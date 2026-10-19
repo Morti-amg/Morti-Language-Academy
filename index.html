@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lingua · Deutsch · English · Español</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F8F8;--card:#fff;--ink:#12313A;--mut:#5E7C84;--teal:#0E8A8F;--saf:#F2A71B;--lap:#2B3F9E;--ok:#1E9E62;--bad:#D8453A;--line:#D6E4E6}
+:root[data-t=dark]{--bg:#0D1B20;--card:#14272E;--ink:#E6F2F3;--mut:#8FB0B6;--line:#243C44;--teal:#2FB5BA;--lap:#7C8FE8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 'Outfit','Vazirmatn',system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-block-end:1px solid var(--line);display:flex;gap:.6rem;align-items:center;padding:.6rem 1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.4rem;margin-inline-end:auto;display:flex;align-items:center;gap:.5rem}
+.logo i{width:26px;height:26px;border-radius:6px;background:repeating-conic-gradient(var(--teal) 0 25%,var(--saf) 0 50%) 0 0/13px 13px}
+select,.ib{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.35rem .6rem;cursor:pointer}
+.hero{background:var(--lap);color:#fff;padding:2.2rem 1rem 2.6rem;position:relative;overflow:hidden;text-align:center}
+.hero:before{content:"";position:absolute;inset:0;opacity:.13;background:repeating-conic-gradient(#fff 0 25%,transparent 0 50%) 0 0/38px 38px}
+.hero>*{position:relative}
+.hero h1{margin:0;font-size:clamp(2.4rem,9vw,4.6rem);font-weight:800;height:1.3em;line-height:1.3}
+.hero h1 span{position:absolute;inset-inline:0;opacity:0;animation:cy 8s infinite}
+.hero h1 span:nth-child(2){animation-delay:2s}.hero h1 span:nth-child(3){animation-delay:4s}.hero h1 span:nth-child(4){animation-delay:6s}
+@keyframes cy{0%,2%{opacity:0;transform:translateY(14px)}6%,22%{opacity:1;transform:none}27%,100%{opacity:0}}
+.hero p{margin:.4rem 0 0;opacity:.9}
+.sw{display:flex;gap:.5rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
+.sw button{border:2px solid #fff6;background:transparent;color:#fff;border-radius:99px;padding:.35rem 1.1rem;cursor:pointer;font-weight:700}
+.sw button.on{background:var(--saf);border-color:var(--saf);color:#2a1b00}
+main{max-width:860px;margin:0 auto;padding:1rem}
+.stats{display:flex;gap:.6rem;margin:-1.6rem 0 1rem;position:relative}
+.stats div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.5rem;text-align:center;font-weight:700}
+.stats small{display:block;color:var(--mut);font-weight:400;font-size:.8rem}
+nav{display:flex;gap:.4rem;overflow-x:auto;padding-block-end:.4rem}
+nav button{border:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.45rem .9rem;cursor:pointer;white-space:nowrap}
+nav button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.bar{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.bar input{flex:1;min-width:140px}
+input,textarea{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;width:100%}
+.p{background:var(--card);border:1px solid var(--line);border-inline-start:6px solid var(--teal);border-radius:14px;padding:.8rem 1rem;margin-bottom:.7rem;display:flex;gap:.8rem;align-items:center}
+.p.k{border-inline-start-color:var(--ok)}
+.p .t{flex:1}.p b{font-size:1.2rem;display:block}.p span{color:var(--mut)}
+.ab{display:flex;gap:.2rem}.ab button{border:0;background:none;font-size:1.25rem;cursor:pointer;padding:.3rem;border-radius:8px}
+.big{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2.2rem 1.2rem;text-align:center;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:.6rem;cursor:pointer;box-shadow:0 8px 0 var(--line)}
+.big b{font-size:clamp(1.5rem,6vw,2.2rem);line-height:1.3}
+.row{display:flex;gap:.6rem;margin-top:1.1rem}
+.btn{flex:1;border:0;border-radius:12px;padding:.7rem;cursor:pointer;font-weight:700;color:#fff;background:var(--teal)}
+.btn.r{background:var(--bad)}.btn.g{background:var(--ok)}.btn.s{background:var(--saf);color:#2a1b00}.btn.m{background:var(--mut)}
+.opt{display:block;width:100%;text-align:start;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.7rem 1rem;margin-top:.6rem;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:#1E9E6222}.opt.bad{border-color:var(--bad);background:#D8453A22}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1rem;margin-bottom:1rem}
+.card h3{margin:.2rem 0 .6rem}.card label{display:block;margin:.4rem 0 .1rem;color:var(--mut);font-size:.9rem}
+.e{text-align:center;color:var(--mut);padding:2rem}
+:focus-visible{outline:3px solid var(--saf);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}.hero h1 span:first-child{opacity:1}}
+main{max-width:1100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:.7rem}.grid .p{margin:0}
+.nar{max-width:640px;margin-inline:auto}
+.lv{font-size:.72rem;font-weight:700;background:var(--saf);color:#2a1b00!important;border-radius:6px;padding:0 .4rem;margin-inline-start:.5rem;vertical-align:middle;display:inline}
+.ex{display:block;margin-top:.35rem;font-size:.95rem;opacity:.85}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}.mg .opt{margin:0 0 .6rem}
+.opt.sel{border-color:var(--lap);background:#2B3F9E22}.opt:disabled{opacity:.45;cursor:default}
+.bar select{min-width:110px}.bar{align-items:stretch}
+button,select,.ib{min-height:44px}.ab button{min-width:44px}
+.ad{display:block}.ad>div>.card{margin-bottom:1rem}
+@media(min-width:900px){.ad{display:grid;grid-template-columns:400px 1fr;gap:1.2rem;align-items:start}nav{flex-wrap:wrap}}
+@media(max-width:480px){main{padding:.7rem}.p{padding:.7rem}.stats{gap:.4rem}.sw button{padding:.3rem .8rem}.big{padding:1.6rem .8rem}.mg{gap:.4rem}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo"><i></i>Lingua</div>
+ <select id="ui" onchange="S.ui=this.value;sv();draw()" aria-label="Language">
+  <option value="fa">فارسی</option><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option></select>
+ <button class="ib" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme">◐</button>
+</header>
+<div class="hero">
+ <h1 dir="ltr"><span>Hallo</span><span>Hello</span><span>Hola</span><span dir="rtl">سلام</span></h1>
+ <p id="sub"></p>
+ <div class="sw" id="sw"></div>
+</div>
+<main>
+ <div class="stats" id="st"></div>
+ <nav id="nav"></nav>
+ <section id="app"></section>
+</main>
+<script>
+/* ====== داده‌های پایه: برای جمله‌های ثابت می‌توانید فایل data.json هم کنار index.html بگذارید ====== */
+const BASE=[
+{id:1,c:'greet',de:"Hallo, wie geht's?",en:"Hello, how are you?",es:"Hola, ¿cómo estás?",fa:"سلام، حالت چطوره؟"},
+{id:2,c:'greet',de:"Freut mich, dich kennenzulernen.",en:"Nice to meet you.",es:"Mucho gusto.",fa:"از آشنایی با شما خوشحالم."},
+{id:3,c:'greet',de:"Bis morgen!",en:"See you tomorrow!",es:"¡Hasta mañana!",fa:"تا فردا!"},
+{id:4,c:'travel',de:"Wo ist der Bahnhof?",en:"Where is the train station?",es:"¿Dónde está la estación de tren?",fa:"ایستگاه قطار کجاست؟"},
+{id:5,c:'travel',de:"Ich hätte gern ein Ticket.",en:"I would like a ticket.",es:"Quisiera un billete.",fa:"یک بلیط می‌خواهم."},
+{id:6,c:'travel',de:"Sprechen Sie Englisch?",en:"Do you speak English?",es:"¿Habla usted inglés?",fa:"انگلیسی صحبت می‌کنید؟"},
+{id:7,c:'food',de:"Die Rechnung, bitte.",en:"The bill, please.",es:"La cuenta, por favor.",fa:"لطفاً صورت‌حساب."},
+{id:8,c:'food',de:"Ich möchte einen Kaffee.",en:"I would like a coffee.",es:"Quiero un café.",fa:"یک قهوه می‌خواهم."},
+{id:9,c:'food',de:"Das schmeckt sehr gut!",en:"This tastes great!",es:"¡Esto está muy rico!",fa:"خیلی خوشمزه است!"},
+{id:10,c:'school',de:"Können Sie das wiederholen?",en:"Can you repeat that?",es:"¿Puede repetirlo?",fa:"می‌توانید تکرار کنید؟"},
+{id:11,c:'school',de:"Ich verstehe nicht.",en:"I don't understand.",es:"No entiendo.",fa:"متوجه نمی‌شوم."},
+{id:12,c:'school',de:"Ich lerne jeden Tag.",en:"I learn every day.",es:"Aprendo todos los días.",fa:"هر روز یاد می‌گیرم."},
+{id:13,c:'daily',de:"Wie spät ist es?",en:"What time is it?",es:"¿Qué hora es?",fa:"ساعت چنده؟"},
+{id:14,c:'daily',de:"Ich brauche Hilfe.",en:"I need help.",es:"Necesito ayuda.",fa:"به کمک نیاز دارم."},
+{id:15,c:'daily',de:"Vielen Dank!",en:"Thank you very much!",es:"¡Muchas gracias!",fa:"خیلی ممنون!"},
+{id:16,k:'w',c:'food',lv:'A1',de:"das Brot",en:"bread",es:"el pan",fa:"نان",ex:{de:"Ich esse Brot zum Frühstück.",en:"I eat bread for breakfast.",es:"Como pan en el desayuno.",fa:"من برای صبحانه نان می‌خورم."}},
+{id:17,k:'w',c:'food',lv:'A1',de:"das Wasser",en:"water",es:"el agua",fa:"آب",ex:{de:"Ich trinke viel Wasser.",en:"I drink a lot of water.",es:"Bebo mucha agua.",fa:"من زیاد آب می‌نوشم."}},
+{id:18,k:'w',c:'school',lv:'A1',de:"die Schule",en:"school",es:"la escuela",fa:"مدرسه",ex:{de:"Die Schule beginnt um acht Uhr.",en:"School starts at eight o'clock.",es:"La escuela empieza a las ocho.",fa:"مدرسه ساعت هشت شروع می‌شود."}},
+{id:19,k:'w',c:'travel',lv:'A2',de:"reisen",en:"to travel",es:"viajar",fa:"سفر کردن",ex:{de:"Ich reise gern mit dem Zug.",en:"I like travelling by train.",es:"Me gusta viajar en tren.",fa:"دوست دارم با قطار سفر کنم."}},
+{id:20,k:'w',c:'daily',lv:'A2',de:"freundlich",en:"friendly",es:"amable",fa:"مهربان",ex:{de:"Sie ist sehr freundlich.",en:"She is very friendly.",es:"Ella es muy amable.",fa:"او خیلی مهربان است."}}];
+const C={greet:{fa:'سلام و احوال‌پرسی',de:'Begrüßung',en:'Greetings',es:'Saludos'},travel:{fa:'سفر',de:'Reisen',en:'Travel',es:'Viajes'},food:{fa:'غذا و رستوران',de:'Essen',en:'Food',es:'Comida'},school:{fa:'کلاس و یادگیری',de:'Schule',en:'School',es:'Escuela'},daily:{fa:'زندگی روزمره',de:'Alltag',en:'Daily life',es:'Vida diaria'}};
+const LN={de:'Deutsch',en:'English',es:'Español',fa:'فارسی'},VC={de:'de-DE',en:'en-US',es:'es-ES'};
+const T={
+fa:{sub:'آلمانی، انگلیسی و اسپانیایی را با جمله‌های واقعی یاد بگیر',learn:'جمله‌ها',cards:'فلش‌کارت',quiz:'آزمون',saved:'ذخیره‌شده‌ها',admin:'مدیر',search:'جستجو...',all:'همه',iLearn:'می‌خواهم یاد بگیرم',my:'ترجمه به',ok:'بلد بودم',again:'دوباره',tap:'برای دیدن ترجمه بزن',next:'بعدی',xp:'امتیاز',streak:'پشت‌سرهم',known:'یادگرفته',pw:'رمز عبور',login:'ورود',out:'خروج',save:'ذخیره',del:'حذف',exp:'دانلود data.json',imp:'وارد کردن',empty:'اینجا هنوز چیزی نیست.',cat:'دسته',wrong:'رمز اشتباه است.',newp:'جمله جدید',chpw:'رمز جدید',hint:'برای ماندگاری روی GitHub فایل data.json را دانلود و در مخزن جایگزین کنید.',right:'درست!',quizq:'کدام جمله درست است؟'},
+de:{sub:'Lerne Deutsch, Englisch und Spanisch mit echten Sätzen',learn:'Sätze',cards:'Karteikarten',quiz:'Quiz',saved:'Gemerkt',admin:'Admin',search:'Suchen...',all:'Alle',iLearn:'Ich lerne',my:'Übersetzung in',ok:'Gewusst',again:'Nochmal',tap:'Tippen für Übersetzung',next:'Weiter',xp:'Punkte',streak:'Serie',known:'Gelernt',pw:'Passwort',login:'Anmelden',out:'Abmelden',save:'Speichern',del:'Löschen',exp:'data.json laden',imp:'Importieren',empty:'Hier ist noch nichts.',cat:'Kategorie',wrong:'Falsches Passwort.',newp:'Neuer Satz',chpw:'Neues Passwort',hint:'Für dauerhaftes Speichern auf GitHub: data.json herunterladen und im Repository ersetzen.',right:'Richtig!',quizq:'Welcher Satz ist richtig?'},
+en:{sub:'Learn German, English and Spanish with real-life sentences',learn:'Phrases',cards:'Flashcards',quiz:'Quiz',saved:'Saved',admin:'Admin',search:'Search...',all:'All',iLearn:'I learn',my:'Translate to',ok:'Got it',again:'Again',tap:'Tap to reveal translation',next:'Next',xp:'XP',streak:'Streak',known:'Learned',pw:'Password',login:'Log in',out:'Log out',save:'Save',del:'Delete',exp:'Download data.json',imp:'Import',empty:'Nothing here yet.',cat:'Category',wrong:'Wrong password.',newp:'New phrase',chpw:'New password',hint:'To keep changes on GitHub, download data.json and replace it in your repository.',right:'Correct!',quizq:'Which sentence is correct?'},
+es:{sub:'Aprende alemán, inglés y español con frases reales',learn:'Frases',cards:'Tarjetas',quiz:'Quiz',saved:'Guardadas',admin:'Admin',search:'Buscar...',all:'Todas',iLearn:'Aprendo',my:'Traducir a',ok:'Lo sé',again:'Otra vez',tap:'Toca para ver la traducción',next:'Siguiente',xp:'Puntos',streak:'Racha',known:'Aprendidas',pw:'Contraseña',login:'Entrar',out:'Salir',save:'Guardar',del:'Borrar',exp:'Descargar data.json',imp:'Importar',empty:'Aún no hay nada.',cat:'Categoría',wrong:'Contraseña incorrecta.',newp:'Nueva frase',chpw:'Nueva contraseña',hint:'Para conservar los cambios en GitHub, descarga data.json y reemplázalo en tu repositorio.',right:'¡Correcto!',quizq:'¿Qué frase es correcta?'}};
+
+const X={
+fa:{learn:'لغت و جمله',type:'تایپ',match:'جور کردن',lvl:'سطح',words:'لغت‌ها',sents:'جمله‌ها',allT:'همه',ex:'مثال',typeq:'این را بنویس',check:'بررسی',ans:'پاسخ درست',addcat:'دستهٔ جدید',done:'آفرین! همه را درست جور کردی',fill:'همهٔ چهار ترجمه را پر کن.',kind:'نوع'},
+de:{learn:'Wörter & Sätze',type:'Tippen',match:'Zuordnen',lvl:'Niveau',words:'Wörter',sents:'Sätze',allT:'Alle',ex:'Beispiel',typeq:'Schreibe das in der Lernsprache',check:'Prüfen',ans:'Richtig wäre',addcat:'Neue Kategorie',done:'Super! Alles richtig zugeordnet',fill:'Bitte alle vier Übersetzungen ausfüllen.',kind:'Art'},
+en:{learn:'Words & phrases',type:'Typing',match:'Match',lvl:'Level',words:'Words',sents:'Sentences',allT:'All',ex:'Example',typeq:'Type this in the language you learn',check:'Check',ans:'Correct answer',addcat:'New category',done:'Great! All pairs matched',fill:'Please fill in all four translations.',kind:'Type'},
+es:{learn:'Palabras y frases',type:'Escribir',match:'Unir',lvl:'Nivel',words:'Palabras',sents:'Frases',allT:'Todo',ex:'Ejemplo',typeq:'Escribe esto en el idioma que aprendes',check:'Comprobar',ans:'Respuesta correcta',addcat:'Nueva categoría',done:'¡Genial! Todo unido',fill:'Rellena las cuatro traducciones.',kind:'Tipo'}};
+for(const l in X)Object.assign(T[l],X[l]);
+
+const ld=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(x){return null}};
+let D=ld('lp_data')||BASE,CU=ld('lp_cats')||{},
+S=Object.assign({ui:'fa',learn:'de',my:'fa',tab:'learn',cat:'all',lv:'all',kd:'all',q:'',fav:[],known:[],xp:0,streak:0,dark:false},ld('lp_s')||{}),
+admin=false,ci=0,fl=false,qz=null,ty=null,mg=null,ed=null,msg='';
+const LV=['A1','A2','B1','B2','C1'];
+const sv=()=>{try{localStorage.setItem('lp_s',JSON.stringify(S))}catch(x){}};
+const svD=()=>{qz=ty=mg=null;try{localStorage.setItem('lp_data',JSON.stringify(D));localStorage.setItem('lp_cats',JSON.stringify(CU))}catch(x){}};
+const CAT=()=>Object.assign({},C,CU);
+const cn=k=>{const c=CAT()[k];return c?(c[S.ui]||c.en||k):k};
+const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const t=k=>T[S.ui][k];
+const dirOf=l=>l==='fa'?'rtl':'ltr';
+const LG=['de','en','es','fa'];
+const list=()=>D.filter(p=>(S.cat==='all'||p.c===S.cat)&&(S.lv==='all'||(p.lv||'A1')===S.lv)&&(S.kd==='all'||(p.k||'p')===S.kd)&&(!S.q||LG.some(l=>(p[l]||'').toLowerCase().includes(S.q.toLowerCase()))));
+const tog=(a,id)=>{const i=S[a].indexOf(id);i<0?S[a].push(id):S[a].splice(i,1);sv();draw()};
+const speak=id=>{const p=D.find(x=>x.id===id);if(!p||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(p[S.learn]);u.lang=VC[S.learn];u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)};
+const pick=(a,n)=>a.slice().sort(()=>Math.random()-.5).slice(0,n);
+const exOf=p=>p.ex&&p.ex[S.learn]?`<em class="ex" dir="ltr" lang="${S.learn}">${e(p.ex[S.learn])}${p.ex[S.my]&&S.my!==S.learn?`<br><span dir="${dirOf(S.my)}">${e(p.ex[S.my])}</span>`:''}</em>`:'';
+
+function item(p){return `<div class="p ${S.known.includes(p.id)?'k':''}"><div class="t"><b dir="ltr" lang="${S.learn}">${e(p[S.learn])}<span class="lv">${p.lv||'A1'}</span></b><span dir="${dirOf(S.my)}">${e(p[S.my])}</span>${exOf(p)}</div>
+<div class="ab"><button onclick="speak(${p.id})" aria-label="audio">🔊</button><button onclick="tog('fav',${p.id})" aria-label="save">${S.fav.includes(p.id)?'❤️':'🤍'}</button><button onclick="tog('known',${p.id})" aria-label="known">${S.known.includes(p.id)?'✅':'⬜'}</button></div></div>`}
+const opts=(arr,cur,f)=>arr.map(k=>`<option value="${k}" ${cur===k?'selected':''}>${f(k)}</option>`).join('');
+function filters(){return `<div class="bar"><input value="${e(S.q)}" placeholder="${t('search')}" oninput="S.q=this.value;sv();draw(1)">
+<select onchange="S.cat=this.value;ci=0;sv();draw()" aria-label="${t('cat')}"><option value="all">${t('all')}</option>${opts(Object.keys(CAT()),S.cat,cn)}</select>
+<select onchange="S.lv=this.value;ci=0;sv();draw()" aria-label="${t('lvl')}"><option value="all">${t('lvl')}: ${t('all')}</option>${opts(LV,S.lv,x=>x)}</select>
+<select onchange="S.kd=this.value;ci=0;sv();draw()" aria-label="${t('kind')}"><option value="all">${t('allT')}</option><option value="w" ${S.kd==='w'?'selected':''}>${t('words')}</option><option value="p" ${S.kd==='p'?'selected':''}>${t('sents')}</option></select></div>`}
+
+function vLearn(l=list()){return filters()+(l.length?`<div class="grid">${l.map(item).join('')}</div>`:`<div class="e">${t('empty')}</div>`)}
+const vSaved=()=>vLearn(D.filter(p=>S.fav.includes(p.id)));
+function vCards(){const d=list();if(!d.length)return filters()+`<div class="e">${t('empty')}</div>`;const p=d[ci%d.length];
+return filters()+`<div class="nar"><div class="big" onclick="fl=!fl;draw()"><small style="color:var(--mut)">${ci%d.length+1} / ${d.length}</small>${fl?`<b dir="${dirOf(S.my)}">${e(p[S.my])}</b>${exOf(p)}`:`<b dir="ltr" lang="${S.learn}">${e(p[S.learn])}</b><small style="color:var(--mut)">${t('tap')}</small>`}</div>
+<div class="row"><button class="btn m" onclick="speak(${p.id})">🔊</button><button class="btn r" onclick="S.streak=0;ci++;fl=false;sv();draw()">${t('again')}</button><button class="btn g" onclick="cardOk(${p.id})">${t('ok')}</button></div></div>`}
+function cardOk(id){if(!S.known.includes(id))S.known.push(id);S.xp+=5;S.streak++;ci++;fl=false;sv();draw()}
+
+function newQ(){if(D.length<4){qz=null;return}const p=pick(D,1)[0];qz={p,o:pick([p,...pick(D.filter(x=>x.id!==p.id),3)],4),a:null}}
+function ans(i){if(qz.a!==null)return;qz.a=i;if(qz.o[i].id===qz.p.id){S.xp+=10;S.streak++}else S.streak=0;sv();draw()}
+function vQuiz(){if(!qz)newQ();if(!qz)return `<div class="e">${t('empty')}</div>`;
+return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('quizq')}</p><h3 dir="${dirOf(S.my)}">${e(qz.p[S.my])}</h3>${qz.o.map((o,i)=>`<button class="opt ${qz.a!==null?(o.id===qz.p.id?'ok':i===qz.a?'bad':''):''}" dir="ltr" onclick="ans(${i})">${e(o[S.learn])}</button>`).join('')}${qz.a!==null?`<div class="row"><button class="btn s" onclick="speak(${qz.p.id})">🔊</button><button class="btn" onclick="newQ();draw()">${t('next')}</button></div>`:''}</div>`}
+
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[.,!?¡¿;:'"’-]/g,'').replace(/\s+/g,' ').trim();
+function newT(){const d=list().length?list():D;ty=d.length?{p:pick(d,1)[0],r:null,v:''}:null}
+function chkT(){if(ty.r!==null)return;ty.v=document.getElementById('ty_in').value;ty.r=norm(ty.v)===norm(ty.p[S.learn]);if(ty.r){S.xp+=15;S.streak++}else S.streak=0;sv();draw()}
+function vType(){if(!ty)newT();if(!ty)return `<div class="e">${t('empty')}</div>`;const p=ty.p;
+return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('typeq')} (${LN[S.learn]})</p><h3 dir="${dirOf(S.my)}">${e(p[S.my])}</h3>
+<input id="ty_in" dir="ltr" lang="${S.learn}" autocomplete="off" autocapitalize="off" spellcheck="false" value="${e(ty.v)}" ${ty.r!==null?'disabled':''} onkeydown="if(event.key==='Enter')chkT()">
+${ty.r===null?`<div class="row"><button class="btn" onclick="chkT()">${t('check')}</button></div>`:`<p style="font-weight:700;color:var(--${ty.r?'ok':'bad'})">${ty.r?t('right'):t('ans')+':'} <span dir="ltr" style="color:var(--ink)">${ty.r?'':e(p[S.learn])}</span></p><div class="row"><button class="btn s" onclick="speak(${p.id})">🔊</button><button class="btn" onclick="newT();draw()">${t('next')}</button></div>`}</div>`}
+
+function newM(){const d=pick(list().length>=3?list():D,6);mg=d.length>=2?{L:pick(d,6).map(x=>x.id),R:pick(d,6).map(x=>x.id),done:[],sel:null,bad:null}:null}
+function mc(side,id){if(mg.done.includes(id))return;if(!mg.sel||mg.sel.side===side){mg.sel={side,id}}else{if(mg.sel.id===id){mg.done.push(id);S.xp+=5;S.streak++;if(mg.done.length===mg.L.length)S.xp+=20}else{S.streak=0;mg.bad=[mg.sel,{side,id}];setTimeout(()=>{if(mg){mg.bad=null;draw()}},600)}mg.sel=null}sv();draw()}
+function vMatch(){if(!mg)newM();if(!mg)return `<div class="e">${t('empty')}</div>`;
+const cell=(side,id)=>{const p=D.find(x=>x.id===id);const dn=mg.done.includes(id),sl=mg.sel&&mg.sel.side===side&&mg.sel.id===id,bd=mg.bad&&mg.bad.some(b=>b.side===side&&b.id===id);
+return `<button class="opt ${dn?'ok':bd?'bad':sl?'sel':''}" ${dn?'disabled':''} dir="${side==='l'?'ltr':dirOf(S.my)}" onclick="mc('${side}',${id})">${e(p[side==='l'?S.learn:S.my])}</button>`};
+const fin=mg.done.length===mg.L.length;
+return `<div class="nar"><div class="mg"><div>${mg.L.map(i=>cell('l',i)).join('')}</div><div>${mg.R.map(i=>cell('r',i)).join('')}</div></div>${fin?`<p style="font-weight:700;color:var(--ok);text-align:center">${t('done')}</p><div class="row"><button class="btn" onclick="newM();draw()">${t('next')}</button></div>`:''}</div>`}
+
+function vAdmin(){
+if(!admin)return `<div class="card nar"><h3>${t('admin')}</h3><label>${t('pw')}</label><input type="password" id="pw" onkeydown="if(event.key==='Enter')login()"><div class="row"><button class="btn" onclick="login()">${t('login')}</button></div><p style="color:var(--bad)">${msg}</p></div>`;
+const p=ed!=null?D.find(x=>x.id===ed):{k:'w',c:Object.keys(CAT())[0],lv:'A1'};const x=p.ex||{};
+return `<div class="ad"><div>
+<div class="card"><h3>${ed!=null?'✏️ ':''}${t('newp')}</h3>
+<label>${t('kind')}</label><select id="f_k" style="width:100%"><option value="w" ${(p.k||'p')==='w'?'selected':''}>${t('words')}</option><option value="p" ${(p.k||'p')==='p'?'selected':''}>${t('sents')}</option></select>
+<label>${t('cat')}</label><select id="f_c" style="width:100%">${opts(Object.keys(CAT()),p.c,cn)}</select>
+<label>${t('lvl')}</label><select id="f_lv" style="width:100%">${opts(LV,p.lv||'A1',x=>x)}</select>
+${LG.map(l=>`<label>${LN[l]}</label><input id="f_${l}" dir="${dirOf(l)}" value="${e(p[l]||'')}">`).join('')}
+<label><b>${t('ex')}</b></label>${LG.map(l=>`<input id="x_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem" value="${e(x[l]||'')}">`).join('')}
+<p style="color:var(--bad);margin:.3rem 0">${msg}</p>
+<div class="row" style="margin-top:.3rem"><button class="btn g" onclick="addP()">${t('save')}</button>${ed!=null?`<button class="btn m" onclick="ed=null;draw()">✕</button>`:''}<button class="btn m" onclick="logout()">${t('out')}</button></div></div>
+<div class="card"><h3>${t('addcat')}</h3>${['fa','de','en','es'].map(l=>`<input id="cn_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem">`).join('')}<div class="row" style="margin-top:.3rem"><button class="btn" onclick="addC()">${t('save')}</button></div></div>
+<div class="card"><div class="row" style="margin:0"><button class="btn s" onclick="expD()">${t('exp')}</button><button class="btn m" onclick="document.getElementById('imp').click()">${t('imp')}</button><input type="file" id="imp" accept=".json" hidden onchange="impD(this.files[0])"></div><p style="color:var(--mut)">${t('hint')}</p>
+<label>${t('chpw')}</label><input id="np"><div class="row"><button class="btn" onclick="chPw()">${t('save')}</button></div></div></div>
+<div>${D.slice().reverse().map(y=>`<div class="p" style="margin-bottom:.6rem"><div class="t"><b dir="ltr">${e(y.de)}<span class="lv">${y.lv||'A1'}</span></b><span dir="ltr">${e(y.en)} · ${e(y.es)}</span><span dir="rtl" style="display:block">${e(y.fa)}</span><span style="font-size:.8rem">${(y.k||'p')==='w'?t('words'):t('sents')} · ${e(cn(y.c))}</span></div><div class="ab"><button onclick="ed=${y.id};msg='';draw();scrollTo(0,0)" aria-label="edit">✏️</button><button onclick="delP(${y.id})" aria-label="${t('del')}">🗑️</button></div></div>`).join('')}</div></div>`}
+function login(){const pw=localStorage.getItem('lp_pw')||'admin1234';if(document.getElementById('pw').value===pw){admin=true;msg=''}else msg=t('wrong');draw()}
+function logout(){admin=false;ed=null;draw()}
+function chPw(){const v=document.getElementById('np').value.trim();if(v.length>=6){try{localStorage.setItem('lp_pw',v)}catch(x){}document.getElementById('np').value=''}}
+function addP(){const g=i=>document.getElementById(i).value.trim();const o={k:g('f_k'),c:g('f_c'),lv:g('f_lv')};LG.forEach(l=>o[l]=g('f_'+l));
+if(LG.some(l=>!o[l])){msg=t('fill');draw();return}
+const ex={};LG.forEach(l=>{if(g('x_'+l))ex[l]=g('x_'+l)});if(Object.keys(ex).length)o.ex=ex;
+if(ed!=null){const i=D.findIndex(z=>z.id===ed);D[i]={id:ed,...o}}else D.push({id:Date.now(),...o});ed=null;msg='';svD();draw()}
+function addC(){const n={};['fa','de','en','es'].forEach(l=>n[l]=document.getElementById('cn_'+l).value.trim());const f=Object.values(n).find(v=>v);if(!f)return;for(const l in n)n[l]=n[l]||f;CU['c'+Date.now()]=n;svD();draw()}
+function delP(id){D=D.filter(x=>x.id!==id);svD();draw()}
+function expD(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({items:D,cats:CU},null,1)],{type:'application/json'}));a.download='data.json';a.click()}
+function applyData(j){if(Array.isArray(j))D=j;else if(j&&Array.isArray(j.items)){D=j.items;CU=j.cats||{}}else return false;return true}
+function impD(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{if(applyData(JSON.parse(r.result))){svD();draw()}}catch(x){}};r.readAsText(f)}
+
+const TABS=['learn','cards','quiz','type','match','saved','admin'],VW={learn:vLearn,cards:vCards,quiz:vQuiz,type:vType,match:vMatch,saved:vSaved,admin:vAdmin};
+function draw(keep){
+ const el=document.documentElement;el.lang=S.ui;el.dir=dirOf(S.ui);el.dataset.t=S.dark?'dark':'light';
+ ui.value=S.ui;sub.textContent=t('sub');
+ sw.innerHTML=['de','en','es'].map(l=>`<button class="${S.learn===l?'on':''}" onclick="S.learn='${l}';qz=ty=mg=null;sv();draw()">${LN[l]}</button>`).join('')+
+ `<select onchange="S.my=this.value;sv();draw()" aria-label="${t('my')}">${['fa','de','en','es'].map(l=>`<option value="${l}" ${S.my===l?'selected':''}>${t('my')} ${LN[l]}</option>`).join('')}</select>`;
+ st.innerHTML=`<div>${S.xp}<small>${t('xp')}</small></div><div>🔥 ${S.streak}<small>${t('streak')}</small></div><div>${S.known.length}/${D.length}<small>${t('known')}</small></div>`;
+ nav.innerHTML=TABS.map(k=>`<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';sv();draw()">${t(k)}</button>`).join('');
+ const a=document.activeElement,pos=a&&a.tagName==='INPUT'?a.selectionStart:null,isQ=keep&&a&&a.placeholder;
+ app.innerHTML=VW[S.tab]();
+ if(isQ){const i=app.querySelector('input');if(i){i.focus();try{i.setSelectionRange(pos,pos)}catch(x){}}}
+}
+draw();
+fetch('data.json').then(r=>r.ok?r.json():null).then(j=>{if(!ld('lp_data')&&applyData(j))draw()}).catch(()=>{});
+</script>
+</body>
+</html>
