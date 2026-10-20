@@ -1,169 +1,261 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111b30">
-<title>MORTI Ill LANGUAGE ACADEMY</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230f1115%22%2F%3E%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%2214%2C46%2023%2C46%2033%2C18%2024%2C18%22%2F%3E%3Cpolygon%20points%3D%2228%2C46%2037%2C46%2047%2C18%2038%2C18%22%2F%3E%3Cpolygon%20points%3D%2242%2C46%2051%2C46%2061%2C18%2052%2C18%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<title>Morti Language Academy · Deutsch · English · Español</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#111b30;--navy2:#263653;--gold:#f1c75b;--bg:#f3f5fa;--ink:#19243a;--muted:#778196;--line:#e4e8f0;--green:#16885b}
+:root{--bg:#F3F8F8;--card:#fff;--ink:#12313A;--mut:#5E7C84;--teal:#0E8A8F;--saf:#F2A71B;--lap:#2B3F9E;--ok:#1E9E62;--bad:#D8453A;--line:#D6E4E6}
+:root[data-t=dark]{--bg:#0D1B20;--card:#14272E;--ink:#E6F2F3;--mut:#8FB0B6;--line:#243C44;--teal:#2FB5BA;--lap:#7C8FE8}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;line-height:1.75}
-button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #809aff;outline-offset:2px}
-header{background:linear-gradient(120deg,var(--navy),var(--navy2));color:white;padding:17px}
-.top{max-width:1050px;margin:auto;display:flex;align-items:center;gap:13px}
-.logo{height:55px;width:55px;display:grid;place-items:center;border:2px solid var(--gold);border-radius:15px;color:var(--gold);font-size:30px;font-weight:900;flex-shrink:0}
-.brand h1{margin:0;font-size:21px;line-height:1.3;letter-spacing:1px}.brand p{margin:0;color:var(--gold);font-size:11px;letter-spacing:1.5px}.brand small{font-size:10px;letter-spacing:1px}
-.topxp{margin-right:auto;background:#ffffff16;border:1px solid #ffffff30;border-radius:30px;padding:5px 11px;font-size:13px}
-main{max-width:1050px;margin:20px auto;padding:0 15px 40px}
-.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:15px;box-shadow:0 10px 30px #15223d08}
-.hero{background:linear-gradient(125deg,#17243c,#304566);color:white;border:0;position:relative;overflow:hidden}
-.hero h2{font-size:clamp(24px,4vw,34px);margin:0}.hero p{color:#dce4ef}.gold{color:var(--gold)}
-.languages{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;position:relative}
-.lang{background:#ffffff0d;color:white;border:1px solid #ffffff40;border-radius:13px;padding:12px 5px}.lang.active{border:2px solid var(--gold);background:#ffffff1c}.lang span{font-size:23px}.lang b,.lang small{display:block}.lang small{color:#dce4ef;font-size:11px}
-.layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:15px;align-items:start}
-nav{display:grid;gap:7px;position:sticky;top:12px}
-nav button,.btn{padding:10px 13px;border:1px solid var(--line);background:white;color:var(--ink);border-radius:11px}
-nav button{text-align:right}nav button.active,.primary{background:var(--navy)!important;color:white!important;border-color:var(--navy)!important}
-.goldbtn{background:var(--gold)!important;color:var(--navy)!important;border-color:var(--gold)!important;font-weight:750}
-.view{display:none}.view.active{display:block}
-h2{font-size:22px;margin:0 0 6px}h3{font-size:17px;margin:0 0 8px}.muted{color:var(--muted);font-size:14px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:17px 0}.stat{text-align:center;background:#f4f6fb;padding:12px 5px;border-radius:12px}.stat b{display:block;font-size:24px}.stat span{font-size:12px;color:var(--muted)}
-.card{border:1px solid var(--line);border-radius:14px;padding:15px;margin:12px 0}
-.progress{height:9px;background:#e9edf5;border-radius:20px;overflow:hidden}.progress div{height:100%;width:0;background:linear-gradient(90deg,#e6b537,#f6d77e);transition:width .25s}
-.lesson{display:flex;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.lesson:last-child{border:0}.lessonicon{height:43px;width:43px;flex-shrink:0;display:grid;place-items:center;border-radius:12px;background:#f0f3fa;font-size:20px}.lessoninfo{flex:1;min-width:0}.lessoninfo p{margin:2px 0}.lesson .btn{padding:7px 10px;font-size:13px;white-space:nowrap}
-.wordbox{background:linear-gradient(130deg,#19263e,#304566);color:white;border-radius:16px;text-align:center;padding:20px 12px;margin:15px 0}.word{font-size:clamp(27px,6vw,40px);font-weight:800;margin:6px}.wordbox p{color:#e1e7f1;margin:0}
-.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.options{display:grid;gap:9px;margin:14px 0}.option{width:100%;text-align:right;background:white;border:1px solid var(--line);padding:12px;border-radius:11px;color:var(--ink)}.option.selected{border:2px solid #7289df;background:#f0f3ff}.option.correct{border:2px solid var(--green);background:#e9f8ef}.option.wrong{border:2px solid #c34545;background:#fff0ef}
-.notice{padding:12px;border-radius:11px;background:#f0f3f9;margin:12px 0;font-size:14px}.success{background:#e7f7ee;color:#176b43}.error{background:#fff0ef;color:#a52c2c}
-label{display:block;margin:12px 0 5px;font-size:14px}input,select{width:100%;padding:12px;border:1px solid #dce2ed;border-radius:11px;background:white;color:var(--ink)}
-.hidden{display:none!important}.center{text-align:center}.welcome{max-width:520px;margin:30px auto}.welcome .logo{margin:0 auto 16px;height:68px;width:68px;font-size:37px}.welcome .panel{padding:clamp(20px,5vw,35px)}
-footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 15px 25px}#toast{display:none;position:fixed;z-index:9;bottom:18px;left:15px;right:15px;max-width:440px;margin:auto;background:#17243b;color:white;padding:13px 16px;border-radius:12px;box-shadow:0 5px 25px #0002}.small{font-size:12px}
-@media(max-width:680px){header{padding:13px}.brand h1{font-size:17px}.brand small{font-size:9px}.topxp{font-size:11px;padding:5px 8px}.layout{grid-template-columns:1fr}nav{position:static;display:flex;overflow-x:auto;padding-bottom:5px}nav button{white-space:nowrap;text-align:center;padding:9px 11px}.panel{padding:16px}main{padding:0 10px 30px;margin-top:12px}.hero{padding:18px}.lang{font-size:13px}.stats{gap:6px}.stat b{font-size:21px}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 'Outfit','Vazirmatn',system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-block-end:1px solid var(--line);display:flex;gap:.6rem;align-items:center;padding:.6rem 1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.4rem;margin-inline-end:auto;display:flex;align-items:center;gap:.5rem}
+select,.ib{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.35rem .6rem;cursor:pointer}
+.hero{background:var(--lap);color:#fff;padding:2.2rem 1rem 2.6rem;position:relative;overflow:hidden;text-align:center}
+.hero:before{content:"";position:absolute;inset:0}
+.hero>*{position:relative}
+.hero h1{margin:0;font-size:clamp(2.4rem,9vw,4.6rem);font-weight:800;height:1.3em;line-height:1.3}
+.hero h1 span{position:absolute;inset-inline:0;opacity:0;animation:cy 8s infinite}
+.hero h1 span:nth-child(2){animation-delay:2s}.hero h1 span:nth-child(3){animation-delay:4s}.hero h1 span:nth-child(4){animation-delay:6s}
+@keyframes cy{0%,2%{opacity:0;transform:translateY(14px)}6%,22%{opacity:1;transform:none}27%,100%{opacity:0}}
+.hero p{margin:.4rem 0 0;opacity:.9}
+.sw{display:flex;gap:.5rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
+.sw button{border:2px solid #fff6;background:transparent;color:#fff;border-radius:99px;padding:.35rem 1.1rem;cursor:pointer;font-weight:700}
+.sw button.on{background:var(--saf);border-color:var(--saf);color:#2a1b00}
+main{max-width:860px;margin:0 auto;padding:1rem}
+.stats{display:flex;gap:.6rem;margin:-1.6rem 0 1rem;position:relative}
+.stats div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.5rem;text-align:center;font-weight:700}
+.stats small{display:block;color:var(--mut);font-weight:400;font-size:.8rem}
+nav{display:flex;gap:.4rem;overflow-x:auto;padding-block-end:.4rem}
+nav button{border:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.45rem .9rem;cursor:pointer;white-space:nowrap}
+nav button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.bar{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.bar input{flex:1;min-width:140px}
+input,textarea{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;width:100%}
+.p{background:var(--card);border:1px solid var(--line);border-inline-start:6px solid var(--teal);border-radius:14px;padding:.8rem 1rem;margin-bottom:.7rem;display:flex;gap:.8rem;align-items:center}
+.p.k{border-inline-start-color:var(--ok)}
+.p .t{flex:1}.p b{font-size:1.2rem;display:block}.p span{color:var(--mut)}
+.ab{display:flex;gap:.2rem}.ab button{border:0;background:none;font-size:1.25rem;cursor:pointer;padding:.3rem;border-radius:8px}
+.big{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:2.2rem 1.2rem;text-align:center;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:.6rem;cursor:pointer;box-shadow:0 8px 0 var(--line)}
+.big b{font-size:clamp(1.5rem,6vw,2.2rem);line-height:1.3}
+.row{display:flex;gap:.6rem;margin-top:1.1rem}
+.btn{flex:1;border:0;border-radius:12px;padding:.7rem;cursor:pointer;font-weight:700;color:#fff;background:var(--teal)}
+.btn.r{background:var(--bad)}.btn.g{background:var(--ok)}.btn.s{background:var(--saf);color:#2a1b00}.btn.m{background:var(--mut)}
+.opt{display:block;width:100%;text-align:start;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.7rem 1rem;margin-top:.6rem;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:#1E9E6222}.opt.bad{border-color:var(--bad);background:#D8453A22}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1rem;margin-bottom:1rem}
+.card h3{margin:.2rem 0 .6rem}.card label{display:block;margin:.4rem 0 .1rem;color:var(--mut);font-size:.9rem}
+.e{text-align:center;color:var(--mut);padding:2rem}
+:focus-visible{outline:3px solid var(--saf);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}.hero h1 span:first-child{opacity:1}}
+main{max-width:1100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:.7rem}.grid .p{margin:0}
+.nar{max-width:640px;margin-inline:auto}
+.lv{font-size:.72rem;font-weight:700;background:var(--saf);color:#2a1b00!important;border-radius:6px;padding:0 .4rem;margin-inline-start:.5rem;vertical-align:middle;display:inline}
+.ex{display:block;margin-top:.35rem;font-size:.95rem;opacity:.85}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}.mg .opt{margin:0 0 .6rem}
+.opt.sel{border-color:var(--lap);background:#2B3F9E22}.opt:disabled{opacity:.45;cursor:default}
+.bar select{min-width:110px}.bar{align-items:stretch}
+button,select,.ib{min-height:44px}.ab button{min-width:44px}
+.ad{display:block}.ad>div>.card{margin-bottom:1rem}
+@media(min-width:900px){.ad{display:grid;grid-template-columns:400px 1fr;gap:1.2rem;align-items:start}nav{flex-wrap:wrap}}
+@media(max-width:480px){main{padding:.7rem}.p{padding:.7rem}.stats{gap:.4rem}.sw button{padding:.3rem .8rem}.big{padding:1.6rem .8rem}.mg{gap:.4rem}}
+.logo img{height:52px;width:auto;display:block;border-radius:12px}
+@media(max-width:480px){.logo img{height:46px}}
+.p .t{min-width:0;overflow-wrap:break-word;hyphens:auto}.ab{flex-shrink:0}.sw select{color:var(--ink)}
+@media(max-width:480px){.ab button{min-width:38px;padding:.2rem}}
+:root{--ck:rgba(14,138,143,.07)}:root[data-t=dark]{--ck:rgba(255,255,255,.045)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201100%20437%22%20width%3D%221100%22%20height%3D%22437%22%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23d02a1f%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%235b7a82%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%235b7a82%22%2F%3E%3C%2Fsvg%3E") center/min(92vw,820px) no-repeat}
+.hero{background:#0f1115;padding:2.6rem 1rem 3.4rem;border-block-start:6px solid #d02a1f;border-block-end:3px solid #8b8d96}
+.hero:before{opacity:1;z-index:0;background:radial-gradient(ellipse at center,rgba(12,13,17,.62),rgba(12,13,17,0) 72%),linear-gradient(#14171d,#0f1115)}
+.hero:after{content:"";position:absolute;inset:0;z-index:0;opacity:.11;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201100%20437%22%20width%3D%221100%22%20height%3D%22437%22%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23d02a1f%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%23e6e9ef%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%238b8d96%22%2F%3E%3C%2Fsvg%3E") center/min(94%,780px) no-repeat}
+.hero>*{z-index:1}.hero h1,.hero p{text-shadow:0 2px 12px #000c}
+.hero{padding:2rem 1rem 3.4rem}
+.hero:after{display:none}
+.hero:before{background:radial-gradient(ellipse 75% 70% at 50% 24%,rgba(86,100,138,.55),rgba(86,100,138,0) 72%),linear-gradient(#151922,#0f1115)}
+.hl{display:block;width:min(90%,640px);height:auto;margin:0 auto 1.5rem;filter:drop-shadow(0 6px 18px #0009)}
+.wm{overflow:hidden;margin:-2rem -1rem 1.3rem;padding:.6rem 0;background:linear-gradient(90deg,rgba(224,56,44,.16),rgba(224,56,44,.05) 50%,rgba(224,56,44,.16));border-block-end:1px solid rgba(255,255,255,.09);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.tk{display:flex;width:max-content;animation:tk 90s linear infinite;will-change:transform}
+.un{display:flex;align-items:center;flex:none}
+.ph{padding:0 1rem;white-space:nowrap;color:#dfe3ea;font-size:clamp(.92rem,2.3vw,1.12rem);line-height:1.5}
+.ph.hi{color:#f2a71b;font-weight:800}
+.sp{color:#e0382c;font-weight:800;font-style:italic;letter-spacing:-.08em;padding:0 .3rem}
+@keyframes tk{to{transform:translateX(-50%)}}
+@keyframes tkr{to{transform:translateX(50%)}}
+html[dir=rtl] .tk{animation-name:tkr}
+.wm:hover .tk{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.tk{animation:none}}
 </style>
 </head>
 <body>
-<header><div class="top">
-<div class="logo">M</div>
-<div class="brand"><h1>MORTI Ill</h1><p>LANGUAGE ACADEMY</p><small>DEUTSCH • ENGLISH • ESPAÑOL</small></div>
-<div class="topxp">⭐ <span id="headerXP">0 XP</span></div>
-</div></header>
-
-<section id="welcome" class="welcome hidden">
-<div class="panel center">
-<div class="logo">M</div><p class="gold small"><b>YOUR LANGUAGE JOURNEY STARTS HERE</b></p>
-<h2>به آکادمی MORTI خوش آمدی!</h2><p class="muted">برای شروع، نامت را به ما بگو.</p>
-<form id="welcomeForm">
-<label for="firstName">نام یا نام مستعار</label><input id="firstName" maxlength="50" required placeholder="مثلاً سارا">
-<label for="firstLang">زبان مورد علاقه</label>
-<select id="firstLang"><option value="de">🇩🇪 آلمانی — Deutsch</option><option value="en">🇬🇧 انگلیسی — English</option><option value="es">🇪🇸 اسپانیایی — Español</option></select>
-<label for="firstLevel">سطح زبان</label>
-<select id="firstLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select>
-<button class="btn goldbtn" style="width:100%;margin-top:18px;padding:13px">شروع سفر یادگیری من ✨</button>
-</form><p class="muted small">اطلاعات در مرورگر همین دستگاه ذخیره می‌شود.</p>
-</div></section>
-
-<main id="app" class="hidden">
-<section class="panel hero">
-<p class="gold small"><b>YOUR PERSONAL LANGUAGE SPACE</b></p><h2 id="greeting">خوش آمدی!</h2><p>هر روز یک قدم کوچک به هدفت نزدیک‌تر شو.</p>
-<div class="languages">
-<button class="lang" data-lang="de"><span>🇩🇪</span><b>Deutsch</b><small>آلمانی</small></button>
-<button class="lang" data-lang="en"><span>🇬🇧</span><b>English</b><small>انگلیسی</small></button>
-<button class="lang" data-lang="es"><span>🇪🇸</span><b>Español</b><small>اسپانیایی</small></button>
-</div></section>
-<div class="layout">
-<aside><nav>
-<button class="active" data-view="home">⌂ خانه</button><button data-view="courses">▤ دوره‌ها</button><button data-view="practice">✎ تمرین</button><button data-view="vocab">▣ واژگان</button><button data-view="progress">◔ پیشرفت</button><button data-view="profile">☺ پروفایل</button><button data-view="premium">✦ Premium</button><button data-view="rules">ⓘ قوانین</button>
-</nav></aside>
-<div>
-<section class="panel view active" id="home">
-<h2 id="homeTitle">آماده‌ای برای یادگیری؟</h2><p class="muted">با تمرین روزانه، قدم‌به‌قدم پیشرفت کن.</p>
-<div class="stats"><div class="stat"><b id="xp">0</b><span>امتیاز XP</span></div><div class="stat"><b id="correct">0</b><span>پاسخ صحیح</span></div><div class="stat"><b id="streak">0</b><span>روز متوالی</span></div></div>
-<div class="card"><h3>🎯 هدف روزانه</h3><p id="dailyLabel" class="muted">0 از 10 XP</p><div class="progress"><div id="dailyBar"></div></div></div>
-<div class="card"><h3>📚 ادامه یادگیری</h3><p id="nextLesson" class="muted"></p><button class="btn primary" id="continueBtn">شروع درس ←</button></div>
-<div class="card"><h3>💡 پیشنهاد امروز</h3><p class="muted">واژه‌های تازه را با صدای بلند تکرار کن و فردا دوباره مرورشان کن.</p></div>
-</section>
-
-<section class="panel view" id="courses"><h2>دوره‌های یادگیری</h2><p class="muted">درس‌های کوتاه برای شروع مکالمه روزمره.</p><div id="courseList"></div></section>
-
-<section class="panel view" id="practice">
-<h2>تمرین تعاملی</h2><p class="muted">معنی عبارت را انتخاب کن تا امتیاز بگیری.</p>
-<div class="wordbox"><div id="wordCount" class="gold small">درس ۱</div><div id="word" class="word">Hallo!</div><p id="meaning">سلام!</p><div class="actions" style="justify-content:center"><button class="btn" id="speakBtn">🔊 شنیدن تلفظ</button><button class="btn" id="saveWordBtn">☆ ذخیره واژه</button></div></div>
-<h3 id="question">معنی این عبارت چیست؟</h3><div id="options" class="options"></div><div id="feedback" aria-live="polite"></div>
-<div class="actions"><button class="btn primary" id="checkBtn">بررسی پاسخ</button><button class="btn goldbtn hidden" id="nextBtn">ادامه درس ←</button></div>
-</section>
-
-<section class="panel view" id="vocab"><h2>دفترچه واژگان</h2><p class="muted">کلماتی که ذخیره کرده‌ای اینجا نمایش داده می‌شوند.</p><div id="vocabList"></div></section>
-
-<section class="panel view" id="progress">
-<h2>گزارش پیشرفت</h2><div class="stats"><div class="stat"><b id="pXP">0</b><span>مجموع XP</span></div><div class="stat"><b id="pCorrect">0</b><span>پاسخ صحیح</span></div><div class="stat"><b id="accuracy">—</b><span>دقت آزمون</span></div></div>
-<h3>دقت پاسخ‌ها</h3><div class="progress"><div id="accuracyBar"></div></div><p id="progressMessage" class="muted"></p><div class="card"><h3>وضعیت دوره‌ها</h3><div id="languageStats"></div></div><button class="btn" id="exportBtn">⬇ دانلود نسخه پشتیبان</button>
-</section>
-
-<section class="panel view" id="profile"><h2>پروفایل</h2><label for="profileName">نام نمایشی</label><input id="profileName" maxlength="50"><label for="profileLevel">سطح زبان</label><select id="profileLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select><label for="dailyGoal">هدف روزانه</label><select id="dailyGoal"><option value="10">10 XP — سبک</option><option value="20">20 XP — معمولی</option><option value="30">30 XP — چالشی</option></select><div class="actions"><button class="btn primary" id="saveProfile">ذخیره تغییرات</button><button class="btn" id="resetProgress">پاک‌کردن پیشرفت</button></div></section>
-
-<section class="panel view" id="premium"><h2>✦ MORTI Premium</h2><p class="muted">نسخه رایگان برای تمرین‌های پایه آماده است.</p><div class="card"><h3>رایگان</h3><p>درس‌ها، آزمون، واژگان و ثبت پیشرفت محلی.</p></div><div class="card"><h3>Premium — امکانات پیشنهادی</h3><ul><li>دوره‌های کامل و پیشرفته</li><li>تمرین شنیداری و مکالمه</li><li>مرور هوشمند واژگان</li><li>گزارش پیشرفته</li><li>همگام‌سازی دستگاه‌ها</li></ul><p class="muted">اشتراک و پرداخت واقعی هنوز فعال نیستند و به سرور نیاز دارند.</p></div></section>
-
-<section class="panel view" id="rules"><h2>قوانین و حریم خصوصی</h2><h3>ذخیره‌سازی</h3><p class="muted">نام، سطح، امتیاز و واژه‌ها در حافظه مرورگر همین دستگاه ذخیره می‌شوند. پاک‌کردن داده‌های مرورگر ممکن است اطلاعات را حذف کند.</p><h3>حساب و پرداخت</h3><p class="muted">این نسخه حساب آنلاین، پرداخت یا پنل مدیریت سروری ندارد. اطلاعات بانکی وارد نکن.</p><h3>محتوا</h3><p class="muted">درس‌های فعلی نمونه آموزشی‌اند و جایگزین دوره کامل یا آزمون رسمی زبان نیستند.</p><h3>استفاده</h3><p class="muted">پیش از انتشار عمومی یا تجاری، شرایط استفاده و سیاست حریم خصوصی نهایی باید بررسی و تکمیل شوند.</p></section>
-</div></div></main>
-<div id="toast" role="status" aria-live="polite"></div>
-<footer>MORTI Ill LANGUAGE ACADEMY · DEUTSCH • ENGLISH • ESPAÑOL<br>Learn a little. Grow every day.</footer>
-
+<header>
+ <div class="logo"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201100%20437%22%20width%3D%221100%22%20height%3D%22437%22%3E%0A%3Cdefs%3E%0A%3Cpattern%20id%3D%22ck%22%20width%3D%2268%22%20height%3D%2268%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Crect%20width%3D%2268%22%20height%3D%2268%22%20fill%3D%22%230f1115%22%2F%3E%3Crect%20width%3D%2234%22%20height%3D%2234%22%20fill%3D%22%231d2028%22%2F%3E%3Crect%20x%3D%2234%22%20y%3D%2234%22%20width%3D%2234%22%20height%3D%2234%22%20fill%3D%22%231d2028%22%2F%3E%3C%2Fpattern%3E%0A%3CradialGradient%20id%3D%22vg%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2262%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%22.6%22%2F%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%22.33%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%0A%3ClinearGradient%20id%3D%22am%22%20x1%3D%220%22%20x2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d9dbe0%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b9bcc6%22%2F%3E%3C%2FlinearGradient%3E%0A%3CclipPath%20id%3D%22cl%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%221098%22%20height%3D%22435%22%20rx%3D%2240%22%2F%3E%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3Cg%20clip-path%3D%22url%28%23cl%29%22%3E%3Crect%20width%3D%221100%22%20height%3D%22437%22%20fill%3D%22%230f1115%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%221098%22%20height%3D%22435%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22%232a2c33%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23d02a1f%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20fill%3D%22%23f4f5f8%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20fill%3D%22url%28%23am%29%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20fill%3D%22url%28%23am%29%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20fill%3D%22%238b8d96%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%238b8d96%22%2F%3E%0A%3C%2Fsvg%3E" alt="Morti Language Academy"></div>
+ <select id="ui" onchange="S.ui=this.value;sv();draw()" aria-label="Language">
+  <option value="fa">فارسی</option><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option></select>
+ <button class="ib" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme">◐</button>
+</header>
+<div class="hero">
+ <div class="wm" id="wm" role="region"><div class="tk" id="tk"></div></div>
+ <img class="hl" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2292%2056%20916%20324%22%20width%3D%22916%22%20height%3D%22324%22%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23e0382c%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20fill%3D%22%23f7f8fb%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20fill%3D%22%23e3e6ec%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20fill%3D%22%23e3e6ec%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20fill%3D%22%23b9bdc8%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23e0382c%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%23a3a6b1%22%2F%3E%3C%2Fsvg%3E" alt="Morti Language Academy">
+ <h1 dir="ltr"><span>Hallo</span><span>Hello</span><span>Hola</span><span dir="rtl">سلام</span></h1>
+ <p id="sub"></p>
+ <div class="sw" id="sw"></div>
+</div>
+<main>
+ <div class="stats" id="st"></div>
+ <nav id="nav"></nav>
+ <section id="app"></section>
+</main>
 <script>
-"use strict";
-const lessons={
-de:[
-{title:"سلام و احوال‌پرسی",word:"Hallo!",meaning:"سلام!",pron:"هالو",q:"معنی Hallo چیست؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
-{title:"معرفی خود",word:"Ich heiße Anna.",meaning:"اسم من آنا است.",pron:"ایش هایسه آنا",q:"Ich heiße Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل آلمانم"],correct:0},
-{title:"تشکر",word:"Danke schön!",meaning:"خیلی ممنون!",pron:"دانکه شون",q:"کدام عبارت برای تشکر است؟",opts:["Gute Nacht!","Danke schön!","Auf Wiedersehen!"],correct:1},
-{title:"صبح بخیر",word:"Guten Morgen!",meaning:"صبح بخیر!",pron:"گوتن مورگن",q:"Guten Morgen چه زمانی استفاده می‌شود؟",opts:["صبح","شب","خداحافظی"],correct:0},
-{title:"خداحافظی",word:"Auf Wiedersehen!",meaning:"خداحافظ!",pron:"آوف ویدرزین",q:"معنی Auf Wiedersehen چیست؟",opts:["لطفاً","صبح بخیر","خداحافظ"],correct:2}
-],
-en:[
-{title:"سلام و احوال‌پرسی",word:"Hello!",meaning:"سلام!",pron:"هلو",q:"Hello یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
-{title:"معرفی خود",word:"My name is Anna.",meaning:"اسم من آنا است.",pron:"مای نیم ایز آنا",q:"My name is Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","اسم تو آناست"],correct:0},
-{title:"تشکر",word:"Thank you!",meaning:"متشکرم!",pron:"ثنک یو",q:"کدام عبارت برای تشکر است؟",opts:["Good night!","Thank you!","Goodbye!"],correct:1},
-{title:"صبح بخیر",word:"Good morning!",meaning:"صبح بخیر!",pron:"گود مورنینگ",q:"Good morning چه زمانی استفاده می‌شود؟",opts:["صبح","شب","خداحافظی"],correct:0},
-{title:"خداحافظی",word:"See you later!",meaning:"بعداً می‌بینمت!",pron:"سی یو لِیتر",q:"See you later یعنی چه؟",opts:["حالت چطور است؟","شب بخیر","بعداً می‌بینمت"],correct:2}
-],
-es:[
-{title:"سلام و احوال‌پرسی",word:"¡Hola!",meaning:"سلام!",pron:"اولا",q:"¡Hola! یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
-{title:"معرفی خود",word:"Me llamo Ana.",meaning:"اسم من آنا است.",pron:"مه یامو آنا",q:"Me llamo Ana یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل اسپانیا هستم"],correct:0},
-{title:"تشکر",word:"¡Muchas gracias!",meaning:"خیلی ممنون!",pron:"موچاس گراسیاس",q:"کدام عبارت برای تشکر است؟",opts:["¡Buenos días!","¡Adiós!","¡Muchas gracias!"],correct:2},
-{title:"صبح بخیر",word:"¡Buenos días!",meaning:"صبح بخیر!",pron:"بوئنس دیاس",q:"¡Buenos días! چه زمانی استفاده می‌شود؟",opts:["صبح","شب","خداحافظی"],correct:0},
-{title:"خداحافظی",word:"¡Hasta luego!",meaning:"بعداً می‌بینمت!",pron:"آستا لوئگو",q:"¡Hasta luego! یعنی چه؟",opts:["لطفاً","متشکرم","بعداً می‌بینمت"],correct:2}
-]};
-const $=id=>document.getElementById(id);
-function fresh(){return{name:"",lang:"de",level:"A1",goal:10,xp:0,attempts:0,correct:0,index:{de:0,en:0,es:0},completed:{de:[],en:[],es:[]},savedWords:[],daily:{date:"",xp:0},streak:0,lastDay:""}}
-function load(){try{const r=JSON.parse(localStorage.getItem("morti-academy-v1")||"null");if(!r)return fresh();const s={...fresh(),...r};s.index={...fresh().index,...(r.index||{})};s.completed={...fresh().completed,...(r.completed||{})};s.savedWords=Array.isArray(r.savedWords)?r.savedWords:[];for(const c of ["de","en","es"]){s.index[c]=Number.isInteger(s.index[c])?Math.max(0,s.index[c])%lessons[c].length:0;s.completed[c]=Array.isArray(s.completed[c])?s.completed[c].filter(n=>Number.isInteger(n)&&n>=0&&n<lessons[c].length):[]}s.xp=Math.max(0,Number(s.xp)||0);s.correct=Math.max(0,Number(s.correct)||0);s.attempts=Math.max(s.correct,Number(s.attempts)||0);s.goal=[10,20,30].includes(Number(s.goal))?Number(s.goal):10;if(!["de","en","es"].includes(s.lang))s.lang="de";if(!["A1","A2","B1","B2","C1","C2"].includes(s.level))s.level="A1";return s}catch(e){return fresh()}}
-let state=load(),choice=null,answered=false,timer;
-function today(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
-function resetDaily(){if(!state.daily||state.daily.date!==today())state.daily={date:today(),xp:0}}
-function save(){try{localStorage.setItem("morti-academy-v1",JSON.stringify(state))}catch(e){toast("ذخیره مرورگر ممکن نشد.")}}
-function toast(s){$("toast").textContent=s;$("toast").style.display="block";clearTimeout(timer);timer=setTimeout(()=>$("toast").style.display="none",2800)}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function langName(c){return{de:"آلمانی",en:"انگلیسی",es:"اسپانیایی"}[c]}
-function current(){return lessons[state.lang][state.index[state.lang]%lessons[state.lang].length]}
-function showWelcome(){$("app").classList.add("hidden");$("welcome").classList.remove("hidden");$("firstName").value=state.name||"";$("firstLang").value=state.lang;$("firstLevel").value=state.level}
-function start(){ $("welcome").classList.add("hidden");$("app").classList.remove("hidden");$("greeting").textContent="خوش آمدی، "+state.name+"! 👋";$("homeTitle").textContent="سلام "+state.name+"، آماده‌ای؟";$("profileName").value=state.name;$("profileLevel").value=state.level;$("dailyGoal").value=String(state.goal);updateAll()}
-function showView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));if(id==="practice")renderPractice();if(id==="courses")renderCourses();if(id==="vocab")renderVocab();if(id==="progress")renderProgress();window.scrollTo({top:0,behavior:"smooth"})}
-document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{state.lang=b.dataset.lang;save();updateAll();toast("زبان انتخابی: "+langName(state.lang))}));
-$("welcomeForm").addEventListener("submit",e=>{e.preventDefault();const n=$("firstName").value.trim();if(!n)return;state.name=n.slice(0,50);state.lang=$("firstLang").value;state.level=$("firstLevel").value;resetDaily();save();start();toast("خوش آمدی "+state.name+"! ✨")});
-function updateStats(){resetDaily();$("xp").textContent=state.xp;$("headerXP").textContent=state.xp+" XP";$("correct").textContent=state.correct;$("streak").textContent=state.streak;$("pXP").textContent=state.xp;$("pCorrect").textContent=state.correct;const a=state.attempts?Math.round(state.correct/state.attempts*100):0;$("accuracy").textContent=state.attempts?a+"%":"—";$("dailyLabel").textContent=state.daily.xp+" از "+state.goal+" XP";$("dailyBar").style.width=Math.min(100,state.daily.xp/state.goal*100)+"%";$("nextLesson").textContent="زبان "+langName(state.lang)+" · درس "+(state.index[state.lang]+1)+": "+current().title}
-function updateAll(){updateStats();renderCourses();renderVocab();renderPractice();renderProgress();document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===state.lang))}
-function renderCourses(){const list=lessons[state.lang];$("courseList").innerHTML=list.map((l,i)=>{const done=state.completed[state.lang].includes(i);return`<div class="lesson"><div class="lessonicon">${done?"✓":i===state.index[state.lang]?"▶":"📘"}</div><div class="lessoninfo"><b>${i+1}. ${esc(l.title)}</b><p class="muted">${esc(l.word)} — ${esc(l.meaning)}</p><span class="muted small">${done?"تکمیل‌شده":i===state.index[state.lang]?"درس فعلی":"برای شروع انتخاب کن"}</span></div><button class="btn ${i===state.index[state.lang]?"primary":""}" data-start="${i}">شروع</button></div>`}).join("");$("courseList").querySelectorAll("[data-start]").forEach(b=>b.addEventListener("click",()=>{state.index[state.lang]=Number(b.dataset.start);save();renderPractice();showView("practice")}))}
-function renderPractice(){const l=current(),i=state.index[state.lang];choice=null;answered=false;$("wordCount").textContent="درس "+(i+1)+" از "+lessons[state.lang].length;$("word").textContent=l.word;$("meaning").textContent=l.meaning;$("question").textContent=l.q;$("feedback").innerHTML="";$("checkBtn").classList.remove("hidden");$("nextBtn").classList.add("hidden");$("options").innerHTML=l.opts.map((o,n)=>`<button class="option" data-choice="${n}">${esc(o)}</button>`).join("");$("options").querySelectorAll("[data-choice]").forEach(b=>b.addEventListener("click",()=>{if(answered)return;choice=Number(b.dataset.choice);$("options").querySelectorAll(".option").forEach(x=>x.classList.toggle("selected",x===b))}));$("saveWordBtn").textContent=state.savedWords.some(w=>w.key===state.lang+":"+i)?"★ ذخیره‌شده":"☆ ذخیره واژه"}
-$("continueBtn").addEventListener("click",()=>showView("practice"));
-$("checkBtn").addEventListener("click",()=>{if(answered)return;if(choice===null){toast("ابتدا یک پاسخ انتخاب کن.");return}const l=current(),i=state.index[state.lang],ok=choice===l.correct;answered=true;state.attempts++;if(ok){state.correct++;state.xp+=10;resetDaily();state.daily.xp+=10;if(!state.completed[state.lang].includes(i))state.completed[state.lang].push(i);$("feedback").innerHTML='<div class="notice success">آفرین! پاسخ درست است. 🎉 +10 XP</div>';const d=today();if(state.lastDay!==d){const y=new Date();y.setDate(y.getDate()-1);const yd=y.getFullYear()+"-"+String(y.getMonth()+1).padStart(2,"0")+"-"+String(y.getDate()).padStart(2,"0");state.streak=state.lastDay===yd?state.streak+1:1;state.lastDay=d}}else{$("feedback").innerHTML='<div class="notice error">اشکالی ندارد! پاسخ درست: <b>'+esc(l.opts[l.correct])+'</b></div>'}$("options").querySelectorAll(".option").forEach((b,n)=>{b.disabled=true;if(n===l.correct)b.classList.add("correct");else if(n===choice)b.classList.add("wrong")});$("checkBtn").classList.add("hidden");$("nextBtn").classList.remove("hidden");save();updateStats();renderProgress()});
-$("nextBtn").addEventListener("click",()=>{state.index[state.lang]=(state.index[state.lang]+1)%lessons[state.lang].length;save();updateAll()});
-$("speakBtn").addEventListener("click",()=>{if(!("speechSynthesis"in window)){toast("تلفظ صوتی در این مرورگر در دسترس نیست.");return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(current().word);u.lang={de:"de-DE",en:"en-US",es:"es-ES"}[state.lang];u.rate=.85;speechSynthesis.speak(u)});
-$("saveWordBtn").addEventListener("click",()=>{const l=current(),key=state.lang+":"+state.index[state.lang],i=state.savedWords.findIndex(w=>w.key===key);if(i>=0){state.savedWords.splice(i,1);toast("واژه حذف شد")}else{state.savedWords.push({key,lang:state.lang,word:l.word,meaning:l.meaning,pron:l.pron});toast("واژه ذخیره شد ⭐")}save();renderPractice();renderVocab()});
-function renderVocab(){if(!state.savedWords.length){$("vocabList").innerHTML='<div class="center" style="padding:25px"><div style="font-size:38px">📖</div><h3>دفترچه خالی است</h3><p class="muted">در تمرین روی «ذخیره واژه» بزن.</p></div>';return}$("vocabList").innerHTML=state.savedWords.map((w,i)=>`<div class="lesson"><div class="lessonicon">🔖</div><div class="lessoninfo"><b>${esc(w.word)}</b><p class="muted">${esc(w.meaning)} · ${langName(w.lang)}</p></div><button class="btn" data-remove="${i}">حذف</button></div>`).join("");$("vocabList").querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>{state.savedWords.splice(Number(b.dataset.remove),1);save();renderVocab();renderPractice()}))}
-function renderProgress(){const a=state.attempts?Math.round(state.correct/state.attempts*100):0;$("accuracyBar").style.width=a+"%";$("progressMessage").textContent=state.attempts?"از "+state.attempts+" پاسخ، "+state.correct+" پاسخ صحیح بوده است.":"با اولین تمرین گزارش تو شروع می‌شود.";$("languageStats").innerHTML=Object.keys(lessons).map(c=>`<p>${{de:"🇩🇪 آلمانی",en:"🇬🇧 انگلیسی",es:"🇪🇸 اسپانیایی"}[c]}: ${state.completed[c].length} از ${lessons[c].length} درس</p>`).join("")}
-$("saveProfile").addEventListener("click",()=>{const n=$("profileName").value.trim();if(!n){toast("نام نمی‌تواند خالی باشد.");return}state.name=n.slice(0,50);state.level=$("profileLevel").value;state.goal=Number($("dailyGoal").value)||10;save();start();toast("پروفایل ذخیره شد")});
-$("resetProgress").addEventListener("click",()=>{if(!confirm("تمام امتیازها و نتایج پاک شوند؟"))return;const keep={name:state.name,lang:state.lang,level:state.level,goal:state.goal};state={...fresh(),...keep};save();updateAll();toast("پیشرفت پاک شد")});
-$("exportBtn").addEventListener("click",()=>{try{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="morti-progress.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}catch(e){toast("ساخت نسخه پشتیبان ممکن نشد")}});
-resetDaily();if(state.name&&state.name.trim())start();else showWelcome();
+/* ====== داده‌های پایه: برای جمله‌های ثابت می‌توانید فایل data.json هم کنار index.html بگذارید ====== */
+const BASE=[
+{id:1,c:'greet',de:"Hallo, wie geht's?",en:"Hello, how are you?",es:"Hola, ¿cómo estás?",fa:"سلام، حالت چطوره؟"},
+{id:2,c:'greet',de:"Freut mich, dich kennenzulernen.",en:"Nice to meet you.",es:"Mucho gusto.",fa:"از آشنایی با شما خوشحالم."},
+{id:3,c:'greet',de:"Bis morgen!",en:"See you tomorrow!",es:"¡Hasta mañana!",fa:"تا فردا!"},
+{id:4,c:'travel',de:"Wo ist der Bahnhof?",en:"Where is the train station?",es:"¿Dónde está la estación de tren?",fa:"ایستگاه قطار کجاست؟"},
+{id:5,c:'travel',de:"Ich hätte gern ein Ticket.",en:"I would like a ticket.",es:"Quisiera un billete.",fa:"یک بلیط می‌خواهم."},
+{id:6,c:'travel',de:"Sprechen Sie Englisch?",en:"Do you speak English?",es:"¿Habla usted inglés?",fa:"انگلیسی صحبت می‌کنید؟"},
+{id:7,c:'food',de:"Die Rechnung, bitte.",en:"The bill, please.",es:"La cuenta, por favor.",fa:"لطفاً صورت‌حساب."},
+{id:8,c:'food',de:"Ich möchte einen Kaffee.",en:"I would like a coffee.",es:"Quiero un café.",fa:"یک قهوه می‌خواهم."},
+{id:9,c:'food',de:"Das schmeckt sehr gut!",en:"This tastes great!",es:"¡Esto está muy rico!",fa:"خیلی خوشمزه است!"},
+{id:10,c:'school',de:"Können Sie das wiederholen?",en:"Can you repeat that?",es:"¿Puede repetirlo?",fa:"می‌توانید تکرار کنید؟"},
+{id:11,c:'school',de:"Ich verstehe nicht.",en:"I don't understand.",es:"No entiendo.",fa:"متوجه نمی‌شوم."},
+{id:12,c:'school',de:"Ich lerne jeden Tag.",en:"I learn every day.",es:"Aprendo todos los días.",fa:"هر روز یاد می‌گیرم."},
+{id:13,c:'daily',de:"Wie spät ist es?",en:"What time is it?",es:"¿Qué hora es?",fa:"ساعت چنده؟"},
+{id:14,c:'daily',de:"Ich brauche Hilfe.",en:"I need help.",es:"Necesito ayuda.",fa:"به کمک نیاز دارم."},
+{id:15,c:'daily',de:"Vielen Dank!",en:"Thank you very much!",es:"¡Muchas gracias!",fa:"خیلی ممنون!"},
+{id:16,k:'w',c:'food',lv:'A1',de:"das Brot",en:"bread",es:"el pan",fa:"نان",ex:{de:"Ich esse Brot zum Frühstück.",en:"I eat bread for breakfast.",es:"Como pan en el desayuno.",fa:"من برای صبحانه نان می‌خورم."}},
+{id:17,k:'w',c:'food',lv:'A1',de:"das Wasser",en:"water",es:"el agua",fa:"آب",ex:{de:"Ich trinke viel Wasser.",en:"I drink a lot of water.",es:"Bebo mucha agua.",fa:"من زیاد آب می‌نوشم."}},
+{id:18,k:'w',c:'school',lv:'A1',de:"die Schule",en:"school",es:"la escuela",fa:"مدرسه",ex:{de:"Die Schule beginnt um acht Uhr.",en:"School starts at eight o'clock.",es:"La escuela empieza a las ocho.",fa:"مدرسه ساعت هشت شروع می‌شود."}},
+{id:19,k:'w',c:'travel',lv:'A2',de:"reisen",en:"to travel",es:"viajar",fa:"سفر کردن",ex:{de:"Ich reise gern mit dem Zug.",en:"I like travelling by train.",es:"Me gusta viajar en tren.",fa:"دوست دارم با قطار سفر کنم."}},
+{id:20,k:'w',c:'daily',lv:'A2',de:"freundlich",en:"friendly",es:"amable",fa:"مهربان",ex:{de:"Sie ist sehr freundlich.",en:"She is very friendly.",es:"Ella es muy amable.",fa:"او خیلی مهربان است."}}];
+const C={greet:{fa:'سلام و احوال‌پرسی',de:'Begrüßung',en:'Greetings',es:'Saludos'},travel:{fa:'سفر',de:'Reisen',en:'Travel',es:'Viajes'},food:{fa:'غذا و رستوران',de:'Essen',en:'Food',es:'Comida'},school:{fa:'کلاس و یادگیری',de:'Schule',en:'School',es:'Escuela'},daily:{fa:'زندگی روزمره',de:'Alltag',en:'Daily life',es:'Vida diaria'}};
+const LN={de:'Deutsch',en:'English',es:'Español',fa:'فارسی'},VC={de:'de-DE',en:'en-US',es:'es-ES'};
+const T={
+fa:{sub:'آلمانی، انگلیسی و اسپانیایی را با جمله‌های واقعی یاد بگیر',learn:'جمله‌ها',cards:'فلش‌کارت',quiz:'آزمون',saved:'ذخیره‌شده‌ها',admin:'مدیر',search:'جستجو...',all:'همه',iLearn:'می‌خواهم یاد بگیرم',my:'ترجمه به',ok:'بلد بودم',again:'دوباره',tap:'برای دیدن ترجمه بزن',next:'بعدی',xp:'امتیاز',streak:'پشت‌سرهم',known:'یادگرفته',pw:'رمز عبور',login:'ورود',out:'خروج',save:'ذخیره',del:'حذف',exp:'دانلود data.json',imp:'وارد کردن',empty:'اینجا هنوز چیزی نیست.',cat:'دسته',wrong:'رمز اشتباه است.',newp:'جمله جدید',chpw:'رمز جدید',hint:'برای ماندگاری روی GitHub فایل data.json را دانلود و در مخزن جایگزین کنید.',right:'درست!',quizq:'کدام جمله درست است؟'},
+de:{sub:'Lerne Deutsch, Englisch und Spanisch mit echten Sätzen',learn:'Sätze',cards:'Karteikarten',quiz:'Quiz',saved:'Gemerkt',admin:'Admin',search:'Suchen...',all:'Alle',iLearn:'Ich lerne',my:'Übersetzung in',ok:'Gewusst',again:'Nochmal',tap:'Tippen für Übersetzung',next:'Weiter',xp:'Punkte',streak:'Serie',known:'Gelernt',pw:'Passwort',login:'Anmelden',out:'Abmelden',save:'Speichern',del:'Löschen',exp:'data.json laden',imp:'Importieren',empty:'Hier ist noch nichts.',cat:'Kategorie',wrong:'Falsches Passwort.',newp:'Neuer Satz',chpw:'Neues Passwort',hint:'Für dauerhaftes Speichern auf GitHub: data.json herunterladen und im Repository ersetzen.',right:'Richtig!',quizq:'Welcher Satz ist richtig?'},
+en:{sub:'Learn German, English and Spanish with real-life sentences',learn:'Phrases',cards:'Flashcards',quiz:'Quiz',saved:'Saved',admin:'Admin',search:'Search...',all:'All',iLearn:'I learn',my:'Translate to',ok:'Got it',again:'Again',tap:'Tap to reveal translation',next:'Next',xp:'XP',streak:'Streak',known:'Learned',pw:'Password',login:'Log in',out:'Log out',save:'Save',del:'Delete',exp:'Download data.json',imp:'Import',empty:'Nothing here yet.',cat:'Category',wrong:'Wrong password.',newp:'New phrase',chpw:'New password',hint:'To keep changes on GitHub, download data.json and replace it in your repository.',right:'Correct!',quizq:'Which sentence is correct?'},
+es:{sub:'Aprende alemán, inglés y español con frases reales',learn:'Frases',cards:'Tarjetas',quiz:'Quiz',saved:'Guardadas',admin:'Admin',search:'Buscar...',all:'Todas',iLearn:'Aprendo',my:'Traducir a',ok:'Lo sé',again:'Otra vez',tap:'Toca para ver la traducción',next:'Siguiente',xp:'Puntos',streak:'Racha',known:'Aprendidas',pw:'Contraseña',login:'Entrar',out:'Salir',save:'Guardar',del:'Borrar',exp:'Descargar data.json',imp:'Importar',empty:'Aún no hay nada.',cat:'Categoría',wrong:'Contraseña incorrecta.',newp:'Nueva frase',chpw:'Nueva contraseña',hint:'Para conservar los cambios en GitHub, descarga data.json y reemplázalo en tu repositorio.',right:'¡Correcto!',quizq:'¿Qué frase es correcta?'}};
+
+const X={
+fa:{learn:'لغت و جمله',type:'تایپ',match:'جور کردن',lvl:'سطح',words:'لغت‌ها',sents:'جمله‌ها',allT:'همه',ex:'مثال',typeq:'این را بنویس',check:'بررسی',ans:'پاسخ درست',addcat:'دستهٔ جدید',done:'آفرین! همه را درست جور کردی',fill:'همهٔ چهار ترجمه را پر کن.',kind:'نوع'},
+de:{learn:'Wörter & Sätze',type:'Tippen',match:'Zuordnen',lvl:'Niveau',words:'Wörter',sents:'Sätze',allT:'Alle',ex:'Beispiel',typeq:'Schreibe das in der Lernsprache',check:'Prüfen',ans:'Richtig wäre',addcat:'Neue Kategorie',done:'Super! Alles richtig zugeordnet',fill:'Bitte alle vier Übersetzungen ausfüllen.',kind:'Art'},
+en:{learn:'Words & phrases',type:'Typing',match:'Match',lvl:'Level',words:'Words',sents:'Sentences',allT:'All',ex:'Example',typeq:'Type this in the language you learn',check:'Check',ans:'Correct answer',addcat:'New category',done:'Great! All pairs matched',fill:'Please fill in all four translations.',kind:'Type'},
+es:{learn:'Palabras y frases',type:'Escribir',match:'Unir',lvl:'Nivel',words:'Palabras',sents:'Frases',allT:'Todo',ex:'Ejemplo',typeq:'Escribe esto en el idioma que aprendes',check:'Comprobar',ans:'Respuesta correcta',addcat:'Nueva categoría',done:'¡Genial! Todo unido',fill:'Rellena las cuatro traducciones.',kind:'Tipo'}};
+for(const l in X)Object.assign(T[l],X[l]);
+const W={
+fa:['به آکادمی زبان مورتی خوش آمدید','هر روز یک جمله، یک قدم نزدیک‌تر به روان‌صحبت‌کردن','یادگیری یک زبان تازه، دری به دنیای تازه است؛ همین امروز شروع کن!'],
+de:['Willkommen in der Morti Language Academy','Jeden Tag ein Satz – ein Schritt näher zur Sprachfreiheit','Eine neue Sprache öffnet dir eine neue Welt – fang heute an!'],
+en:['Welcome to Morti Language Academy','One sentence a day – one step closer to fluency','A new language opens a new world – start today!'],
+es:['Te damos la bienvenida a Morti Language Academy','Una frase al día, un paso más cerca de la fluidez','Un nuevo idioma abre un mundo nuevo: ¡empieza hoy!']};
+let wmLang=null;
+function setWm(){if(wmLang===S.ui)return;wmLang=S.ui;const ph=W[S.ui]||W.en;
+ const unit=()=>[0,1,2].map(()=>ph.map((x,i)=>`<span class="ph${i?'':' hi'}">${x}</span><b class="sp" aria-hidden="true">///</b>`).join('')).join('');
+ document.getElementById('tk').innerHTML=`<div class="un">${unit()}</div><div class="un" aria-hidden="true">${unit()}</div>`;
+ document.getElementById('wm').setAttribute('aria-label',ph[0])}
+
+const ld=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(x){return null}};
+let D=ld('lp_data')||BASE,CU=ld('lp_cats')||{},
+S=Object.assign({ui:'fa',learn:'de',my:'fa',tab:'learn',cat:'all',lv:'all',kd:'all',q:'',fav:[],known:[],xp:0,streak:0,dark:false},ld('lp_s')||{}),
+admin=false,ci=0,fl=false,qz=null,ty=null,mg=null,ed=null,msg='';
+const LV=['A1','A2','B1','B2','C1'];
+const sv=()=>{try{localStorage.setItem('lp_s',JSON.stringify(S))}catch(x){}};
+const svD=()=>{qz=ty=mg=null;try{localStorage.setItem('lp_data',JSON.stringify(D));localStorage.setItem('lp_cats',JSON.stringify(CU))}catch(x){}};
+const CAT=()=>Object.assign({},C,CU);
+const cn=k=>{const c=CAT()[k];return c?(c[S.ui]||c.en||k):k};
+const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const t=k=>T[S.ui][k];
+const dirOf=l=>l==='fa'?'rtl':'ltr';
+const LG=['de','en','es','fa'];
+const list=()=>D.filter(p=>(S.cat==='all'||p.c===S.cat)&&(S.lv==='all'||(p.lv||'A1')===S.lv)&&(S.kd==='all'||(p.k||'p')===S.kd)&&(!S.q||LG.some(l=>(p[l]||'').toLowerCase().includes(S.q.toLowerCase()))));
+const tog=(a,id)=>{const i=S[a].indexOf(id);i<0?S[a].push(id):S[a].splice(i,1);sv();draw()};
+const speak=id=>{const p=D.find(x=>x.id===id);if(!p||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(p[S.learn]);u.lang=VC[S.learn];u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)};
+const pick=(a,n)=>a.slice().sort(()=>Math.random()-.5).slice(0,n);
+const exOf=p=>p.ex&&p.ex[S.learn]?`<em class="ex" dir="ltr" lang="${S.learn}">${e(p.ex[S.learn])}${p.ex[S.my]&&S.my!==S.learn?`<br><span dir="${dirOf(S.my)}">${e(p.ex[S.my])}</span>`:''}</em>`:'';
+
+function item(p){return `<div class="p ${S.known.includes(p.id)?'k':''}"><div class="t"><b dir="ltr" lang="${S.learn}">${e(p[S.learn])}<span class="lv">${p.lv||'A1'}</span></b><span dir="${dirOf(S.my)}">${e(p[S.my])}</span>${exOf(p)}</div>
+<div class="ab"><button onclick="speak(${p.id})" aria-label="audio">🔊</button><button onclick="tog('fav',${p.id})" aria-label="save">${S.fav.includes(p.id)?'❤️':'🤍'}</button><button onclick="tog('known',${p.id})" aria-label="known">${S.known.includes(p.id)?'✅':'⬜'}</button></div></div>`}
+const opts=(arr,cur,f)=>arr.map(k=>`<option value="${k}" ${cur===k?'selected':''}>${f(k)}</option>`).join('');
+function filters(){return `<div class="bar"><input value="${e(S.q)}" placeholder="${t('search')}" oninput="S.q=this.value;sv();draw(1)">
+<select onchange="S.cat=this.value;ci=0;sv();draw()" aria-label="${t('cat')}"><option value="all">${t('all')}</option>${opts(Object.keys(CAT()),S.cat,cn)}</select>
+<select onchange="S.lv=this.value;ci=0;sv();draw()" aria-label="${t('lvl')}"><option value="all">${t('lvl')}: ${t('all')}</option>${opts(LV,S.lv,x=>x)}</select>
+<select onchange="S.kd=this.value;ci=0;sv();draw()" aria-label="${t('kind')}"><option value="all">${t('allT')}</option><option value="w" ${S.kd==='w'?'selected':''}>${t('words')}</option><option value="p" ${S.kd==='p'?'selected':''}>${t('sents')}</option></select></div>`}
+
+function vLearn(l=list()){return filters()+(l.length?`<div class="grid">${l.map(item).join('')}</div>`:`<div class="e">${t('empty')}</div>`)}
+const vSaved=()=>vLearn(D.filter(p=>S.fav.includes(p.id)));
+function vCards(){const d=list();if(!d.length)return filters()+`<div class="e">${t('empty')}</div>`;const p=d[ci%d.length];
+return filters()+`<div class="nar"><div class="big" onclick="fl=!fl;draw()"><small style="color:var(--mut)">${ci%d.length+1} / ${d.length}</small>${fl?`<b dir="${dirOf(S.my)}">${e(p[S.my])}</b>${exOf(p)}`:`<b dir="ltr" lang="${S.learn}">${e(p[S.learn])}</b><small style="color:var(--mut)">${t('tap')}</small>`}</div>
+<div class="row"><button class="btn m" onclick="speak(${p.id})">🔊</button><button class="btn r" onclick="S.streak=0;ci++;fl=false;sv();draw()">${t('again')}</button><button class="btn g" onclick="cardOk(${p.id})">${t('ok')}</button></div></div>`}
+function cardOk(id){if(!S.known.includes(id))S.known.push(id);S.xp+=5;S.streak++;ci++;fl=false;sv();draw()}
+
+function newQ(){if(D.length<4){qz=null;return}const p=pick(D,1)[0];qz={p,o:pick([p,...pick(D.filter(x=>x.id!==p.id),3)],4),a:null}}
+function ans(i){if(qz.a!==null)return;qz.a=i;if(qz.o[i].id===qz.p.id){S.xp+=10;S.streak++}else S.streak=0;sv();draw()}
+function vQuiz(){if(!qz)newQ();if(!qz)return `<div class="e">${t('empty')}</div>`;
+return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('quizq')}</p><h3 dir="${dirOf(S.my)}">${e(qz.p[S.my])}</h3>${qz.o.map((o,i)=>`<button class="opt ${qz.a!==null?(o.id===qz.p.id?'ok':i===qz.a?'bad':''):''}" dir="ltr" onclick="ans(${i})">${e(o[S.learn])}</button>`).join('')}${qz.a!==null?`<div class="row"><button class="btn s" onclick="speak(${qz.p.id})">🔊</button><button class="btn" onclick="newQ();draw()">${t('next')}</button></div>`:''}</div>`}
+
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[.,!?¡¿;:'"’-]/g,'').replace(/\s+/g,' ').trim();
+function newT(){const d=list().length?list():D;ty=d.length?{p:pick(d,1)[0],r:null,v:''}:null}
+function chkT(){if(ty.r!==null)return;ty.v=document.getElementById('ty_in').value;ty.r=norm(ty.v)===norm(ty.p[S.learn]);if(ty.r){S.xp+=15;S.streak++}else S.streak=0;sv();draw()}
+function vType(){if(!ty)newT();if(!ty)return `<div class="e">${t('empty')}</div>`;const p=ty.p;
+return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('typeq')} (${LN[S.learn]})</p><h3 dir="${dirOf(S.my)}">${e(p[S.my])}</h3>
+<input id="ty_in" dir="ltr" lang="${S.learn}" autocomplete="off" autocapitalize="off" spellcheck="false" value="${e(ty.v)}" ${ty.r!==null?'disabled':''} onkeydown="if(event.key==='Enter')chkT()">
+${ty.r===null?`<div class="row"><button class="btn" onclick="chkT()">${t('check')}</button></div>`:`<p style="font-weight:700;color:var(--${ty.r?'ok':'bad'})">${ty.r?t('right'):t('ans')+':'} <span dir="ltr" style="color:var(--ink)">${ty.r?'':e(p[S.learn])}</span></p><div class="row"><button class="btn s" onclick="speak(${p.id})">🔊</button><button class="btn" onclick="newT();draw()">${t('next')}</button></div>`}</div>`}
+
+function newM(){const d=pick(list().length>=3?list():D,6);mg=d.length>=2?{L:pick(d,6).map(x=>x.id),R:pick(d,6).map(x=>x.id),done:[],sel:null,bad:null}:null}
+function mc(side,id){if(mg.done.includes(id))return;if(!mg.sel||mg.sel.side===side){mg.sel={side,id}}else{if(mg.sel.id===id){mg.done.push(id);S.xp+=5;S.streak++;if(mg.done.length===mg.L.length)S.xp+=20}else{S.streak=0;mg.bad=[mg.sel,{side,id}];setTimeout(()=>{if(mg){mg.bad=null;draw()}},600)}mg.sel=null}sv();draw()}
+function vMatch(){if(!mg)newM();if(!mg)return `<div class="e">${t('empty')}</div>`;
+const cell=(side,id)=>{const p=D.find(x=>x.id===id);const dn=mg.done.includes(id),sl=mg.sel&&mg.sel.side===side&&mg.sel.id===id,bd=mg.bad&&mg.bad.some(b=>b.side===side&&b.id===id);
+return `<button class="opt ${dn?'ok':bd?'bad':sl?'sel':''}" ${dn?'disabled':''} dir="${side==='l'?'ltr':dirOf(S.my)}" onclick="mc('${side}',${id})">${e(p[side==='l'?S.learn:S.my])}</button>`};
+const fin=mg.done.length===mg.L.length;
+return `<div class="nar"><div class="mg"><div>${mg.L.map(i=>cell('l',i)).join('')}</div><div>${mg.R.map(i=>cell('r',i)).join('')}</div></div>${fin?`<p style="font-weight:700;color:var(--ok);text-align:center">${t('done')}</p><div class="row"><button class="btn" onclick="newM();draw()">${t('next')}</button></div>`:''}</div>`}
+
+function vAdmin(){
+if(!admin)return `<div class="card nar"><h3>${t('admin')}</h3><label>${t('pw')}</label><input type="password" id="pw" onkeydown="if(event.key==='Enter')login()"><div class="row"><button class="btn" onclick="login()">${t('login')}</button></div><p style="color:var(--bad)">${msg}</p></div>`;
+const p=ed!=null?D.find(x=>x.id===ed):{k:'w',c:Object.keys(CAT())[0],lv:'A1'};const x=p.ex||{};
+return `<div class="ad"><div>
+<div class="card"><h3>${ed!=null?'✏️ ':''}${t('newp')}</h3>
+<label>${t('kind')}</label><select id="f_k" style="width:100%"><option value="w" ${(p.k||'p')==='w'?'selected':''}>${t('words')}</option><option value="p" ${(p.k||'p')==='p'?'selected':''}>${t('sents')}</option></select>
+<label>${t('cat')}</label><select id="f_c" style="width:100%">${opts(Object.keys(CAT()),p.c,cn)}</select>
+<label>${t('lvl')}</label><select id="f_lv" style="width:100%">${opts(LV,p.lv||'A1',x=>x)}</select>
+${LG.map(l=>`<label>${LN[l]}</label><input id="f_${l}" dir="${dirOf(l)}" value="${e(p[l]||'')}">`).join('')}
+<label><b>${t('ex')}</b></label>${LG.map(l=>`<input id="x_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem" value="${e(x[l]||'')}">`).join('')}
+<p style="color:var(--bad);margin:.3rem 0">${msg}</p>
+<div class="row" style="margin-top:.3rem"><button class="btn g" onclick="addP()">${t('save')}</button>${ed!=null?`<button class="btn m" onclick="ed=null;draw()">✕</button>`:''}<button class="btn m" onclick="logout()">${t('out')}</button></div></div>
+<div class="card"><h3>${t('addcat')}</h3>${['fa','de','en','es'].map(l=>`<input id="cn_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem">`).join('')}<div class="row" style="margin-top:.3rem"><button class="btn" onclick="addC()">${t('save')}</button></div></div>
+<div class="card"><div class="row" style="margin:0"><button class="btn s" onclick="expD()">${t('exp')}</button><button class="btn m" onclick="document.getElementById('imp').click()">${t('imp')}</button><input type="file" id="imp" accept=".json" hidden onchange="impD(this.files[0])"></div><p style="color:var(--mut)">${t('hint')}</p>
+<label>${t('chpw')}</label><input id="np"><div class="row"><button class="btn" onclick="chPw()">${t('save')}</button></div></div></div>
+<div>${D.slice().reverse().map(y=>`<div class="p" style="margin-bottom:.6rem"><div class="t"><b dir="ltr">${e(y.de)}<span class="lv">${y.lv||'A1'}</span></b><span dir="ltr">${e(y.en)} · ${e(y.es)}</span><span dir="rtl" style="display:block">${e(y.fa)}</span><span style="font-size:.8rem">${(y.k||'p')==='w'?t('words'):t('sents')} · ${e(cn(y.c))}</span></div><div class="ab"><button onclick="ed=${y.id};msg='';draw();scrollTo(0,0)" aria-label="edit">✏️</button><button onclick="delP(${y.id})" aria-label="${t('del')}">🗑️</button></div></div>`).join('')}</div></div>`}
+function login(){const pw=localStorage.getItem('lp_pw')||'admin1234';if(document.getElementById('pw').value===pw){admin=true;msg=''}else msg=t('wrong');draw()}
+function logout(){admin=false;ed=null;draw()}
+function chPw(){const v=document.getElementById('np').value.trim();if(v.length>=6){try{localStorage.setItem('lp_pw',v)}catch(x){}document.getElementById('np').value=''}}
+function addP(){const g=i=>document.getElementById(i).value.trim();const o={k:g('f_k'),c:g('f_c'),lv:g('f_lv')};LG.forEach(l=>o[l]=g('f_'+l));
+if(LG.some(l=>!o[l])){msg=t('fill');draw();return}
+const ex={};LG.forEach(l=>{if(g('x_'+l))ex[l]=g('x_'+l)});if(Object.keys(ex).length)o.ex=ex;
+if(ed!=null){const i=D.findIndex(z=>z.id===ed);D[i]={id:ed,...o}}else D.push({id:Date.now(),...o});ed=null;msg='';svD();draw()}
+function addC(){const n={};['fa','de','en','es'].forEach(l=>n[l]=document.getElementById('cn_'+l).value.trim());const f=Object.values(n).find(v=>v);if(!f)return;for(const l in n)n[l]=n[l]||f;CU['c'+Date.now()]=n;svD();draw()}
+function delP(id){D=D.filter(x=>x.id!==id);svD();draw()}
+function expD(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({items:D,cats:CU},null,1)],{type:'application/json'}));a.download='data.json';a.click()}
+function applyData(j){if(Array.isArray(j))D=j;else if(j&&Array.isArray(j.items)){D=j.items;CU=j.cats||{}}else return false;return true}
+function impD(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{if(applyData(JSON.parse(r.result))){svD();draw()}}catch(x){}};r.readAsText(f)}
+
+const TABS=['learn','cards','quiz','type','match','saved','admin'],VW={learn:vLearn,cards:vCards,quiz:vQuiz,type:vType,match:vMatch,saved:vSaved,admin:vAdmin};
+function draw(keep){
+ const el=document.documentElement;el.lang=S.ui;el.dir=dirOf(S.ui);el.dataset.t=S.dark?'dark':'light';
+ ui.value=S.ui;sub.textContent=t('sub');setWm();
+ sw.innerHTML=['de','en','es'].map(l=>`<button class="${S.learn===l?'on':''}" onclick="S.learn='${l}';qz=ty=mg=null;sv();draw()">${LN[l]}</button>`).join('')+
+ `<select onchange="S.my=this.value;sv();draw()" aria-label="${t('my')}">${['fa','de','en','es'].map(l=>`<option value="${l}" ${S.my===l?'selected':''}>${t('my')} ${LN[l]}</option>`).join('')}</select>`;
+ st.innerHTML=`<div>${S.xp}<small>${t('xp')}</small></div><div>🔥 ${S.streak}<small>${t('streak')}</small></div><div>${S.known.length}/${D.length}<small>${t('known')}</small></div>`;
+ nav.innerHTML=TABS.map(k=>`<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';sv();draw()">${t(k)}</button>`).join('');
+ const a=document.activeElement,pos=a&&a.tagName==='INPUT'?a.selectionStart:null,isQ=keep&&a&&a.placeholder;
+ app.innerHTML=VW[S.tab]();
+ if(isQ){const i=app.querySelector('input');if(i){i.focus();try{i.setSelectionRange(pos,pos)}catch(x){}}}
+}
+draw();
+fetch('data.json').then(r=>r.ok?r.json():null).then(j=>{if(!ld('lp_data')&&applyData(j))draw()}).catch(()=>{});
 </script>
 </body>
 </html>
