@@ -68,3 +68,22 @@ Paste your `firebaseConfig` into `FIREBASE_CONFIG` in index.html. Then Firebase 
 4. اطلاعات شخصی و لینک نفرست.
 5. اسپم و تبلیغ ممنوع است.
 6. مدیر می‌تواند پیام‌ها را اصلاح یا حذف کند و کاربر خاطی را بی‌صدا کند.
+
+---
+
+## Konten, Admin-Seite, Moderator (neu)
+
+**Ablauf für Benutzer:** Die Seite zeigt zuerst nur Anmelden/Registrieren. Benutzername + eigenes Passwort (mind. 10 Zeichen, Buchstaben und Zahl) → danach Zugang. Optionale Angaben (E-Mail, Land, Lernziel …) werden **nur für den Admin verschlüsselt** gesendet; nur du kannst sie in der Admin-Konsole lesen.
+
+**Admin-Konto einrichten (einmalig):** Auf dem Anmeldebildschirm „🛠 Admin-Konto einrichten“ → Inhalt von `admin-key.json` einfügen + Benutzername und Passwort wählen. Danach meldest du dich auf jedem Gerät mit Name + Passwort an. `admin-key.json` NIEMALS auf GitHub hochladen – nur `index.html` (und data.json) gehören ins Repo.
+
+**Admin-Konsole (🛠 oben):** Dashboard, Benutzer (Info, sperren, freigeben, Moderator ernennen), Registrierungsanfragen, Chat/Meldungen, Konferenzen, Seiteneinstellungen (Registrierung offen / mit Freigabe / geschlossen, Chat, Privatchat, Konferenzen, Anrufe, Links, Nachrichten-Abstand, Teilnehmerlimits, Hinweis-Banner), Inhalte (Wörter/Sätze), Mein Konto.
+
+**Moderator:** Wenn du nicht da bist, ernennst du einen Benutzer zum Moderator. Er kann im Chat/in Konferenzen moderieren (löschen, stummschalten, bannen), sieht aber weder Registrierungsdaten noch Admin-Nachrichten und kann keine Einstellungen ändern.
+
+**Ehrliche Grenzen (statische Seite ohne eigenen Server):**
+- Alles läuft über öffentliche MQTT-Broker; es gibt keine Garantie für Verfügbarkeit.
+- Die Zugangsdaten liegen als mit dem Passwort verschlüsselte Schlüssel im Broker. Schwache Passwörter können offline erraten werden – darum Passwortregeln.
+- Wer einen freien Benutzernamen zuerst registriert, behält ihn (Admin-Name ist geschützt). Empfehlung: Registrierung auf „mit Freigabe“ stellen.
+- Gefälschte Einträge (Rollen, Sperren, Einstellungen, Nachrichten) werden durch Signaturen abgewiesen; gelöschte/überschriebene Einträge stellen die Clients automatisch wieder her.
+- Lernfortschritt bleibt pro Gerät. Übersetzungen sind nicht von Muttersprachlern geprüft.

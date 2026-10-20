@@ -118,6 +118,38 @@ html[dir=rtl] .tk{animation-name:tkr}
 #conf .cfb button,#conf .rq button{background:#2b3f48;color:#fff;border:0;border-radius:99px;padding:.7rem 1.1rem;font-size:1.05rem;cursor:pointer}
 #conf .cfb button.off{background:#555;opacity:.8}#conf .red,#conf .red2{background:#D8453A!important}#conf .grn{background:#1E9E62!important}
 #conf .rq{background:#F2A71B33;padding:.4rem .8rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}#conf .rq button{padding:.25rem .8rem}
+body.admv::before,body.admv .wm,body.admv .hl{display:none}
+body.gate .hero,body.gate nav,body.gate .stats,body.gate .ntw,body.admv .hero,body.admv nav,body.admv .stats{display:none}
+.splash{max-width:460px;margin:3rem auto;text-align:center;padding:2rem}
+.spin{display:inline-block;width:22px;height:22px;border:3px solid var(--line);border-top-color:var(--teal);border-radius:50%;animation:spn .8s linear infinite;vertical-align:middle;margin-inline-end:.5rem}.spin.big{width:48px;height:48px;border-width:5px}@keyframes spn{to{transform:rotate(360deg)}}
+.auth{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;max-width:1000px;margin:1.2rem auto;align-items:stretch}
+.ahero{background:linear-gradient(135deg,#0E8A8F,#2B3F9E 70%,#E0382C);color:#fff;border-radius:24px;padding:2rem;display:flex;flex-direction:column;justify-content:center;box-shadow:0 18px 40px #2B3F9E33}
+.ahero h2{font-size:1.8rem;margin:0 0 .6rem}.ahero ul{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.5rem}.ahero li{background:#ffffff22;border-radius:12px;padding:.5rem .8rem}
+.acard{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:1.4rem;box-shadow:0 18px 40px #0003}
+.atabs{display:flex;gap:.4rem;background:var(--bg);border-radius:14px;padding:.25rem;margin-bottom:.8rem}.atabs button{flex:1;border:0;background:none;padding:.6rem;border-radius:11px;font:inherit;font-weight:700;cursor:pointer;color:var(--mut)}.atabs button.on{background:var(--card);color:var(--teal);box-shadow:0 2px 8px #0002}
+.acard label{display:block;margin:.6rem 0 .2rem;font-weight:700}.acard label.ck{font-weight:400}.acard input:not([type=checkbox]),.acard select,.acard textarea{width:100%}
+.btn.big{width:100%;padding:.9rem;font-size:1.05rem;margin-top:.8rem}
+.aerr{background:#D8453A22;color:var(--bad);border-radius:10px;padding:.5rem .8rem;margin:.6rem 0;font-weight:700}
+.abusy{display:flex;align-items:center;padding:.5rem;color:var(--mut)}
+.pwm{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:.3rem 0}.pwm i{display:block;height:100%;width:0;transition:.2s}
+details.more{margin:.6rem 0;border:1px solid var(--line);border-radius:12px;padding:.4rem .7rem}details.more summary{cursor:pointer;font-weight:700}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem}
+.alink{text-align:center;margin:.8rem 0 0;font-size:.85rem}
+@media(max-width:800px){.auth{grid-template-columns:1fr}.ahero{padding:1.2rem}.ahero ul{display:none}}
+.notice{background:linear-gradient(90deg,#F2A71B44,#E0382C22);border-radius:12px;padding:.5rem .8rem;margin:.5rem auto;max-width:1100px;font-weight:700}
+.modal{position:fixed;inset:0;z-index:95;background:#000a;display:flex;align-items:center;justify-content:center;padding:1rem;overflow:auto}
+.rolb{border-radius:99px;padding:.05rem .6rem;font-size:.78rem;font-weight:700;margin-inline-end:.3rem}.r_admin{background:#F2A71B;color:#222}.r_mod{background:#2B3F9E;color:#fff}.r_user{background:var(--line)}
+.stb{border-radius:99px;padding:.05rem .6rem;font-size:.78rem;font-weight:700}.s_ok{background:#1E9E6233;color:var(--ok)}.s_pending{background:#F2A71B33}.s_ban{background:#D8453A33;color:var(--bad)}
+.acw{display:grid;grid-template-columns:230px 1fr;gap:1rem;align-items:start}
+.acs{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:.8rem;position:sticky;top:.5rem;display:flex;flex-direction:column;gap:.3rem}
+.acs .acb{font-weight:800;padding:.4rem .6rem;font-size:1.05rem}.acs button{display:flex;gap:.5rem;align-items:center;text-align:start;border:0;background:none;padding:.6rem .7rem;border-radius:12px;cursor:pointer;font:inherit;color:var(--ink)}.acs button.on{background:var(--teal);color:#fff}.acs .bk{margin-top:.6rem;color:var(--mut);border-top:1px solid var(--line);border-radius:0}.cnt{background:var(--bad);color:#fff;border-radius:99px;padding:0 .45rem;font-size:.75rem;font-style:normal}
+.acm h2{margin:.2rem 0 1rem}
+.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.6rem;margin-bottom:1rem}.stt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:.8rem;display:flex;flex-direction:column;gap:.1rem}.stt span{font-size:1.4rem}.stt b{font-size:1.7rem}.stt small{color:var(--mut)}
+.urow{display:flex;gap:.7rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:.7rem;margin-bottom:.5rem}.urow .un{flex:1;min-width:0}.urow .un small{display:block;color:var(--mut)}.ua{display:flex;gap:.3rem;flex-wrap:wrap;justify-content:flex-end}.ua button,.sq{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:.3rem .7rem;cursor:pointer;font:inherit}.ua .grn{background:var(--ok);color:#fff;border:0}.ua .redb{color:var(--bad)}.sq{width:100%;margin-bottom:.6rem;padding:.6rem .8rem}
+.uinf{background:var(--bg);border-radius:10px;padding:.5rem .7rem;margin-top:.4rem;font-size:.9rem;display:grid;gap:.15rem}
+.okm{color:var(--ok);font-weight:700;align-self:center}
+@media(max-width:800px){.acw{grid-template-columns:1fr}.acs{position:static;flex-direction:row;overflow-x:auto}.acs .acb{display:none}.acs button{white-space:nowrap}.urow{flex-direction:column}.ua{justify-content:flex-start}}
+
 .comp{display:flex;gap:.5rem;margin-top:.6rem}.snd{flex:none;padding:.6rem 1.2rem}.hint{color:var(--mut);margin:.2rem 0 .6rem}.dm0{background:#F2A71B22;border-color:var(--saf)}
 .avg{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}.avg button{font-size:1.5rem;background:var(--bg);border:2px solid var(--line);border-radius:12px;cursor:pointer}.avg button.on{border-color:var(--saf);background:#F2A71B33}.rl{padding-inline-start:1.3rem}.rl li{margin:.4rem 0}.ck{display:flex;gap:.5rem;align-items:center;margin-top:.8rem}.ck input{width:auto}
 .inb{display:grid;gap:.4rem;margin-bottom:.8rem}.ib2{display:flex;gap:.6rem;align-items:center;text-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.4rem .7rem;cursor:pointer}.ib2 small{display:block;color:var(--mut)}.ib2.un{border-color:var(--saf);background:#F2A71B22}.ib2.on{border-color:var(--lap)}
@@ -132,7 +164,8 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;overflow:visible}
  <div class="logo"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201100%20437%22%20width%3D%221100%22%20height%3D%22437%22%3E%0A%3Cdefs%3E%0A%3Cpattern%20id%3D%22ck%22%20width%3D%2268%22%20height%3D%2268%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Crect%20width%3D%2268%22%20height%3D%2268%22%20fill%3D%22%230f1115%22%2F%3E%3Crect%20width%3D%2234%22%20height%3D%2234%22%20fill%3D%22%231d2028%22%2F%3E%3Crect%20x%3D%2234%22%20y%3D%2234%22%20width%3D%2234%22%20height%3D%2234%22%20fill%3D%22%231d2028%22%2F%3E%3C%2Fpattern%3E%0A%3CradialGradient%20id%3D%22vg%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2262%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%22.6%22%2F%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%22.33%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230c0d11%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%0A%3ClinearGradient%20id%3D%22am%22%20x1%3D%220%22%20x2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d9dbe0%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b9bcc6%22%2F%3E%3C%2FlinearGradient%3E%0A%3CclipPath%20id%3D%22cl%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%221098%22%20height%3D%22435%22%20rx%3D%2240%22%2F%3E%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3Cg%20clip-path%3D%22url%28%23cl%29%22%3E%3Crect%20width%3D%221100%22%20height%3D%22437%22%20fill%3D%22%230f1115%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%221098%22%20height%3D%22435%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22%232a2c33%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23d02a1f%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20fill%3D%22%23f4f5f8%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20fill%3D%22url%28%23am%29%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20fill%3D%22url%28%23am%29%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20fill%3D%22%238b8d96%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%238b8d96%22%2F%3E%0A%3C%2Fsvg%3E" alt="Morti Language Academy"></div>
  <select id="ui" onchange="S.ui=this.value;sv();draw()" aria-label="Language">
   <option value="fa">فارسی</option><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option></select>
- <button class="ib" onclick="S.tab='admin';sv();draw();scrollTo(0,0)" aria-label="Admin">🔒</button>
+ <button class="ib" id="hb_me" onclick="profileUI()" style="display:none" aria-label="Profile">👤</button>
+ <button class="ib" id="hb_adm" onclick="goAdmin()" style="display:none" aria-label="Admin">🛠</button>
  <button class="ib" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme">◐</button>
 </header>
 <div class="hero">
@@ -142,6 +175,7 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;overflow:visible}
  <p id="sub"></p>
  <div class="sw" id="sw"></div>
 </div>
+<div id="ntc" class="ntw"></div>
 <main>
  <div class="stats" id="st"></div>
  <nav id="nav"></nav>
@@ -261,6 +295,108 @@ cended:['کانفرانس پایان یافت','Konferenz beendet','Conference e
 cadmin:['مدیر حاضر است','Admin ist dabei','Admin is present','El admin está presente'],
 cinfo:['همه می‌توانند دربارهٔ موضوع صحبت کنند. مدیر می‌تواند همه را بشنود و کنترل کند.','Alle dürfen zum Thema sprechen. Der Admin kann alle hören und moderieren.','Everyone can speak on the topic. The admin can hear and moderate everyone.','Todos pueden hablar sobre el tema. El admin puede escuchar y moderar a todos.'],
 you:['شما','du','you','tú'],
+"au_login":["ورود", "Anmelden", "Sign in", "Iniciar sesión"],
+"au_reg":["ثبت‌نام", "Registrieren", "Sign up", "Registrarse"],
+"au_user":["نام کاربری", "Benutzername", "Username", "Usuario"],
+"au_userh":["۳ تا ۲۰ حرف انگلیسی کوچک، عدد یا _", "3–20 Zeichen: a–z, 0–9, _", "3–20 characters: a–z, 0–9, _", "3–20 caracteres: a–z, 0–9, _"],
+"au_pw":["کلمه عبور", "Passwort", "Password", "Contraseña"],
+"au_pw2":["تکرار کلمه عبور", "Passwort wiederholen", "Repeat password", "Repite la contraseña"],
+"au_pwh":["حداقل ۱۰ حرف، شامل حرف و عدد. هرچه طولانی‌تر، امن‌تر.", "Mindestens 10 Zeichen mit Buchstaben und Zahl. Je länger, desto sicherer.", "At least 10 characters with letters and a number. Longer is safer.", "Mínimo 10 caracteres con letras y número. Cuanto más larga, mejor."],
+"pw_weak":["ضعیف", "schwach", "weak", "débil"],
+"pw_mid":["متوسط", "mittel", "fair", "media"],
+"pw_strong":["قوی", "stark", "strong", "fuerte"],
+"au_name":["نام نمایشی", "Anzeigename", "Display name", "Nombre visible"],
+"au_more":["اطلاعات بیشتر (اختیاری، فقط برای مدیر)", "Weitere Angaben (optional, nur für den Admin)", "More details (optional, admin only)", "Más datos (opcional, solo admin)"],
+"au_email":["ایمیل", "E-Mail", "Email", "Correo"],
+"au_country":["کشور / شهر", "Land / Stadt", "Country / city", "País / ciudad"],
+"au_native":["زبان مادری", "Muttersprache", "Native language", "Lengua materna"],
+"au_learn":["زبان در حال یادگیری", "Lernsprache", "Learning", "Aprendo"],
+"au_level":["سطح", "Niveau", "Level", "Nivel"],
+"au_note":["توضیح کوتاه", "Kurze Nachricht", "Short note", "Nota breve"],
+"au_rules":["قوانین را خوانده‌ام و می‌پذیرم", "Ich habe die Regeln gelesen und akzeptiere sie", "I have read and accept the rules", "He leído y acepto las normas"],
+"au_rem":["مرا به خاطر بسپار", "Angemeldet bleiben", "Keep me signed in", "Mantener sesión iniciada"],
+"au_go_login":["ورود به سایت", "Zur Website", "Enter the site", "Entrar"],
+"au_go_reg":["ساخت حساب", "Konto erstellen", "Create account", "Crear cuenta"],
+"au_busy":["در حال ساخت کلیدهای امن…", "Sichere Schlüssel werden erstellt…", "Creating secure keys…", "Creando claves seguras…"],
+"au_busy2":["در حال ورود…", "Anmeldung läuft…", "Signing in…", "Entrando…"],
+"au_hello":["به آکادمی زبان مورتی خوش آمدی", "Willkommen in der Morti Language Academy", "Welcome to Morti Language Academy", "Bienvenido a Morti Language Academy"],
+"au_tag":["حساب بساز و هر روز زبان یاد بگیر؛ با دیگران چت کن و در کانفرانس‌ها صحبت کن.", "Erstelle ein Konto, lerne jeden Tag, chatte mit anderen und sprich in Konferenzen.", "Create an account, learn every day, chat with others and speak in conferences.", "Crea una cuenta, aprende cada día, chatea con otros y habla en conferencias."],
+"au_f1":["📚 بیش از ۸۰۰ لغت و جمله با مثال", "📚 Über 800 Wörter und Sätze mit Beispielen", "📚 800+ words and phrases with examples", "📚 Más de 800 palabras y frases con ejemplos"],
+"au_f2":["💬 گفتگوی زنده و پیام خصوصی رمزنگاری‌شده", "💬 Live-Chat und verschlüsselte Privatnachrichten", "💬 Live chat and encrypted private messages", "💬 Chat en vivo y mensajes privados cifrados"],
+"au_f3":["🎙 کانفرانس صوتی و تصویری گروهی", "🎙 Audio- und Video-Konferenzen in Gruppen", "🎙 Group audio and video conferences", "🎙 Conferencias de audio y vídeo en grupo"],
+"au_f4":["🏅 امتیاز، نشان و مسیر پیشرفت", "🏅 Punkte, Abzeichen und Lernweg", "🏅 Points, badges and progress", "🏅 Puntos, insignias y progreso"],
+"au_out":["خروج", "Abmelden", "Sign out", "Cerrar sesión"],
+"au_adm":["تنظیم حساب مدیر", "Admin-Konto einrichten", "Set up admin account", "Configurar cuenta de admin"],
+"au_admh":["فایل admin-key.json را انتخاب کن و سپس نام کاربری و کلمه عبور مدیر را بساز. بعد از آن فقط با نام و کلمه عبور وارد می‌شوی.", "Wähle die Datei admin-key.json und lege Benutzername und Passwort für den Admin fest. Danach meldest du dich nur noch mit Name und Passwort an.", "Choose admin-key.json and create the admin username and password. After that you sign in with name and password only.", "Elige admin-key.json y crea usuario y contraseña del admin. Después entras solo con usuario y contraseña."],
+"au_retry":["تلاش دوباره", "Erneut versuchen", "Retry", "Reintentar"],
+"au_pend_t":["حساب شما در انتظار تأیید مدیر است", "Dein Konto wartet auf die Freigabe durch den Admin", "Your account is waiting for admin approval", "Tu cuenta espera la aprobación del admin"],
+"au_pend_d":["به‌محض تأیید، به‌طور خودکار وارد سایت می‌شوید.", "Sobald du freigegeben bist, geht es automatisch weiter.", "As soon as you are approved you will be let in automatically.", "En cuanto te aprueben, entrarás automáticamente."],
+"au_ban_t":["حساب شما مسدود شده است", "Dein Konto wurde gesperrt", "Your account is suspended", "Tu cuenta está suspendida"],
+"au_ban_d":["برای اطلاعات بیشتر با مدیر تماس بگیرید.", "Wende dich bitte an den Admin.", "Please contact the admin.", "Contacta con el admin."],
+"e_baduser":["نام کاربری معتبر نیست", "Ungültiger Benutzername", "Invalid username", "Usuario no válido"],
+"e_taken":["این نام کاربری قبلاً گرفته شده", "Dieser Benutzername ist vergeben", "This username is taken", "Este usuario ya existe"],
+"e_weakpw":["کلمه عبور ضعیف است: حداقل ۱۰ حرف با حرف و عدد", "Passwort zu schwach: mind. 10 Zeichen mit Buchstaben und Zahl", "Password too weak: at least 10 characters with letters and a number", "Contraseña débil: mínimo 10 caracteres con letras y número"],
+"e_pwmatch":["تکرار کلمه عبور یکی نیست", "Die Passwörter stimmen nicht überein", "Passwords do not match", "Las contraseñas no coinciden"],
+"e_nouser":["کاربری با این نام پیدا نشد", "Benutzer nicht gefunden", "User not found", "Usuario no encontrado"],
+"e_badpw":["کلمه عبور اشتباه است", "Falsches Passwort", "Wrong password", "Contraseña incorrecta"],
+"e_noname":["نام نمایشی را وارد کن (حداقل ۲ حرف)", "Bitte einen Anzeigenamen eingeben (mind. 2 Zeichen)", "Enter a display name (at least 2 characters)", "Escribe un nombre (mín. 2 caracteres)"],
+"e_norules":["باید قوانین را بپذیری", "Du musst die Regeln akzeptieren", "You must accept the rules", "Debes aceptar las normas"],
+"e_closed":["ثبت‌نام فعلاً بسته است", "Die Registrierung ist derzeit geschlossen", "Registration is currently closed", "El registro está cerrado"],
+"e_badkey":["فایل کلید مدیر معتبر نیست", "Admin-Schlüsseldatei ungültig", "Admin key file invalid", "Archivo de clave no válido"],
+"e_net":["اتصال به سرور برقرار نشد", "Keine Verbindung zum Server", "Could not reach the server", "Sin conexión con el servidor"],
+"pf_title":["پروفایل", "Profil", "Profile", "Perfil"],
+"pf_chpw":["تغییر کلمه عبور", "Passwort ändern", "Change password", "Cambiar contraseña"],
+"pf_cur":["کلمه عبور فعلی", "Aktuelles Passwort", "Current password", "Contraseña actual"],
+"pf_new":["کلمه عبور جدید", "Neues Passwort", "New password", "Nueva contraseña"],
+"role_admin":["مدیر کل", "Administrator", "Administrator", "Administrador"],
+"role_mod":["مدیراتور", "Moderator", "Moderator", "Moderador"],
+"role_user":["کاربر", "Mitglied", "Member", "Miembro"],
+"modl":["مدیراتور", "Moderator", "Moderator", "Moderador"],
+"ac_title":["پنل مدیریت", "Admin-Konsole", "Admin console", "Consola de admin"],
+"ac_back":["بازگشت به سایت", "Zurück zur Website", "Back to site", "Volver al sitio"],
+"ac_dash":["داشبورد", "Übersicht", "Dashboard", "Panel"],
+"ac_users":["کاربران", "Nutzer", "Users", "Usuarios"],
+"ac_reqs":["درخواست‌های ثبت‌نام", "Registrierungen", "Registrations", "Registros"],
+"ac_chat":["گفتگو و گزارش‌ها", "Chat & Meldungen", "Chat & reports", "Chat y denuncias"],
+"ac_conf":["کانفرانس‌ها", "Konferenzen", "Conferences", "Conferencias"],
+"ac_set":["تنظیمات سایت", "Website-Einstellungen", "Site settings", "Ajustes del sitio"],
+"ac_cont":["محتوا (لغت و جمله)", "Inhalte (Wörter & Sätze)", "Content (words & phrases)", "Contenido (palabras y frases)"],
+"ac_acct":["حساب من", "Mein Konto", "My account", "Mi cuenta"],
+"ac_key":["دانلود کلید پشتیبان مدیر", "Admin-Schlüssel sichern", "Download admin key backup", "Descargar copia de la clave"],
+"ac_keyh":["این فایل را فقط در جای امن نگه دار و هرگز در GitHub آپلود نکن.", "Bewahre die Datei sicher auf – niemals auf GitHub hochladen.", "Keep this file safe and never upload it to GitHub.", "Guarda el archivo en lugar seguro y nunca lo subas a GitHub."],
+"stat_users":["کاربران ثبت‌شده", "Registrierte Nutzer", "Registered users", "Usuarios registrados"],
+"stat_pend":["در انتظار تأیید", "Wartend", "Pending", "Pendientes"],
+"stat_ban":["مسدود", "Gesperrt", "Banned", "Bloqueados"],
+"stat_mods":["مدیراتورها", "Moderatoren", "Moderators", "Moderadores"],
+"stat_rooms":["کانفرانس فعال", "Aktive Konferenzen", "Active conferences", "Conferencias activas"],
+"u_ok":["فعال", "Aktiv", "Active", "Activo"],
+"u_pending":["منتظر تأیید", "Wartet", "Pending", "Pendiente"],
+"u_ban":["مسدود", "Gesperrt", "Banned", "Bloqueado"],
+"u_none":["هنوز کاربری نیست", "Noch keine Nutzer", "No users yet", "Aún no hay usuarios"],
+"u_appr":["تأیید", "Freigeben", "Approve", "Aprobar"],
+"u_rej":["مسدود", "Sperren", "Ban", "Bloquear"],
+"u_unban":["رفع مسدودی", "Entsperren", "Unban", "Desbloquear"],
+"u_mkmod":["تعیین مدیراتور", "Zum Moderator machen", "Make moderator", "Hacer moderador"],
+"u_unmod":["برداشتن مدیراتوری", "Moderator entziehen", "Remove moderator", "Quitar moderador"],
+"u_search":["جستجوی کاربر…", "Nutzer suchen…", "Search users…", "Buscar usuarios…"],
+"s_note":["تنظیمات برای همهٔ کاربران اعمال می‌شود و با امضای مدیر محافظت شده‌اند.", "Die Einstellungen gelten für alle Nutzer und sind vom Admin signiert.", "Settings apply to all users and are signed by the admin.", "Los ajustes se aplican a todos y están firmados por el admin."],
+"s_reg":["ثبت‌نام کاربران جدید", "Neue Registrierungen", "New registrations", "Nuevos registros"],
+"s_reg_open":["آزاد (فوری)", "Offen (sofort)", "Open (instant)", "Abierto (inmediato)"],
+"s_reg_app":["فقط با تأیید مدیر", "Nur mit Admin-Freigabe", "Admin approval required", "Con aprobación del admin"],
+"s_reg_cl":["بسته", "Geschlossen", "Closed", "Cerrado"],
+"s_feat":["امکانات سایت", "Funktionen", "Features", "Funciones"],
+"s_chat":["گفتگوی همگانی", "Gruppenchat", "Group chat", "Chat grupal"],
+"s_pm":["گفتگوی خصوصی", "Privatchats", "Private chats", "Chats privados"],
+"s_conf":["کانفرانس", "Konferenzen", "Conferences", "Conferencias"],
+"s_calls":["تماس صوتی/تصویری", "Anrufe", "Calls", "Llamadas"],
+"s_links":["اجازهٔ لینک در گفتگو", "Links im Chat erlauben", "Allow links in chat", "Permitir enlaces en el chat"],
+"s_slow":["فاصلهٔ پیام‌ها (ثانیه)", "Sekunden zwischen Nachrichten", "Seconds between messages", "Segundos entre mensajes"],
+"s_maxv":["حداکثر نفرات تصویری", "Max. Personen (Video)", "Max. people (video)", "Máx. personas (vídeo)"],
+"s_maxa":["حداکثر نفرات صوتی", "Max. Personen (Audio)", "Max. people (audio)", "Máx. personas (audio)"],
+"s_notice":["اطلاعیهٔ بالای سایت (خالی = بدون اطلاعیه)", "Hinweis oben auf der Seite (leer = keiner)", "Banner notice (empty = none)", "Aviso superior (vacío = ninguno)"],
+"s_saved":["ذخیره شد ✓", "Gespeichert ✓", "Saved ✓", "Guardado ✓"],
+"chatoff":["گفتگو موقتاً توسط مدیر بسته شده است", "Der Chat ist vorübergehend geschlossen", "The chat is temporarily closed", "El chat está cerrado temporalmente"],
+"newreg":["ثبت‌نام جدید", "Neue Registrierung", "New registration", "Nuevo registro"],
 joined:['به گفتگو پیوست','ist beigetreten','joined the chat','se unió al chat'],
 sayhi:['سلام بده','Hallo sagen','Say hi','Saludar'],
 typing:['در حال نوشتن…','schreibt…','is typing…','está escribiendo…'],
@@ -337,9 +473,7 @@ return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('typeq')}
 <input id="ty_in" dir="ltr" lang="${S.learn}" autocomplete="off" autocapitalize="off" spellcheck="false" value="${e(ty.v)}" ${ty.r!==null?'disabled':''} onkeydown="if(event.key==='Enter')chkT()">
 ${ty.r===null?`<div class="row"><button class="btn" onclick="chkT()">${t('check')}</button></div>`:`<p style="font-weight:700;color:var(--${ty.r?'ok':'bad'})">${ty.r?t('right'):t('ans')+':'} <span dir="ltr" style="color:var(--ink)">${ty.r?'':e(p[S.learn])}</span></p><div class="row"><button class="btn s" onclick="speak(${p.id})">🔊</button><button class="btn" onclick="newT();draw()">${t('next')}</button></div>`}</div>`}
 
-function vAdmin(){
-if(!admin)return `<div class="card nar"><h3>${t('admin')}</h3>${CH.net?`<label>${t('akey')}</label><textarea id="ak" dir="ltr" rows="4" placeholder='{"sign":{…},"ecdh":{…}}' style="width:100%"></textarea><input type="file" id="akf" accept=".json" onchange="rdKey(this.files[0])" style="margin-top:.4rem"><p class="hint">${t('akeyh')}</p>`:`${CH.live?`<label>Email</label><input id="em" type="email" dir="ltr" autocomplete="username">`:''}<label>${t('pw')}</label><input type="password" id="pw" autocomplete="current-password" onkeydown="if(event.key==='Enter')login()">`}<div class="row"><button class="btn" onclick="login()">${t('login')}</button></div><p style="color:var(--bad)">${msg}</p></div>`;
-const p=ed!=null?D.find(x=>x.id===ed):{k:'w',c:Object.keys(CAT())[0],lv:'A1'};const x=p.ex||{};
+function contentUI(){const p=ed!=null?D.find(x=>x.id===ed):{k:'w',c:Object.keys(CAT())[0],lv:'A1'};const x=p.ex||{};
 return `<div class="ad"><div>
 <div class="card"><h3>${ed!=null?'✏️ ':''}${t('newp')}</h3>
 <label>${t('kind')}</label><select id="f_k" style="width:100%"><option value="w" ${(p.k||'p')==='w'?'selected':''}>${t('words')}</option><option value="p" ${(p.k||'p')==='p'?'selected':''}>${t('sents')}</option></select>
@@ -348,21 +482,11 @@ return `<div class="ad"><div>
 ${LG.map(l=>`<label>${LN[l]}</label><input id="f_${l}" dir="${dirOf(l)}" value="${e(p[l]||'')}">`).join('')}
 <label><b>${t('ex')}</b></label>${LG.map(l=>`<input id="x_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem" value="${e(x[l]||'')}">`).join('')}
 <p style="color:var(--bad);margin:.3rem 0">${msg}</p>
-<div class="row" style="margin-top:.3rem"><button class="btn g" onclick="addP()">${t('save')}</button>${ed!=null?`<button class="btn m" onclick="ed=null;draw()">✕</button>`:''}<button class="btn m" onclick="logout()">${t('out')}</button></div></div>
+<div class="row" style="margin-top:.3rem"><button class="btn g" onclick="addP()">${t('save')}</button>${ed!=null?`<button class="btn m" onclick="ed=null;draw()">✕</button>`:''}</div></div>
 <div class="card"><h3>${t('addcat')}</h3>${['fa','de','en','es'].map(l=>`<input id="cn_${l}" dir="${dirOf(l)}" placeholder="${LN[l]}" style="margin-bottom:.3rem">`).join('')}<div class="row" style="margin-top:.3rem"><button class="btn" onclick="addC()">${t('save')}</button></div></div>
 <div class="card"><div class="row" style="margin:0"><button class="btn s" onclick="expD()">${t('exp')}</button><button class="btn m" onclick="document.getElementById('imp').click()">${t('imp')}</button><input type="file" id="imp" accept=".json" hidden onchange="impD(this.files[0])"></div><p style="color:var(--mut)">${t('hint')}</p>
-<label>${t('chpw')}</label><input id="np"><div class="row"><button class="btn" onclick="chPw()">${t('save')}</button></div></div></div>
+</div></div>
 <div>${D.slice().reverse().map(y=>`<div class="p" style="margin-bottom:.6rem"><div class="t"><b dir="ltr">${e(y.de)}<span class="lv">${y.lv||'A1'}</span></b><span dir="ltr">${e(y.en)} · ${e(y.es)}</span><span dir="rtl" style="display:block">${e(y.fa)}</span><span style="font-size:.8rem">${(y.k||'p')==='w'?t('words'):t('sents')} · ${e(cn(y.c))}</span></div><div class="ab"><button onclick="ed=${y.id};msg='';draw();scrollTo(0,0)" aria-label="edit">✏️</button><button onclick="delP(${y.id})" aria-label="${t('del')}">🗑️</button></div></div>`).join('')}</div></div>`}
-async function login(){
- if(CH.net){try{const k=JSON.parse(($('ak').value||'').trim());await CR.chkKey(k);CH.ak=k;try{localStorage.setItem('lp_ak',JSON.stringify(k))}catch(x){}admin=true;CH.adm=true;msg='';attachAdmin();api_beat()}catch(x){msg=t('wrong')}draw();return}
- const v=document.getElementById('pw').value;
- if(CH.live){try{await CH.Au.signInWithEmailAndPassword(CH.auth,document.getElementById('em').value.trim(),v);admin=true;msg='';await startChat()}catch(x){msg=t('wrong')}}
- else{const pw=localStorage.getItem('lp_pw')||'admin1234';if(v===pw){admin=true;CH.adm=true;msg='';attachAdmin()}else msg=t('wrong')}
- draw()}
-const api_beat=()=>{try{NDB.beat&&NDB.beat()}catch(x){}};
-function rdKey(f){if(!f)return;const r=new FileReader();r.onload=()=>{$('ak').value=r.result};r.readAsText(f)}
-function logout(){admin=false;ed=null;CH.adm=false;CH.ak=null;try{localStorage.removeItem('lp_ak')}catch(x){}if(CH.live&&CH.Au)CH.Au.signOut(CH.auth).then(()=>CH.Au.signInAnonymously(CH.auth)).then(()=>startChat());draw()}
-function chPw(){const v=document.getElementById('np').value.trim();if(v.length>=6){try{localStorage.setItem('lp_pw',v)}catch(x){}document.getElementById('np').value=''}}
 function addP(){const g=i=>document.getElementById(i).value.trim();const o={k:g('f_k'),c:g('f_c'),lv:g('f_lv')};LG.forEach(l=>o[l]=g('f_'+l));
 if(LG.some(l=>!o[l])){msg=t('fill');draw();return}
 const ex={};LG.forEach(l=>{if(g('x_'+l))ex[l]=g('x_'+l)});if(Object.keys(ex).length)o.ex=ex;
@@ -404,7 +528,7 @@ return `<div class="card jr"><div class="ring" style="--p:${pc}"><b>${lv}</b></d
 const FIREBASE_CONFIG=null; /* ← paste your firebaseConfig here (see README-chat.md). null = test mode inside this browser only */
 const FB='https://www.gstatic.com/firebasejs/10.12.2/firebase-';
 const AVS=['🦊','🐼','🦁','🐯','🐨','🐸','🦉','🐙','🦄','🐳','🐧','🦋'];
-let DB=null,CH={live:false,ready:false,uid:'',adm:false,sel:null,msgs:[],on:{},th:[],mutes:{},idx:{},rep:{},dw:null,subs:[],dmSub:null,err:'',pres:0,aat:0,last:0,acc:false,net:false,unr:0,sys:[],al:{},raw:{},on0:0,gr:0,tyAt:{},dq:0,ak:null,sid:new Set(),jt:{},tl:0,tm:0,m0:0,pmi:{},pw:null,pth:[],pSub:null,sg:new Set(),aq:{},adu:{},beat:null};
+let DB=null,CH={live:false,ready:false,uid:'',adm:false,sel:null,msgs:[],on:{},th:[],mutes:{},idx:{},rep:{},dw:null,subs:[],dmSub:null,err:'',pres:0,aat:0,last:0,acc:false,net:false,unr:0,sys:[],al:{},raw:{},on0:0,gr:0,tyAt:{},dq:0,ak:null,sid:new Set(),jt:{},tl:0,tm:0,m0:0,pmi:{},pw:null,pth:[],pSub:null,isA:false,started:0,redo:[],pvf:{},aat2:0,sg:new Set(),aq:{},adu:{},beat:null};
 const T0=document.title;
 S.chat=S.chat||{name:'',av:AVS[0],ok:false};S.sub=S.sub||'pub';
 const LDB=(()=>{const K='lp_demo',bc=window.BroadcastChannel?new BroadcastChannel('lp_demo'):null;let subs=[];
@@ -436,15 +560,14 @@ async dk(priv,pub){const p=await crypto.subtle.importKey('jwk',{kty:'EC',crv:'P-
 async enc(k,t){const iv=crypto.getRandomValues(new Uint8Array(12));return{iv:b64(iv),ct:b64(await crypto.subtle.encrypt({name:'AES-GCM',iv},k,ENC.encode(t)))}},
 async dec(k,m){try{return DEC.decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:unb(m.iv)},k,unb(m.ct)))}catch(x){return '🔒'}}};
 const AVC=new Map();
-function av(s,sig){if(!CH.net)return Promise.resolve(true);if(!sig)return Promise.resolve(false);const k=s+'~'+sig;if(!AVC.has(k))AVC.set(k,CR.verify(s,sig));return AVC.get(k)}
 const mkId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
 /* minimal MQTT 3.1.1 client (QoS 0) */
-function MQ(o){let ws,ok=false,subs=new Set(),q=[],hb,tries=0,buf=new Uint8Array(0),ct;
+function MQ(o){let dead=false,ws,ok=false,subs=new Set(),q=[],hb,tries=0,buf=new Uint8Array(0),ct;
 const str=s=>{const b=ENC.encode(s);return[b.length>>8,b.length&255,...b]};
 const rl=n=>{const r=[];do{let d=n%128;n=Math.floor(n/128);if(n>0)d|=128;r.push(d)}while(n>0);return r};
 const out=(h,b)=>{try{ws.send(new Uint8Array([h,...rl(b.length),...b]))}catch(x){}};
 const sub1=f=>out(0x82,[0,1,...str(f),0]);
-function retry(){ok=false;clearInterval(hb);clearTimeout(ct);o.onstate(false);const d=Math.min(1000*2**tries,10000);tries++;setTimeout(open,d)}
+function retry(){if(dead)return;ok=false;clearInterval(hb);clearTimeout(ct);o.onstate(false);const d=Math.min(1000*2**tries,10000);tries++;setTimeout(open,d)}
 function open(){let w;const url=o.urls[Math.floor(tries/3)%o.urls.length];try{w=new WebSocket(url,'mqtt')}catch(x){return retry()}
  ws=w;w.binaryType='arraybuffer';buf=new Uint8Array(0);
  ct=setTimeout(()=>{try{w.close()}catch(x){}},9000);
@@ -456,9 +579,9 @@ function open(){let w;const url=o.urls[Math.floor(tries/3)%o.urls.length];try{w=
    if(ty===2){if(body[1]!==0){try{w.close()}catch(x){}return}ok=true;tries=0;clearTimeout(ct);o.onstate(true);subs.forEach(sub1);q.splice(0).forEach(x=>out(x.h,x.b));hb=setInterval(()=>out(0xC0,[]),20000)}
    else if(ty===3){const tl=(body[0]<<8)|body[1],tp=DEC.decode(body.slice(2,2+tl));let p=2+tl;if((fl>>1)&3)p+=2;o.onmsg(tp,DEC.decode(body.slice(p)))}}}}
 open();
-return{sub(f){if(subs.has(f))return;subs.add(f);if(ok)sub1(f)},
+return{close(){dead=true;clearInterval(hb);clearTimeout(ct);try{ws.close()}catch(x){}},get list(){return[...subs]},sub(f){if(subs.has(f))return;subs.add(f);if(ok)sub1(f)},
  pub(t,p,r){const b=[...str(t),...ENC.encode(p)],h=0x30|(r?1:0);if(ok)out(h,b);else{q.push({h,b});if(q.length>80)q.shift()}}}}
-const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\/|^conf\/[^/]+$|^conf\/[^/]+\/(end|ok|lock|ban)(\/|$)/;let mq,ft,up=false,uid='';
+const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\/|^acct\/[^/]+$|^acct\/[^/]+\/(st|role)$|^cfg\/|^conf\/[^/]+$|^conf\/[^/]+\/(end|ok|lock|ban)(\/|$)/;let mq,ft,up=false,uid='';
 const tp=p=>NS+'db/'+p,cl=v=>v==null?v:JSON.parse(JSON.stringify(v));
 function get(p){const ks=[];st.forEach((v,k)=>{if(k===p||k.startsWith(p+'/'))ks.push(k)});if(!ks.length)return null;ks.sort((a,b)=>a.length-b.length);let r;
  for(const k of ks){const v=st.get(k);if(k===p){r=cl(v);continue}if(r===undefined)r={};if(r===null||typeof r!=='object')continue;
@@ -468,8 +591,9 @@ function fire(){clearTimeout(ft);ft=setTimeout(()=>ls.slice().forEach(l=>{const 
 function onmsg(t,pl){if(!t.startsWith(NS+'db/'))return;const p=t.slice(NS.length+3);
  if(pl===''){if(PROT.test(p))return;st.delete(p);fire();return}
  let v;try{v=JSON.parse(pl)}catch(x){return}st.set(p,v);fire()}
+const mk=u=>MQ({urls:BROKERS,id:'mla_'+u+'_'+Math.random().toString(36).slice(2,6),will:tp('online/'+u),onmsg,onstate:s=>{up=s;if(s)CH.gr=Date.now()+2500;calcOn();drawChat();gateTick()}});
 const api={get up(){return up},get,
-start(u){uid=u;mq=MQ({urls:BROKERS,id:'mla_'+u+'_'+Math.random().toString(36).slice(2,6),will:tp('online/'+u),onmsg,onstate:s=>{up=s;if(s)CH.gr=Date.now()+2500;calcOn();drawChat()}});return api},
+start(u){uid=u;mq=mk(u);return api},reconnect(u){const l=mq?mq.list:[];mq&&mq.close();uid=u;up=false;mq=mk(u);l.forEach(f=>mq.sub(f))},
 on(p,cb){mq.sub(tp(p)+'/#');const l={p,cb,last:'null'};ls.push(l);const v=get(p);l.last=JSON.stringify(v);cb(v);return()=>{const i=ls.indexOf(l);if(i>=0)ls.splice(i,1)}},
 set(p,v){if(v==null){[...st.keys()].forEach(k=>{if(k===p||k.startsWith(p+'/')){st.delete(k);mq.pub(tp(k),'',true)}});if(!st.has(p))mq.pub(tp(p),'',true)}
  else{st.set(p,cl(v));mq.pub(tp(p),JSON.stringify(v),true)}fire()},
@@ -497,40 +621,39 @@ function toast(m){const d=document.createElement('div');d.className='toast';d.te
 const isMuted=()=>!!(CH.mutes&&CH.mutes[CH.uid]);
 const pmUn=()=>Object.values(CH.pmi||{}).filter(x=>x&&x.u).length;
 const viewing2=()=>S.tab==='community'&&S.sub==='pm'&&!document.hidden;
-function dmUn(){return CH.adm?Object.values(CH.idx||{}).filter(x=>x&&x.u).length:0}
+function dmUn(){return CH.isA?Object.values(CH.idx||{}).filter(x=>x&&x.u).length:0}
 function unread(){return dmUn()+pmUn()+(CH.unr||0)}
 function ttl(){document.title=(CH.unr?'('+CH.unr+') ':'')+T0}
 const viewing=()=>S.tab==='community'&&S.sub==='pub'&&S.chat.ok&&!document.hidden;
 const ICO={learn:'📚',practice:'🎯',journey:'🏅',community:'💬'};
 function navLabel(k){return ICO[k]+' '+t(k)+(k==='community'&&unread()?' ('+unread()+')':'')}
 function updNav(){const n=$('nv_community');if(n)n.textContent=navLabel('community')}
-function attachAdmin(){if(CH.aat||!CH.adm||!DB)return;CH.aat=1;CH.subs.push(DB.on('dmidx',v=>{CH.idx=v||{};drawChat()}));CH.subs.push(DB.on('reports',v=>{CH.rep=v||{};drawChat()}));if(CH.net){setTimeout(()=>NDB.prune(),7000);setInterval(()=>NDB.prune(),600000)}}
-async function startChat(){CH.subs.forEach(f=>f());CH.subs=[];CH.dmSub&&CH.dmSub();CH.dmSub=null;CH.aat=0;CH.pres=0;
-if(!DB){try{if(FIREBASE_CONFIG){DB=await fbConnect();CH.live=true}else if(NET_ON&&window.WebSocket&&window.crypto&&crypto.subtle){S.cu=S.cu||'u'+Math.random().toString(36).slice(2,9);CH.gr=Infinity;DB=NDB.start(S.cu);CH.net=true}else DB=LDB}catch(x){CH.err=String(x&&x.message||x);DB=LDB;CH.live=false;CH.net=false}}
-if(!CH.net)CH.gr=Date.now()+600;
-CH.uid=CH.live?DB.uid():(S.cu=S.cu||'u'+Math.random().toString(36).slice(2,9));
-const sba=(p,f,g)=>{let n=0;CH.subs.push(DB.on(p,v=>{const c=++n;f(v||{}).then(r=>{if(c===n){g(r);drawChat()}})}))};
+function attachAdmin(){if(!CH.adm||!DB)return;
+ if(!CH.aat){CH.aat=1;CH.subs.push(DB.on('reports',v=>{CH.rep=v||{};drawChat();admRefresh()}))}
+ if(CH.isA&&!CH.aat2){CH.aat2=1;CH.subs.push(DB.on('dmidx',v=>{CH.idx=v||{};drawChat()}));CH.subs.push(DB.on('reg',v=>{AC.reg=v||{};admRefresh()}));setTimeout(()=>NDB.prune(),7000);setInterval(()=>NDB.prune(),600000)}}
+async function startChat(){CH.subs.forEach(f=>f());CH.subs=[];CH.dmSub&&CH.dmSub();CH.dmSub=null;CH.aat=0;CH.aat2=0;CH.pres=0;
+CH.started=1;CH.redo=[];CH.uid=AU.u;
+const sba=(p,f,g)=>{let n=0,last={};const run=()=>{const c=++n;f(last).then(r=>{if(c===n){g(r);drawChat()}})};CH.redo.push(run);CH.subs.push(DB.on(p,v=>{last=v||{};run()}))};
 sba('rooms/main',procR,gotMsgs);
 CH.subs.push(DB.on('online',v=>{CH.raw=v||{};calcOn()}));
 sba('muted',procM,r=>{CH.mutes=r});
 CH.subs.push(DB.on('dm/'+CH.uid,v=>{if(CH.adm)return;const c=++CH.dq;thr(v||{},CH.uid).then(a=>{if(c===CH.dq){CH.th=a;drawChat()}})}));
 CH.subs.push(DB.on('typing',v=>typH(v||{})));
 if(CH.net)CH.subs.push(DB.on('pmi/'+CH.uid,v=>{v=v||{};for(const k in v){const o=v[k];if(o&&o.u&&o.ts&&!(CH.pmi[k]&&CH.pmi[k].ts===o.ts)&&Date.now()>CH.gr&&!(CH.pw===k&&viewing2())){toast('✉️ '+t('pmn')+' '+(o.name||''));if(S.snd!==false)beep()}}CH.pmi=v;updNav();drawChat()}));
-if(CH.net){try{const raw=localStorage.getItem('lp_ak');if(raw){const k=JSON.parse(raw);await CR.chkKey(k);CH.ak=k;admin=true}}catch(x){}}
 if(CH.net){CH.subs.push(DB.on('conf',v=>{CF.raw=v||{};procConf()}));if(!CF.pt)CF.pt=setInterval(procConf,4000)}
-if(CH.net)CH.subs.push(DB.on('sig/'+CH.uid,v=>{for(const [k,m] of Object.entries(v||{})){if(CH.sg.has(k))continue;CH.sg.add(k);onSig(m)}}));
-if(CH.live)CH.subs.push(DB.on('admins/'+CH.uid,v=>{const was=CH.adm;CH.adm=v===true;if(CH.adm)attachAdmin();if(was!==CH.adm)draw();else drawChat()}));
-else{CH.adm=admin;attachAdmin()}
+CH.subs.push(DB.on('sig/'+CH.uid,v=>{for(const [k,m] of Object.entries(v||{})){if(CH.sg.has(k))continue;CH.sg.add(k);vSig(m).then(ok=>{if(ok){const r=AC.rec[m.from];m.name=r.name;m.av=r.av;onSig(m)}})}}));
+applyRole();
 if(!CH.tm)CH.tm=setInterval(()=>{calcOn();drawTyp()},1500);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)drawChat()});
 CH.ready=true;if(S.chat.ok){startPres();meLine()}draw()}
 /* --- processing (signature checks in net mode) --- */
 async function procR(v){const arr=Object.entries(v).map(([id,m])=>({id,...m})).filter(m=>m&&m.ts&&m.text!=null&&m.uid);
-if(!CH.net)return arr.sort((a,b)=>a.ts-b.ts).slice(-100);
 const now=Date.now(),out=[];
-for(const m of arr){if(now-m.ts>TTL||m.ts>now+3600000)continue;
+for(const m of arr){if(now-m.ts>TTL||m.ts>now+3600000)continue;const rec=AC.rec[m.uid];if(!rec||acSt(m.uid)!=='ok')continue;
+ if(!(await cvc('m|'+m.id+'|'+m.uid+'|'+m.ts+'|'+m.text+'|'+(m.us||''),()=>CR.uverify(rec.pub,'m|'+m.id+'|'+m.uid+'|'+m.ts+'|'+m.text,m.us||''))))continue;
+ m.name=rec.name;m.av=rec.av;
  if(m.del&&await av('del|'+m.id,m.del.sig))continue;
- if(m.adm&&!await av('msg|'+m.id+'|'+m.uid+'|'+m.ts+'|'+m.text,m.sig))m.adm=false;
+ const rl=m.adm?await avR('msg|'+m.id+'|'+m.uid+'|'+m.ts+'|'+m.text,m.sig):false;m.adm=!!rl;m.rl=rl;
  if(m.fix){if(!(await av('fix|'+m.id+'|'+m.fix.text,m.fix.sig))||!m.fix.text)delete m.fix}
  if(m.pin){if(m.pin.on&&await av('pin|'+m.id+'|true',m.pin.sig))m.pin=true;else delete m.pin}
  out.push(m)}
@@ -542,10 +665,12 @@ for(const m of r){if(!CH.sid.has(m.id)){CH.sid.add(m.id);if(!first&&m.uid!==CH.u
 CH.msgs=r;if(n&&!viewing()){CH.unr+=n;ttl();if(S.snd!==false)beep()}}
 function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.frequency.value=880;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+.12);setTimeout(()=>a.close(),400)}catch(x){}}
 function calcOn(){const raw=CH.raw||{},now=Date.now(),f={};
-for(const [k,o] of Object.entries(raw)){if(!o||!o.ts)continue;if(CH.live){f[k]=o;continue}
- if(o.adm&&CH.net){const key=k+'|'+o.ts;if(!(key in CH.aq)){CH.aq[key]=0;av('adm|'+k+'|'+o.ts,o.sig).then(ok=>{if(ok)CH.adu[k]=Date.now();else delete CH.adu[k];calcOn();drawChat()})}}
+for(const [k,o] of Object.entries(raw)){if(!o||!o.ts)continue;const rec=AC.rec[k];if(!rec||acSt(k)!=='ok')continue;
+ const key=k+'|'+o.ts+'|'+(o.us||'');if(CH.pvf[key]===undefined){CH.pvf[key]=null;CR.uverify(rec.pub,'on|'+k+'|'+o.ts,o.us||'').then(ok=>{CH.pvf[key]=ok;calcOn()});continue}
+ if(!CH.pvf[key])continue;
+ if(o.adm&&o.sig){const ak=key+'|'+o.sig;if(!(ak in CH.aq)){CH.aq[ak]=0;avR('adm|'+k+'|'+o.ts,o.sig).then(r=>{if(r)CH.adu[k]=r;else delete CH.adu[k];calcOn();drawChat()})}}
  const a=CH.al[k];if(!a||a.ts!==o.ts)CH.al[k]={ts:o.ts,seen:now};
- if(now-CH.al[k].seen<50000&&Math.abs(now-o.ts)<300000)f[k]={...o,admv:!!(o.adm&&CH.adu[k])}}
+ if(now-CH.al[k].seen<50000&&Math.abs(now-o.ts)<300000){const rl=o.adm?CH.adu[k]:null;f[k]={...o,name:rec.name,av:rec.av,admv:!!rl,rl}}}
 if(CH.on0)for(const k in f)if(!(k in CH.on)&&k!==CH.uid)joined(k,f[k]);
 const ch=Object.keys(f).sort().join()!==Object.keys(CH.on).sort().join();CH.on=f;CH.on0=1;if(ch)drawChat()}
 function joined(k,o){const now=Date.now();if(now<CH.gr||(CH.jt[k]&&now-CH.jt[k]<120000))return;CH.jt[k]=now;
@@ -558,13 +683,15 @@ function greet(k){const s=CH.sys.find(x=>x.uid===k&&!x.done);if(!s)return;s.done
 function typH(v){const now=Date.now();for(const [u,o] of Object.entries(v)){if(u===CH.uid||!o)continue;if(!CH.tyAt[u]||CH.tyAt[u].ts!==o.ts)CH.tyAt[u]={ts:o.ts,at:now,name:o.name}}drawTyp()}
 function drawTyp(){const n=$('ctyp');if(!n)return;const now=Date.now(),a=Object.values(CH.tyAt).filter(x=>now-x.at<3500).map(x=>x.name);n.textContent=a.length?a.slice(0,3).join(', ')+' '+t('typing'):''}
 function typ(){if(!DB||!DB.eph||Date.now()-CH.tl<2500)return;CH.tl=Date.now();DB.eph('typing/'+CH.uid,{name:S.chat.name,ts:Date.now()})}
-async function dmKey(u){if(CH.adm){const i=(CH.idx||{})[u];if(!i||!i.pub)throw 1;const p=await crypto.subtle.importKey('jwk',CH.ak.ecdh,EC('ECDH'),false,['deriveKey']);return CR.dk(p,i.pub)}return CR.dk((await CR.uk()).priv,AP.d)}
+async function dmKey(u){if(CH.isA){const i=AC.rec[u];if(!i)throw 1;return CR.dk((await CR.uk()).priv,i.epub)}return CR.dk((await CR.uk()).priv,AP.d)}
 async function thr(v,u){const arr=Object.entries(v||{}).map(([id,m])=>({id,...m})).filter(m=>m.ts).sort((a,b)=>a.ts-b.ts);if(!CH.net)return arr;
 let k=null;try{k=await dmKey(u)}catch(x){}return Promise.all(arr.map(async m=>({...m,text:k&&m.ct?await CR.dec(k,m):'🔒'})))}
 /* ===== voice / video calls (WebRTC, signalling over the same broker) ===== */
 const ICE={iceServers:[{urls:['stun:stun.l.google.com:19302','stun:stun1.l.google.com:19302']},{urls:['turn:openrelay.metered.ca:80','turn:openrelay.metered.ca:443?transport=tcp'],username:'openrelayproject',credential:'openrelayproject'}]};
 let CALL=null,ringT=null;
-const sigSend=(to,o)=>DB.eph('sig/'+to+'/'+mkId(),{...o,from:CH.uid,name:S.chat.name,av:S.chat.av});
+const sgStr=m=>['sg',m.t,m.from,m.to,m.cid||'',m.room||'',m.ts,m.sdp||''].join('|');
+async function sigSend(to,o){const m={...o,from:CH.uid,to,ts:Date.now()};m.us=await CR.usign(sgStr(m));DB.eph('sig/'+to+'/'+mkId(),m)}
+async function vSig(m){const r=AC.rec[m&&m.from];return !!(r&&acSt(m.from)==='ok'&&m.to===CH.uid&&Math.abs(Date.now()-m.ts)<120000&&await CR.uverify(r.pub,sgStr(m),m.us||''))}
 function callUI(){let d=$('call');if(!CALL){d&&d.remove();clearInterval(ringT);ringT=null;return}
  if(!d){d=document.createElement('div');d.id='call';d.innerHTML='<video class="rv" id="crv" autoplay playsinline></video><video class="lv" id="clv" autoplay playsinline muted></video><div class="who" id="cwho"></div><div class="cb" id="ccb"></div>';document.body.appendChild(d)}
  const c=CALL;$('cwho').textContent=c.state==='ringing'?t('cin')+' '+c.av+' '+c.name:c.state==='calling'?t('cout')+' '+c.av+' '+c.name:c.state==='live'?'🟢 '+c.av+' '+c.name:t('cconn');
@@ -577,7 +704,7 @@ function mkPc(){const pc=new RTCPeerConnection(ICE);CALL.pc=pc;CALL.stream.getTr
  pc.ontrack=ev=>{const r=$('crv');if(r){r.srcObject=ev.streams[0];r.play&&r.play().catch(()=>{})}};
  pc.onconnectionstatechange=()=>{if(!CALL||CALL.pc!==pc)return;const s=pc.connectionState;if(s==='connected'){CALL.state='live';clearTimeout(CALL.timer);callUI()}else if(s==='failed'||s==='closed'){toast(t('cend'));endCall(false)}else if(s==='disconnected'){setTimeout(()=>{if(CALL&&CALL.pc===pc&&pc.connectionState==='disconnected'){toast(t('cend'));endCall(true)}},6000)}};return pc}
 const iceDone=pc=>new Promise(r=>{if(pc.iceGatheringState==='complete')return r();const f=()=>{if(pc.iceGatheringState==='complete'){pc.removeEventListener('icegatheringstatechange',f);r()}};pc.addEventListener('icegatheringstatechange',f);setTimeout(r,4000)});
-async function startCall(u,video){if(CALL||!CH.net||!navigator.mediaDevices||!window.RTCPeerConnection){toast('⚠');return}
+async function startCall(u,video){if(CALL||!CFG.calls||!CH.net||!navigator.mediaDevices||!window.RTCPeerConnection){toast('⚠');return}
  const o=CH.on[u]||CH.pmi[u]||{};CALL={id:mkId(),peer:u,name:o.name||'?',av:o.av||'🙂',video,state:'calling'};callUI();const c=CALL;
  try{await getMedia();const pc=mkPc();await pc.setLocalDescription(await pc.createOffer());await iceDone(pc);if(CALL!==c)return;
   sigSend(u,{t:'offer',cid:c.id,video,sdp:pc.localDescription.sdp});
@@ -594,16 +721,16 @@ function onSig(m){if(!m||!m.t)return;if(m.t==='coffer'){confOnOffer(m);return}if
  else if(m.t==='bye'||m.t==='busy'){toast(m.t==='busy'?t('cbusy'):t('cend'));endCall(false)}}
 addEventListener('beforeunload',()=>{try{endCall(true)}catch(x){}});
 
-function startPres(){if(CH.pres||!DB)return;CH.pres=1;if(CH.net)CR.uk().then(k=>{DB.pres(CH.uid,async ts=>({name:S.chat.name,av:S.chat.av,pub:k.pub,...(CH.adm&&CH.ak?{adm:true,sig:await CR.sign('adm|'+CH.uid+'|'+ts)}:{})}))});else DB.pres(CH.uid,{name:S.chat.name,av:S.chat.av})}
+function startPres(){if(CH.pres||!DB)return;CH.pres=1;if(CH.net)CR.uk().then(k=>{DB.pres(CH.uid,async ts=>({name:S.chat.name,av:S.chat.av,pub:k.pub,us:await CR.usign('on|'+CH.uid+'|'+ts),...(CH.adm?{adm:true,sig:await CR.sign('adm|'+CH.uid+'|'+ts)}:{})}))});else DB.pres(CH.uid,{name:S.chat.name,av:S.chat.av})}
 function joinChat(){S.chat.name=S.chat.name.trim().slice(0,20);S.chat.ok=true;sv();startPres();meLine();draw()}
 function msgH(m){const me=m.uid===CH.uid,s=CH.sel===m.id;
-return `<div class="cm${me?' me':''}${s?' sel':''}${m.adm?' adm':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${m.adm?' 👑 <span class="admb">'+t('adml')+'</span>':''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix&&m.fix.text?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
+return `<div class="cm${me?' me':''}${s?' sel':''}${m.adm?' adm':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${m.adm?(m.rl==='m'?' 🛡 <span class="admb">'+t('modl')+'</span>':' 👑 <span class="admb">'+t('adml')+'</span>'):''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix&&m.fix.text?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
 function actH(m){const st='event.stopPropagation();';
 if(CH.adm)return `<div class="ac"><button onclick="${st}fixM('${m.id}')">✏️ ${t('fix')}</button><button onclick="${st}pinM('${m.id}')">${m.pin?'📍':'📌'}</button><button onclick="${st}delM('${m.id}')">🗑</button>${m.adm?'':`<button onclick="${st}muteU('${m.uid}')">🔇</button>`}</div>`;
 return m.uid===CH.uid?'':`<div class="ac"><button onclick="${st}repM('${m.id}')">🚩 ${t('report')}</button></div>`}
 const msgsH=()=>{const it=[...CH.msgs.filter(m=>CH.adm||!CH.mutes[m.uid]).map(m=>({ts:m.ts,h:msgH(m)})),...CH.sys.map(x=>({ts:x.ts,h:sysH(x)}))].sort((a,b)=>a.ts-b.ts);return it.map(x=>x.h).join('')||`<div class="e">${t('nomsg')}</div>`};
 const tid=(a,b)=>[a,b].sort().join('_');
-const peerPub=u=>((CH.on[u]||{}).pub)||((CH.pmi[u]||{}).pub);
+const peerPub=u=>AC.rec[u]&&AC.rec[u].epub;
 async function pmKey(u){const p=peerPub(u);if(!p)throw 1;return CR.dk((await CR.uk()).priv,p)}
 function openPm(u){if(!CH.net||u===CH.uid)return;CH.pw=u;S.tab='community';S.sub='pm';CH.pSub&&CH.pSub();CH.pth=[];let c=0;
  CH.pSub=DB.on('pm/'+tid(CH.uid,u),v=>{const n=++c;(async()=>{const arr=Object.entries(v||{}).map(([id,m])=>({id,...m})).filter(m=>m.ts).sort((a,b)=>a.ts-b.ts);let k=null;try{k=await pmKey(u)}catch(x){}
@@ -619,7 +746,7 @@ const pmH=()=>CH.pth.map(m=>{const me=m.from===CH.uid,o=CH.on[CH.pw]||CH.pmi[CH.
 function pmListH(){const on=Object.entries(CH.on).filter(([k])=>k!==CH.uid).map(([k,o])=>`<button class="ib2" onclick="openPm('${e(k)}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||'')}</b><small>🟢 ${t('online')}</small></span></button>`).join('');
  const cv=Object.entries(CH.pmi||{}).filter(([k,o])=>o&&o.ts).sort((a,b)=>b[1].ts-a[1].ts).map(([k,o])=>`<button class="ib2${o.u?' un':''}" onclick="openPm('${e(k)}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||k)}</b><small>🔒 ${tmf(o.ts)}</small></span></button>`).join('');
  return `<p class="hint">${t('pmh')}</p><h3>🟢 ${t('online')}</h3><div class="inb">${on||'<p class="e">—</p>'}</div><h3>✉️ ${t('pm')}</h3><div class="inb">${cv||'<p class="e">—</p>'}</div>`}
-function dmH(){const mine=m=>CH.adm?m.from==='a':m.from==='u';return CH.th.map(m=>`<div class="cm${mine(m)?' me':''}"><span class="av">${m.from==='a'?'👑':e(S.chat.av)}</span><div class="bb"><div class="mt" dir="auto">${e(m.text)}</div><small>${tmf(m.ts)}</small></div></div>`).join('')||`<div class="e">—</div>`}
+function dmH(){const mine=m=>CH.isA?m.from==='a':m.from==='u';return CH.th.map(m=>`<div class="cm${mine(m)?' me':''}"><span class="av">${m.from==='a'?'👑':e(S.chat.av)}</span><div class="bb"><div class="mt" dir="auto">${e(m.text)}</div><small>${tmf(m.ts)}</small></div></div>`).join('')||`<div class="e">—</div>`}
 /* ===== Conference rooms: mesh WebRTC (audio/video), join requests, signed moderation ===== */
 CR.us=async()=>{if(CR._us)return CR._us;let j;try{j=JSON.parse(localStorage.getItem('lp_us'))}catch(x){}
  if(!j){const g=await crypto.subtle.generateKey(EC('ECDSA'),true,['sign']);j=await crypto.subtle.exportKey('jwk',g.privateKey);try{localStorage.setItem('lp_us',JSON.stringify(j))}catch(x){}}
@@ -627,27 +754,28 @@ CR.us=async()=>{if(CR._us)return CR._us;let j;try{j=JSON.parse(localStorage.getI
 CR.usign=async s=>b64(await crypto.subtle.sign(SG,(await CR.us()).priv,ENC.encode(s)));
 CR.uverify=async(pub,s,sig)=>{try{const k=await crypto.subtle.importKey('jwk',{kty:'EC',crv:'P-256',x:pub.x,y:pub.y,ext:true},EC('ECDSA'),false,['verify']);return await crypto.subtle.verify(SG,k,unb(sig),ENC.encode(s))}catch(x){return false}};
 const CF={raw:{},rooms:{},seen:{},cur:null,wait:null,pend:null,pq:0,qn:new Set(),vc:new Map(),an:{},ac:null,hb:null,ti:null};
-const capOf=R=>R.kind==='video'?6:8;
+const capOf=R=>R.kind==='video'?CFG.maxv:CFG.maxa;
 const fpOf=async p=>b64(await crypto.subtle.digest('SHA-256',ENC.encode(p.x+p.y))).replace(/[^A-Za-z0-9]/g,'').slice(0,8);
 function cvc(k,f){if(!CF.vc.has(k))CF.vc.set(k,f());return CF.vc.get(k)}
-const cfv=(R,str,o)=>o.by==='a'?av(str,o.sig):cvc('h'+R.id+str+o.sig,()=>CR.uverify(R.hp,str,o.sig));
+const cfv=(R,str,o)=>o.by==='a'?av(str,o.sig):cvc('h'+R.id+R.hp.x+R.hp.y+str+o.sig,()=>CR.uverify(R.hp,str,o.sig));
 async function procConf(){const raw=CF.raw,now=Date.now(),out={},n=++CF.pq;
  for(const [id,r] of Object.entries(raw)){if(!r||!r.ts||!r.hp||!r.title||!r.sig||now-r.ts>43200000)continue;
-  const ok=await cvc('r'+id+r.sig,async()=>(id.split('-')[0]===await fpOf(r.hp))&&await CR.uverify(r.hp,`room|${id}|${r.title}|${r.kind}|${r.mode}|${r.host}|${r.ts}`,r.sig));if(!ok)continue;
-  const R={id,title:String(r.title).slice(0,40),kind:r.kind==='video'?'video':'audio',mode:r.mode==='ask'?'ask':'open',host:r.host,hn:r.hn||'?',ha:r.ha||'🙂',hp:r.hp,ts:r.ts,p:{},ok:{},lock:{},ban:{},q:{},ended:false};
+  if(!AC.rec[r.host]||AC.rec[r.host].pub.x!==r.hp.x||acSt(r.host)!=='ok')continue;
+  const ok=await cvc('r'+id+r.hp.x+r.hp.y+r.title+r.kind+r.mode+r.host+r.ts+r.sig,async()=>(id.split('-')[0]===await fpOf(r.hp))&&await CR.uverify(r.hp,`room|${id}|${r.title}|${r.kind}|${r.mode}|${r.host}|${r.ts}`,r.sig));if(!ok)continue;
+  const R={id,title:String(r.title).slice(0,40),kind:r.kind==='video'?'video':'audio',mode:r.mode==='ask'?'ask':'open',host:r.host,hn:AC.rec[r.host].name,ha:AC.rec[r.host].av,hp:r.hp,ts:r.ts,p:{},ok:{},lock:{},ban:{},q:{},ended:false};
   const chk=async(w,u,o)=>!!(o&&o.sig&&o.ts&&o.on&&await cfv(R,`cf|${id}|${w}|${u}|1|${o.ts}`,o));
   if(await chk('end','',r.end))R.ended=true;
   for(const [u,o] of Object.entries(r.ok||{}))if(await chk('ok',u,o))R.ok[u]=1;
   for(const [u,o] of Object.entries(r.lock||{}))if(await chk('lock',u,o))R.lock[u]=1;
   for(const [u,o] of Object.entries(r.ban||{}))if(await chk('ban',u,o))R.ban[u]=1;
-  for(const [u,o] of Object.entries(r.q||{}))if(o&&o.ts&&now-o.ts<600000)R.q[u]=o;
-  for(const [u,o] of Object.entries(r.p||{})){if(!o||!o.ts)continue;const k=id+u;if(!CF.seen[k]||CF.seen[k].ts!==o.ts)CF.seen[k]={ts:o.ts,at:now};if(now-CF.seen[k].at<75000)R.p[u]=o}
+  for(const [u,o] of Object.entries(r.q||{})){const rc=AC.rec[u];if(o&&o.ts&&now-o.ts<600000&&rc&&acSt(u)==='ok')R.q[u]={...o,name:rc.name,av:rc.av}}
+  for(const [u,o] of Object.entries(r.p||{})){if(!o||!o.ts)continue;const k=id+u;if(!CF.seen[k]||CF.seen[k].ts!==o.ts)CF.seen[k]={ts:o.ts,at:now};const rc=AC.rec[u];if(rc&&acSt(u)==='ok'&&now-CF.seen[k].at<75000)R.p[u]={...o,name:rc.name,av:rc.av}}
   out[id]=R}
  if(n!==CF.pq)return;CF.rooms=out;confTick();drawChat()}
 const isAdmU=u=>!!(CH.on[u]&&CH.on[u].admv)||(u===CH.uid&&CH.adm);
 const confAllowed=(R,u)=>u!==CH.uid&&R.p[u]&&!R.ban[u]&&(R.mode==='open'||u===R.host||R.ok[u]||isAdmU(u));
-const canMod=R=>!!R&&(R.host===CH.uid||(CH.adm&&!!CH.ak));
-async function confSign(id,w,u,on){const ts=Date.now(),str=`cf|${id}|${w}|${u}|${on?1:0}|${ts}`,by=CH.adm&&CH.ak?'a':'h';return{on:!!on,ts,by,sig:by==='a'?await CR.sign(str):await CR.usign(str)}}
+const canMod=R=>!!R&&(R.host===CH.uid||CH.adm);
+async function confSign(id,w,u,on){const ts=Date.now(),str=`cf|${id}|${w}|${u}|${on?1:0}|${ts}`,by=CH.adm?'a':'h';return{on:!!on,ts,by,sig:by==='a'?await CR.sign(str):await CR.usign(str)}}
 async function confAct(id,w,u,on){const R=CF.rooms[id];if(!canMod(R))return;const v=await confSign(id,w,u||'',on);DB.set('conf/'+id+(w==='end'?'/end':'/'+w+'/'+u),v);setTimeout(()=>{CF.raw=DB.get('conf')||{};procConf()},80)}
 function confNew(){if(CF.cur||$('cform'))return;const d=document.createElement('div');d.id='cform';
  d.innerHTML=`<div class="card nar"><h3>🎙 ${t('cnew')}</h3><label>${t('ctitle')}</label><input id="cfti" maxlength="40" placeholder="${t('ctitle')}"><label>${t('ckind')}</label><select id="cfk" style="width:100%"><option value="audio">🎧 ${t('cka')}</option><option value="video">🎥 ${t('ckv')}</option></select><label>${t('cmode')}</label><select id="cfmd" style="width:100%"><option value="open">${t('cmo')}</option><option value="ask">${t('cma')}</option></select><p class="hint">${t('cmax')}</p><div class="row"><button class="btn g" onclick="confCreate()">🎙 ${t('cnew')}</button><button class="btn m" onclick="$('cform').remove()">✕</button></div></div>`;document.body.appendChild(d)}
@@ -719,8 +847,188 @@ function confUI(){const c=CF.cur;let d=$('conf');if(!c){d&&d.remove();clearInter
  $('cfb').innerHTML=`<button class="${c.mic&&!c.locked?'':'off'}" onclick="confMic()" aria-label="mic">${c.locked?'🔒':c.mic?'🎙':'🔇'}</button>${hv?`<button class="${c.cam?'':'off'}" onclick="confCam()" aria-label="cam">${c.cam?'📷':'🚫'}</button>`:''}<button class="red" onclick="confLeave()" aria-label="${t('cleave')}">🚪 ${t('cleave')}</button>${mod?`<button class="red2" onclick="confEnd()">⛔ ${t('cendall')}</button>`:''}`}
 function confListH(){const rs=Object.values(CF.rooms).filter(R=>!R.ended&&(Object.keys(R.p).length||Date.now()-R.ts<120000)).sort((a,b)=>b.ts-a.ts);
  const card=R=>{const n=Object.keys(R.p).length,w=CF.wait===R.id,adm=Object.keys(R.p).some(isAdmU);
-  return `<div class="p"><div class="t"><b>${R.kind==='video'?'🎥':'🎧'} ${e(R.title)}</b><span>⭐ ${e(R.ha)} ${e(R.hn)} · 👥 ${n}/${capOf(R)} · ${R.mode==='ask'?'🙋':'🔓'}${adm?' · 👑':''}</span></div><div class="ab">${w?`<button onclick="confCancel()">⏳ ✕</button>`:`<button class="jn" onclick="confEnter('${R.id}')">${R.mode==='ask'&&R.host!==CH.uid&&!CH.adm&&!R.ok[CH.uid]?t('creq'):t('cjoin')}</button>`}${CH.adm&&CH.ak?`<button onclick="CF.cur||confAct('${R.id}','end','',true)">⛔</button>`:''}</div></div>`};
+  return `<div class="p"><div class="t"><b>${R.kind==='video'?'🎥':'🎧'} ${e(R.title)}</b><span>⭐ ${e(R.ha)} ${e(R.hn)} · 👥 ${n}/${capOf(R)} · ${R.mode==='ask'?'🙋':'🔓'}${adm?' · 👑':''}</span></div><div class="ab">${w?`<button onclick="confCancel()">⏳ ✕</button>`:`<button class="jn" onclick="confEnter('${R.id}')">${R.mode==='ask'&&R.host!==CH.uid&&!CH.adm&&!R.ok[CH.uid]?t('creq'):t('cjoin')}</button>`}${CH.adm?`<button onclick="CF.cur||confAct('${R.id}','end','',true)">⛔</button>`:''}</div></div>`};
  return `<p class="hint">${t('cinfo')}</p><div class="row" style="margin:0 0 .6rem"><button class="btn g" onclick="confNew()">🎙 ${t('cnew')}</button></div>${rs.map(card).join('')||`<p class="e">${t('cnone')}</p>`}`}
+/* ===== Accounts: username + password, registry, roles, site settings (all signed, no server) ===== */
+const UNRE=/^[a-z0-9_]{3,20}$/,KDF_IT=600000;
+const AC={v:{},rec:{},ok:{},ban:{},mods:{},isA:{},first:{},reg:{},n:0,info:{}};
+const AU={u:null,name:'',av:'🙂',b:null,role:'user',st:'ok',pre:null};
+const CFGD={reg:'open',chat:1,pm:1,conf:1,calls:1,links:0,slow:1.2,maxv:6,maxa:8,notice:''};
+let CFG={...CFGD},CFGTS=0;
+const accStr=(u,r)=>['acct',u,r.name,r.av,r.pub.x,r.pub.y,r.epub.x,r.epub.y,r.wk.salt,r.wk.it,r.wk.iv,r.wk.ct,r.ts].join('|');
+const cfgStr=(v,ts)=>['cfg',v.reg,v.chat?1:0,v.pm?1:0,v.conf?1:0,v.calls?1:0,v.links?1:0,v.slow,v.maxv,v.maxa,v.notice||'',ts].join('|');
+const acSt=u=>!AC.rec[u]?'none':AC.isA[u]?'ok':AC.ban[u]?'ban':AC.ok[u]?'ok':(CFG.reg==='approval'?'pending':'ok');
+const acRole=u=>AC.isA[u]?'admin':AC.mods[u]?'mod':'user';
+const netReady=()=>NDB.up&&Date.now()>CH.gr;
+async function kdf(pw,salt,it){const k=await crypto.subtle.importKey('raw',ENC.encode(pw),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt:unb(salt),iterations:it,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function wrapB(bundle,pw){const salt=b64(crypto.getRandomValues(new Uint8Array(16))),k=await kdf(pw,salt,KDF_IT),iv=crypto.getRandomValues(new Uint8Array(12));
+ return{salt,it:KDF_IT,iv:b64(iv),ct:b64(await crypto.subtle.encrypt({name:'AES-GCM',iv},k,ENC.encode(JSON.stringify(bundle))))}}
+async function unwrapB(w,pw){const k=await kdf(pw,w.salt,w.it);return JSON.parse(DEC.decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:unb(w.iv)},k,unb(w.ct))))}
+/* identity keys come from the logged-in account */
+CR.uk=async()=>{if(!AU.b)throw 1;if(CR._ukU===AU.u&&CR._uk)return CR._uk;const j=AU.b.ecdh;CR._ukU=AU.u;return CR._uk={priv:await crypto.subtle.importKey('jwk',j,EC('ECDH'),false,['deriveKey']),pub:{x:j.x,y:j.y}}};
+CR.us=async()=>{if(!AU.b)throw 1;if(CR._usU===AU.u&&CR._us)return CR._us;const j=AU.b.sign;CR._usU=AU.u;return CR._us={priv:await crypto.subtle.importKey('jwk',j,EC('ECDSA'),false,['sign']),pub:{x:j.x,y:j.y}}};
+CR.sign=async s=>{const g=await CR.usign(s);return AU.role==='admin'?g:'M.'+AU.u+'.'+g};
+/* signature check: plain = administrator, "M.<user>.<sig>" = appointed moderator */
+const AVM=new Map();
+async function avR(s,sig){if(!sig||typeof sig!=='string')return false;
+ if(sig.charCodeAt(0)===77&&sig[1]==='.'){const i=sig.indexOf('.',2),u=sig.slice(2,i),g=sig.slice(i+1),r=AC.rec[u];if(!r||!AC.mods[u]||AC.ban[u])return false;
+  const k=u+'|'+s+'|'+g;if(AVM.has(k))return 'm';if(await CR.uverify(r.pub,s,g)){AVM.set(k,1);return 'm'}return false}
+ const k=s+'~'+sig;if(!AVC.has(k))AVC.set(k,CR.verify(s,sig));return (await AVC.get(k))?'a':false}
+const av=async(s,sig)=>!!(await avR(s,sig));
+const avA=async(s,sig)=>(await avR(s,sig))==='a';
+/* ---- registry ---- */
+const HL={};
+function heal(p,val){if(!netReady()||Date.now()-(HL[p]||0)<20000)return;HL[p]=Date.now();try{DB.set(p,val)}catch(x){}}
+AC.good={rec:{},st:{},role:{}};
+async function procAcct(){const v=AC.v||{},n=++AC.n,rec={},isA={},mods={},ok={},ban={},G=AC.good,hl=[];
+ for(const [u,r] of Object.entries(v)){if(!UNRE.test(u)||!r||!r.pub||!r.epub||!r.wk||!r.sig||typeof r.name!=='string'||typeof r.ts!=='number')continue;
+  if(typeof r.wk.it!=='number'||r.wk.it<100000||r.wk.it>1500000)continue;const key=r.pub.x+r.pub.y,adk=r.pub.x===AP.s.x&&r.pub.y===AP.s.y;if(AC.first[u]&&AC.first[u]!==key&&!adk)continue;
+  if(!(await cvc('a'+accStr(u,r)+r.sig,()=>CR.uverify(r.pub,accStr(u,r),r.sig))))continue;
+  AC.first[u]=key;if(adk||!G.rec[u]||(G.rec[u].pub.x+G.rec[u].pub.y===key&&r.ts>=G.rec[u].ts))G.rec[u]=r}
+ for(const u in G.rec){const g=G.rec[u],c=v[u];rec[u]=g;if(!c||c.sig!==g.sig||c.ts!==g.ts)hl.push(['acct/'+u,g]);if(g.pub.x===AP.s.x&&g.pub.y===AP.s.y)isA[u]=true}
+ AC.rec=rec;AC.isA=isA;
+ for(const u in rec){const ro=v[u]&&v[u].role;
+  if(ro&&typeof ro.ts==='number'&&ro.sig&&(!G.role[u]||ro.ts>G.role[u].ts)&&await avA(`role|${u}|${rec[u].pub.x}|${ro.on?1:0}|${ro.ts}`,ro.sig))G.role[u]={on:!!ro.on,ts:ro.ts,sig:ro.sig};
+  const g=G.role[u];if(g){if(g.on)mods[u]=true;if(!ro||ro.sig!==g.sig||ro.ts!==g.ts)hl.push(['acct/'+u+'/role',g])}}
+ AC.mods=mods;
+ for(const u in rec){if(isA[u])continue;const s=v[u]&&v[u].st;
+  if(s&&s.ts&&s.sig&&(!G.st[u]||s.ts>G.st[u].ts)&&await av(`st|${u}|${rec[u].pub.x}|${s.s}|${s.ts}`,s.sig)&&(s.s==='ok'||s.s==='ban'))G.st[u]={s:s.s,ts:s.ts,sig:s.sig};
+  const g=G.st[u];if(g){if(g.s==='ok')ok[u]=true;else ban[u]=true;if(!s||s.sig!==g.sig||s.ts!==g.ts)hl.push(['acct/'+u+'/st',g])}}
+ if(n!==AC.n)return;AC.ok=ok;AC.ban=ban;hl.forEach(([p,x])=>heal(p,x));onAcct()}
+let CFGG=null;
+async function procCfg(v){const r=v&&v.site;
+ if(r&&r.v&&r.sig&&typeof r.ts==='number'&&r.ts>CFGTS&&await avA(cfgStr(r.v,r.ts),r.sig)){CFGTS=r.ts;CFGG=r;CFG={...CFGD,...r.v};gateTick(true)}
+ if(CFGG&&!(r&&r.ts===CFGG.ts&&r.sig===CFGG.sig))heal('cfg/site',CFGG)}
+let gk='';
+function gateTick(force){const k=[netReady(),AU.u,AU.st,AU.role,CFG.reg,CFG.notice,AV.tab,Object.keys(AC.rec).length>0].join();if(force||k!==gk){gk=k;draw(1)}}
+function applyRole(){CH.adm=AU.role!=='user';CH.isA=AU.role==='admin';admin=CH.isA;if(CH.adm&&DB)attachAdmin();try{NDB.beat&&NDB.beat()}catch(x){}}
+function onAcct(){
+ if(netReady()&&AU.pre&&!AU.u)tryPre();
+ if(AU.u){const st=acSt(AU.u),ro=acRole(AU.u);if(st==='none'&&netReady()){/* record vanished: keep session, wait */}else{const was=AU.st;AU.st=st;AU.role=ro;if(was!=='ok'&&st==='ok'&&!CH.started)startChat();applyRole()}}
+ CH.redo.forEach(f=>f());calcOn();admNotif();gateTick();if(S.tab==='admin'||S.tab==='community')drawChat();if(S.tab==='admin')admRefresh()}
+let regSeen=null;
+function admNotif(){if(!CH.adm||AU.st!=='ok')return;const p=Object.keys(AC.rec).filter(u=>acSt(u)==='pending');if(regSeen===null){regSeen=new Set(p);return}for(const u of p)if(!regSeen.has(u)){regSeen.add(u);toast('🆕 '+t('newreg')+': '+u);if(S.snd!==false)beep()}}
+/* ---- session ---- */
+function sessClear(){try{localStorage.removeItem('lp_sess');sessionStorage.removeItem('lp_sess')}catch(x){}}
+function tryPre(){const s=AU.pre;AU.pre=null;const r=s&&AC.rec[s.u];
+ if(r&&s.b&&s.b.sign&&s.b.sign.x===r.pub.x&&s.b.ecdh&&s.b.ecdh.x===r.epub.x)startSession(s.u,s.b,!!localStorage.getItem('lp_sess'));else{sessClear();gateTick(true)}}
+async function startSession(u,b,remember){const r=AC.rec[u];AU.u=u;AU.b=b;AU.name=r.name;AU.av=r.av;AU.st=acSt(u);AU.role=acRole(u);
+ try{const st=remember?localStorage:sessionStorage;st.setItem('lp_sess',JSON.stringify({u,b}));(remember?sessionStorage:localStorage).removeItem('lp_sess')}catch(x){}
+ S.chat.name=r.name;S.chat.av=r.av;S.chat.ok=true;sv();CH.uid=u;CH.gr=Infinity;NDB.reconnect(u);applyRole();
+ if(AU.st==='ok')await startChat();gateTick(true)}
+async function doLogin(u,pw,rem){u=String(u||'').trim().toLowerCase();const r=AC.rec[u];if(!r)throw 'nouser';let b;try{b=await unwrapB(r.wk,pw)}catch(x){throw 'badpw'}
+ if(!b||!b.sign||!b.ecdh||b.sign.x!==r.pub.x||b.ecdh.x!==r.epub.x)throw 'badpw';await startSession(u,b,rem)}
+const pwScore=p=>{let s=0;if(p.length>=10)s++;if(p.length>=14)s++;if(/[a-z]/.test(p)&&/[A-Z]/.test(p))s++;if(/\d/.test(p))s++;if(/[^A-Za-z0-9]/.test(p))s++;if(/^(password|passwort|12345|qwert|abc123|iloveyou)/i.test(p))s=0;return s};
+const pwOk=p=>p.length>=10&&/[A-Za-z؀-ۿ]/.test(p)&&/\d/.test(p)&&pwScore(p)>=3;
+async function publishAcct(u,name,avt,bundle,pw,info){const wk=await wrapB(bundle,pw),pub={x:bundle.sign.x,y:bundle.sign.y},epub={x:bundle.ecdh.x,y:bundle.ecdh.y},r={name,av:avt,pub,epub,wk,ts:Date.now()};
+ const pk=await crypto.subtle.importKey('jwk',bundle.sign,EC('ECDSA'),false,['sign']);r.sig=b64(await crypto.subtle.sign(SG,pk,ENC.encode(accStr(u,r))));
+ DB.set('acct/'+u,r);
+ if(info){const ek=await crypto.subtle.importKey('jwk',bundle.ecdh,EC('ECDH'),false,['deriveKey']),k=await CR.dk(ek,AP.d),c=await CR.enc(k,JSON.stringify(info));DB.set('reg/'+u,{...c,ts:Date.now()})}
+ AC.v=DB.get('acct')||{};await procAcct();return r}
+async function doRegister(f){const u=String(f.u||'').trim().toLowerCase();
+ if(CFG.reg==='closed')throw 'closed';if(!UNRE.test(u))throw 'baduser';if(AC.rec[u])throw 'taken';
+ const name=String(f.name||'').trim().slice(0,20);if(name.length<2)throw 'noname';if(!pwOk(f.pw))throw 'weakpw';if(f.pw!==f.pw2)throw 'pwmatch';if(!f.acc)throw 'norules';
+ const sg=await crypto.subtle.generateKey(EC('ECDSA'),true,['sign','verify']),dh=await crypto.subtle.generateKey(EC('ECDH'),true,['deriveKey']);
+ const bundle={sign:await crypto.subtle.exportKey('jwk',sg.privateKey),ecdh:await crypto.subtle.exportKey('jwk',dh.privateKey)};
+ const info={email:f.email||'',country:f.country||'',nat:f.nat||'',learn:f.learn||'',lv:f.lv||'',note:f.note||'',name,ts:Date.now(),lang:navigator.language||''};
+ await publishAcct(u,name,f.av,bundle,f.pw,info);await startSession(u,bundle,!!f.rem)}
+async function doAdminSetup(keyTxt,u,pw,name){u=String(u||'').trim().toLowerCase();if(!UNRE.test(u))throw 'baduser';if(!pwOk(pw))throw 'weakpw';let k;try{k=JSON.parse(keyTxt)}catch(x){throw 'badkey'}
+ try{await CR.chkKey(k)}catch(x){throw 'badkey'}
+ const old=AC.rec[u];if(old&&!AC.isA[u])throw 'taken';const bundle={sign:k.sign,ecdh:k.ecdh};
+ await publishAcct(u,(name||'Admin').slice(0,20),'👑',bundle,pw,null);await startSession(u,bundle,true)}
+async function saveProfile(name,avt){name=String(name||'').trim().slice(0,20);if(name.length<2)return false;const r=AC.rec[AU.u];if(!r)return false;
+ const n={...r,name,av:avt,ts:Date.now()};const pk=(await CR.us()).priv;n.sig=b64(await crypto.subtle.sign(SG,pk,ENC.encode(accStr(AU.u,n))));DB.set('acct/'+AU.u,n);AC.v=DB.get('acct')||{};AU.name=name;AU.av=avt;S.chat.name=name;S.chat.av=avt;sv();await procAcct();try{NDB.beat&&NDB.beat()}catch(x){}return true}
+async function changePw(cur,nw){const r=AC.rec[AU.u];try{await unwrapB(r.wk,cur)}catch(x){throw 'badpw'}if(!pwOk(nw))throw 'weakpw';
+ const wk=await wrapB(AU.b,nw),n={...r,wk,ts:Date.now()};n.sig=b64(await crypto.subtle.sign(SG,(await CR.us()).priv,ENC.encode(accStr(AU.u,n))));DB.set('acct/'+AU.u,n);AC.v=DB.get('acct')||{};await procAcct()}
+/* ---- admin / moderator actions (signed) ---- */
+async function setSt(u,s){const r=AC.rec[u];if(!r||!CH.adm||AC.isA[u])return;const ts=Date.now();DB.set(`acct/${u}/st`,{s,ts,sig:await CR.sign(`st|${u}|${r.pub.x}|${s}|${ts}`)});AC.v=DB.get('acct')||{};procAcct()}
+async function setRole(u,on){const r=AC.rec[u];if(!r||!CH.isA||AC.isA[u])return;const ts=Date.now();DB.set(`acct/${u}/role`,{on:!!on,ts,sig:await CR.sign(`role|${u}|${r.pub.x}|${on?1:0}|${ts}`)});AC.v=DB.get('acct')||{};procAcct()}
+async function saveCfg(v){if(!CH.isA)return;const ts=Date.now();DB.set('cfg/site',{v,ts,sig:await CR.sign(cfgStr(v,ts))});CFGTS=0;procCfg(DB.get('cfg'))}
+async function loadInfo(u){if(!CH.isA||AC.info[u])return;const r=AC.rec[u],c=AC.reg[u];if(!r||!c||!c.ct)return;try{const k=await CR.dk((await CR.uk()).priv,r.epub);AC.info[u]=JSON.parse(await CR.dec(k,c))}catch(x){AC.info[u]={err:1}}admRefresh()}
+
+/* ===== Auth screens, profile, admin console ===== */
+const AV={tab:'login',err:'',busy:'',ak:'',f:{u:'',pw:'',pw2:'',name:'',av:AVS[0],email:'',country:'',nat:'fa',learn:'de',lv:'A1',note:'',rem:true,acc:false}};
+const AD={sec:'dash',q:'',open:null,msg:''};
+const errT=c=>t('e_'+c)||t('e_net');
+const t0=Date.now();
+function pwm(v){const s=pwScore(v||''),i=$('pwi'),x=$('pwt');if(i){i.style.width=(s*20)+'%';i.style.background=s<3?'var(--bad)':s<4?'var(--saf)':'var(--ok)'}if(x)x.textContent=v?t(s<3?'pw_weak':s<4?'pw_mid':'pw_strong'):''}
+async function avGo(kind){if(AV.busy)return;AV.err='';const f=AV.f;
+ try{AV.busy=kind==='login'?'au_busy2':'au_busy';draw(1);await new Promise(r=>setTimeout(r,40));
+  if(kind==='login')await doLogin(f.u,f.pw,f.rem);else if(kind==='reg')await doRegister(f);else await doAdminSetup(AV.ak,f.u,f.pw,f.name)}
+ catch(x){AV.err=typeof x==='string'?x:'net';if(typeof x!=='string')console.error(x)}
+ AV.busy='';f.pw='';f.pw2='';draw(1)}
+function rdAk(fl){if(!fl)return;const r=new FileReader();r.onload=()=>{AV.ak=r.result;$('avak').value=r.result};r.readAsText(fl)}
+function gateView(){
+ if(!netReady()||(AU.pre&&!AU.u)){const slow=Date.now()-t0>12000&&!NDB.up;return `<div class="splash"><div class="spin big"></div><p>${t('loading')}</p>${slow?`<p class="aerr">${t('e_net')}</p><button class="btn" onclick="location.reload()">${t('au_retry')}</button>`:''}</div>`}
+ if(AU.u&&AU.st==='pending')return `<div class="splash card"><div style="font-size:3rem">⏳</div><h2>${t('au_pend_t')}</h2><p>${t('au_pend_d')}</p><p><b>${e(AU.av)} ${e(AU.name)}</b> · @${e(AU.u)}</p><button class="btn m" onclick="logout()">${t('au_out')}</button></div>`;
+ if(AU.u&&AU.st==='ban')return `<div class="splash card"><div style="font-size:3rem">⛔</div><h2>${t('au_ban_t')}</h2><p>${t('au_ban_d')}</p><button class="btn m" onclick="logout()">${t('au_out')}</button></div>`;
+ if(AU.u)return '';
+ return authView()}
+function authView(){const f=AV.f,tab=AV.tab,closed=CFG.reg==='closed';if(closed&&tab==='reg')AV.tab='login';
+ const err=AV.err?`<div class="aerr">${e(errT(AV.err))}</div>`:'',busy=AV.busy?`<div class="abusy"><span class="spin"></span>${t(AV.busy)}</div>`:'';
+ const inp=(id,k,type,ac,ph)=>`<input id="${id}" type="${type||'text'}" dir="${type==='password'||k==='u'||k==='email'?'ltr':'auto'}" autocomplete="${ac||'off'}" autocapitalize="off" spellcheck="false" value="${e(f[k])}" ${ph?`placeholder="${e(ph)}"`:''} oninput="AV.f.${k}=this.value${k==='pw'&&tab!=='login'?';pwm(this.value)':''}" ${AV.busy?'disabled':''} onkeydown="if(event.key==='Enter')avGo('${tab}')">`;
+ const lang=(k)=>`<select onchange="AV.f.${k}=this.value">${['fa','de','en','es'].map(l=>`<option value="${l}" ${f[k]===l?'selected':''}>${LN[l]}</option>`).join('')}</select>`;
+ let form='';
+ if(tab==='login')form=`<label>${t('au_user')}</label>${inp('au1','u','text','username')}<label>${t('au_pw')}</label>${inp('au2','pw','password','current-password')}<label class="ck"><input type="checkbox" ${f.rem?'checked':''} onchange="AV.f.rem=this.checked"> ${t('au_rem')}</label>${err}${busy}<button class="btn big g" ${AV.busy?'disabled':''} onclick="avGo('login')">${t('au_go_login')}</button>`;
+ else if(tab==='reg')form=`<label>${t('au_user')}</label>${inp('au1','u','text','username')}<small class="hint">${t('au_userh')}</small><label>${t('au_name')}</label>${inp('au3','name','text','nickname')}<label>${t('avatar')}</label><div class="avg">${AVS.map(a=>`<button type="button" class="${f.av===a?'on':''}" onclick="AV.f.av='${a}';draw(1)">${a}</button>`).join('')}</div><label>${t('au_pw')}</label>${inp('au2','pw','password','new-password')}<div class="pwm"><i id="pwi"></i></div><small class="hint" id="pwt"></small><small class="hint">${t('au_pwh')}</small><label>${t('au_pw2')}</label>${inp('au4','pw2','password','new-password')}
+ <details class="more"><summary>${t('au_more')}</summary><label>${t('au_email')}</label>${inp('au5','email','email','email')}<label>${t('au_country')}</label>${inp('au6','country','text','country-name')}<div class="two"><div><label>${t('au_native')}</label>${lang('nat')}</div><div><label>${t('au_learn')}</label><select onchange="AV.f.learn=this.value">${['de','en','es'].map(l=>`<option value="${l}" ${f.learn===l?'selected':''}>${LN[l]}</option>`).join('')}</select></div></div><label>${t('au_level')}</label><select onchange="AV.f.lv=this.value">${LV.map(l=>`<option ${f.lv===l?'selected':''}>${l}</option>`).join('')}</select><label>${t('au_note')}</label><input maxlength="200" value="${e(f.note)}" oninput="AV.f.note=this.value"></details>
+ <details class="more"><summary>🤝 ${t('rtitle')}</summary>${rulesH()}</details><label class="ck"><input type="checkbox" ${f.acc?'checked':''} onchange="AV.f.acc=this.checked"> ${t('au_rules')}</label><label class="ck"><input type="checkbox" ${f.rem?'checked':''} onchange="AV.f.rem=this.checked"> ${t('au_rem')}</label>${err}${busy}<button class="btn big g" ${AV.busy?'disabled':''} onclick="avGo('reg')">${t('au_go_reg')}</button>`;
+ else form=`<p class="hint">${t('au_admh')}</p><textarea id="avak" dir="ltr" rows="3" placeholder='{"sign":{…},"ecdh":{…}}' oninput="AV.ak=this.value">${e(AV.ak)}</textarea><input type="file" accept=".json" onchange="rdAk(this.files[0])"><label>${t('au_user')}</label>${inp('au1','u','text','username')}<label>${t('au_name')}</label>${inp('au3','name','text','nickname')}<label>${t('au_pw')}</label>${inp('au2','pw','password','new-password')}<div class="pwm"><i id="pwi"></i></div><small class="hint" id="pwt"></small><small class="hint">${t('au_pwh')}</small>${err}${busy}<button class="btn big g" ${AV.busy?'disabled':''} onclick="avGo('adm')">${t('au_adm')}</button>`;
+ return `<div class="auth"><div class="ahero"><h2>${t('au_hello')}</h2><p>${t('au_tag')}</p><ul>${[1,2,3,4].map(i=>`<li>${t('au_f'+i)}</li>`).join('')}</ul></div>
+ <div class="acard"><div class="atabs"><button class="${tab==='login'?'on':''}" onclick="AV.tab='login';AV.err='';draw(1)">${t('au_login')}</button>${closed?'':`<button class="${tab==='reg'?'on':''}" onclick="AV.tab='reg';AV.err='';draw(1)">${t('au_reg')}</button>`}</div>
+ ${closed&&tab==='login'?`<div class="aerr">${t('e_closed')}</div>`:''}${form}
+ <p class="alink"><a href="#" onclick="AV.tab=AV.tab==='adm'?'login':'adm';AV.err='';draw(1);return false">🛠 ${t('au_adm')}</a></p></div></div>`}
+function logout(){sessClear();location.reload()}
+/* ---- profile ---- */
+function profileUI(){if($('pfm')||!AU.u)return;const d=document.createElement('div');d.id='pfm';d.className='modal';d.onclick=ev=>{if(ev.target===d)d.remove()};
+ d.innerHTML=`<div class="card nar"><h3>${e(AU.av)} ${t('pf_title')}</h3><p><b>${e(AU.name)}</b> · @${e(AU.u)}<br><span class="rolb r_${AU.role}">${t('role_'+AU.role)}</span></p>
+ <label>${t('au_name')}</label><input id="pfn" maxlength="20" value="${e(AU.name)}"><label>${t('avatar')}</label><div class="avg" id="pfa">${AVS.map(a=>`<button type="button" class="${AU.av===a?'on':''}" onclick="pfAv='${a}';[...$('pfa').children].forEach(b=>b.classList.toggle('on',b.textContent==='${a}'))">${a}</button>`).join('')}</div><div class="row"><button class="btn g" onclick="pfSave()">${t('save')}</button></div>
+ <h3 style="margin-top:1rem">🔐 ${t('pf_chpw')}</h3><label>${t('pf_cur')}</label><input id="pfc" type="password" autocomplete="current-password"><label>${t('pf_new')}</label><input id="pfw" type="password" autocomplete="new-password"><p class="aerr" id="pfe" hidden></p><div class="row"><button class="btn" onclick="pfPw()">${t('pf_chpw')}</button></div>
+ <div class="row"><button class="btn m" onclick="logout()">⎋ ${t('au_out')}</button><button class="btn m" onclick="$('pfm').remove()">✕</button></div></div>`;document.body.appendChild(d);pfAv=AU.av}
+let pfAv='🙂';
+async function pfSave(){if(await saveProfile($('pfn').value,pfAv)){toast('✓');$('pfm').remove();draw()}}
+async function pfPw(){const e1=$('pfe');e1.hidden=true;try{await changePw($('pfc').value,$('pfw').value);toast(t('s_saved'));$('pfm').remove()}catch(x){e1.textContent=errT(typeof x==='string'?x:'net');e1.hidden=false}}
+/* ---- admin console ---- */
+const usersList=()=>Object.entries(AC.rec).map(([u,r])=>({u,r,st:acSt(u),ro:acRole(u)})).sort((a,b)=>b.r.ts-a.r.ts);
+const dstr=ts=>{try{return new Date(ts).toLocaleDateString()}catch(x){return''}};
+function goAdmin(){if(!CH.adm)return;S.tab='admin';sv();draw();scrollTo(0,0)}
+function admSec(k){AD.sec=k;AD.msg='';draw();scrollTo(0,0)}
+const badge=(ro,st)=>(ro!=='user'?`<span class="rolb r_${ro}">${ro==='admin'?'👑':'🛡'} ${t('role_'+ro)}</span>`:'')+`<span class="stb s_${st}">${t('u_'+st)}</span>`;
+function infoH(u){const i=AC.info[u];if(!CH.isA)return '';if(!i){loadInfo(u);return `<div class="uinf">…</div>`}if(i.err)return `<div class="uinf">🔒</div>`;
+ return `<div class="uinf"><div>📧 ${e(i.email||'—')}</div><div>🌍 ${e(i.country||'—')}</div><div>🗣 ${e(LN[i.nat]||i.nat||'—')} → 📚 ${e(LN[i.learn]||i.learn||'—')} · ${e(i.lv||'')}</div>${i.note?`<div>📝 ${e(i.note)}</div>`:''}<small>${dstr(i.ts)} · ${e(i.lang||'')}</small></div>`}
+function userRow(x,inf){const {u,r,st,ro}=x,me=u===AU.u,own=ro==='admin';
+ return `<div class="urow"><span class="av">${e(r.av)}</span><div class="un"><b>${e(r.name)}</b><small dir="ltr">@${e(u)} · ${dstr(r.ts)}</small><div>${badge(ro,st)}</div>${inf||AD.open===u?infoH(u):''}</div><div class="ua">${own||me?'':`${st==='pending'?`<button class="grn" onclick="setSt('${u}','ok')">✓ ${t('u_appr')}</button>`:''}${st==='ban'?`<button onclick="setSt('${u}','ok')">♻ ${t('u_unban')}</button>`:`<button class="redb" onclick="setSt('${u}','ban')">⛔ ${t('u_rej')}</button>`}${CH.isA&&st==='ok'?`<button onclick="setRole('${u}',${ro==='mod'?'false':'true'})">🛡 ${t(ro==='mod'?'u_unmod':'u_mkmod')}</button>`:''}`}${CH.isA&&!own?`<button onclick="AD.open=AD.open==='${u}'?null:'${u}';admRefresh()">ℹ</button>`:''}</div></div>`}
+function admDash(){const us=usersList(),c=s=>us.filter(x=>x.st===s).length,rooms=Object.values(CF.rooms||{}).filter(R=>!R.ended&&Object.keys(R.p).length).length;
+ const tile=(n,l,ic)=>`<div class="stt"><span>${ic}</span><b>${n}</b><small>${l}</small></div>`;
+ return `<div class="stg">${tile(us.length,t('stat_users'),'👥')}${tile(c('pending'),t('stat_pend'),'⏳')}${tile(c('ban'),t('stat_ban'),'⛔')}${tile(us.filter(x=>x.ro==='mod').length,t('stat_mods'),'🛡')}${tile(Object.keys(CH.on).length,t('online'),'🟢')}${tile(rooms,t('stat_rooms'),'🎙')}${tile(Object.keys(CH.rep||{}).length,t('reports'),'🚩')}</div>
+ <h3>🆕 ${t('ac_reqs')}</h3>${us.filter(x=>x.st==='pending').slice(0,6).map(userRow).join('')||`<p class="e">—</p>`}<h3>👥 ${t('ac_users')}</h3>${us.slice(0,5).map(userRow).join('')||`<p class="e">${t('u_none')}</p>`}`}
+function admUsers(){const q=AD.q.toLowerCase(),us=usersList().filter(x=>!q||x.u.includes(q)||x.r.name.toLowerCase().includes(q));return us.map(userRow).join('')||`<p class="e">${t('u_none')}</p>`}
+function admReqs(){return usersList().filter(x=>x.st==='pending').map(x=>userRow(x,true)).join('')||`<p class="e">—</p>`}
+function admSet(){const c=CFG,tg=(k,l)=>`<label class="ck"><input type="checkbox" id="cf_${k}" ${c[k]?'checked':''}> ${t(l)}</label>`;
+ return `<div class="card"><p class="hint">${t('s_note')}</p><label>${t('s_reg')}</label><select id="cf_reg" style="width:100%">${[['open','s_reg_open'],['approval','s_reg_app'],['closed','s_reg_cl']].map(([v,l])=>`<option value="${v}" ${c.reg===v?'selected':''}>${t(l)}</option>`).join('')}</select>
+ <label>${t('s_feat')}</label>${tg('chat','s_chat')}${tg('pm','s_pm')}${tg('conf','s_conf')}${tg('calls','s_calls')}${tg('links','s_links')}
+ <div class="two"><div><label>${t('s_slow')}</label><input id="cf_slow" type="number" min="0" max="30" step="0.5" value="${c.slow}"></div><div><label>${t('s_maxv')}</label><input id="cf_maxv" type="number" min="2" max="6" value="${c.maxv}"></div><div><label>${t('s_maxa')}</label><input id="cf_maxa" type="number" min="2" max="8" value="${c.maxa}"></div></div>
+ <label>${t('s_notice')}</label><input id="cf_notice" maxlength="200" value="${e(c.notice)}"><div class="row"><button class="btn g" onclick="cfgGo()">${t('save')}</button><span class="okm" id="cfm">${AD.msg}</span></div></div>`}
+async function cfgGo(){const g=i=>$('cf_'+i),n=(i,a,b)=>Math.max(a,Math.min(b,Number(g(i).value)||a));
+ const v={reg:g('reg').value,chat:g('chat').checked?1:0,pm:g('pm').checked?1:0,conf:g('conf').checked?1:0,calls:g('calls').checked?1:0,links:g('links').checked?1:0,slow:n('slow',0,30),maxv:n('maxv',2,6),maxa:n('maxa',2,8),notice:g('notice').value.trim().slice(0,200)};
+ await saveCfg(v);AD.msg=t('s_saved');const m=$('cfm');if(m)m.textContent=AD.msg}
+function dlKey(){if(!CH.isA||!AU.b)return;const b=new Blob([JSON.stringify({note:'GEHEIM / SECRET - nie hochladen / never upload',sign:AU.b.sign,ecdh:AU.b.ecdh})],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='admin-key.json';a.click()}
+function admAcct(){return `<div class="card"><h3>${e(AU.av)} ${e(AU.name)} <small>@${e(AU.u)}</small></h3><p><span class="rolb r_${AU.role}">${t('role_'+AU.role)}</span></p><div class="row"><button class="btn" onclick="profileUI()">👤 ${t('pf_title')}</button>${CH.isA?`<button class="btn s" onclick="dlKey()">🔑 ${t('ac_key')}</button>`:''}<button class="btn m" onclick="logout()">⎋ ${t('au_out')}</button></div>${CH.isA?`<p class="hint">${t('ac_keyh')}</p>`:''}</div>`}
+function admBody(){switch(AD.sec){
+ case 'dash':return `<div id="adash">${admDash()}</div>`;
+ case 'users':return `<input class="sq" id="auq" value="${e(AD.q)}" placeholder="${t('u_search')}" oninput="AD.q=this.value;admRefresh()"><div id="aul">${admUsers()}</div>`;
+ case 'reqs':return `<div id="areq">${admReqs()}</div>`;
+ case 'chat':return `<div id="cmod">${modH()}</div>`;
+ case 'conf':return `<div id="acf">${confListH()}</div>`;
+ case 'set':return CH.isA?admSet():'';
+ case 'cont':return CH.isA?contentUI():'';
+ default:return admAcct()}}
+function admRefresh(){if(S.tab!=='admin')return;const m={adash:admDash,aul:admUsers,areq:admReqs,acf:confListH,cmod:modH};for(const id in m){const n=$(id);if(n)n.innerHTML=m[id]()}}
+function vAdmin(){if(!CH.adm||AU.st!=='ok'){S.tab='learn';return vLearn()}
+ const secs=(CH.isA?['dash','users','reqs','chat','conf','set','cont','acct']:['dash','users','reqs','chat','conf','acct']),IC={dash:'📊',users:'👥',reqs:'🆕',chat:'💬',conf:'🎙',set:'⚙️',cont:'📝',acct:'🔐'};if(!secs.includes(AD.sec))AD.sec='dash';
+ const np=Object.keys(AC.rec).filter(u=>acSt(u)==='pending').length;
+ return `<div class="acw"><aside class="acs"><div class="acb">🛠 ${t('ac_title')}</div>${secs.map(k=>`<button class="${AD.sec===k?'on':''}" onclick="admSec('${k}')"><span>${IC[k]}</span> ${t('ac_'+k)}${k==='reqs'&&np?` <i class="cnt">${np}</i>`:''}</button>`).join('')}<button class="bk" onclick="S.tab='learn';sv();draw()">← ${t('ac_back')}</button></aside><section class="acm"><h2>${IC[AD.sec]} ${t('ac_'+AD.sec)}</h2>${admBody()}</section></div>`}
+
 const admBar=()=>{if(!CH.net)return '';const a=Object.entries(CH.on).find(([k,o])=>o.admv);return a?`<div class="admon on">👑 ${t('admon')} ${CH.uid!==a[0]?`<button class="chip" onclick="openPm('${e(a[0])}')">✉️</button><button class="chip" onclick="startCall('${e(a[0])}',false)">📞</button><button class="chip" onclick="startCall('${e(a[0])}',true)">🎥</button>`:''}</div>`:`<div class="admon">👑 ${t('admoff')}</div>`};
 const onlineH=()=>{const a=Object.entries(CH.on).sort((x,y)=>(y[1].admv?1:0)-(x[1].admv?1:0)),dn=CH.net&&!NDB.up;return `<span class="dotg${dn?' off':''}"></span><b>${a.length}</b> ${t('online')}`+a.slice(0,14).map(([k,o])=>k===CH.uid||!CH.net?`<span class="chip">${e(o.av||'🙂')} ${e(o.name||'')}${k===CH.uid?' ·':''}</span>`:`<button class="chip" onclick="openPm('${e(k)}')">${o.admv?'👑':e(o.av||'🙂')} ${e(o.name||'')}</button>`).join('')+`<button class="chip" onclick="S.snd=S.snd===false;sv();drawChat()" aria-label="sound">${S.snd===false?'🔕':'🔔'}</button>`+(dn?`<span class="chip">⏳ ${t('loading')}</span>`:'')};
 function inbH(){return Object.entries(CH.idx||{}).sort((a,b)=>b[1].ts-a[1].ts).map(([u,o])=>`<button class="ib2${o.u?' un':''}${CH.dw===u?' on':''}" onclick="openDm('${u}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||u)}</b><small>${e(o.last||(CH.net?'🔒':''))}</small></span></button>`).join('')||`<p class="e">—</p>`}
@@ -733,18 +1041,19 @@ const m=$('cmsgs');if(m&&S.sub==='pub'){const nb=m.scrollHeight-m.scrollTop-m.cl
 const d=$('cdm');if(d){const nb=d.scrollHeight-d.scrollTop-d.clientHeight<90;d.innerHTML=dmH();if(nb)d.scrollTop=d.scrollHeight}
 {const m=$('cpt');if(m){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=pmH();if(nb)m.scrollTop=m.scrollHeight}}set('cpl',pmListH());if(S.sub==='conf')set('ccl',confListH());set('conl',onlineH());set('cadm',admBar());set('cinb',inbH());set('cmod',modH());drawTyp()}
 function selM(id){CH.sel=CH.sel===id?null:id;drawChat()}
-async function sendRaw(x){x=x.trim();if(!x||isMuted())return false;
-if(!CH.adm&&/https?:|www\./i.test(x)){toast(t('nolink'));return false}
-if(Date.now()-CH.last<1200)return false;CH.last=Date.now();
+async function sendRaw(x){x=x.trim();if(!x||isMuted()||(!CFG.chat&&!CH.adm))return false;
+if(!CH.adm&&!CFG.links&&/https?:|www\./i.test(x)){toast(t('nolink'));return false}
+if(Date.now()-CH.last<(CH.adm?400:CFG.slow*1000))return false;CH.last=Date.now();
 const id=mkId(),o={uid:CH.uid,name:S.chat.name,av:S.chat.av,text:x.slice(0,300),ts:Date.now()};
-if(CH.adm){o.adm=true;if(CH.net)o.sig=await CR.sign('msg|'+id+'|'+o.uid+'|'+o.ts+'|'+o.text)}
+o.us=await CR.usign('m|'+id+'|'+o.uid+'|'+o.ts+'|'+o.text);
+if(CH.adm){o.adm=true;o.sig=await CR.sign('msg|'+id+'|'+o.uid+'|'+o.ts+'|'+o.text)}
 DB.set('rooms/main/'+id,o);S.cn=(S.cn||0)+1;sv();setTimeout(()=>{const m=$('cmsgs');if(m)m.scrollTop=m.scrollHeight},80);return true}
 function sendM(){const i=$('ci');if(!i)return;const x=i.value;i.value='';sendRaw(x).then(ok=>{if(!ok&&!i.value)i.value=x})}
-async function sendDm(){const i=$('cdi');if(!i)return;const x=i.value.trim(),u=CH.adm?CH.dw:CH.uid;if(!x||!u)return;
-if(CH.net){try{const k=await dmKey(u),c=await CR.enc(k,x.slice(0,500));i.value='';DB.push('dm/'+u,{from:CH.adm?'a':'u',...c,ts:Date.now()});
- DB.upd('dmidx/'+u,CH.adm?{ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,pub:(await CR.uk()).pub,ts:Date.now(),u:true})}catch(x){toast('⚠')}return}
-DB.push('dm/'+u,{from:CH.adm?'a':'u',text:x.slice(0,500),ts:Date.now()});
-DB.upd('dmidx/'+u,CH.adm?{last:x.slice(0,60),ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,last:x.slice(0,60),ts:Date.now(),u:true});i.value=''}
+async function sendDm(){const i=$('cdi');if(!i)return;const x=i.value.trim(),u=CH.isA?CH.dw:CH.uid;if(!x||!u)return;
+if(CH.net){try{const k=await dmKey(u),c=await CR.enc(k,x.slice(0,500));i.value='';DB.push('dm/'+u,{from:CH.isA?'a':'u',...c,ts:Date.now()});
+ DB.upd('dmidx/'+u,CH.isA?{ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,pub:(await CR.uk()).pub,ts:Date.now(),u:true})}catch(x){toast('⚠')}return}
+DB.push('dm/'+u,{from:CH.isA?'a':'u',text:x.slice(0,500),ts:Date.now()});
+DB.upd('dmidx/'+u,CH.isA?{last:x.slice(0,60),ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,last:x.slice(0,60),ts:Date.now(),u:true});i.value=''}
 function openDm(u){CH.dw=u;CH.dmSub&&CH.dmSub();CH.th=[];let c=0;CH.dmSub=DB.on('dm/'+u,v=>{const n=++c;thr(v||{},u).then(a=>{if(n===c){CH.th=a;drawChat()}})});DB.upd('dmidx/'+u,{u:false});draw()}
 function repM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;DB.push('reports',{mid:id,uid:m.uid,name:m.name,text:m.text,by:CH.uid,ts:Date.now()});CH.sel=null;drawChat();toast(t('thanks'))}
 async function fixM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;const x=prompt(t('fixp'),m.fix?m.fix.text:m.text);if(x===null)return;const tx=x.trim().slice(0,300),ts=Date.now();
@@ -759,11 +1068,11 @@ const rulesH=()=>`<ol class="rl">${[0,1,2,3,4,5,6].map(i=>`<li>${t('r'+i)}</li>`
 function chk(){const b=$('jb');if(b)b.disabled=!(S.chat.name.trim().length>=2&&CH.acc)}
 function vJoin(){const c=S.chat;return `<div class="card nar"><h3>💬 ${t('chat_join')}</h3><label>${t('nick')}</label><input id="jn" maxlength="20" value="${e(c.name)}" oninput="S.chat.name=this.value;chk()"><label>${t('avatar')}</label><div class="avg">${AVS.map(a=>`<button class="${c.av===a?'on':''}" onclick="S.chat.av='${a}';draw()">${a}</button>`).join('')}</div><h3 style="margin-top:1rem">🤝 ${t('rtitle')}</h3>${rulesH()}<label class="ck"><input type="checkbox" onchange="CH.acc=this.checked;chk()" ${CH.acc?'checked':''}> ${t('acc')}</label><div class="row"><button class="btn g" id="jb" ${c.name.trim().length>=2&&CH.acc?'':'disabled'} onclick="joinChat()">💬 ${t('enter')}</button></div></div>`}
 function vCommunity(){if(!CH.ready)return `<div class="e">${t('loading')}</div>`;if(!S.chat.ok)return vJoin();
-const P=(CH.adm?['pub','pm','conf','inbox','mod','rules']:['pub','pm','conf','dm','rules']).filter(k=>(k!=='pm'&&k!=='conf')||CH.net),IC={pub:'💬',conf:'🎙',pm:'👥',dm:'🛡✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
+const P=(CH.isA?['pub','pm','conf','inbox','mod','rules']:CH.adm?['pub','pm','conf','dm','mod','rules']:['pub','pm','conf','dm','rules']).filter(k=>(k!=='pm'||CFG.pm)&&(k!=='conf'||CFG.conf)),IC={pub:'💬',conf:'🎙',pm:'👥',dm:'🛡✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
 const pills=`<div class="pls">${P.map(k=>`<button class="${S.sub===k?'on':''}" onclick="S.sub='${k}';sv();draw()">${IC[k]} ${t(k)}${k==='inbox'&&dmUn()?' ('+dmUn()+')':''}${k==='pm'&&pmUn()?' ('+pmUn()+')':''}</button>`).join('')}</div>`;
 const comp=(id,fn,ex)=>`<div class="comp"><input id="${id}" maxlength="500" autocomplete="off" ${ex||''} placeholder="${t('typem')}" onkeydown="if(event.key==='Enter')${fn}()"><button class="btn snd" onclick="${fn}()">${t('send')}</button></div>`;
 let b='';
-if(S.sub==='pub'){const w=todayWord();b=`<div id="cadm">${admBar()}</div><div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div><div class="typ" id="ctyp"></div>${isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM','oninput="typ()"')}`}
+if(S.sub==='pub'){const w=todayWord();b=`<div id="cadm">${admBar()}</div><div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div><div class="typ" id="ctyp"></div>${!CFG.chat&&!CH.adm?`<p class="e">${t('chatoff')}</p>`:isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM','oninput="typ()"')}`}
 else if(S.sub==='conf')b=`<div id="ccl">${confListH()}</div>`;
 else if(S.sub==='pm')b=CH.pw?`<div class="row" style="margin:0 0 .4rem"><button class="btn m" onclick="CH.pw=null;draw()">← ${t('back')}</button><b style="align-self:center;flex:1">${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).av||'🙂')} ${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).name||'')}</b><button class="btn s" onclick="startCall(CH.pw,false)" aria-label="call">📞</button><button class="btn s" onclick="startCall(CH.pw,true)" aria-label="video">🎥</button></div><div class="cmsgs" id="cpt">${pmH()}</div>${comp('cpi','sendPm')}`:`<div id="cpl">${pmListH()}</div>`;
 else if(S.sub==='dm')b=`<p class="hint">${t('dmhint')}</p><div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`;
@@ -777,6 +1086,9 @@ function draw(keep){
  if(!VW[S.tab])S.tab='learn';if(!(S.tab==='practice'&&S.pm==='blitz')){clearInterval(bzT);bz=null}
  const el=document.documentElement;el.lang=S.ui;el.dir=dirOf(S.ui);el.dataset.t=S.dark?'dark':'light';
  ui.value=S.ui;sub.textContent=t('sub');setWm();
+ const g=gateView();document.body.classList.toggle('gate',!!g);document.body.classList.toggle('admv',S.tab==='admin'&&!g&&!!CH.adm);
+ hb_adm.style.display=CH.adm&&!g?'':'none';hb_me.style.display=AU.u&&!g?'':'none';ntc.innerHTML=!g&&CFG.notice?`<div class="notice">📢 ${e(CFG.notice)}</div>`:'';
+ if(g){app.innerHTML=g;return}
  sw.innerHTML=['de','en','es'].map(l=>`<button class="${S.learn===l?'on':''}" onclick="S.learn='${l}';qz=ty=mg=null;sv();draw()">${LN[l]}</button>`).join('')+
  `<select onchange="S.my=this.value;sv();draw()" aria-label="${t('my')}">${['fa','de','en','es'].map(l=>`<option value="${l}" ${S.my===l?'selected':''}>${t('my')} ${LN[l]}</option>`).join('')}</select>`;
  st.innerHTML=`<div>${S.xp}<small>${t('xp')}</small></div><div>🔥 ${S.streak}<small>${t('streak')}</small></div><div>${S.known.length}/${D.length}<small>${t('known')}</small></div>`;
@@ -785,7 +1097,11 @@ function draw(keep){
  app.innerHTML=VW[S.tab]();const cm=document.getElementById('cmsgs');if(cm)cm.scrollTop=cm.scrollHeight;
  if(isQ){const i=app.querySelector('input');if(i){i.focus();try{i.setSelectionRange(pos,pos)}catch(x){}}}
 }
-draw();startChat();
+function boot(){CH.gr=Infinity;CH.net=true;DB=NDB;NDB.start('g'+Math.random().toString(36).slice(2,8));
+ DB.on('acct',v=>{AC.v=v||{};procAcct()});DB.on('cfg',v=>procCfg(v||{}));
+ try{const x=JSON.parse(localStorage.getItem('lp_sess')||sessionStorage.getItem('lp_sess'));AU.pre=x&&x.u&&x.b?x:null}catch(x){}
+ draw();setInterval(()=>{if(netReady()&&AU.pre&&!AU.u)tryPre();gateTick()},600)}
+boot();
 fetch('data.json').then(r=>r.ok?r.json():null).then(j=>{if(!ld('lp_data')&&applyData(j))draw()}).catch(()=>{});
 </script>
 </body>
