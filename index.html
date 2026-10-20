@@ -103,6 +103,21 @@ html[dir=rtl] .tk{animation-name:tkr}
 .admon{background:#8883;border-radius:12px;padding:.4rem .7rem;margin:.3rem 0;font-weight:700;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}.admon.on{background:linear-gradient(90deg,#F2A71B44,#1E9E6233)}.cm.adm .bb{background:#F2A71B26;border:1px solid var(--saf)}.admb{background:var(--saf);color:#222;border-radius:6px;padding:0 .35rem;font-size:.7rem;font-weight:800}
 #call{position:fixed;inset:0;z-index:999;background:#0b1418ee;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:1rem}#call .rv{width:min(96vw,720px);max-height:60vh;background:#000;border-radius:18px}#call .lv{position:absolute;inset-inline-end:1rem;top:1rem;width:28vw;max-width:160px;border-radius:12px;background:#000}#call .who{font-size:1.4rem;font-weight:800;text-align:center}#call .cb{display:flex;gap:.8rem}#call .cb button{width:62px;height:62px;border-radius:50%;border:0;font-size:1.6rem;cursor:pointer;background:#ffffff26;color:#fff}#call .cb .red{background:#D8453A}#call .cb .grn{background:#1E9E62}#call .cb .off{background:#fff;color:#222}
 .sys{text-align:center;color:var(--mut);font-size:.85rem;margin:.4rem 0}.sys button{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:.1rem .6rem;cursor:pointer;color:var(--ink)}.typ{min-height:1.2rem;font-size:.85rem;color:var(--mut);padding:.1rem .4rem}.dotg.off{background:var(--saf)}textarea{font:inherit;padding:.5rem;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.ab .jn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:.3rem .8rem;font-weight:700;cursor:pointer}
+#cform{position:fixed;inset:0;z-index:90;background:#000a;display:flex;align-items:center;justify-content:center;padding:1rem;overflow:auto}
+#conf{position:fixed;inset:0;z-index:100;background:#0B141A;color:#fff;display:flex;flex-direction:column}
+#conf .cfh{display:flex;justify-content:space-between;gap:.5rem;padding:.7rem 1rem;background:#111f27;font-weight:700;flex-wrap:wrap}
+#conf .cfg{flex:1;display:grid;gap:.5rem;padding:.5rem;grid-template-columns:repeat(auto-fit,minmax(min(150px,45%),1fr));grid-auto-rows:minmax(110px,1fr);overflow:auto}
+#conf .tl{position:relative;background:#1c2b33;border-radius:16px;overflow:hidden;border:3px solid transparent;display:flex;align-items:center;justify-content:center;min-height:110px}
+#conf .tl.sp{border-color:#1E9E62;box-shadow:0 0 14px #1E9E62}
+#conf .tl video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#conf .av2{font-size:3.2rem;display:flex}
+#conf .nm{position:absolute;left:.4rem;bottom:.3rem;background:#000a;border-radius:8px;padding:.1rem .5rem;font-size:.85rem;max-width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#conf .tb{position:absolute;right:.3rem;top:.3rem;display:flex;gap:.2rem}#conf .tb button{background:#000a;border:0;border-radius:8px;padding:.15rem .4rem;cursor:pointer;color:#fff}
+#conf .cfb{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;padding:.7rem;background:#111f27}
+#conf .cfb button,#conf .rq button{background:#2b3f48;color:#fff;border:0;border-radius:99px;padding:.7rem 1.1rem;font-size:1.05rem;cursor:pointer}
+#conf .cfb button.off{background:#555;opacity:.8}#conf .red,#conf .red2{background:#D8453A!important}#conf .grn{background:#1E9E62!important}
+#conf .rq{background:#F2A71B33;padding:.4rem .8rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}#conf .rq button{padding:.25rem .8rem}
 .comp{display:flex;gap:.5rem;margin-top:.6rem}.snd{flex:none;padding:.6rem 1.2rem}.hint{color:var(--mut);margin:.2rem 0 .6rem}.dm0{background:#F2A71B22;border-color:var(--saf)}
 .avg{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}.avg button{font-size:1.5rem;background:var(--bg);border:2px solid var(--line);border-radius:12px;cursor:pointer}.avg button.on{border-color:var(--saf);background:#F2A71B33}.rl{padding-inline-start:1.3rem}.rl li{margin:.4rem 0}.ck{display:flex;gap:.5rem;align-items:center;margin-top:.8rem}.ck input{width:auto}
 .inb{display:grid;gap:.4rem;margin-bottom:.8rem}.ib2{display:flex;gap:.6rem;align-items:center;text-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.4rem .7rem;cursor:pointer}.ib2 small{display:block;color:var(--mut)}.ib2.un{border-color:var(--saf);background:#F2A71B22}.ib2.on{border-color:var(--lap)}
@@ -218,6 +233,34 @@ reports:['گزارش‌ها','Meldungen','Reports','Denuncias'],
 demo:['حالت آزمایشی: گفتگو فقط بین تب‌های همین مرورگر کار می‌کند.','Testmodus: Der Chat funktioniert nur zwischen Tabs in diesem Browser.','Test mode: the chat only works between tabs of this browser.','Modo de prueba: el chat solo funciona entre pestañas de este navegador.'],
 cprompt:['✍️ چالش امروز: با «{w}» یک جمله بنویس','✍️ Heute: Schreibe einen Satz mit „{w}“','✍️ Today’s challenge: write a sentence with “{w}”','✍️ Reto de hoy: escribe una frase con «{w}»'],
 loading:['در حال اتصال…','Verbinde…','Connecting…','Conectando…'],
+conf:['کانفرانس','Konferenz','Conference','Conferencia'],
+cnew:['ساخت کانفرانس','Konferenz starten','Start a conference','Iniciar conferencia'],
+ctitle:['موضوع کانفرانس','Thema','Topic','Tema'],
+ckind:['نوع','Art','Type','Tipo'],
+cka:['فقط صوتی','Nur Audio','Audio only','Solo audio'],
+ckv:['تصویری (ویدیو)','Video','Video','Vídeo'],
+cmode:['شرایط ورود','Beitritt','Joining','Ingreso'],
+cmo:['ورود آزاد برای همه','Offen für alle','Open to everyone','Abierta a todos'],
+cma:['ورود فقط با تأیید میزبان','Nur nach Freigabe','Only after approval','Solo con aprobación'],
+cmax:['حداکثر ۶ نفر در تصویری و ۸ نفر در صوتی','Max. 6 Personen (Video) / 8 (Audio)','Max. 6 people (video) / 8 (audio)','Máx. 6 personas (vídeo) / 8 (audio)'],
+cjoin:['پیوستن','Beitreten','Join','Unirse'],
+creq:['درخواست ورود','Beitritt anfragen','Request to join','Solicitar'],
+cwait:['منتظر تأیید میزبان…','Warte auf Freigabe…','Waiting for approval…','Esperando aprobación…'],
+cnone:['الان کانفرانسی نیست. اولین نفر باش!','Gerade keine Konferenz. Starte die erste!','No conference right now. Start the first one!','No hay conferencias. ¡Inicia la primera!'],
+cfull:['ظرفیت پر است','Der Raum ist voll','The room is full','La sala está llena'],
+cleave:['خروج','Verlassen','Leave','Salir'],
+cendall:['پایان برای همه','Für alle beenden','End for all','Terminar para todos'],
+clock:['بستن میکروفون','Mikro sperren','Lock mic','Bloquear micro'],
+cunlock:['باز کردن میکروفون','Mikro freigeben','Unlock mic','Desbloquear micro'],
+ckick:['حذف از کانفرانس','Entfernen','Remove','Expulsar'],
+crep:['گزارش به مدیر','Dem Admin melden','Report to admin','Denunciar'],
+caskin:['می‌خواهد وارد شود','möchte beitreten','wants to join','quiere unirse'],
+cmuted:['میکروفون شما توسط مدیر/میزبان بسته شد','Dein Mikro wurde vom Admin/Host gesperrt','Your mic was locked by the admin/host','Tu micro fue bloqueado por el admin/anfitrión'],
+ckicked:['از کانفرانس حذف شدید','Du wurdest entfernt','You were removed','Fuiste expulsado'],
+cended:['کانفرانس پایان یافت','Konferenz beendet','Conference ended','Conferencia terminada'],
+cadmin:['مدیر حاضر است','Admin ist dabei','Admin is present','El admin está presente'],
+cinfo:['همه می‌توانند دربارهٔ موضوع صحبت کنند. مدیر می‌تواند همه را بشنود و کنترل کند.','Alle dürfen zum Thema sprechen. Der Admin kann alle hören und moderieren.','Everyone can speak on the topic. The admin can hear and moderate everyone.','Todos pueden hablar sobre el tema. El admin puede escuchar y moderar a todos.'],
+you:['شما','du','you','tú'],
 joined:['به گفتگو پیوست','ist beigetreten','joined the chat','se unió al chat'],
 sayhi:['سلام بده','Hallo sagen','Say hi','Saludar'],
 typing:['در حال نوشتن…','schreibt…','is typing…','está escribiendo…'],
@@ -232,6 +275,7 @@ const RL=[
 ['اطلاعات شخصی (شماره، آدرس، رمز) و لینک نفرست.','Teile keine privaten Daten (Nummern, Adressen, Passwörter) und keine Links.','Do not share personal data (numbers, addresses, passwords) or links.','No compartas datos personales (números, direcciones, contraseñas) ni enlaces.'],
 ['اسپم، تبلیغ و پیام تکراری نفرست؛ به موضوع یادگیری زبان وفادار بمان.','Kein Spam, keine Werbung, keine Wiederholungen – bleib beim Sprachenlernen.','No spam, ads or repeated messages – stay on the topic of language learning.','Nada de spam, publicidad ni mensajes repetidos: céntrate en aprender idiomas.'],
 ['مدیر می‌تواند پیام‌ها را اصلاح یا حذف کند و در صورت تکرار تخلف، کاربر را بی‌صدا کند.','Der Admin kann Nachrichten korrigieren oder löschen und bei Verstößen Nutzer stummschalten.','The admin may correct or delete messages and mute users who repeatedly break the rules.','El admin puede corregir o borrar mensajes y silenciar a quien incumpla las normas.']];
+RL.push(['در کانفرانس هم احترام را رعایت کن. مدیر می‌تواند همه را بشنود، میکروفون را ببندد یا کاربر را حذف کند.','Auch in Konferenzen gilt Respekt. Der Admin kann alle hören, Mikros sperren und Teilnehmer entfernen.','Respect applies in conferences too. The admin can hear everyone, lock mics and remove participants.','El respeto también vale en las conferencias. El admin puede escuchar a todos, bloquear micros y expulsar.']);
 const BDN=[['شروع کار','Erster Schritt','First steps','Primeros pasos'],['شعله‌ور','In Fahrt','On fire','En racha'],['کتاب‌خوان','Bücherwurm','Bookworm','Ratón de biblioteca'],['قهرمان','Champion','Champion','Campeón'],['برق‌آسا','Blitzschnell','Lightning','Relámpago'],['اجتماعی','Gesellig','Social','Sociable']];
 RL.forEach((r,i)=>LNG.forEach((l,j)=>T[l]['r'+i]=r[j]));BDN.forEach((r,i)=>LNG.forEach((l,j)=>T[l]['bd'+i]=r[j]));
 
@@ -414,7 +458,7 @@ function open(){let w;const url=o.urls[Math.floor(tries/3)%o.urls.length];try{w=
 open();
 return{sub(f){if(subs.has(f))return;subs.add(f);if(ok)sub1(f)},
  pub(t,p,r){const b=[...str(t),...ENC.encode(p)],h=0x30|(r?1:0);if(ok)out(h,b);else{q.push({h,b});if(q.length>80)q.shift()}}}}
-const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\//;let mq,ft,up=false,uid='';
+const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\/|^conf\/[^/]+$|^conf\/[^/]+\/(end|ok|lock|ban)(\/|$)/;let mq,ft,up=false,uid='';
 const tp=p=>NS+'db/'+p,cl=v=>v==null?v:JSON.parse(JSON.stringify(v));
 function get(p){const ks=[];st.forEach((v,k)=>{if(k===p||k.startsWith(p+'/'))ks.push(k)});if(!ks.length)return null;ks.sort((a,b)=>a.length-b.length);let r;
  for(const k of ks){const v=st.get(k);if(k===p){r=cl(v);continue}if(r===undefined)r={};if(r===null||typeof r!=='object')continue;
@@ -436,6 +480,7 @@ pres(u,o){const b=async()=>{const ts=Date.now(),x=typeof o==='function'?await o(
 prune(){const now=Date.now(),del=k=>{st.delete(k);mq.pub(tp(k),'',true)};
  [...st.keys()].forEach(k=>{const s=k.split('/');
   if(s[0]==='rooms'&&s[1]==='main'&&s.length>=3){const b=st.get('rooms/main/'+s[2]);if(!b||typeof b!=='object'||!b.ts||now-b.ts>TTL)del(k)}
+  else if(s[0]==='conf'&&s.length>=2){const b=st.get('conf/'+s[1]);if(!b||!b.ts||now-b.ts>43200000)del(k)}
   else if(s[0]==='online'&&s.length===2){const b=st.get(k);if(!b||!b.ts||now-b.ts>600000)del(k)}});fire()}};
 return api})();
 async function fbConnect(){const [A,Au,R]=await Promise.all(['app','auth','database'].map(m=>import(FB+m+'.js')));
@@ -472,6 +517,7 @@ CH.subs.push(DB.on('dm/'+CH.uid,v=>{if(CH.adm)return;const c=++CH.dq;thr(v||{},C
 CH.subs.push(DB.on('typing',v=>typH(v||{})));
 if(CH.net)CH.subs.push(DB.on('pmi/'+CH.uid,v=>{v=v||{};for(const k in v){const o=v[k];if(o&&o.u&&o.ts&&!(CH.pmi[k]&&CH.pmi[k].ts===o.ts)&&Date.now()>CH.gr&&!(CH.pw===k&&viewing2())){toast('✉️ '+t('pmn')+' '+(o.name||''));if(S.snd!==false)beep()}}CH.pmi=v;updNav();drawChat()}));
 if(CH.net){try{const raw=localStorage.getItem('lp_ak');if(raw){const k=JSON.parse(raw);await CR.chkKey(k);CH.ak=k;admin=true}}catch(x){}}
+if(CH.net){CH.subs.push(DB.on('conf',v=>{CF.raw=v||{};procConf()}));if(!CF.pt)CF.pt=setInterval(procConf,4000)}
 if(CH.net)CH.subs.push(DB.on('sig/'+CH.uid,v=>{for(const [k,m] of Object.entries(v||{})){if(CH.sg.has(k))continue;CH.sg.add(k);onSig(m)}}));
 if(CH.live)CH.subs.push(DB.on('admins/'+CH.uid,v=>{const was=CH.adm;CH.adm=v===true;if(CH.adm)attachAdmin();if(was!==CH.adm)draw();else drawChat()}));
 else{CH.adm=admin;attachAdmin()}
@@ -540,7 +586,7 @@ async function acceptCall(){const c=CALL;if(!c||c.state!=='ringing')return;clear
  try{await getMedia();const pc=mkPc();await pc.setRemoteDescription({type:'offer',sdp:c.offer});await pc.setLocalDescription(await pc.createAnswer());await iceDone(pc);if(CALL!==c)return;sigSend(c.peer,{t:'answer',cid:c.id,sdp:pc.localDescription.sdp});
   c.timer=setTimeout(()=>{if(CALL===c&&c.state!=='live'){toast(t('cend'));endCall(true)}},25000)}catch(x){toast(t('nomic'));endCall(true)}}
 function endCall(notify){const c=CALL;if(!c)return;if(notify&&c.peer)sigSend(c.peer,{t:'bye',cid:c.id});clearTimeout(c.timer);try{c.stream&&c.stream.getTracks().forEach(x=>x.stop())}catch(x){}try{c.pc&&c.pc.close()}catch(x){}CALL=null;callUI()}
-function onSig(m){if(!m||!m.t)return;
+function onSig(m){if(!m||!m.t)return;if(m.t==='coffer'){confOnOffer(m);return}if(m.t==='canswer'){confOnAnswer(m);return}
  if(m.t==='offer'){if(CALL){sigSend(m.from,{t:'busy',cid:m.cid});return}CALL={id:m.cid,peer:m.from,name:m.name||'?',av:m.av||'🙂',video:!!m.video,offer:m.sdp,state:'ringing'};callUI();
   CALL.timer=setTimeout(()=>{if(CALL&&CALL.state==='ringing')endCall(true)},45000)}
  else if(!CALL||CALL.id!==m.cid)return;
@@ -574,6 +620,107 @@ function pmListH(){const on=Object.entries(CH.on).filter(([k])=>k!==CH.uid).map(
  const cv=Object.entries(CH.pmi||{}).filter(([k,o])=>o&&o.ts).sort((a,b)=>b[1].ts-a[1].ts).map(([k,o])=>`<button class="ib2${o.u?' un':''}" onclick="openPm('${e(k)}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||k)}</b><small>🔒 ${tmf(o.ts)}</small></span></button>`).join('');
  return `<p class="hint">${t('pmh')}</p><h3>🟢 ${t('online')}</h3><div class="inb">${on||'<p class="e">—</p>'}</div><h3>✉️ ${t('pm')}</h3><div class="inb">${cv||'<p class="e">—</p>'}</div>`}
 function dmH(){const mine=m=>CH.adm?m.from==='a':m.from==='u';return CH.th.map(m=>`<div class="cm${mine(m)?' me':''}"><span class="av">${m.from==='a'?'👑':e(S.chat.av)}</span><div class="bb"><div class="mt" dir="auto">${e(m.text)}</div><small>${tmf(m.ts)}</small></div></div>`).join('')||`<div class="e">—</div>`}
+/* ===== Conference rooms: mesh WebRTC (audio/video), join requests, signed moderation ===== */
+CR.us=async()=>{if(CR._us)return CR._us;let j;try{j=JSON.parse(localStorage.getItem('lp_us'))}catch(x){}
+ if(!j){const g=await crypto.subtle.generateKey(EC('ECDSA'),true,['sign']);j=await crypto.subtle.exportKey('jwk',g.privateKey);try{localStorage.setItem('lp_us',JSON.stringify(j))}catch(x){}}
+ return CR._us={priv:await crypto.subtle.importKey('jwk',j,EC('ECDSA'),false,['sign']),pub:{x:j.x,y:j.y}}};
+CR.usign=async s=>b64(await crypto.subtle.sign(SG,(await CR.us()).priv,ENC.encode(s)));
+CR.uverify=async(pub,s,sig)=>{try{const k=await crypto.subtle.importKey('jwk',{kty:'EC',crv:'P-256',x:pub.x,y:pub.y,ext:true},EC('ECDSA'),false,['verify']);return await crypto.subtle.verify(SG,k,unb(sig),ENC.encode(s))}catch(x){return false}};
+const CF={raw:{},rooms:{},seen:{},cur:null,wait:null,pend:null,pq:0,qn:new Set(),vc:new Map(),an:{},ac:null,hb:null,ti:null};
+const capOf=R=>R.kind==='video'?6:8;
+const fpOf=async p=>b64(await crypto.subtle.digest('SHA-256',ENC.encode(p.x+p.y))).replace(/[^A-Za-z0-9]/g,'').slice(0,8);
+function cvc(k,f){if(!CF.vc.has(k))CF.vc.set(k,f());return CF.vc.get(k)}
+const cfv=(R,str,o)=>o.by==='a'?av(str,o.sig):cvc('h'+R.id+str+o.sig,()=>CR.uverify(R.hp,str,o.sig));
+async function procConf(){const raw=CF.raw,now=Date.now(),out={},n=++CF.pq;
+ for(const [id,r] of Object.entries(raw)){if(!r||!r.ts||!r.hp||!r.title||!r.sig||now-r.ts>43200000)continue;
+  const ok=await cvc('r'+id+r.sig,async()=>(id.split('-')[0]===await fpOf(r.hp))&&await CR.uverify(r.hp,`room|${id}|${r.title}|${r.kind}|${r.mode}|${r.host}|${r.ts}`,r.sig));if(!ok)continue;
+  const R={id,title:String(r.title).slice(0,40),kind:r.kind==='video'?'video':'audio',mode:r.mode==='ask'?'ask':'open',host:r.host,hn:r.hn||'?',ha:r.ha||'🙂',hp:r.hp,ts:r.ts,p:{},ok:{},lock:{},ban:{},q:{},ended:false};
+  const chk=async(w,u,o)=>!!(o&&o.sig&&o.ts&&o.on&&await cfv(R,`cf|${id}|${w}|${u}|1|${o.ts}`,o));
+  if(await chk('end','',r.end))R.ended=true;
+  for(const [u,o] of Object.entries(r.ok||{}))if(await chk('ok',u,o))R.ok[u]=1;
+  for(const [u,o] of Object.entries(r.lock||{}))if(await chk('lock',u,o))R.lock[u]=1;
+  for(const [u,o] of Object.entries(r.ban||{}))if(await chk('ban',u,o))R.ban[u]=1;
+  for(const [u,o] of Object.entries(r.q||{}))if(o&&o.ts&&now-o.ts<600000)R.q[u]=o;
+  for(const [u,o] of Object.entries(r.p||{})){if(!o||!o.ts)continue;const k=id+u;if(!CF.seen[k]||CF.seen[k].ts!==o.ts)CF.seen[k]={ts:o.ts,at:now};if(now-CF.seen[k].at<75000)R.p[u]=o}
+  out[id]=R}
+ if(n!==CF.pq)return;CF.rooms=out;confTick();drawChat()}
+const isAdmU=u=>!!(CH.on[u]&&CH.on[u].admv)||(u===CH.uid&&CH.adm);
+const confAllowed=(R,u)=>u!==CH.uid&&R.p[u]&&!R.ban[u]&&(R.mode==='open'||u===R.host||R.ok[u]||isAdmU(u));
+const canMod=R=>!!R&&(R.host===CH.uid||(CH.adm&&!!CH.ak));
+async function confSign(id,w,u,on){const ts=Date.now(),str=`cf|${id}|${w}|${u}|${on?1:0}|${ts}`,by=CH.adm&&CH.ak?'a':'h';return{on:!!on,ts,by,sig:by==='a'?await CR.sign(str):await CR.usign(str)}}
+async function confAct(id,w,u,on){const R=CF.rooms[id];if(!canMod(R))return;const v=await confSign(id,w,u||'',on);DB.set('conf/'+id+(w==='end'?'/end':'/'+w+'/'+u),v);setTimeout(()=>{CF.raw=DB.get('conf')||{};procConf()},80)}
+function confNew(){if(CF.cur||$('cform'))return;const d=document.createElement('div');d.id='cform';
+ d.innerHTML=`<div class="card nar"><h3>🎙 ${t('cnew')}</h3><label>${t('ctitle')}</label><input id="cfti" maxlength="40" placeholder="${t('ctitle')}"><label>${t('ckind')}</label><select id="cfk" style="width:100%"><option value="audio">🎧 ${t('cka')}</option><option value="video">🎥 ${t('ckv')}</option></select><label>${t('cmode')}</label><select id="cfmd" style="width:100%"><option value="open">${t('cmo')}</option><option value="ask">${t('cma')}</option></select><p class="hint">${t('cmax')}</p><div class="row"><button class="btn g" onclick="confCreate()">🎙 ${t('cnew')}</button><button class="btn m" onclick="$('cform').remove()">✕</button></div></div>`;document.body.appendChild(d)}
+async function confCreate(){const ti=($('cfti').value||'').trim().slice(0,40);if(ti.length<2){$('cfti').focus();return}
+ const kind=$('cfk').value,mode=$('cfmd').value,us=await CR.us(),id=(await fpOf(us.pub))+'-'+Math.random().toString(36).slice(2,6),ts=Date.now();
+ const sig=await CR.usign(`room|${id}|${ti}|${kind}|${mode}|${CH.uid}|${ts}`);
+ DB.set('conf/'+id,{title:ti,kind,mode,host:CH.uid,hn:S.chat.name,ha:S.chat.av,hp:us.pub,ts,sig});$('cform').remove();CF.pend=id;
+ setTimeout(()=>{CF.raw=DB.get('conf')||{};procConf()},80)}
+function confEnter(id){const R=CF.rooms[id];if(!R||CF.cur)return;if(R.ban[CH.uid]){toast(t('ckicked'));return}
+ const host=R.host===CH.uid,adm=!!CH.adm;if(!adm&&!host&&Object.keys(R.p).length>=capOf(R)){toast(t('cfull'));return}
+ if(R.mode==='ask'&&!host&&!adm&&!R.ok[CH.uid]){DB.set('conf/'+id+'/q/'+CH.uid,{name:S.chat.name,av:S.chat.av,ts:Date.now()});CF.wait=id;toast(t('cwait'));drawChat();return}
+ confJoin(id)}
+function confCancel(){if(CF.wait)DB.set('conf/'+CF.wait+'/q/'+CH.uid,null);CF.wait=null;drawChat()}
+async function confJoin(id){const R=CF.rooms[id];if(!R||CF.cur)return;CF.wait=null;let stream=null;const au={echoCancellation:true,noiseSuppression:true,autoGainControl:true};
+ try{stream=await navigator.mediaDevices.getUserMedia({audio:au,video:R.kind==='video'?{facingMode:'user',width:{ideal:640},height:{ideal:480}}:false})}catch(x){if(R.kind==='video'){try{stream=await navigator.mediaDevices.getUserMedia({audio:au})}catch(y){}}}
+ if(!stream){toast(t('nomic'));drawChat();return}
+ try{CF.ac=CF.ac||new (window.AudioContext||window.webkitAudioContext)();CF.ac.resume&&CF.ac.resume()}catch(x){}
+ CF.cur={id,stream,peers:{},mic:true,cam:true,locked:false};DB.set('conf/'+id+'/q/'+CH.uid,null);confBeat();CF.hb=setInterval(confBeat,12000);
+ if(!CF.ti)CF.ti=setInterval(()=>{confTick();confLevels()},1500);CF.lv=setInterval(confLevels,250);confUI();drawChat()}
+function confBeat(){const c=CF.cur;if(!c)return;DB.set('conf/'+c.id+'/p/'+CH.uid,{name:S.chat.name,av:S.chat.av,ts:Date.now(),mic:c.mic&&!c.locked,cam:c.cam&&c.stream.getVideoTracks().length>0})}
+function confTick(){if(CF.wait){const R=CF.rooms[CF.wait];if(!R||R.ended||R.ban[CH.uid]){toast(R&&R.ban[CH.uid]?t('ckicked'):t('cended'));CF.wait=null;drawChat()}else if(R.ok[CH.uid])confJoin(CF.wait)}
+ if(CF.pend&&CF.rooms[CF.pend]){const id=CF.pend;CF.pend=null;confJoin(id)}
+ const c=CF.cur;if(!c){return}const R=CF.rooms[c.id];
+ if(!R||R.ended){confLeave(t('cended'));return}if(R.ban[CH.uid]){confLeave(t('ckicked'));return}
+ const lk=!!R.lock[CH.uid];if(lk!==c.locked){c.locked=lk;c.stream.getAudioTracks().forEach(x=>x.enabled=!lk&&c.mic);if(lk)toast(t('cmuted'));confBeat()}
+ for(const u in R.p)if(confAllowed(R,u)&&!c.peers[u]&&CH.uid<u)confOffer(u);
+ for(const u of Object.keys(c.peers))if(!confAllowed(R,u))confDrop(u);
+ for(const u in R.q)if(canMod(R)&&!R.ok[u]&&!R.ban[u]&&!CF.qn.has(c.id+u+R.q[u].ts)){CF.qn.add(c.id+u+R.q[u].ts);toast('🙋 '+R.q[u].name+' '+t('caskin'));if(S.snd!==false)beep()}
+ confUI()}
+function confPc(u){const c=CF.cur,pc=new RTCPeerConnection(ICE),P={pc,u,cid:null,stream:null};c.peers[u]=P;c.stream.getTracks().forEach(x=>pc.addTrack(x,c.stream));
+ pc.ontrack=ev=>{P.stream=ev.streams[0];confUI()};
+ pc.onconnectionstatechange=()=>{const s=pc.connectionState;if(s==='failed'||s==='closed'){if(CF.cur&&CF.cur.peers[u]===P)confDrop(u)}else confUI()};return P}
+async function confOffer(u){const c=CF.cur,P=confPc(u);P.cid=mkId();
+ try{await P.pc.setLocalDescription(await P.pc.createOffer());await iceDone(P.pc);if(c.peers[u]!==P)return;sigSend(u,{t:'coffer',room:c.id,cid:P.cid,sdp:P.pc.localDescription.sdp});
+  P.timer=setTimeout(()=>{if(c.peers[u]===P&&P.pc.connectionState!=='connected')confDrop(u)},20000)}catch(x){confDrop(u)}}
+async function confOnOffer(m){const c=CF.cur;if(!c||m.room!==c.id)return;const R=CF.rooms[c.id],u=m.from;if(!R||!confAllowed(R,u))return;
+ if(c.peers[u])confDrop(u);const P=confPc(u);P.cid=m.cid;
+ try{await P.pc.setRemoteDescription({type:'offer',sdp:m.sdp});await P.pc.setLocalDescription(await P.pc.createAnswer());await iceDone(P.pc);if(c.peers[u]!==P)return;sigSend(u,{t:'canswer',room:c.id,cid:m.cid,sdp:P.pc.localDescription.sdp});
+  P.timer=setTimeout(()=>{if(c.peers[u]===P&&P.pc.connectionState!=='connected')confDrop(u)},25000)}catch(x){confDrop(u)}}
+function confOnAnswer(m){const c=CF.cur;if(!c||m.room!==c.id)return;const P=c.peers[m.from];if(P&&P.cid===m.cid&&P.pc.signalingState==='have-local-offer')P.pc.setRemoteDescription({type:'answer',sdp:m.sdp}).catch(()=>confDrop(m.from))}
+function confDrop(u){const c=CF.cur;if(!c)return;const P=c.peers[u];if(!P)return;clearTimeout(P.timer);try{P.pc.close()}catch(x){}delete c.peers[u];delete CF.an[u];const d=$('ct_'+u);if(d)d.remove();confUI()}
+function confLeave(msg){const c=CF.cur;if(!c)return;clearInterval(CF.hb);clearInterval(CF.lv);Object.keys(c.peers).forEach(confDrop);try{c.stream.getTracks().forEach(x=>x.stop())}catch(x){}
+ DB.set('conf/'+c.id+'/p/'+CH.uid,null);CF.cur=null;CF.an={};confUI();if(msg)toast(msg);drawChat()}
+function confMic(){const c=CF.cur;if(!c||c.locked)return;c.mic=!c.mic;c.stream.getAudioTracks().forEach(x=>x.enabled=c.mic);confBeat();confUI()}
+function confCam(){const c=CF.cur;if(!c)return;c.cam=!c.cam;c.stream.getVideoTracks().forEach(x=>x.enabled=c.cam);confBeat();confUI()}
+function confRep(u){const R=CF.cur&&CF.rooms[CF.cur.id],o=R&&R.p[u];if(!o)return;DB.push('reports',{mid:'conf',uid:u,name:o.name,text:'🎙 '+R.title,by:CH.uid,ts:Date.now()});toast(t('thanks'))}
+function confKick(u){const c=CF.cur;if(c&&confirm(t('ckick')+'?'))confAct(c.id,'ban',u,true)}
+function confLock(u){const c=CF.cur,R=c&&CF.rooms[c.id];if(R)confAct(c.id,'lock',u,!R.lock[u])}
+function confEnd(){const c=CF.cur;if(c&&confirm(t('cendall')+'?'))confAct(c.id,'end','',true)}
+function confLevels(){const c=CF.cur;if(!c||!CF.ac)return;const ent=[[CH.uid,c.stream]];for(const u in c.peers)if(c.peers[u].stream)ent.push([u,c.peers[u].stream]);
+ for(const [u,s] of ent){let a=CF.an[u];if(!a||a.s!==s){try{if(!s.getAudioTracks().length)continue;const an=CF.ac.createAnalyser();an.fftSize=256;CF.ac.createMediaStreamSource(s).connect(an);a=CF.an[u]={s,an,b:new Uint8Array(an.fftSize)}}catch(x){continue}}
+  a.an.getByteTimeDomainData(a.b);let m=0;for(let i=0;i<a.b.length;i++)m=Math.max(m,Math.abs(a.b[i]-128));const d=$('ct_'+u);if(d)d.classList.toggle('sp',m>14&&!(u===CH.uid&&(!c.mic||c.locked)))}}
+function confUI(){const c=CF.cur;let d=$('conf');if(!c){d&&d.remove();clearInterval(CF.lv);return}const R=CF.rooms[c.id];if(!R)return;
+ if(!d){d=document.createElement('div');d.id='conf';d.innerHTML='<div class="cfh"><b id="cfti2"></b><span id="cfin"></span></div><div class="cfq" id="cfq"></div><div class="cfg" id="cfg"></div><div class="cfb" id="cfb"></div>';document.body.appendChild(d)}
+ const mod=canMod(R),ids=Object.keys(R.p).sort((a,b)=>(a===CH.uid?-1:b===CH.uid?1:a<b?-1:1));
+ $('cfti2').textContent=(R.kind==='video'?'🎥 ':'🎧 ')+R.title;
+ $('cfin').textContent='👥 '+ids.length+'/'+capOf(R)+(ids.some(isAdmU)?' · 👑 '+t('cadmin'):'');
+ const g=$('cfg');g.dataset.n=ids.length;
+ ids.forEach(u=>{const o=R.p[u],me=u===CH.uid,P=c.peers[u];let tl=$('ct_'+u);
+  if(!tl){tl=document.createElement('div');tl.id='ct_'+u;tl.className='tl';tl.innerHTML='<video autoplay playsinline></video><div class="av2"></div><div class="nm"></div><div class="tb"></div>';g.appendChild(tl)}
+  const v=tl.querySelector('video'),st=me?c.stream:(P&&P.stream),hasV=!!(st&&st.getVideoTracks().length&&o.cam!==false);
+  if(st&&v.srcObject!==st){v.srcObject=st;v.play&&v.play().catch(()=>{})}v.muted=me||!!R.lock[u];v.style.display=hasV?'block':'none';
+  tl.querySelector('.av2').textContent=o.av||'🙂';tl.querySelector('.av2').style.display=hasV?'none':'flex';
+  tl.querySelector('.nm').textContent=(isAdmU(u)?'👑 ':u===R.host?'⭐ ':'')+(o.name||'?')+(me?' ('+t('you')+')':'')+((R.lock[u]||o.mic===false)?' 🔇':'')+(!me&&!(P&&P.pc.connectionState==='connected')?' ⏳':'');
+  const bt=tl.querySelector('.tb');if(!me){bt.innerHTML=(mod?`<button onclick="confLock('${e(u)}')" title="${t(R.lock[u]?'cunlock':'clock')}">${R.lock[u]?'🔊':'🔇'}</button><button onclick="confKick('${e(u)}')" title="${t('ckick')}">🚪</button>`:'')+`<button onclick="confRep('${e(u)}')" title="${t('crep')}">🚩</button>`}else bt.innerHTML=''});
+ [...g.children].forEach(x=>{if(!R.p[x.id.slice(3)])x.remove()});
+ const rq=Object.entries(R.q).filter(([u])=>!R.ok[u]&&!R.ban[u]&&!R.p[u]);$('cfq').innerHTML=mod&&rq.length?rq.map(([u,o])=>`<div class="rq">🙋 <b>${e(o.av||'')} ${e(o.name||'')}</b> ${t('caskin')} <button class="grn" onclick="confAct('${c.id}','ok','${e(u)}',true)">✓</button><button class="red" onclick="confAct('${c.id}','ban','${e(u)}',true)">✗</button></div>`).join(''):'';
+ const hv=c.stream.getVideoTracks().length>0;
+ $('cfb').innerHTML=`<button class="${c.mic&&!c.locked?'':'off'}" onclick="confMic()" aria-label="mic">${c.locked?'🔒':c.mic?'🎙':'🔇'}</button>${hv?`<button class="${c.cam?'':'off'}" onclick="confCam()" aria-label="cam">${c.cam?'📷':'🚫'}</button>`:''}<button class="red" onclick="confLeave()" aria-label="${t('cleave')}">🚪 ${t('cleave')}</button>${mod?`<button class="red2" onclick="confEnd()">⛔ ${t('cendall')}</button>`:''}`}
+function confListH(){const rs=Object.values(CF.rooms).filter(R=>!R.ended&&(Object.keys(R.p).length||Date.now()-R.ts<120000)).sort((a,b)=>b.ts-a.ts);
+ const card=R=>{const n=Object.keys(R.p).length,w=CF.wait===R.id,adm=Object.keys(R.p).some(isAdmU);
+  return `<div class="p"><div class="t"><b>${R.kind==='video'?'🎥':'🎧'} ${e(R.title)}</b><span>⭐ ${e(R.ha)} ${e(R.hn)} · 👥 ${n}/${capOf(R)} · ${R.mode==='ask'?'🙋':'🔓'}${adm?' · 👑':''}</span></div><div class="ab">${w?`<button onclick="confCancel()">⏳ ✕</button>`:`<button class="jn" onclick="confEnter('${R.id}')">${R.mode==='ask'&&R.host!==CH.uid&&!CH.adm&&!R.ok[CH.uid]?t('creq'):t('cjoin')}</button>`}${CH.adm&&CH.ak?`<button onclick="CF.cur||confAct('${R.id}','end','',true)">⛔</button>`:''}</div></div>`};
+ return `<p class="hint">${t('cinfo')}</p><div class="row" style="margin:0 0 .6rem"><button class="btn g" onclick="confNew()">🎙 ${t('cnew')}</button></div>${rs.map(card).join('')||`<p class="e">${t('cnone')}</p>`}`}
 const admBar=()=>{if(!CH.net)return '';const a=Object.entries(CH.on).find(([k,o])=>o.admv);return a?`<div class="admon on">👑 ${t('admon')} ${CH.uid!==a[0]?`<button class="chip" onclick="openPm('${e(a[0])}')">✉️</button><button class="chip" onclick="startCall('${e(a[0])}',false)">📞</button><button class="chip" onclick="startCall('${e(a[0])}',true)">🎥</button>`:''}</div>`:`<div class="admon">👑 ${t('admoff')}</div>`};
 const onlineH=()=>{const a=Object.entries(CH.on).sort((x,y)=>(y[1].admv?1:0)-(x[1].admv?1:0)),dn=CH.net&&!NDB.up;return `<span class="dotg${dn?' off':''}"></span><b>${a.length}</b> ${t('online')}`+a.slice(0,14).map(([k,o])=>k===CH.uid||!CH.net?`<span class="chip">${e(o.av||'🙂')} ${e(o.name||'')}${k===CH.uid?' ·':''}</span>`:`<button class="chip" onclick="openPm('${e(k)}')">${o.admv?'👑':e(o.av||'🙂')} ${e(o.name||'')}</button>`).join('')+`<button class="chip" onclick="S.snd=S.snd===false;sv();drawChat()" aria-label="sound">${S.snd===false?'🔕':'🔔'}</button>`+(dn?`<span class="chip">⏳ ${t('loading')}</span>`:'')};
 function inbH(){return Object.entries(CH.idx||{}).sort((a,b)=>b[1].ts-a[1].ts).map(([u,o])=>`<button class="ib2${o.u?' un':''}${CH.dw===u?' on':''}" onclick="openDm('${u}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||u)}</b><small>${e(o.last||(CH.net?'🔒':''))}</small></span></button>`).join('')||`<p class="e">—</p>`}
@@ -584,7 +731,7 @@ return `<h3>🟢 ${t('online')} (${Object.keys(CH.on).length})</h3><div class="g
 function drawChat(){updNav();if(S.tab!=='community'||!S.chat.ok)return;if(viewing()&&CH.unr){CH.unr=0;ttl();updNav()}const set=(id,h)=>{const n=$(id);if(n)n.innerHTML=h};
 const m=$('cmsgs');if(m&&S.sub==='pub'){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=msgsH();if(nb)m.scrollTop=m.scrollHeight}
 const d=$('cdm');if(d){const nb=d.scrollHeight-d.scrollTop-d.clientHeight<90;d.innerHTML=dmH();if(nb)d.scrollTop=d.scrollHeight}
-{const m=$('cpt');if(m){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=pmH();if(nb)m.scrollTop=m.scrollHeight}}set('cpl',pmListH());set('conl',onlineH());set('cadm',admBar());set('cinb',inbH());set('cmod',modH());drawTyp()}
+{const m=$('cpt');if(m){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=pmH();if(nb)m.scrollTop=m.scrollHeight}}set('cpl',pmListH());if(S.sub==='conf')set('ccl',confListH());set('conl',onlineH());set('cadm',admBar());set('cinb',inbH());set('cmod',modH());drawTyp()}
 function selM(id){CH.sel=CH.sel===id?null:id;drawChat()}
 async function sendRaw(x){x=x.trim();if(!x||isMuted())return false;
 if(!CH.adm&&/https?:|www\./i.test(x)){toast(t('nolink'));return false}
@@ -608,15 +755,16 @@ async function delM(id,q){if(!(q||confirm(t('del')+'?')))return;
 if(CH.net){DB.upd('rooms/main/'+id,{del:{ts:Date.now(),sig:await CR.sign('del|'+id)}});setTimeout(()=>DB.rm('rooms/main/'+id),400)}else DB.rm('rooms/main/'+id)}
 async function muteU(u){const on=!CH.mutes[u];
 if(CH.net){const ts=Date.now();DB.set('muted/'+u,{on,ts,sig:await CR.sign('mute|'+u+'|'+on+'|'+ts)});if(!on)delete CH.mutes[u];else CH.mutes[u]=true}else DB.set('muted/'+u,on?true:null);toast(on?'🔇':'🔊')}
-const rulesH=()=>`<ol class="rl">${[0,1,2,3,4,5].map(i=>`<li>${t('r'+i)}</li>`).join('')}</ol>`;
+const rulesH=()=>`<ol class="rl">${[0,1,2,3,4,5,6].map(i=>`<li>${t('r'+i)}</li>`).join('')}</ol>`;
 function chk(){const b=$('jb');if(b)b.disabled=!(S.chat.name.trim().length>=2&&CH.acc)}
 function vJoin(){const c=S.chat;return `<div class="card nar"><h3>💬 ${t('chat_join')}</h3><label>${t('nick')}</label><input id="jn" maxlength="20" value="${e(c.name)}" oninput="S.chat.name=this.value;chk()"><label>${t('avatar')}</label><div class="avg">${AVS.map(a=>`<button class="${c.av===a?'on':''}" onclick="S.chat.av='${a}';draw()">${a}</button>`).join('')}</div><h3 style="margin-top:1rem">🤝 ${t('rtitle')}</h3>${rulesH()}<label class="ck"><input type="checkbox" onchange="CH.acc=this.checked;chk()" ${CH.acc?'checked':''}> ${t('acc')}</label><div class="row"><button class="btn g" id="jb" ${c.name.trim().length>=2&&CH.acc?'':'disabled'} onclick="joinChat()">💬 ${t('enter')}</button></div></div>`}
 function vCommunity(){if(!CH.ready)return `<div class="e">${t('loading')}</div>`;if(!S.chat.ok)return vJoin();
-const P=(CH.adm?['pub','pm','inbox','mod','rules']:['pub','pm','dm','rules']).filter(k=>k!=='pm'||CH.net),IC={pub:'💬',pm:'👥',dm:'🛡✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
+const P=(CH.adm?['pub','pm','conf','inbox','mod','rules']:['pub','pm','conf','dm','rules']).filter(k=>(k!=='pm'&&k!=='conf')||CH.net),IC={pub:'💬',conf:'🎙',pm:'👥',dm:'🛡✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
 const pills=`<div class="pls">${P.map(k=>`<button class="${S.sub===k?'on':''}" onclick="S.sub='${k}';sv();draw()">${IC[k]} ${t(k)}${k==='inbox'&&dmUn()?' ('+dmUn()+')':''}${k==='pm'&&pmUn()?' ('+pmUn()+')':''}</button>`).join('')}</div>`;
 const comp=(id,fn,ex)=>`<div class="comp"><input id="${id}" maxlength="500" autocomplete="off" ${ex||''} placeholder="${t('typem')}" onkeydown="if(event.key==='Enter')${fn}()"><button class="btn snd" onclick="${fn}()">${t('send')}</button></div>`;
 let b='';
 if(S.sub==='pub'){const w=todayWord();b=`<div id="cadm">${admBar()}</div><div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div><div class="typ" id="ctyp"></div>${isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM','oninput="typ()"')}`}
+else if(S.sub==='conf')b=`<div id="ccl">${confListH()}</div>`;
 else if(S.sub==='pm')b=CH.pw?`<div class="row" style="margin:0 0 .4rem"><button class="btn m" onclick="CH.pw=null;draw()">← ${t('back')}</button><b style="align-self:center;flex:1">${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).av||'🙂')} ${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).name||'')}</b><button class="btn s" onclick="startCall(CH.pw,false)" aria-label="call">📞</button><button class="btn s" onclick="startCall(CH.pw,true)" aria-label="video">🎥</button></div><div class="cmsgs" id="cpt">${pmH()}</div>${comp('cpi','sendPm')}`:`<div id="cpl">${pmListH()}</div>`;
 else if(S.sub==='dm')b=`<p class="hint">${t('dmhint')}</p><div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`;
 else if(S.sub==='inbox')b=`<div class="inb" id="cinb">${inbH()}</div>${CH.dw?`<div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`:''}`;
