@@ -157,6 +157,66 @@ details.more{margin:.6rem 0;border:1px solid var(--line);border-radius:12px;padd
 header{gap:.4rem;flex-wrap:nowrap}.ib,header select{flex:none}.ib{min-width:44px}
 nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;overflow:visible}nav button{padding:.5rem .3rem;text-align:center;white-space:normal;line-height:1.25}
 @media(max-width:480px){.logo img{height:38px}header{padding:.5rem}header select{padding:.3rem .4rem;max-width:96px}nav button{font-size:.82rem}}
+/* ===== v3 polish ===== */
+:root{--g1:linear-gradient(135deg,#0E8A8F,#2B3F9E);--sh:0 10px 30px rgba(18,49,58,.10);--sh2:0 4px 14px rgba(18,49,58,.08)}
+:root[data-t=dark]{--sh:0 10px 30px rgba(0,0,0,.4);--sh2:0 4px 14px rgba(0,0,0,.3)}
+.ic{display:inline-block;vertical-align:-.2em;flex:none}
+header{backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);background:color-mix(in srgb,var(--card) 82%,transparent);box-shadow:var(--sh2)}
+.ib{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:44px;border-radius:14px;transition:.15s;color:var(--ink)}.ib:hover{background:var(--card);box-shadow:var(--sh2);transform:translateY(-1px)}
+.bdg{position:absolute;top:-5px;inset-inline-end:-5px;background:var(--bad);color:#fff;border-radius:99px;font:700 .7rem/1 system-ui;padding:.2rem .4rem;font-style:normal;box-shadow:0 2px 6px #0004}
+.card,.p,.stats div,.big{box-shadow:var(--sh2);border-radius:18px}
+.card{transition:box-shadow .2s}.card:hover{box-shadow:var(--sh)}
+.btn{background:var(--g1);box-shadow:0 4px 12px rgba(14,138,143,.3);transition:.15s}.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}.btn:active{transform:none}
+.btn.r{background:var(--bad)}.btn.g{background:linear-gradient(135deg,#1E9E62,#0E8A8F)}.btn.s{background:linear-gradient(135deg,#F2A71B,#F27A1B)}.btn.m{background:var(--mut);box-shadow:none}
+.opt{border-radius:14px;transition:.12s}.opt:hover:not(:disabled){border-color:var(--teal);transform:translateY(-1px)}
+nav button{display:inline-flex;gap:.45rem;align-items:center;font-weight:700;border-radius:14px;transition:.15s}nav button.on{background:var(--g1);box-shadow:0 6px 16px rgba(43,63,158,.3)}
+.pls button{border-radius:99px;font-weight:600;transition:.15s}.pls button.on{background:var(--g1);color:#fff;border-color:transparent}
+.cmsgs{background:linear-gradient(180deg,var(--card),color-mix(in srgb,var(--bg) 60%,var(--card)));border-radius:20px;box-shadow:inset 0 2px 10px rgba(0,0,0,.04)}
+.cm .bb{background:var(--bg);border:1px solid var(--line);border-radius:16px;border-start-start-radius:4px;padding:.45rem .75rem;box-shadow:var(--sh2);animation:pop .22s ease-out}
+.cm.me .bb{background:var(--g1);color:#fff;border-color:transparent;border-start-start-radius:16px;border-start-end-radius:4px}.cm.me .bb small,.cm.me .bb .mh b{color:#fff}.cm.me .bb small{opacity:.75}
+.cm.adm .bb{border:2px solid var(--saf);background:linear-gradient(135deg,#F2A71B22,var(--card))}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.97)}to{opacity:1;transform:none}}
+.comp input{border-radius:99px;padding:.6rem 1rem}.comp .snd{border-radius:99px;display:inline-flex;align-items:center;gap:.3rem}
+.glv{background:var(--g1);color:#fff;border-radius:99px;font-size:.68rem;font-weight:800;padding:.02rem .4rem;margin-inline-start:.3rem;vertical-align:middle}
+@media(max-width:700px){
+ body{padding-bottom:84px}
+ nav{position:fixed;inset-inline:0;bottom:0;z-index:40;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:.35rem .4rem calc(.35rem + env(safe-area-inset-bottom));justify-content:space-around;gap:.2rem;overflow:visible}
+ nav button{flex:1;flex-direction:column;gap:.1rem;font-size:.72rem;padding:.35rem .2rem;border:0;background:none;min-height:52px;color:var(--mut);box-shadow:none}
+ nav button.on{background:none;color:var(--teal);box-shadow:none}nav button.on svg{transform:translateY(-2px) scale(1.15)}nav button svg{transition:.15s}
+ .toast{bottom:5.6rem}
+}
+/* login/gate */
+.ahero{position:relative;overflow:hidden}.ahero:after{content:"";position:absolute;inset:auto -20% -40% auto;width:320px;height:320px;border-radius:50%;background:radial-gradient(#ffffff33,transparent 70%)}
+.atabs button.on{background:var(--g1);color:#fff}
+/* live game */
+.gme{max-width:680px;margin-inline:auto}
+.gst{display:flex;gap:1rem;align-items:center;background:var(--g1);color:#fff;border-radius:22px;padding:1rem 1.2rem;box-shadow:0 12px 30px rgba(43,63,158,.3);margin-bottom:.8rem}
+.gring{--p:0;width:70px;height:70px;border-radius:50%;background:conic-gradient(#F2A71B calc(var(--p)*1%),#ffffff33 0);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;flex:none}
+.gring:before{content:"";position:absolute;inset:6px;border-radius:50%;background:#1d2f86}.gring b,.gring small{position:relative;line-height:1}.gring b{font-size:1.5rem}.gring small{font-size:.65rem;opacity:.8}
+.gbl{flex:1;min-width:0}.gbl b{font-size:1.5rem}.gbl small{display:block;opacity:.85}.gxp{height:7px;background:#ffffff33;border-radius:9px;overflow:hidden;margin-top:.4rem}.gxp i{display:block;height:100%;background:#F2A71B;border-radius:9px;transition:width .5s}
+.gfd{display:flex;gap:.4rem;overflow-x:auto;margin-bottom:.6rem;padding-bottom:.2rem}.gfd span{flex:none;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:.15rem .7rem;font-size:.85rem;box-shadow:var(--sh2)}
+.gmc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.1rem;margin-bottom:1rem;box-shadow:var(--sh)}
+.gmc.idle{text-align:center;padding:1.6rem}.gbig{font-size:2.6rem;margin-bottom:.3rem}
+.gmc.act{border:2px solid #E0382C;box-shadow:0 0 0 4px #E0382C22,var(--sh)}
+.gmh{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}.livedot{color:#E0382C;font-weight:800;animation:blink 1.2s infinite}@keyframes blink{50%{opacity:.35}}
+.gmt{font-size:2rem;font-weight:800;color:var(--lap);font-variant-numeric:tabular-nums}
+.gmb{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:.8rem}.gmb i{display:block;height:100%;background:linear-gradient(90deg,#1E9E62,#F2A71B,#E0382C);transition:width .5s linear}
+.gmc h3{margin:.2rem 0 .8rem;font-size:1.35rem;text-align:center}.gmc h4{margin:.2rem 0 .6rem;color:var(--mut);text-align:center}
+.gans{background:#1E9E6222;color:var(--ok);border-radius:10px;padding:.1rem .7rem;font-weight:800}
+.gwin{background:linear-gradient(135deg,#F2A71B,#F27A1B);color:#2a1b00;border-radius:14px;padding:.6rem;text-align:center;font-weight:800;margin:.5rem 0;animation:pop .4s}.gwin.lose{background:var(--bg);color:var(--mut)}
+.gr{display:flex;gap:.5rem;align-items:center;padding:.4rem .2rem;border-bottom:1px solid var(--line)}.gr:last-child{border:0}.gr .av{font-size:1.5rem}.gr b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.gr em{font-style:normal;font-weight:800;color:var(--teal)}
+.gbt{border:1px solid var(--line);background:var(--bg);color:var(--bad);border-radius:12px;min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s}.gbt:hover{background:var(--bad);color:#fff;transform:scale(1.08)}
+.gstaff summary{cursor:pointer;padding:.2rem}.gstaff hr{border:0;border-top:1px solid var(--line);margin:1rem 0}
+.modal .gsh{background:var(--card);border-radius:24px;padding:1.2rem;width:min(94vw,420px);box-shadow:0 20px 60px #0008;animation:pop .25s}
+.gsh-h{display:flex;justify-content:space-between;align-items:center;gap:.5rem}.gsh-b{font-size:1.3rem;font-weight:800;margin:.4rem 0 .8rem;color:var(--lap)}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}.ggrid button{background:var(--bg);border:2px solid var(--line);border-radius:16px;padding:.5rem .2rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;transition:.15s}.ggrid button span{font-size:2rem;line-height:1.2}.ggrid button small{font-weight:800;color:var(--lap)}.ggrid button:hover:not(:disabled){border-color:var(--saf);transform:translateY(-3px) scale(1.05)}.ggrid button:disabled{opacity:.35;cursor:not-allowed}
+.gfx{position:fixed;bottom:18%;z-index:2000;text-align:center;pointer-events:none;animation:gup 3.2s ease-out forwards}.gfe{font-size:4.5rem;filter:drop-shadow(0 6px 10px #0006);animation:gwob .6s ease-in-out infinite alternate}.gft{background:#000a;color:#fff;border-radius:99px;padding:.15rem .8rem;font-weight:700;font-size:.9rem;margin-top:.2rem}
+@keyframes gup{0%{transform:translateY(40px) scale(.3);opacity:0}12%{transform:translateY(0) scale(1.15);opacity:1}80%{opacity:1}100%{transform:translateY(-55vh) scale(1);opacity:0}}@keyframes gwob{to{transform:rotate(8deg) scale(1.08)}}
+/* call/conference buttons with svg icons */
+#call .cb button,#conf .cfb button{display:inline-flex;align-items:center;justify-content:center;gap:.4rem}
+#clv.back,#conf .tl video.back{transform:none!important}
+.odot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#1E9E62;box-shadow:0 0 0 3px #1E9E6233;margin-inline-end:.3rem}
+
 </style>
 </head>
 <body>
@@ -166,7 +226,8 @@ nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;overflow:visible}
   <option value="fa">فارسی</option><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option></select>
  <button class="ib" id="hb_me" onclick="profileUI()" style="display:none" aria-label="Profile">👤</button>
  <button class="ib" id="hb_adm" onclick="goAdmin()" style="display:none" aria-label="Admin">🛠</button>
- <button class="ib" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme">◐</button>
+ <button class="ib" id="hb_sn" onclick="togSnd()" aria-label="Sound"></button>
+ <button class="ib" id="hb_th" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme"></button>
 </header>
 <div class="hero">
  <div class="wm" id="wm" role="region"><div class="tk" id="tk"></div></div>
@@ -397,6 +458,49 @@ you:['شما','du','you','tú'],
 "s_saved":["ذخیره شد ✓", "Gespeichert ✓", "Saved ✓", "Guardado ✓"],
 "chatoff":["گفتگو موقتاً توسط مدیر بسته شده است", "Der Chat ist vorübergehend geschlossen", "The chat is temporarily closed", "El chat está cerrado temporalmente"],
 "newreg":["ثبت‌نام جدید", "Neue Registrierung", "New registration", "Nuevo registro"],
+"live":["لایو", "Live", "Live", "En vivo"],
+"ac_live":["بازی زنده و کاربران", "Live-Spiel & Nutzer", "Live game & users", "Juego en vivo y usuarios"],
+"n_dm":["پیام خصوصی جدید از", "Neue private Nachricht von", "New private message from", "Nuevo mensaje privado de"],
+"n_adm":["مدیر برایت پیام فرستاد", "Der Admin hat dir geschrieben", "The admin wrote to you", "El administrador te escribió"],
+"noflip":["تغییر دوربین ممکن نیست", "Kamerawechsel nicht möglich", "Cannot switch camera", "No se puede cambiar la cámara"],
+"g_new":["دور جدید بازی شروع شد!", "Neue Runde gestartet!", "A new round has started!", "¡Nueva ronda!"],
+"g_idle":["الان بازی‌ای در جریان نیست", "Gerade läuft kein Spiel", "No game running right now", "Ahora no hay juego"],
+"g_idleh":["منتظر بمان تا مدیر دور تازه را شروع کند. جواب درست = امتیاز و هدیه!", "Warte, bis der Admin eine neue Runde startet. Richtig antworten = Punkte und Geschenke!", "Wait for the host to start a new round. Answer correctly to win points and gifts!", "Espera a que el anfitrión inicie otra ronda. ¡Acierta y gana puntos y regalos!"],
+"g_live":["زنده", "LIVE", "LIVE", "EN VIVO"],
+"g_answer":["جواب را بنویس…", "Antwort eingeben…", "Type your answer…", "Escribe tu respuesta…"],
+"g_sent":["جواب ارسال شد", "Antwort gesendet", "Answer sent", "Respuesta enviada"],
+"g_hurry":["سریع جواب بده!", "Antworte schnell!", "Answer fast!", "¡Responde rápido!"],
+"g_reward":["جایزه", "Preis", "Reward", "Premio"],
+"g_end":["پایان دور", "Runde beenden", "End round", "Terminar ronda"],
+"g_wait":["در حال بررسی جواب‌ها…", "Antworten werden ausgewertet…", "Judging answers…", "Evaluando respuestas…"],
+"g_correct":["جواب درست", "Richtige Antwort", "Correct answer", "Respuesta correcta"],
+"g_you":["تو", "Du", "You", "Tú"],
+"g_wrong":["این بار نشد؛ دور بعد!", "Diesmal nicht – nächste Runde!", "Not this time – next round!", "Esta vez no, ¡a la próxima!"],
+"g_nowin":["کسی جواب درست نداد", "Niemand hatte recht", "Nobody got it right", "Nadie acertó"],
+"g_none":["هنوز کسی امتیاز نگرفته", "Noch keine Punkte vergeben", "No points yet", "Aún no hay puntos"],
+"g_board":["جدول برترین‌ها", "Bestenliste", "Leaderboard", "Clasificación"],
+"g_pts":["امتیاز", "Punkte", "Points", "Puntos"],
+"g_earned":["کسب‌شده", "gesammelt", "earned", "ganados"],
+"g_giftto":["هدیه برای", "Geschenk für", "Gift for", "Regalo para"],
+"g_nopts":["امتیاز کافی نداری", "Nicht genug Punkte", "Not enough points", "Puntos insuficientes"],
+"g_ctl":["کنترل بازی (مدیر)", "Spielsteuerung (Host)", "Game control (host)", "Control del juego (anfitrión)"],
+"g_pl":["زبان سؤال", "Fragesprache", "Question language", "Idioma de la pregunta"],
+"g_tl":["زبان جواب", "Antwortsprache", "Answer language", "Idioma de la respuesta"],
+"g_dur":["مدت (ثانیه)", "Dauer (Sek.)", "Duration (s)", "Duración (s)"],
+"g_base":["امتیاز نفر اول", "Punkte für Platz 1", "Points for 1st", "Puntos del 1.º"],
+"g_quick":["دور سریع از لغت‌ها", "Schnellrunde aus dem Wortschatz", "Quick round from word bank", "Ronda rápida del vocabulario"],
+"g_custom":["سؤال دلخواه", "Eigene Frage", "Custom question", "Pregunta propia"],
+"g_q":["سؤال", "Frage", "Question", "Pregunta"],
+"g_kind":["نوع", "Typ", "Type", "Tipo"],
+"g_mc":["چهارگزینه‌ای", "Multiple Choice", "Multiple choice", "Opción múltiple"],
+"g_tx":["جواب تایپی", "Texteingabe", "Typed answer", "Respuesta escrita"],
+"g_opts":["گزینه‌ها", "Optionen", "Options", "Opciones"],
+"g_ans":["جواب درست", "Richtige Antwort", "Correct answer", "Respuesta correcta"],
+"g_start":["شروع دور", "Runde starten", "Start round", "Iniciar ronda"],
+"g_bad":["سؤال یا جواب کامل نیست (جواب باید یکی از گزینه‌ها باشد)", "Frage/Antwort unvollständig (Antwort muss eine Option sein)", "Incomplete question/answer (answer must be one of the options)", "Pregunta/respuesta incompleta (la respuesta debe ser una opción)"],
+"g_award":["جایزه و هدیه به کاربر", "Punkte & Geschenk vergeben", "Award points & gift", "Dar puntos y regalo"],
+"g_pick":["کاربر را انتخاب کن", "Nutzer wählen", "Pick a user", "Elige un usuario"],
+"g_gift":["هدیه", "Geschenk", "Gift", "Regalo"],
 joined:['به گفتگو پیوست','ist beigetreten','joined the chat','se unió al chat'],
 sayhi:['سلام بده','Hallo sagen','Say hi','Saludar'],
 typing:['در حال نوشتن…','schreibt…','is typing…','está escribiendo…'],
@@ -581,7 +685,7 @@ function open(){let w;const url=o.urls[Math.floor(tries/3)%o.urls.length];try{w=
 open();
 return{close(){dead=true;clearInterval(hb);clearTimeout(ct);try{ws.close()}catch(x){}},get list(){return[...subs]},sub(f){if(subs.has(f))return;subs.add(f);if(ok)sub1(f)},
  pub(t,p,r){const b=[...str(t),...ENC.encode(p)],h=0x30|(r?1:0);if(ok)out(h,b);else{q.push({h,b});if(q.length>80)q.shift()}}}}
-const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\/|^acct\/[^/]+$|^acct\/[^/]+\/(st|role)$|^cfg\/|^conf\/[^/]+$|^conf\/[^/]+\/(end|ok|lock|ban)(\/|$)/;let mq,ft,up=false,uid='';
+const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm|pm)\/|^acct\/[^/]+$|^acct\/[^/]+\/(st|role)$|^cfg\/|^gm\/(round|res|aw|gf)|^conf\/[^/]+$|^conf\/[^/]+\/(end|ok|lock|ban)(\/|$)/;let mq,ft,up=false,uid='';
 const tp=p=>NS+'db/'+p,cl=v=>v==null?v:JSON.parse(JSON.stringify(v));
 function get(p){const ks=[];st.forEach((v,k)=>{if(k===p||k.startsWith(p+'/'))ks.push(k)});if(!ks.length)return null;ks.sort((a,b)=>a.length-b.length);let r;
  for(const k of ks){const v=st.get(k);if(k===p){r=cl(v);continue}if(r===undefined)r={};if(r===null||typeof r!=='object')continue;
@@ -605,6 +709,7 @@ prune(){const now=Date.now(),del=k=>{st.delete(k);mq.pub(tp(k),'',true)};
  [...st.keys()].forEach(k=>{const s=k.split('/');
   if(s[0]==='rooms'&&s[1]==='main'&&s.length>=3){const b=st.get('rooms/main/'+s[2]);if(!b||typeof b!=='object'||!b.ts||now-b.ts>TTL)del(k)}
   else if(s[0]==='conf'&&s.length>=2){const b=st.get('conf/'+s[1]);if(!b||!b.ts||now-b.ts>43200000)del(k)}
+  else if(s[0]==='gm'&&s[1]==='an'&&s.length>=4){const b=st.get(k);if(!b||!b.ts||now-b.ts>21600000)del(k)}
   else if(s[0]==='online'&&s.length===2){const b=st.get(k);if(!b||!b.ts||now-b.ts>600000)del(k)}});fire()}};
 return api})();
 async function fbConnect(){const [A,Au,R]=await Promise.all(['app','auth','database'].map(m=>import(FB+m+'.js')));
@@ -626,18 +731,18 @@ function unread(){return dmUn()+pmUn()+(CH.unr||0)}
 function ttl(){document.title=(CH.unr?'('+CH.unr+') ':'')+T0}
 const viewing=()=>S.tab==='community'&&S.sub==='pub'&&S.chat.ok&&!document.hidden;
 const ICO={learn:'📚',practice:'🎯',journey:'🏅',community:'💬'};
-function navLabel(k){return ICO[k]+' '+t(k)+(k==='community'&&unread()?' ('+unread()+')':'')}
-function updNav(){const n=$('nv_community');if(n)n.textContent=navLabel('community')}
+function navLabel(k){return ic(k,22)+'<span>'+t(k)+(k==='community'&&unread()?' ('+unread()+')':'')+'</span>'}
+function updNav(){const n=$('nv_community');if(n)n.innerHTML=navLabel('community');admBadge()}
 function attachAdmin(){if(!CH.adm||!DB)return;
  if(!CH.aat){CH.aat=1;CH.subs.push(DB.on('reports',v=>{CH.rep=v||{};drawChat();admRefresh()}))}
- if(CH.isA&&!CH.aat2){CH.aat2=1;CH.subs.push(DB.on('dmidx',v=>{CH.idx=v||{};drawChat()}));CH.subs.push(DB.on('reg',v=>{AC.reg=v||{};admRefresh()}));setTimeout(()=>NDB.prune(),7000);setInterval(()=>NDB.prune(),600000)}}
+ if(CH.isA&&!CH.aat2){CH.aat2=1;CH.subs.push(DB.on('dmidx',v=>{v=v||{};dmNotif(v);CH.idx=v;drawChat();admBadge()}));CH.subs.push(DB.on('reg',v=>{AC.reg=v||{};admRefresh()}));setTimeout(()=>NDB.prune(),7000);setInterval(()=>NDB.prune(),600000)}}
 async function startChat(){CH.subs.forEach(f=>f());CH.subs=[];CH.dmSub&&CH.dmSub();CH.dmSub=null;CH.aat=0;CH.aat2=0;CH.pres=0;
 CH.started=1;CH.redo=[];CH.uid=AU.u;
 const sba=(p,f,g)=>{let n=0,last={};const run=()=>{const c=++n;f(last).then(r=>{if(c===n){g(r);drawChat()}})};CH.redo.push(run);CH.subs.push(DB.on(p,v=>{last=v||{};run()}))};
 sba('rooms/main',procR,gotMsgs);
 CH.subs.push(DB.on('online',v=>{CH.raw=v||{};calcOn()}));
 sba('muted',procM,r=>{CH.mutes=r});
-CH.subs.push(DB.on('dm/'+CH.uid,v=>{if(CH.adm)return;const c=++CH.dq;thr(v||{},CH.uid).then(a=>{if(c===CH.dq){CH.th=a;drawChat()}})}));
+CH.subs.push(DB.on('dm/'+CH.uid,v=>{if(CH.adm)return;const c=++CH.dq;thr(v||{},CH.uid).then(a=>{if(c===CH.dq){CH.th=a;drawChat();dmUserNotif(a)}})}));
 CH.subs.push(DB.on('typing',v=>typH(v||{})));
 if(CH.net)CH.subs.push(DB.on('pmi/'+CH.uid,v=>{v=v||{};for(const k in v){const o=v[k];if(o&&o.u&&o.ts&&!(CH.pmi[k]&&CH.pmi[k].ts===o.ts)&&Date.now()>CH.gr&&!(CH.pw===k&&viewing2())){toast('✉️ '+t('pmn')+' '+(o.name||''));if(S.snd!==false)beep()}}CH.pmi=v;updNav();drawChat()}));
 if(CH.net){CH.subs.push(DB.on('conf',v=>{CF.raw=v||{};procConf()}));if(!CF.pt)CF.pt=setInterval(procConf,4000)}
@@ -662,8 +767,7 @@ async function procM(v){const o={};for(const [u,m] of Object.entries(v)){if(!CH.
  if(m&&typeof m==='object'&&m.on===true&&await av('mute|'+u+'|true|'+m.ts,m.sig))o[u]=true}return o}
 function gotMsgs(r){const first=Date.now()<CH.gr;let n=0;
 for(const m of r){if(!CH.sid.has(m.id)){CH.sid.add(m.id);if(!first&&m.uid!==CH.uid&&!(CH.mutes[m.uid]&&!CH.adm))n++}}
-CH.msgs=r;if(n&&!viewing()){CH.unr+=n;ttl();if(S.snd!==false)beep()}}
-function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.frequency.value=880;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+.12);setTimeout(()=>a.close(),400)}catch(x){}}
+CH.msgs=r;if(n){snd('msg');if(!viewing()){CH.unr+=n;ttl();const l=r[r.length-1];notify('💬 '+(l&&l.name||''),l&&l.text)}}}
 function calcOn(){const raw=CH.raw||{},now=Date.now(),f={};
 for(const [k,o] of Object.entries(raw)){if(!o||!o.ts)continue;const rec=AC.rec[k];if(!rec||acSt(k)!=='ok')continue;
  const key=k+'|'+o.ts+'|'+(o.us||'');if(CH.pvf[key]===undefined){CH.pvf[key]=null;CR.uverify(rec.pub,'on|'+k+'|'+o.ts,o.us||'').then(ok=>{CH.pvf[key]=ok;calcOn()});continue}
@@ -696,7 +800,7 @@ function callUI(){let d=$('call');if(!CALL){d&&d.remove();clearInterval(ringT);r
  if(!d){d=document.createElement('div');d.id='call';d.innerHTML='<video class="rv" id="crv" autoplay playsinline></video><video class="lv" id="clv" autoplay playsinline muted></video><div class="who" id="cwho"></div><div class="cb" id="ccb"></div>';document.body.appendChild(d)}
  const c=CALL;$('cwho').textContent=c.state==='ringing'?t('cin')+' '+c.av+' '+c.name:c.state==='calling'?t('cout')+' '+c.av+' '+c.name:c.state==='live'?'🟢 '+c.av+' '+c.name:t('cconn');
  $('crv').style.display=c.video&&c.state==='live'?'block':'none';$('clv').style.display=c.video&&c.stream?'block':'none';
- $('ccb').innerHTML=c.state==='ringing'?`<button class="grn" onclick="acceptCall()" aria-label="${t('cacc')}">📞</button><button class="red" onclick="endCall(true)" aria-label="${t('cdec')}">✖</button>`:`<button class="${c.mic===false?'off':''}" onclick="togTrack('audio')" aria-label="${t('cmic')}">${c.mic===false?'🔇':'🎙'}</button>${c.video?`<button class="${c.cam===false?'off':''}" onclick="togTrack('video')" aria-label="${t('ccam')}">${c.cam===false?'🚫':'📷'}</button>`:''}<button class="red" onclick="endCall(true)">✖</button>`;
+ $('ccb').innerHTML=c.state==='ringing'?`<button class="grn" onclick="acceptCall()" aria-label="${t('cacc')}">${ic('phone',26)}</button><button class="red" onclick="endCall(true)" aria-label="${t('cdec')}">${ic('x',26)}</button>`:`<button class="${c.mic===false?'off':''}" onclick="togTrack('audio')" aria-label="${t('cmic')}">${ic(c.mic===false?'micoff':'mic',24)}</button>${c.video?`<button class="${c.cam===false?'off':''}" onclick="togTrack('video')" aria-label="${t('ccam')}">${ic(c.cam===false?'videooff':'video',24)}</button><button onclick="flipCam('call')" aria-label="flip">${ic('flip',24)}</button>`:''}<button class="red" onclick="endCall(true)">${ic('x',26)}</button>`;
  if(c.state==='ringing'&&!ringT){ringT=setInterval(()=>{if(S.snd!==false)beep()},1500)}if(c.state!=='ringing'&&ringT){clearInterval(ringT);ringT=null}}
 function togTrack(k){if(!CALL||!CALL.stream)return;const tr=CALL.stream.getTracks().filter(x=>x.kind===k),on=!(tr[0]&&tr[0].enabled);tr.forEach(x=>x.enabled=on);CALL[k==='audio'?'mic':'cam']=on;callUI()}
 async function getMedia(){CALL.stream=await navigator.mediaDevices.getUserMedia({audio:true,video:CALL.video?{facingMode:'user'}:false});const l=$('clv');if(l)l.srcObject=CALL.stream;callUI()}
@@ -724,7 +828,7 @@ addEventListener('beforeunload',()=>{try{endCall(true)}catch(x){}});
 function startPres(){if(CH.pres||!DB)return;CH.pres=1;if(CH.net)CR.uk().then(k=>{DB.pres(CH.uid,async ts=>({name:S.chat.name,av:S.chat.av,pub:k.pub,us:await CR.usign('on|'+CH.uid+'|'+ts),...(CH.adm?{adm:true,sig:await CR.sign('adm|'+CH.uid+'|'+ts)}:{})}))});else DB.pres(CH.uid,{name:S.chat.name,av:S.chat.av})}
 function joinChat(){S.chat.name=S.chat.name.trim().slice(0,20);S.chat.ok=true;sv();startPres();meLine();draw()}
 function msgH(m){const me=m.uid===CH.uid,s=CH.sel===m.id;
-return `<div class="cm${me?' me':''}${s?' sel':''}${m.adm?' adm':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${m.adm?(m.rl==='m'?' 🛡 <span class="admb">'+t('modl')+'</span>':' 👑 <span class="admb">'+t('adml')+'</span>'):''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix&&m.fix.text?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
+return `<div class="cm${me?' me':''}${s?' sel':''}${m.adm?' adm':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${lvB(m.uid)}${m.adm?(m.rl==='m'?' 🛡 <span class="admb">'+t('modl')+'</span>':' 👑 <span class="admb">'+t('adml')+'</span>'):''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix&&m.fix.text?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
 function actH(m){const st='event.stopPropagation();';
 if(CH.adm)return `<div class="ac"><button onclick="${st}fixM('${m.id}')">✏️ ${t('fix')}</button><button onclick="${st}pinM('${m.id}')">${m.pin?'📍':'📌'}</button><button onclick="${st}delM('${m.id}')">🗑</button>${m.adm?'':`<button onclick="${st}muteU('${m.uid}')">🔇</button>`}</div>`;
 return m.uid===CH.uid?'':`<div class="ac"><button onclick="${st}repM('${m.id}')">🚩 ${t('report')}</button></div>`}
@@ -844,7 +948,7 @@ function confUI(){const c=CF.cur;let d=$('conf');if(!c){d&&d.remove();clearInter
  [...g.children].forEach(x=>{if(!R.p[x.id.slice(3)])x.remove()});
  const rq=Object.entries(R.q).filter(([u])=>!R.ok[u]&&!R.ban[u]&&!R.p[u]);$('cfq').innerHTML=mod&&rq.length?rq.map(([u,o])=>`<div class="rq">🙋 <b>${e(o.av||'')} ${e(o.name||'')}</b> ${t('caskin')} <button class="grn" onclick="confAct('${c.id}','ok','${e(u)}',true)">✓</button><button class="red" onclick="confAct('${c.id}','ban','${e(u)}',true)">✗</button></div>`).join(''):'';
  const hv=c.stream.getVideoTracks().length>0;
- $('cfb').innerHTML=`<button class="${c.mic&&!c.locked?'':'off'}" onclick="confMic()" aria-label="mic">${c.locked?'🔒':c.mic?'🎙':'🔇'}</button>${hv?`<button class="${c.cam?'':'off'}" onclick="confCam()" aria-label="cam">${c.cam?'📷':'🚫'}</button>`:''}<button class="red" onclick="confLeave()" aria-label="${t('cleave')}">🚪 ${t('cleave')}</button>${mod?`<button class="red2" onclick="confEnd()">⛔ ${t('cendall')}</button>`:''}`}
+ $('cfb').innerHTML=`<button class="${c.mic&&!c.locked?'':'off'}" onclick="confMic()" aria-label="mic">${c.locked?'🔒':ic(c.mic?'mic':'micoff',22)}</button>${hv?`<button class="${c.cam?'':'off'}" onclick="confCam()" aria-label="cam">${ic(c.cam?'video':'videooff',22)}</button><button onclick="flipCam('conf')" aria-label="flip">${ic('flip',22)}</button>`:''}<button class="red" onclick="confLeave()" aria-label="${t('cleave')}">🚪 ${t('cleave')}</button>${mod?`<button class="red2" onclick="confEnd()">⛔ ${t('cendall')}</button>`:''}`}
 function confListH(){const rs=Object.values(CF.rooms).filter(R=>!R.ended&&(Object.keys(R.p).length||Date.now()-R.ts<120000)).sort((a,b)=>b.ts-a.ts);
  const card=R=>{const n=Object.keys(R.p).length,w=CF.wait===R.id,adm=Object.keys(R.p).some(isAdmU);
   return `<div class="p"><div class="t"><b>${R.kind==='video'?'🎥':'🎧'} ${e(R.title)}</b><span>⭐ ${e(R.ha)} ${e(R.hn)} · 👥 ${n}/${capOf(R)} · ${R.mode==='ask'?'🙋':'🔓'}${adm?' · 👑':''}</span></div><div class="ab">${w?`<button onclick="confCancel()">⏳ ✕</button>`:`<button class="jn" onclick="confEnter('${R.id}')">${R.mode==='ask'&&R.host!==CH.uid&&!CH.adm&&!R.ok[CH.uid]?t('creq'):t('cjoin')}</button>`}${CH.adm?`<button onclick="CF.cur||confAct('${R.id}','end','',true)">⛔</button>`:''}</div></div>`};
@@ -905,7 +1009,7 @@ function applyRole(){CH.adm=AU.role!=='user';CH.isA=AU.role==='admin';admin=CH.i
 function onAcct(){
  if(netReady()&&AU.pre&&!AU.u)tryPre();
  if(AU.u){const st=acSt(AU.u),ro=acRole(AU.u);if(st==='none'&&netReady()){/* record vanished: keep session, wait */}else{const was=AU.st;AU.st=st;AU.role=ro;if(was!=='ok'&&st==='ok'&&!CH.started)startChat();applyRole()}}
- CH.redo.forEach(f=>f());calcOn();admNotif();gateTick();if(S.tab==='admin'||S.tab==='community')drawChat();if(S.tab==='admin')admRefresh()}
+ CH.redo.forEach(f=>f());calcOn();admNotif();if(GM.v&&Object.keys(GM.v).length)procGame();gateTick();if(S.tab==='admin'||S.tab==='community')drawChat();if(S.tab==='admin')admRefresh()}
 let regSeen=null;
 function admNotif(){if(!CH.adm||AU.st!=='ok')return;const p=Object.keys(AC.rec).filter(u=>acSt(u)==='pending');if(regSeen===null){regSeen=new Set(p);return}for(const u of p)if(!regSeen.has(u)){regSeen.add(u);toast('🆕 '+t('newreg')+': '+u);if(S.snd!==false)beep()}}
 /* ---- session ---- */
@@ -997,7 +1101,7 @@ const badge=(ro,st)=>(ro!=='user'?`<span class="rolb r_${ro}">${ro==='admin'?'�
 function infoH(u){const i=AC.info[u];if(!CH.isA)return '';if(!i){loadInfo(u);return `<div class="uinf">…</div>`}if(i.err)return `<div class="uinf">🔒</div>`;
  return `<div class="uinf"><div>📧 ${e(i.email||'—')}</div><div>🌍 ${e(i.country||'—')}</div><div>🗣 ${e(LN[i.nat]||i.nat||'—')} → 📚 ${e(LN[i.learn]||i.learn||'—')} · ${e(i.lv||'')}</div>${i.note?`<div>📝 ${e(i.note)}</div>`:''}<small>${dstr(i.ts)} · ${e(i.lang||'')}</small></div>`}
 function userRow(x,inf){const {u,r,st,ro}=x,me=u===AU.u,own=ro==='admin';
- return `<div class="urow"><span class="av">${e(r.av)}</span><div class="un"><b>${e(r.name)}</b><small dir="ltr">@${e(u)} · ${dstr(r.ts)}</small><div>${badge(ro,st)}</div>${inf||AD.open===u?infoH(u):''}</div><div class="ua">${own||me?'':`${st==='pending'?`<button class="grn" onclick="setSt('${u}','ok')">✓ ${t('u_appr')}</button>`:''}${st==='ban'?`<button onclick="setSt('${u}','ok')">♻ ${t('u_unban')}</button>`:`<button class="redb" onclick="setSt('${u}','ban')">⛔ ${t('u_rej')}</button>`}${CH.isA&&st==='ok'?`<button onclick="setRole('${u}',${ro==='mod'?'false':'true'})">🛡 ${t(ro==='mod'?'u_unmod':'u_mkmod')}</button>`:''}`}${CH.isA&&!own?`<button onclick="AD.open=AD.open==='${u}'?null:'${u}';admRefresh()">ℹ</button>`:''}</div></div>`}
+ return `<div class="urow"><span class="av">${e(r.av)}</span><div class="un"><b>${CH.on[u]?'<i class="odot"></i>':''}${e(r.name)}${lvB(u)}</b><small dir="ltr">@${e(u)} · ${dstr(r.ts)}</small><div>${badge(ro,st)}</div>${inf||AD.open===u?infoH(u):''}</div><div class="ua">${own||me?'':`${st==='pending'?`<button class="grn" onclick="setSt('${u}','ok')">✓ ${t('u_appr')}</button>`:''}${st==='ban'?`<button onclick="setSt('${u}','ok')">♻ ${t('u_unban')}</button>`:`<button class="redb" onclick="setSt('${u}','ban')">⛔ ${t('u_rej')}</button>`}${CH.isA&&st==='ok'?`<button onclick="setRole('${u}',${ro==='mod'?'false':'true'})">🛡 ${t(ro==='mod'?'u_unmod':'u_mkmod')}</button>`:''}`}${CH.isA&&!own?`<button onclick="AD.open=AD.open==='${u}'?null:'${u}';admRefresh()">ℹ</button>`:''}</div></div>`}
 function admDash(){const us=usersList(),c=s=>us.filter(x=>x.st===s).length,rooms=Object.values(CF.rooms||{}).filter(R=>!R.ended&&Object.keys(R.p).length).length;
  const tile=(n,l,ic)=>`<div class="stt"><span>${ic}</span><b>${n}</b><small>${l}</small></div>`;
  return `<div class="stg">${tile(us.length,t('stat_users'),'👥')}${tile(c('pending'),t('stat_pend'),'⏳')}${tile(c('ban'),t('stat_ban'),'⛔')}${tile(us.filter(x=>x.ro==='mod').length,t('stat_mods'),'🛡')}${tile(Object.keys(CH.on).length,t('online'),'🟢')}${tile(rooms,t('stat_rooms'),'🎙')}${tile(Object.keys(CH.rep||{}).length,t('reports'),'🚩')}</div>
@@ -1017,15 +1121,16 @@ function admAcct(){return `<div class="card"><h3>${e(AU.av)} ${e(AU.name)} <smal
 function admBody(){switch(AD.sec){
  case 'dash':return `<div id="adash">${admDash()}</div>`;
  case 'users':return `<input class="sq" id="auq" value="${e(AD.q)}" placeholder="${t('u_search')}" oninput="AD.q=this.value;admRefresh()"><div id="aul">${admUsers()}</div>`;
+ case 'live':return `<div id="glive">${liveH()}</div>`;
  case 'reqs':return `<div id="areq">${admReqs()}</div>`;
  case 'chat':return `<div id="cmod">${modH()}</div>`;
  case 'conf':return `<div id="acf">${confListH()}</div>`;
  case 'set':return CH.isA?admSet():'';
  case 'cont':return CH.isA?contentUI():'';
  default:return admAcct()}}
-function admRefresh(){if(S.tab!=='admin')return;const m={adash:admDash,aul:admUsers,areq:admReqs,acf:confListH,cmod:modH};for(const id in m){const n=$(id);if(n)n.innerHTML=m[id]()}}
+function admRefresh(){if(S.tab!=='admin')return;const m={adash:admDash,aul:admUsers,areq:admReqs,acf:confListH,cmod:modH};for(const id in m){const n=$(id);if(n)n.innerHTML=m[id]()}gliveSet()}
 function vAdmin(){if(!CH.adm||AU.st!=='ok'){S.tab='learn';return vLearn()}
- const secs=(CH.isA?['dash','users','reqs','chat','conf','set','cont','acct']:['dash','users','reqs','chat','conf','acct']),IC={dash:'📊',users:'👥',reqs:'🆕',chat:'💬',conf:'🎙',set:'⚙️',cont:'📝',acct:'🔐'};if(!secs.includes(AD.sec))AD.sec='dash';
+ const secs=(CH.isA?['dash','users','live','reqs','chat','conf','set','cont','acct']:['dash','users','live','reqs','chat','conf','acct']),IC={dash:'📊',users:'👥',live:'⚡',reqs:'🆕',chat:'💬',conf:'🎙',set:'⚙️',cont:'📝',acct:'🔐'};if(!secs.includes(AD.sec))AD.sec='dash';
  const np=Object.keys(AC.rec).filter(u=>acSt(u)==='pending').length;
  return `<div class="acw"><aside class="acs"><div class="acb">🛠 ${t('ac_title')}</div>${secs.map(k=>`<button class="${AD.sec===k?'on':''}" onclick="admSec('${k}')"><span>${IC[k]}</span> ${t('ac_'+k)}${k==='reqs'&&np?` <i class="cnt">${np}</i>`:''}</button>`).join('')}<button class="bk" onclick="S.tab='learn';sv();draw()">← ${t('ac_back')}</button></aside><section class="acm"><h2>${IC[AD.sec]} ${t('ac_'+AD.sec)}</h2>${admBody()}</section></div>`}
 
@@ -1039,7 +1144,7 @@ return `<h3>🟢 ${t('online')} (${Object.keys(CH.on).length})</h3><div class="g
 function drawChat(){updNav();if(S.tab!=='community'||!S.chat.ok)return;if(viewing()&&CH.unr){CH.unr=0;ttl();updNav()}const set=(id,h)=>{const n=$(id);if(n)n.innerHTML=h};
 const m=$('cmsgs');if(m&&S.sub==='pub'){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=msgsH();if(nb)m.scrollTop=m.scrollHeight}
 const d=$('cdm');if(d){const nb=d.scrollHeight-d.scrollTop-d.clientHeight<90;d.innerHTML=dmH();if(nb)d.scrollTop=d.scrollHeight}
-{const m=$('cpt');if(m){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=pmH();if(nb)m.scrollTop=m.scrollHeight}}set('cpl',pmListH());if(S.sub==='conf')set('ccl',confListH());set('conl',onlineH());set('cadm',admBar());set('cinb',inbH());set('cmod',modH());drawTyp()}
+{const m=$('cpt');if(m){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=pmH();if(nb)m.scrollTop=m.scrollHeight}}set('cpl',pmListH());if(S.sub==='conf')set('ccl',confListH());set('conl',onlineH());set('cadm',admBar());set('cinb',inbH());set('cmod',modH());gliveSet();drawTyp()}
 function selM(id){CH.sel=CH.sel===id?null:id;drawChat()}
 async function sendRaw(x){x=x.trim();if(!x||isMuted()||(!CFG.chat&&!CH.adm))return false;
 if(!CH.adm&&!CFG.links&&/https?:|www\./i.test(x)){toast(t('nolink'));return false}
@@ -1068,11 +1173,12 @@ const rulesH=()=>`<ol class="rl">${[0,1,2,3,4,5,6].map(i=>`<li>${t('r'+i)}</li>`
 function chk(){const b=$('jb');if(b)b.disabled=!(S.chat.name.trim().length>=2&&CH.acc)}
 function vJoin(){const c=S.chat;return `<div class="card nar"><h3>💬 ${t('chat_join')}</h3><label>${t('nick')}</label><input id="jn" maxlength="20" value="${e(c.name)}" oninput="S.chat.name=this.value;chk()"><label>${t('avatar')}</label><div class="avg">${AVS.map(a=>`<button class="${c.av===a?'on':''}" onclick="S.chat.av='${a}';draw()">${a}</button>`).join('')}</div><h3 style="margin-top:1rem">🤝 ${t('rtitle')}</h3>${rulesH()}<label class="ck"><input type="checkbox" onchange="CH.acc=this.checked;chk()" ${CH.acc?'checked':''}> ${t('acc')}</label><div class="row"><button class="btn g" id="jb" ${c.name.trim().length>=2&&CH.acc?'':'disabled'} onclick="joinChat()">💬 ${t('enter')}</button></div></div>`}
 function vCommunity(){if(!CH.ready)return `<div class="e">${t('loading')}</div>`;if(!S.chat.ok)return vJoin();
-const P=(CH.isA?['pub','pm','conf','inbox','mod','rules']:CH.adm?['pub','pm','conf','dm','mod','rules']:['pub','pm','conf','dm','rules']).filter(k=>(k!=='pm'||CFG.pm)&&(k!=='conf'||CFG.conf)),IC={pub:'💬',conf:'🎙',pm:'👥',dm:'🛡✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
+const P=(CH.isA?['pub','live','pm','conf','inbox','mod','rules']:CH.adm?['pub','live','pm','conf','dm','mod','rules']:['pub','live','pm','conf','dm','rules']).filter(k=>(k!=='pm'||CFG.pm)&&(k!=='conf'||CFG.conf)),IC={pub:ic('community',18),live:ic('live',18),conf:ic('mic',18),pm:ic('users',18),dm:ic('shield',18),inbox:ic('inbox',18),mod:ic('shield',18),rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
 const pills=`<div class="pls">${P.map(k=>`<button class="${S.sub===k?'on':''}" onclick="S.sub='${k}';sv();draw()">${IC[k]} ${t(k)}${k==='inbox'&&dmUn()?' ('+dmUn()+')':''}${k==='pm'&&pmUn()?' ('+pmUn()+')':''}</button>`).join('')}</div>`;
 const comp=(id,fn,ex)=>`<div class="comp"><input id="${id}" maxlength="500" autocomplete="off" ${ex||''} placeholder="${t('typem')}" onkeydown="if(event.key==='Enter')${fn}()"><button class="btn snd" onclick="${fn}()">${t('send')}</button></div>`;
 let b='';
 if(S.sub==='pub'){const w=todayWord();b=`<div id="cadm">${admBar()}</div><div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div><div class="typ" id="ctyp"></div>${!CFG.chat&&!CH.adm?`<p class="e">${t('chatoff')}</p>`:isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM','oninput="typ()"')}`}
+else if(S.sub==='live')b=`<div id="glive">${liveH()}</div>`;
 else if(S.sub==='conf')b=`<div id="ccl">${confListH()}</div>`;
 else if(S.sub==='pm')b=CH.pw?`<div class="row" style="margin:0 0 .4rem"><button class="btn m" onclick="CH.pw=null;draw()">← ${t('back')}</button><b style="align-self:center;flex:1">${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).av||'🙂')} ${e((CH.on[CH.pw]||CH.pmi[CH.pw]||{}).name||'')}</b><button class="btn s" onclick="startCall(CH.pw,false)" aria-label="call">📞</button><button class="btn s" onclick="startCall(CH.pw,true)" aria-label="video">🎥</button></div><div class="cmsgs" id="cpt">${pmH()}</div>${comp('cpi','sendPm')}`:`<div id="cpl">${pmListH()}</div>`;
 else if(S.sub==='dm')b=`<p class="hint">${t('dmhint')}</p><div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`;
@@ -1087,7 +1193,7 @@ function draw(keep){
  const el=document.documentElement;el.lang=S.ui;el.dir=dirOf(S.ui);el.dataset.t=S.dark?'dark':'light';
  ui.value=S.ui;sub.textContent=t('sub');setWm();
  const g=gateView();document.body.classList.toggle('gate',!!g);document.body.classList.toggle('admv',S.tab==='admin'&&!g&&!!CH.adm);
- hb_adm.style.display=CH.adm&&!g?'':'none';hb_me.style.display=AU.u&&!g?'':'none';ntc.innerHTML=!g&&CFG.notice?`<div class="notice">📢 ${e(CFG.notice)}</div>`:'';
+ hb_adm.style.display=CH.adm&&!g?'':'none';hb_me.style.display=AU.u&&!g?'':'none';initIcons();ntc.innerHTML=!g&&CFG.notice?`<div class="notice">📢 ${e(CFG.notice)}</div>`:'';
  if(g){app.innerHTML=g;return}
  sw.innerHTML=['de','en','es'].map(l=>`<button class="${S.learn===l?'on':''}" onclick="S.learn='${l}';qz=ty=mg=null;sv();draw()">${LN[l]}</button>`).join('')+
  `<select onchange="S.my=this.value;sv();draw()" aria-label="${t('my')}">${['fa','de','en','es'].map(l=>`<option value="${l}" ${S.my===l?'selected':''}>${t('my')} ${LN[l]}</option>`).join('')}</select>`;
@@ -1097,8 +1203,165 @@ function draw(keep){
  app.innerHTML=VW[S.tab]();const cm=document.getElementById('cmsgs');if(cm)cm.scrollTop=cm.scrollHeight;
  if(isQ){const i=app.querySelector('input');if(i){i.focus();try{i.setSelectionRange(pos,pos)}catch(x){}}}
 }
+/* ===== EXTRAS: icons, sounds, notifications, camera flip, live game (points + gifts) ===== */
+const IP={
+learn:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+practice:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+journey:'<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>',
+community:'<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+live:'<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
+gift:'<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>',
+user:'<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+send:'<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+mic:'<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/>',
+micoff:'<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/><path d="m2 2 20 20"/>',
+video:'<path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/>',
+videooff:'<path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m2 2 20 20"/>',
+phone:'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+flip:'<path d="M11 19H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/><path d="M13 5h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"/><circle cx="12" cy="12" r="3"/><path d="m18 22-3-3 3-3"/><path d="m6 2 3 3-3 3"/>',
+users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+dash:'<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>',
+moon:'<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+vol:'<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>',
+volx:'<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/>',
+x:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+check:'<path d="M20 6 9 17l-5-5"/>',
+inbox:'<path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>',
+star:'<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/>',
+crown:'<path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/>'};
+const ic=(n,s=20)=>`<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IP[n]||''}</svg>`;
+/* ---- sounds (WebAudio, no files) ---- */
+let AX=null;
+function axc(){try{if(!AX)AX=new (window.AudioContext||window.webkitAudioContext)();if(AX.state==='suspended')AX.resume();return AX}catch(x){return null}}
+['pointerdown','keydown','touchstart'].forEach(ev=>addEventListener(ev,()=>axc(),{passive:true}));
+function tone(a,f,t0,d,ty,v){const o=a.createOscillator(),g=a.createGain(),n=a.currentTime+t0;o.type=ty||'sine';o.frequency.setValueAtTime(f,n);g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(v||.09,n+.012);g.gain.exponentialRampToValueAtTime(.0001,n+d);o.connect(g);g.connect(a.destination);o.start(n);o.stop(n+d+.05)}
+const SND={msg:[[740,0,.08],[988,.07,.12]],dm:[[784,0,.1],[988,.1,.1],[1318,.2,.2]],gift:[[880,0,.08],[1109,.07,.08],[1319,.14,.08],[1760,.21,.3]],ok:[[523,0,.1],[659,.1,.1],[784,.2,.1],[1047,.3,.3]],bad:[[260,0,.18,'sawtooth',.05],[200,.16,.25,'sawtooth',.05]],start:[[392,0,.12],[523,.12,.12],[659,.24,.12],[784,.36,.34]],join:[[600,0,.07],[800,.06,.1]],tick:[[1000,0,.04,'square',.03]]};
+function snd(k){if(S.snd===false)return;const a=axc();if(!a)return;(SND[k]||[]).forEach(([f,t0,d,ty,v])=>tone(a,f,t0,d,ty,v))}
+function beep(){snd('dm')}
+function notify(ti,body){try{if(document.hidden&&window.Notification&&Notification.permission==='granted')new Notification(ti,{body:body||'',tag:'mla'})}catch(x){}}
+let askedN=false;addEventListener('pointerdown',()=>{if(askedN||!AU.u)return;askedN=true;try{if(window.Notification&&Notification.permission==='default')Notification.requestPermission()}catch(x){}},{passive:true});
+/* ---- incoming private messages: sound + toast + badge ---- */
+function dmNotif(v){const first=!CH.dmInit;CH.dmInit=1;if(first){const n=Object.values(v).filter(o=>o&&o.u).length;if(n)setTimeout(()=>toast('✉️ '+n+' · '+t('inbox')),1500);return}
+ for(const k in v){const o=v[k];if(o&&o.u&&o.ts&&!(CH.idx[k]&&CH.idx[k].ts===o.ts)){if(!(CH.dw===k&&S.sub==='inbox'&&S.tab==='community'&&!document.hidden))toast('✉️ '+t('n_dm')+' '+(o.name||k));snd('dm');notify('✉️ '+(o.name||k),t('n_dm'))}}}
+function dmUserNotif(a){const c=a.filter(x=>x.from==='a').length;if(CH.dmA!==undefined&&c>CH.dmA){snd('dm');if(!(S.sub==='dm'&&S.tab==='community'&&!document.hidden))toast('👑 '+t('n_adm'));notify('👑 '+t('adml'),t('n_adm'))}CH.dmA=c;updNav()}
+function admBadge(){const b=$('hb_adm');if(!b)return;const n=(CH.isA?dmUn():0)+(CH.adm?Object.keys(AC.rec).filter(u=>acSt(u)==='pending').length:0);b.innerHTML=ic('dash')+(n?`<i class="bdg">${n}</i>`:'')}
+function initIcons(){const m=$('hb_me'),th=$('hb_th'),sn=$('hb_sn');if(m)m.innerHTML=ic('user');if(th)th.innerHTML=ic('moon');if(sn)sn.innerHTML=ic(S.snd===false?'volx':'vol');admBadge()}
+function togSnd(){S.snd=S.snd===false;sv();initIcons();if(S.snd!==false)snd('ok')}
+/* ---- camera flip (front/back) ---- */
+async function flipCam(kind){const c=kind==='call'?CALL:CF.cur;if(!c||!c.stream||c.flipping)return;const old=c.stream.getVideoTracks()[0];if(!old)return;c.flipping=1;
+ const want=c.face==='environment'?'user':'environment';let ns=null;
+ try{ns=await navigator.mediaDevices.getUserMedia({video:{facingMode:{exact:want}}})}catch(x){try{old.stop();ns=await navigator.mediaDevices.getUserMedia({video:{facingMode:want}})}catch(y){toast(t('noflip'));c.flipping=0;return}}
+ const nt=ns.getVideoTracks()[0];if(!nt){c.flipping=0;return}nt.enabled=old.enabled;
+ const pcs=kind==='call'?[c.pc]:Object.values(c.peers).map(p=>p.pc);
+ for(const pc of pcs){if(!pc)continue;const s=pc.getSenders().find(x=>x.track&&x.track.kind==='video'||x.track===null);if(s)try{await s.replaceTrack(nt)}catch(x){}}
+ try{c.stream.removeTrack(old)}catch(x){}old.stop();c.stream.addTrack(nt);c.face=want;c.flipping=0;
+ const lv=kind==='call'?$('clv'):document.querySelector('#ct_'+CH.uid+' video');if(lv){lv.srcObject=null;lv.srcObject=c.stream;lv.classList.toggle('back',want==='environment');lv.play&&lv.play().catch(()=>{})}
+ if(kind==='call')callUI();else confUI()}
+/* ===== LIVE GAME: quiz rounds, points, levels, gifts (all signed; balances derived from signed records) ===== */
+const GIFTS=[{k:'rose',e:'🌹',c:1},{k:'coffee',e:'☕',c:5},{k:'heart',e:'💖',c:10},{k:'gift',e:'🎁',c:20},{k:'diamond',e:'💎',c:50},{k:'rocket',e:'🚀',c:100},{k:'crown',e:'👑',c:200},{k:'castle',e:'🏰',c:500}];
+const GE=k=>GIFTS.find(g=>g.k===k),GSTART=20,GLV=x=>Math.min(50,Math.floor(Math.sqrt(Math.max(0,x)/8))+1);
+const GM={v:{},round:null,res:{},bal:{},earned:{},got:{},board:[],feed:[],seen:new Set(),init:false,n:0,my:{},f:{kind:'mc',dur:20,base:10,q:'',o:['','','',''],a:'',pl:'',tl:'',to:'',n:50,g:''},ph:''};
+const gcl=s=>String(s==null?'':s).replace(/[|~]/g,'/').trim().slice(0,120);
+const gnorm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^\p{L}\p{N} ]/gu,'').replace(/\s+/g,' ').trim();
+const rdStr=r=>`rd|${r.id}|${r.kind}|${r.q}|${(r.opts||[]).join('~')}|${r.t0}|${r.dur}|${r.base}`;
+const lvOf=u=>GLV(GM.earned[u]||0),balOf=u=>GM.bal[u]===undefined?GSTART:GM.bal[u];
+const lvB=u=>GM.earned[u]?`<span class="glv">Lv${lvOf(u)}</span>`:'';
+async function procGame(){const v=GM.v||{},n=++GM.n;let round=null;const r=v.round;
+ if(r&&r.id&&r.sig&&typeof r.t0==='number'&&typeof r.q==='string'&&(r.kind==='mc'||r.kind==='tx')&&r.dur>0&&r.dur<=120&&await avR(rdStr(r),r.sig))round=r;
+ const res={};for(const [rid,x] of Object.entries(v.res||{})){if(!x||!x.sig||!Array.isArray(x.win)||typeof x.ts!=='number')continue;if(await avR(`res|${rid}|${x.ans}|${x.win.map(w=>w.u+':'+w.p).join(',')}|${x.ts}`,x.sig))res[rid]=x}
+ const ev=[];
+ for(const [rid,x] of Object.entries(res))for(const w of x.win.slice(0,40))if(AC.rec[w.u]&&acSt(w.u)==='ok'&&Number.isFinite(w.p)&&w.p>0&&w.p<=200)ev.push({t:x.ts,id:'r'+rid+w.u,k:'e',to:w.u,n:Math.floor(w.p)});
+ for(const [id,x] of Object.entries(v.aw||{})){if(!x||!x.sig||!AC.rec[x.to]||!(x.n>=0&&x.n<=5000))continue;if(await avA(`aw|${id}|${x.to}|${x.n}|${x.g||''}|${x.ts}`,x.sig))ev.push({t:x.ts,id,k:'e',to:x.to,n:Math.floor(x.n),g:x.g||''})}
+ for(const [id,x] of Object.entries(v.gf||{})){const rc=x&&AC.rec[x.from];if(!rc||acSt(x.from)!=='ok'||!GE(x.g)||!AC.rec[x.to]||typeof x.ts!=='number')continue;
+  const s=`gf|${id}|${x.from}|${x.to}|${x.g}|${x.ts}`;if(await cvc('g'+s+(x.us||''),()=>CR.uverify(rc.pub,s,x.us||'')))ev.push({t:x.ts,id,k:'g',from:x.from,to:x.to,g:x.g})}
+ ev.sort((a,b)=>a.t-b.t||(a.id<b.id?-1:1));
+ const bal={},earned={},got={},feed=[],B=u=>(bal[u]===undefined?(bal[u]=GSTART):bal[u]);
+ for(const x of ev){if(x.k==='e'){B(x.to);bal[x.to]+=x.n;earned[x.to]=(earned[x.to]||0)+x.n;if(x.g)feed.push(x)}
+  else{if(x.from===x.to)continue;const c=GE(x.g).c;if(B(x.from)<c)continue;B(x.to);bal[x.from]-=c;bal[x.to]+=c;earned[x.to]=(earned[x.to]||0)+c;got[x.to]=(got[x.to]||0)+1;feed.push(x)}}
+ if(n!==GM.n)return;
+ const oldR=GM.round,oldRes=GM.res;GM.round=round;GM.res=res;GM.bal=bal;GM.earned=earned;GM.got=got;GM.feed=feed.slice(-12).reverse();
+ GM.board=Object.keys(earned).filter(u=>AC.rec[u]&&acSt(u)==='ok'&&!AC.isA[u]).sort((a,b)=>earned[b]-earned[a]).slice(0,20);
+ const live=Date.now()>CH.gr;
+ for(const x of feed){if(GM.seen.has(x.id))continue;GM.seen.add(x.id);if(GM.init&&live&&Date.now()-x.t<60000){const ge=GE(x.g);const fn=(AC.rec[x.from]||{}).name||'👑',tn=(AC.rec[x.to]||{}).name||'';if(ge){giftFx(ge.e,fn+' → '+tn);snd('gift')}}}
+ if(GM.init&&live){if(round&&(!oldR||oldR.id!==round.id)&&Date.now()<round.t0+round.dur*1000&&!(round.by===CH.uid)){toast('🎮 '+t('g_new'));snd('start');notify('🎮 '+t('live'),round.q)}
+  for(const rid in res)if(!oldRes[rid]){const w=res[rid].win.find(w=>w.u===CH.uid);if(w){snd('ok');toast('🎉 +'+w.p)}else if(GM.my[rid])snd('bad')}}
+ if(live)GM.init=true;
+ gmRedraw()}
+function gmRedraw(){try{drawChat()}catch(x){}try{admRefresh()}catch(x){}}
+function gmPhase(){const r=GM.round;if(!r)return 'none';if(GM.res[r.id])return Date.now()-GM.res[r.id].ts<3600000?'res':'none';return Date.now()<r.t0+r.dur*1000?'act':(Date.now()<r.t0+r.dur*1000+120000?'wait':'none')}
+function gliveSet(){const g=$('glive');if(!g)return;const a=document.activeElement;if(a&&g.contains(a)&&/INPUT|TEXTAREA|SELECT/.test(a.tagName))return;g.innerHTML=liveH()}
+function gmTick(){const ph=gmPhase();if(ph!==GM.ph){GM.ph=ph;const a=document.activeElement;if(a&&a.closest&&a.closest('#glive')&&!a.closest('.gstaff'))a.blur();gmRedraw()}
+ document.querySelectorAll('.gmt').forEach(n=>{const r=GM.round;if(!r)return;const left=Math.max(0,Math.ceil((r.t0+r.dur*1000-Date.now())/1000));n.textContent=left;const b=n.closest('.gmc')&&n.closest('.gmc').querySelector('.gmb i');if(b)b.style.width=Math.max(0,Math.min(100,100*(r.t0+r.dur*1000-Date.now())/(r.dur*1000)))+'%';if(left<=5&&left>0&&n.dataset.l!==String(left)){n.dataset.l=left;snd('tick')}});
+ const r=GM.round;if(CH.adm&&r&&r.by===CH.uid&&!GM.res[r.id]&&GM.judging!==r.id&&Date.now()>=r.t0+r.dur*1000+2500){GM.judging=r.id;gmJudge(r)}}
+async function gmJudge(r){let ans='';try{ans=(JSON.parse(localStorage.getItem('lp_gans')||'{}')[r.id])||''}catch(x){}if(!ans)ans=GM.ans&&GM.ans[r.id]||'';
+ const an=((GM.v||{}).an||{})[r.id]||{},ok=[];
+ for(const [u,x] of Object.entries(an)){const rc=AC.rec[u];if(!rc||acSt(u)!=='ok'||!x||typeof x.a!=='string'||!(x.ts>=r.t0-3000&&x.ts<=r.t0+r.dur*1000+4000))continue;
+  if(!(await CR.uverify(rc.pub,`an|${r.id}|${u}|${x.a}|${x.ts}`,x.us||'')))continue;if(gnorm(x.a)===gnorm(ans))ok.push({u,t:x.ts})}
+ ok.sort((a,b)=>a.t-b.t);const win=ok.slice(0,30).map((w,i)=>({u:w.u,p:Math.max(1,Math.round(r.base*(i===0?1:i===1?.7:i===2?.5:.3)))})),ts=Date.now();
+ const str=`res|${r.id}|${ans}|${win.map(w=>w.u+':'+w.p).join(',')}|${ts}`;
+ DB.set('gm/res/'+r.id,{ans,win,ts,by:CH.uid,sig:await CR.sign(str)});setTimeout(()=>{GM.v=DB.get('gm')||{};procGame()},80)}
+async function gmAns(a){const r=GM.round;if(!r||gmPhase()!=='act'||GM.my[r.id]||AU.st!=='ok')return;a=gcl(a);if(!a)return;GM.my[r.id]=a;const ts=Date.now();gmRedraw();
+ DB.set('gm/an/'+r.id+'/'+CH.uid,{a,ts,us:await CR.usign(`an|${r.id}|${CH.uid}|${a}|${ts}`)})}
+function gmAnsI(i){const r=GM.round;if(r&&r.opts[i]!==undefined)gmAns(r.opts[i])}
+function gmAnsTx(){const i=$('gmin');if(i)gmAns(i.value)}
+async function gmStart(o){if(!CH.adm)return;const id=mkId(),t0=Date.now()+1200;
+ const r={id,kind:o.kind,q:gcl(o.q),opts:o.kind==='mc'?o.opts.map(gcl):[],t0,dur:Math.min(120,Math.max(8,o.dur|0)),base:Math.min(100,Math.max(1,o.base|0)),by:CH.uid};
+ if(!r.q||(r.kind==='mc'&&(r.opts.length<2||r.opts.some(x=>!x)||!r.opts.includes(gcl(o.a))))||!gcl(o.a)){toast(t('g_bad'));return}
+ try{const m=JSON.parse(localStorage.getItem('lp_gans')||'{}');m[id]=gcl(o.a);const ks=Object.keys(m);if(ks.length>8)delete m[ks[0]];localStorage.setItem('lp_gans',JSON.stringify(m))}catch(x){}
+ GM.ans=GM.ans||{};GM.ans[id]=gcl(o.a);r.sig=await CR.sign(rdStr(r));DB.set('gm/round',r);snd('start');setTimeout(()=>{GM.v=DB.get('gm')||{};procGame()},80)}
+function gmQuick(){const ws=D.filter(x=>(x.k||'p')==='w'),f=GM.f,pl=f.pl||S.my,tl=f.tl||S.learn;if(ws.length<5)return;const w=ws[Math.floor(Math.random()*ws.length)],c=w[tl];if(!c||!w[pl])return;
+ const ds=[];let g=0;while(ds.length<3&&g++<80){const x=ws[Math.floor(Math.random()*ws.length)][tl];if(x&&x!==c&&!ds.includes(x))ds.push(x)}
+ const opts=[c,...ds].sort(()=>Math.random()-.5);gmStart({kind:'mc',q:`${w[pl]}  →  ${LN[tl]} ?`,opts,a:c,dur:f.dur,base:f.base})}
+function gmCustom(){const f=GM.f;gmStart({kind:f.kind,q:f.q,opts:f.o.filter(x=>x.trim()),a:f.a,dur:f.dur,base:f.base})}
+function gmEnd(){const r=GM.round;if(!r||!CH.adm||GM.res[r.id])return;GM.judging=r.id;gmJudge(r)}
+async function gmGift(to,g){const x=GE(g);if(!x||to===CH.uid||AU.st!=='ok')return;if(balOf(CH.uid)<x.c){toast(t('g_nopts'));snd('bad');return}
+ const id=mkId(),ts=Date.now();DB.set('gm/gf/'+id,{from:CH.uid,to,g,ts,us:await CR.usign(`gf|${id}|${CH.uid}|${to}|${g}|${ts}`)});gsheetClose();setTimeout(()=>{GM.v=DB.get('gm')||{};procGame()},60)}
+async function gmAward(){if(!CH.isA)return;const f=GM.f,to=f.to,n=Math.max(0,Math.min(5000,f.n|0)),g=f.g||'';if(!AC.rec[to]){toast(t('g_pick'));return}
+ const id=mkId(),ts=Date.now();DB.set('gm/aw/'+id,{to,n,g,ts,sig:await CR.sign(`aw|${id}|${to}|${n}|${g}|${ts}`)});toast('✓');setTimeout(()=>{GM.v=DB.get('gm')||{};procGame()},60)}
+function gsheet(to){if(!to||to===CH.uid)return;gsheetClose();if(CH.isA){GM.f.to=to;GM.stOpen=1;toast('🎁 '+t('g_award')+': '+((AC.rec[to]||{}).name||to));gmRedraw();setTimeout(()=>{const d=document.querySelector('.gstaff');d&&d.scrollIntoView({behavior:'smooth',block:'center'})},100);return}const d=document.createElement('div');d.id='gsheet';d.className='modal';const rc=AC.rec[to]||{};
+ d.innerHTML=`<div class="gsh" onclick="event.stopPropagation()"><div class="gsh-h"><b>${t('g_giftto')} ${e(rc.av||'')} ${e(rc.name||to)}</b><button class="ib" onclick="gsheetClose()">${ic('x')}</button></div><div class="gsh-b">💎 ${balOf(CH.uid)}</div><div class="ggrid">${GIFTS.map(g=>`<button ${balOf(CH.uid)<g.c?'disabled':''} onclick="gmGift('${e(to)}','${g.k}')"><span>${g.e}</span><small>${g.c}</small></button>`).join('')}</div></div>`;
+ d.onclick=gsheetClose;document.body.appendChild(d)}
+function gsheetClose(){const d=$('gsheet');d&&d.remove()}
+function giftFx(em,txt){const d=document.createElement('div');d.className='gfx';d.innerHTML=`<div class="gfe">${em}</div><div class="gft">${e(txt)}</div>`;d.style.insetInlineStart=(15+Math.random()*55)+'%';document.body.appendChild(d);setTimeout(()=>d.remove(),3200)}
+function gmSet(k,v){GM.f[k]=v}
+function gmSetO(i,v){GM.f.o[i]=v}
+function whoH(u,x){const r=AC.rec[u]||{};return `<span class="av">${e(r.av||'🙂')}</span><b>${e(r.name||u)}</b>${lvB(u)}${x||''}`}
+function liveH(){if(AU.st!=='ok')return '';const me=CH.uid,bal=balOf(me),ea=GM.earned[me]||0,lv=GLV(ea),cur=8*(lv-1)*(lv-1),nx=8*lv*lv,pc=lv>=50?100:Math.round(100*(ea-cur)/(nx-cur)),r=GM.round,ph=gmPhase(),res=r&&GM.res[r.id];
+ let rc='';
+ if(ph==='none')rc=`<div class="gmc idle"><div class="gbig">🎮</div><b>${t('g_idle')}</b><p>${t('g_idleh')}</p></div>`;
+ else if(ph==='act'){const my=GM.my[r.id],an=Object.keys(((GM.v||{}).an||{})[r.id]||{}).length;
+  rc=`<div class="gmc act"><div class="gmh"><span class="livedot">● ${t('g_live')}</span><span class="gmt">${Math.max(0,Math.ceil((r.t0+r.dur*1000-Date.now())/1000))}</span></div><div class="gmb"><i style="width:${Math.max(0,Math.min(100,100*(r.t0+r.dur*1000-Date.now())/(r.dur*1000)))}%"></i></div><h3 dir="auto">${e(r.q)}</h3>
+  ${r.kind==='mc'?`<div class="mg">${r.opts.map((o,i)=>`<button class="opt ${my===o?'sel':''}" ${my?'disabled':''} onclick="gmAnsI(${i})" dir="auto">${'ABCD'[i]||''} · ${e(o)}</button>`).join('')}</div>`:`<div class="comp"><input id="gmin" maxlength="60" ${my?'disabled':''} value="${e(my||'')}" placeholder="${t('g_answer')}" onkeydown="if(event.key==='Enter')gmAnsTx()"><button class="btn snd" ${my?'disabled':''} onclick="gmAnsTx()">${ic('send',18)}</button></div>`}
+  <p class="hint">${my?'✓ '+t('g_sent'):t('g_hurry')} · ${t('g_reward')} ${r.base}</p>${CH.adm&&r.by===CH.uid?`<p class="hint">📨 ${an} · <button class="sq" style="width:auto" onclick="gmEnd()">${t('g_end')}</button></p>`:''}</div>`}
+ else if(ph==='wait')rc=`<div class="gmc idle"><div class="gbig"><span class="spin big"></span></div><b>${t('g_wait')}</b></div>`;
+ else{const w=res.win,mine=w.find(x=>x.u===me);rc=`<div class="gmc resc"><div class="gmh"><b>${t('g_correct')}:</b><span class="gans" dir="auto">${e(res.ans)}</span></div><h4 dir="auto">${e(r.q)}</h4>${mine?`<div class="gwin">🎉 ${t('g_you')} #${w.indexOf(mine)+1} · +${mine.p}</div>`:GM.my[r.id]?`<div class="gwin lose">${t('g_wrong')}</div>`:''}
+  <div class="gwl">${w.length?w.map((x,i)=>`<div class="gr">${['🥇','🥈','🥉'][i]||'#'+(i+1)}${whoH(x.u,`<em>+${x.p}</em>`)}${x.u!==me?`<button class="gbt" onclick="gsheet('${e(x.u)}')">${ic('gift',18)}</button>`:''}</div>`).join(''):`<p class="e" style="padding:.5rem">${t('g_nowin')}</p>`}</div></div>`}
+ const staff=CH.adm?stfH():'';
+ const lb=GM.board.length?GM.board.map((u,i)=>`<div class="gr">${['🥇','🥈','🥉'][i]||'#'+(i+1)}${whoH(u,`<em>${GM.earned[u]}</em>`)}${u!==me?`<button class="gbt" onclick="gsheet('${e(u)}')">${ic('gift',18)}</button>`:''}</div>`).join(''):`<p class="e" style="padding:.6rem">${t('g_none')}</p>`;
+ const fd=GM.feed.length?`<div class="gfd">${GM.feed.slice(0,6).map(x=>{const ge=GE(x.g);return ge?`<span>${ge.e} ${e((AC.rec[x.from]||{name:'👑'}).name)} → ${e((AC.rec[x.to]||{}).name||'')}</span>`:''}).join('')}</div>`:'';
+ return `<div class="gme">${CH.isA?'':`<div class="gst"><div class="gring" style="--p:${pc}"><b>${lv}</b><small>Lv</small></div><div class="gbl"><b>💎 ${bal}</b><small>${t('g_pts')} · ${ea} ${t('g_earned')}</small><div class="gxp"><i style="width:${pc}%"></i></div></div></div>`}${fd}${rc}${staff}<div class="card"><h3>🏆 ${t('g_board')}</h3>${lb}</div>${CH.adm?onlinePanel():''}</div>`}
+function stfH(){const f=GM.f,us=Object.keys(AC.rec).filter(u=>acSt(u)==='ok'&&!AC.isA[u]);const lg=(k)=>['fa','de','en','es'].map(l=>`<option value="${l}" ${(f[k]||(k==='pl'?S.my:S.learn))===l?'selected':''}>${LN[l]}</option>`).join('');
+ return `<details class="card gstaff" ${GM.stOpen?'open':''} ontoggle="GM.stOpen=this.open"><summary><b>🎛 ${t('g_ctl')}</b></summary>
+ <div class="two"><div><label>${t('g_pl')}</label><select onchange="gmSet('pl',this.value)">${lg('pl')}</select></div><div><label>${t('g_tl')}</label><select onchange="gmSet('tl',this.value)">${lg('tl')}</select></div></div>
+ <div class="two"><div><label>${t('g_dur')}</label><select onchange="gmSet('dur',+this.value)">${[10,15,20,30,45,60].map(x=>`<option ${f.dur===x?'selected':''}>${x}</option>`).join('')}</select></div><div><label>${t('g_base')}</label><select onchange="gmSet('base',+this.value)">${[5,10,20,30,50].map(x=>`<option ${f.base===x?'selected':''}>${x}</option>`).join('')}</select></div></div>
+ <button class="btn g" style="width:100%;margin-top:.6rem" onclick="gmQuick()">⚡ ${t('g_quick')}</button>
+ <p class="hint" style="margin-top:.8rem"><b>${t('g_custom')}</b></p>
+ <label>${t('g_q')}</label><input value="${e(f.q)}" oninput="gmSet('q',this.value)" maxlength="120">
+ <label>${t('g_kind')}</label><select onchange="gmSet('kind',this.value);GM.stOpen=1;gmRedraw()"><option value="mc" ${f.kind==='mc'?'selected':''}>${t('g_mc')}</option><option value="tx" ${f.kind==='tx'?'selected':''}>${t('g_tx')}</option></select>
+ ${f.kind==='mc'?`<label>${t('g_opts')}</label>${[0,1,2,3].map(i=>`<input style="margin-bottom:.3rem" value="${e(f.o[i])}" oninput="gmSetO(${i},this.value)" maxlength="60" placeholder="${'ABCD'[i]}">`).join('')}`:''}
+ <label>${t('g_ans')}</label><input value="${e(f.a)}" oninput="gmSet('a',this.value)" maxlength="60">
+ <button class="btn" style="width:100%;margin-top:.6rem" onclick="gmCustom()">▶ ${t('g_start')}</button>
+ ${CH.isA?`<hr><p class="hint"><b>🎁 ${t('g_award')}</b></p><select onchange="gmSet('to',this.value)"><option value="">${t('g_pick')}</option>${us.map(u=>`<option value="${e(u)}" ${f.to===u?'selected':''}>${e(AC.rec[u].av)} ${e(AC.rec[u].name)} (@${e(u)})</option>`).join('')}</select>
+ <div class="two"><div><label>${t('g_pts')}</label><input type="number" min="0" max="5000" value="${f.n}" oninput="gmSet('n',+this.value)"></div><div><label>${t('g_gift')}</label><select onchange="gmSet('g',this.value)"><option value="">—</option>${GIFTS.map(g=>`<option value="${g.k}" ${f.g===g.k?'selected':''}>${g.e}</option>`).join('')}</select></div></div>
+ <button class="btn s" style="width:100%;margin-top:.6rem" onclick="gmAward()">🎁 ${t('g_award')}</button>`:''}</details>`}
+/* online users panel for staff */
+function onlinePanel(){const a=Object.entries(CH.on);return `<div class="card"><h3>🟢 ${t('online')} (${a.length})</h3>${a.map(([u,o])=>`<div class="gr">${whoH(u,o.admv?`<span class="rolb ${o.rl==='m'?'r_mod':'r_admin'}">${o.rl==='m'?t('modl'):t('adml')}</span>`:'')}${u!==CH.uid?`<button class="gbt" onclick="gsheet('${e(u)}')" title="gift">${ic('gift',18)}</button>${CH.isA?`<button class="gbt" onclick="S.tab='community';S.sub='inbox';openDm('${e(u)}')" title="DM">${ic('send',18)}</button>`:''}`:''}</div>`).join('')||`<p class="e">—</p>`}</div>`}
+function gmInit(){DB.on('gm',v=>{GM.v=v||{};procGame()});setInterval(gmTick,500)}
+
 function boot(){CH.gr=Infinity;CH.net=true;DB=NDB;NDB.start('g'+Math.random().toString(36).slice(2,8));
- DB.on('acct',v=>{AC.v=v||{};procAcct()});DB.on('cfg',v=>procCfg(v||{}));
+ DB.on('acct',v=>{AC.v=v||{};procAcct()});DB.on('cfg',v=>procCfg(v||{}));gmInit();
  try{const x=JSON.parse(localStorage.getItem('lp_sess')||sessionStorage.getItem('lp_sess'));AU.pre=x&&x.u&&x.b?x:null}catch(x){}
  draw();setInterval(()=>{if(netReady()&&AU.pre&&!AU.u)tryPre();gateTick()},600)}
 boot();

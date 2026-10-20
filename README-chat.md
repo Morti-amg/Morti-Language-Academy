@@ -87,3 +87,14 @@ Paste your `firebaseConfig` into `FIREBASE_CONFIG` in index.html. Then Firebase 
 - Wer einen freien Benutzernamen zuerst registriert, behält ihn (Admin-Name ist geschützt). Empfehlung: Registrierung auf „mit Freigabe“ stellen.
 - Gefälschte Einträge (Rollen, Sperren, Einstellungen, Nachrichten) werden durch Signaturen abgewiesen; gelöschte/überschriebene Einträge stellen die Clients automatisch wieder her.
 - Lernfortschritt bleibt pro Gerät. Übersetzungen sind nicht von Muttersprachlern geprüft.
+
+---
+
+## Neu in dieser Version
+
+- **Töne & Hinweise:** Jede eingehende Nachricht (Gruppe, privat, Admin-Antwort) spielt einen eigenen Ton; private Nachrichten an den Admin erzeugen zusätzlich Hinweis, Zähler am 🛠-Symbol und (bei Erlaubnis) eine Browser-Benachrichtigung. Ton an/aus: Lautsprecher-Symbol oben.
+- **Kamera vorne/hinten:** In Anrufen und Konferenzen gibt es einen Wechsel-Knopf.
+- **⚡ Live-Spiel (Tab „Community → Live“):** Der Admin/Moderator startet eine Quiz-Runde (Schnellrunde aus dem Wortschatz oder eigene Frage, Multiple Choice oder Texteingabe). Wer richtig und schnell antwortet, bekommt Punkte (Platz 1 voll, danach weniger). Jeder startet mit 20 Punkten, Level steigt mit gesammelten Punkten.
+- **Geschenke:** Nutzer können Gewinnern (oder anderen in der Bestenliste) Geschenke 🌹☕💖🎁💎🚀👑🏰 schicken; Punkte werden übertragen, mit Animation und Ton. Der Admin kann Punkte + Geschenk frei vergeben (Level-Up).
+- **Admin-Konsole:** neuer Bereich „Live-Spiel & Nutzer“ (Spielsteuerung, Online-Nutzer, Bestenliste) und grüner Online-Punkt in der Nutzerliste.
+- Alle Punkte/Geschenke/Ergebnisse sind signiert; gefälschte Einträge werden ignoriert. Grenze: Eine Runde wird vom Gerät des Hosts ausgewertet – dessen Seite muss bis zum Rundenende offen bleiben.
