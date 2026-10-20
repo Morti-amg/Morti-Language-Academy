@@ -1,99 +1,185 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#111b30">
+<meta name="description" content="MORTI Ill Language Academy — Learn German, English and Spanish.">
 <title>MORTI Ill LANGUAGE ACADEMY</title>
 <style>
-:root{--navy:#111b30;--navy2:#202e48;--gold:#f1c75b;--bg:#f4f6fb;--card:#fff;--ink:#17223b;--muted:#718096;--line:#e5e9f1;--green:#16885b;--red:#c74747;--shadow:0 12px 35px #1824400d}
+:root {
+  --navy:#111b30;
+  --navy2:#263653;
+  --gold:#f1c75b;
+  --bg:#f4f6fb;
+  --card:#fff;
+  --ink:#17223b;
+  --muted:#758096;
+  --line:#e5e9f1;
+  --green:#16885b;
+  --red:#bd4242;
+  --shadow:0 12px 35px #1824400b;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;line-height:1.7}
-button,input,select{font:inherit}button{cursor:pointer}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9aafff;outline-offset:2px}
-header{background:linear-gradient(120deg,#111b30,#263653);color:white;padding:20px 16px}
-.top{max-width:1120px;margin:auto;display:flex;align-items:center;gap:13px}
-.logo{width:54px;height:54px;flex-shrink:0;border:2px solid var(--gold);border-radius:15px;display:grid;place-items:center;color:var(--gold);font-size:30px;font-weight:900}
-.brand h1{font-size:21px;letter-spacing:1px;margin:0;line-height:1.3}
-.brand p{margin:4px 0;color:var(--gold);font-size:11px;letter-spacing:1.4px}
-.brand small{font-size:10px;letter-spacing:1px;color:#e1e6f0}
-.topright{margin-right:auto;text-align:left}
-.pill{display:inline-flex;align-items:center;gap:6px;background:#ffffff16;border:1px solid #ffffff26;padding:6px 10px;border-radius:30px;font-size:12px}
-main{max-width:1120px;margin:24px auto;padding:0 16px 45px}
-.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow)}
-.panel{padding:23px;margin-bottom:17px}
-.hero{background:linear-gradient(130deg,#17243c,#2b3b5b);color:white;border:0;overflow:hidden;position:relative}
-.hero:after{content:"M";position:absolute;left:16px;top:-65px;font-size:240px;color:#ffffff08;font-weight:900;pointer-events:none}
-.hero h2{font-size:clamp(23px,4vw,34px);margin:0 0 5px}
-.hero p{color:#d6deeb;margin:5px 0 17px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;
+  line-height:1.75
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:3px solid #8da7ff;outline-offset:2px
+}
+header{
+  background:linear-gradient(120deg,var(--navy),var(--navy2));
+  color:white;padding:18px 16px
+}
+.top{
+  max-width:1100px;margin:auto;display:flex;align-items:center;gap:13px
+}
+.logo{
+  width:55px;height:55px;flex-shrink:0;display:grid;place-items:center;
+  border:2px solid var(--gold);border-radius:15px;
+  color:var(--gold);font-size:30px;font-weight:900
+}
+.brand h1{font-size:21px;letter-spacing:1px;margin:0;line-height:1.4}
+.brand p{margin:0;color:var(--gold);font-size:11px;letter-spacing:1.5px}
+.brand small{font-size:10px;letter-spacing:1px;color:#e0e6ef}
+.topright{margin-right:auto}
+.pill{
+  display:inline-block;padding:5px 10px;border-radius:30px;
+  background:#ffffff17;border:1px solid #ffffff30;font-size:12px
+}
+main{max-width:1100px;margin:22px auto;padding:0 16px 40px}
+.panel,.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:18px;box-shadow:var(--shadow)
+}
+.panel{padding:23px;margin-bottom:16px}
+.hero{
+  background:linear-gradient(125deg,#17243c,#2b3d5d);
+  color:white;border:0;position:relative;overflow:hidden
+}
+.hero h2{font-size:clamp(24px,4vw,34px);margin:0 0 6px}
+.hero p{color:#dce4ef;margin:5px 0 16px}
+.hero:after{
+  content:"M";position:absolute;left:15px;top:-60px;
+  font-size:230px;color:#ffffff08;font-weight:900;pointer-events:none
+}
 .gold{color:var(--gold)}
-.langs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;position:relative;z-index:1}
-.lang{padding:12px 6px;background:#ffffff0d;color:white;border:1px solid #ffffff28;border-radius:13px}
-.lang.active{border:2px solid var(--gold);background:#ffffff17}
-.lang .flag{font-size:24px}.lang b,.lang small{display:block}.lang small{font-size:11px;color:#dce3ef}
+.langs{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:9px;position:relative;z-index:1
+}
+.lang{
+  background:#ffffff0c;color:white;border:1px solid #ffffff32;
+  border-radius:13px;padding:12px 5px
+}
+.lang.active{border:2px solid var(--gold);background:#ffffff18}
+.lang .flag{font-size:24px}
+.lang b,.lang small{display:block}
+.lang small{font-size:11px;color:#dce4ef}
 .layout{display:grid;grid-template-columns:1fr;gap:16px}
-nav{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:17px}
-nav button,.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:11px;padding:10px 14px}
-nav button.active,.btn.primary{background:var(--navy);border-color:var(--navy);color:white}
+nav{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}
+nav button,.btn{
+  border:1px solid var(--line);background:white;color:var(--ink);
+  border-radius:11px;padding:10px 13px
+}
+nav button.active,.btn.primary{background:var(--navy);color:white;border-color:var(--navy)}
 .btn.goldbtn{background:var(--gold);border-color:var(--gold);color:#111b30;font-weight:750}
 .btn:disabled{opacity:.5;cursor:not-allowed}
-.view{display:none}.view.active{display:block}
-h2{font-size:22px;margin:0 0 8px}h3{font-size:17px;margin:0 0 7px}
+.view{display:none}
+.view.active{display:block}
+h2{font-size:22px;margin:0 0 7px}
+h3{font-size:17px;margin:0 0 7px}
 .muted{color:var(--muted);font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:17px 0}
-.stat{padding:14px 9px;background:#f5f7fc;border-radius:13px;text-align:center}
-.stat b{display:block;font-size:25px;line-height:1.5}.stat span{font-size:12px;color:var(--muted)}
-.progress{height:9px;border-radius:20px;background:#e9edf5;overflow:hidden}
-.progress div{height:100%;width:0;background:linear-gradient(90deg,#e8b83e,#f5d77e);transition:width .3s}
-.card{padding:17px;margin:12px 0;box-shadow:none}
-.lessonrow{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.stat{padding:13px 7px;background:#f4f6fb;border-radius:13px;text-align:center}
+.stat b{display:block;font-size:25px;line-height:1.5}
+.stat span{font-size:12px;color:var(--muted)}
+.progress{height:9px;background:#e9edf5;border-radius:20px;overflow:hidden}
+.progress div{
+  height:100%;width:0;background:linear-gradient(90deg,#e8b83e,#f5d77e);
+  transition:width .3s
+}
+.card{padding:16px;margin:12px 0;box-shadow:none}
+.lessonrow{
+  display:flex;align-items:center;gap:11px;padding:13px 0;
+  border-bottom:1px solid var(--line)
+}
 .lessonrow:last-child{border:0}
-.lessonicon{width:45px;height:45px;flex-shrink:0;border-radius:13px;background:#f2f4fa;display:grid;place-items:center;font-size:22px}
-.lessoninfo{flex:1;min-width:0}.lessoninfo p{margin:3px 0}
-.lessonrow .btn{padding:8px 11px;font-size:13px;white-space:nowrap}
-.wordbox{background:linear-gradient(140deg,#19263e,#304263);border-radius:17px;padding:24px 15px;color:white;text-align:center;margin:16px 0}
-.wordbox .bigword{font-size:clamp(28px,6vw,40px);font-weight:800;margin:6px 0}
-.wordbox p{margin:0;color:#d9e2f0}
+.lessonicon{
+  width:44px;height:44px;flex-shrink:0;border-radius:12px;
+  background:#f0f3fa;display:grid;place-items:center;font-size:21px
+}
+.lessoninfo{flex:1;min-width:0}
+.lessoninfo p{margin:3px 0}
+.lessonrow .btn{padding:7px 10px;font-size:13px;white-space:nowrap}
+.wordbox{
+  background:linear-gradient(140deg,#19263e,#304263);
+  color:white;border-radius:17px;text-align:center;padding:22px 14px;margin:16px 0
+}
+.bigword{font-size:clamp(28px,6vw,40px);font-weight:800;margin:7px 0}
+.wordbox p{margin:0;color:#dce4ef}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
 .options{display:grid;gap:9px;margin:15px 0}
-.option{width:100%;text-align:right;border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:white;color:var(--ink)}
+.option{
+  width:100%;text-align:right;border:1px solid var(--line);
+  border-radius:12px;padding:12px 14px;background:white;color:var(--ink)
+}
 .option.selected{border:2px solid #647fe0;background:#f0f3ff}
-.option.correct{border:2px solid #16885b;background:#eaf8f0}
-.option.wrong{border:2px solid #c74747;background:#fff0ef}
+.option.correct{border:2px solid var(--green);background:#eaf8f0}
+.option.wrong{border:2px solid var(--red);background:#fff0ef}
 .notice{padding:12px 14px;border-radius:11px;background:#f1f4fa;margin:12px 0;font-size:14px}
-.notice.success{background:#e8f7ef;color:#176b43}.notice.error{background:#fff0ef;color:#a52c2c}
-.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
-input,select{width:100%;padding:12px;border:1px solid #dce2ed;border-radius:11px;background:white;color:var(--ink)}
+.notice.success{background:#e8f7ef;color:#176b43}
+.notice.error{background:#fff0ef;color:#a52c2c}
+input,select{
+  width:100%;padding:12px;border:1px solid #dce2ed;
+  border-radius:11px;background:white;color:var(--ink)
+}
 label{display:block;font-size:14px;margin:12px 0 5px}
-.empty{text-align:center;padding:28px 12px}
+.empty{text-align:center;padding:25px 10px}
 .empty .emoji{font-size:40px}
-footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26px}
-#toast{position:fixed;bottom:18px;left:16px;right:16px;max-width:450px;margin:auto;background:#17243b;color:white;padding:13px 17px;border-radius:12px;box-shadow:0 8px 30px #0002;z-index:10;display:none}
-.welcome{max-width:520px;margin:38px auto}
-.welcome .panel{padding:clamp(22px,5vw,38px)}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 15px 25px}
+.welcome{max-width:520px;margin:32px auto}
+.welcome .panel{padding:clamp(20px,5vw,36px)}
 .welcome .logo{margin:0 auto 15px;width:70px;height:70px;font-size:38px}
 .center{text-align:center}
 .small{font-size:12px}
 .hidden{display:none!important}
+#toast{
+  position:fixed;bottom:18px;left:16px;right:16px;max-width:440px;
+  margin:auto;background:#17243b;color:white;padding:13px 17px;
+  border-radius:12px;box-shadow:0 8px 30px #0002;z-index:10;display:none
+}
 @media(min-width:800px){
- main{padding-left:22px;padding-right:22px}
- .layout{grid-template-columns:205px minmax(0,1fr);align-items:start}
- .sidebar{position:sticky;top:12px}
- nav{display:grid;gap:7px}
- nav button{text-align:right}
- .stats{gap:13px}
- .panel{padding:25px}
+  main{padding-left:22px;padding-right:22px}
+  .layout{grid-template-columns:200px minmax(0,1fr);align-items:start}
+  .sidebar{position:sticky;top:12px}
+  nav{display:grid;gap:7px}
+  nav button{text-align:right}
+  .panel{padding:25px}
 }
 @media(max-width:420px){
- header{padding:15px 12px}.brand h1{font-size:17px}.brand small{font-size:9px}
- main{padding:0 10px 30px;margin-top:13px}
- .panel{padding:16px}.hero{padding:20px 15px}
- .lang{font-size:13px}.stats{gap:6px}.stat{padding:11px 4px}
- .stat b{font-size:22px}.lessonrow{gap:8px}
- .lessonrow .btn{padding:7px 8px}
+  header{padding:14px 11px}
+  .brand h1{font-size:17px}
+  .brand small{font-size:9px}
+  main{padding:0 10px 28px;margin-top:13px}
+  .panel{padding:15px}
+  .hero{padding:19px 14px}
+  .lang{font-size:13px}
+  .stats{gap:6px}
+  .stat{padding:10px 4px}
+  .stat b{font-size:21px}
+  .lessonrow{gap:7px}
+  .lessonrow .btn{padding:7px 8px}
 }
 </style>
 </head>
 <body>
+
 <header>
   <div class="top">
     <div class="logo">M</div>
@@ -109,19 +195,19 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26p
 <div id="welcome" class="welcome hidden">
   <section class="panel center">
     <div class="logo">M</div>
-    <p class="gold" style="font-weight:800;letter-spacing:1px">YOUR LANGUAGE JOURNEY STARTS HERE</p>
-    <h2 style="font-size:27px">به آکادمی MORTI خوش آمدی!</h2>
-    <p class="muted">قبل از شروع، دوست داریم تو را بشناسیم. نامت چیست؟</p>
+    <p class="gold small"><b>YOUR LANGUAGE JOURNEY STARTS HERE</b></p>
+    <h2>به آکادمی MORTI خوش آمدی!</h2>
+    <p class="muted">برای شروع، دوست داریم تو را بشناسیم. نامت چیست؟</p>
     <form id="welcomeForm">
       <label for="firstName">نام یا نام مستعار</label>
       <input id="firstName" maxlength="50" required autocomplete="given-name" placeholder="مثلاً سارا">
-      <label for="firstLang">دوست داری کدام زبان را یاد بگیری؟</label>
+      <label for="firstLang">زبان مورد علاقه</label>
       <select id="firstLang">
         <option value="de">🇩🇪 آلمانی — Deutsch</option>
         <option value="en">🇬🇧 انگلیسی — English</option>
         <option value="es">🇪🇸 اسپانیایی — Español</option>
       </select>
-      <label for="firstLevel">سطح فعلی تو</label>
+      <label for="firstLevel">سطح فعلی</label>
       <select id="firstLevel">
         <option value="A1">A1 — کاملاً مبتدی</option>
         <option value="A2">A2 — مقدماتی</option>
@@ -130,15 +216,17 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26p
         <option value="C1">C1 — پیشرفته</option>
         <option value="C2">C2 — تسلط بالا</option>
       </select>
-      <button class="btn goldbtn" style="width:100%;margin-top:19px;padding:14px" type="submit">شروع سفر یادگیری من ✨</button>
+      <button class="btn goldbtn" style="width:100%;margin-top:19px;padding:14px" type="submit">
+        شروع سفر یادگیری من ✨
+      </button>
     </form>
-    <p class="muted small">نام و پیشرفت تو فقط در همین مرورگر ذخیره می‌شود.</p>
+    <p class="muted small">نام و پیشرفت در همین مرورگر ذخیره می‌شود.</p>
   </section>
 </div>
 
 <main id="app" class="hidden">
   <section class="panel hero">
-    <p class="gold" style="font-weight:800;font-size:12px;letter-spacing:1px">YOUR PERSONAL LANGUAGE SPACE</p>
+    <p class="gold small"><b>YOUR PERSONAL LANGUAGE SPACE</b></p>
     <h2 id="greeting">خوش آمدی!</h2>
     <p id="heroText">امروز یک قدم کوچک به هدفت نزدیک‌تر شو.</p>
     <div class="langs">
@@ -153,7 +241,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26p
       <nav aria-label="منوی اصلی">
         <button class="active" data-view="home">⌂ خانه</button>
         <button data-view="courses">▤ دوره‌ها</button>
-        <button data-view="practice">✎ تمرین امروز</button>
+        <button data-view="practice">✎ تمرین و آزمون</button>
         <button data-view="vocab">▣ دفترچه واژگان</button>
         <button data-view="progress">◔ پیشرفت من</button>
         <button data-view="profile">☺ پروفایل</button>
@@ -197,7 +285,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26p
 
       <section class="panel view" id="practice">
         <h2>تمرین تعاملی</h2>
-        <p class="muted" id="practiceSubtitle">کلمه را یاد بگیر، سپس پاسخ درست را انتخاب کن.</p>
+        <p class="muted">کلمه را یاد بگیر، سپس پاسخ درست را انتخاب کن.</p>
         <div class="wordbox">
           <div class="gold small" id="wordCount">درس ۱</div>
           <div class="bigword" id="word">Hallo!</div>
@@ -232,306 +320,503 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 15px 26p
         <h3>نرخ پاسخ صحیح</h3>
         <div class="progress"><div id="accuracyBar"></div></div>
         <p class="muted" id="progressMessage">با اولین تمرین، گزارش تو شروع می‌شود.</p>
-        <div class="card"><h3>زبان‌های انتخاب‌شده</h3><div id="languageStats"></div></div>
+        <div class="card"><h3>وضعیت زبان‌ها</h3><div id="languageStats"></div></div>
         <button class="btn" id="exportBtn">⬇ دانلود نسخه پشتیبان پیشرفت</button>
       </section>
 
       <section class="panel view" id="profile">
         <h2>پروفایل زبان‌آموز</h2>
-        <p class="muted">اطلاعات محلی خود را مدیریت کن.</p>
+        <p class="muted">اطلاعات خود را مدیریت کن.</p>
         <label for="profileName">نام نمایشی</label>
         <input id="profileName" maxlength="50">
         <label for="profileLevel">سطح یادگیری</label>
         <select id="profileLevel">
-          <option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option>
+          <option>A1</option><option>A2</option><option>B1</option>
+          <option>B2</option><option>C1</option><option>C2</option>
         </select>
         <label for="dailyGoal">هدف روزانه XP</label>
-        <select id="dailyGoal"><option value="10">10 XP — سبک</option><option value="20">20 XP — معمولی</option><option value="30">30 XP — چالشی</option></select>
-        <div class="actions"><button class="btn primary" id="saveProfile">ذخیره تغییرات</button><button class="btn" id="resetProgress">پاک‌کردن پیشرفت</button></div>
+        <select id="dailyGoal">
+          <option value="10">10 XP — سبک</option>
+          <option value="20">20 XP — معمولی</option>
+          <option value="30">30 XP — چالشی</option>
+        </select>
+        <div class="actions">
+          <button class="btn primary" id="saveProfile">ذخیره تغییرات</button>
+          <button class="btn" id="resetProgress">پاک‌کردن پیشرفت</button>
+        </div>
         <p id="profileFeedback" class="muted"></p>
       </section>
 
       <section class="panel view" id="premium">
         <h2>✦ MORTI Premium</h2>
-        <p class="muted">مسیر پیشنهادی برای نسخه آینده آکادمی.</p>
-        <div class="card"><h3>نسخه رایگان</h3><p>درس‌های پایه، آزمون، واژگان و پیشرفت محلی.</p><span class="pill" style="color:var(--green);background:#eaf8f0">فعال در این نسخه</span></div>
-        <div class="card"><h3>نسخه Premium</h3><ul><li>دوره‌های کامل و پیشرفته</li><li>تمرین مکالمه و شنیداری</li><li>مرور هوشمند واژگان</li><li>گزارش‌های پیشرفته یادگیری</li><li>همگام‌سازی بین دستگاه‌ها</li></ul><button class="btn primary" id="premiumBtn">اطلاعات نسخه Premium</button><p id="premiumMessage" class="muted"></p></div>
-        <div class="notice">پرداخت و اشتراک واقعی در این نسخه فعال نیست. برای دریافت پول، به سرور، احراز هویت و درگاه پرداخت نیاز داریم.</div>
+        <p class="muted">امکانات پیشنهادی برای نسخه پیشرفته.</p>
+        <div class="card">
+          <h3>نسخه رایگان</h3>
+          <p>درس‌های نمونه، آزمون، واژگان و پیشرفت محلی.</p>
+          <span class="pill" style="color:var(--green);background:#eaf8f0">در دسترس</span>
+        </div>
+        <div class="card">
+          <h3>نسخه Premium</h3>
+          <ul>
+            <li>دوره‌های کامل و پیشرفته</li>
+            <li>تمرین مکالمه و شنیداری</li>
+            <li>مرور هوشمند واژگان</li>
+            <li>گزارش‌های پیشرفته</li>
+            <li>همگام‌سازی بین دستگاه‌ها</li>
+          </ul>
+          <button class="btn primary" id="premiumBtn">اطلاعات اشتراک</button>
+          <p id="premiumMessage" class="muted"></p>
+        </div>
+        <div class="notice">پرداخت و اشتراک واقعی در این نسخه فعال نیست. برای دریافت پول به سرور و درگاه پرداخت نیاز است.</div>
       </section>
 
       <section class="panel view" id="rules">
         <h2>قوانین استفاده و حریم خصوصی</h2>
-        <h3>استفاده از برنامه</h3><p class="muted">از برنامه برای یادگیری استفاده کن. در نسخه‌های آینده، شرایط کامل استفاده و حقوق محتوا باید پیش از انتشار مشخص شوند.</p>
-        <h3>اطلاعات شخصی</h3><p class="muted">نام، سطح و پیشرفت این نسخه در حافظه مرورگر دستگاه ذخیره می‌شود. این نسخه اطلاعات را به سرور نمی‌فرستد؛ پاک‌کردن داده‌های مرورگر می‌تواند اطلاعات را حذف کند.</p>
-        <h3>حساب و پرداخت</h3><p class="muted">ورود آنلاین، اشتراک پولی و حساب مدیریتی واقعی در این نسخه پیاده‌سازی نشده‌اند. هیچ اطلاعات پرداختی وارد نکن.</p>
-        <h3>محتوای آموزشی</h3><p class="muted">درس‌های فعلی نمونه آموزشی هستند و جایگزین دوره‌های کامل یا آزمون رسمی زبان نیستند.</p>
-        <div class="notice">پیش از عرضه تجاری، این متن باید با قوانین حفاظت از داده‌ها و حقوق مصرف‌کننده بازار هدف تطبیق داده شود.</div>
+        <h3>استفاده از برنامه</h3>
+        <p class="muted">از برنامه برای یادگیری استفاده کن. پیش از انتشار تجاری، شرایط کامل استفاده باید تدوین شود.</p>
+        <h3>اطلاعات شخصی</h3>
+        <p class="muted">نام، سطح و پیشرفت در حافظه مرورگر دستگاه ذخیره می‌شود. پاک‌کردن داده‌های مرورگر ممکن است اطلاعات را حذف کند.</p>
+        <h3>حساب و پرداخت</h3>
+        <p class="muted">ورود آنلاین، اشتراک پولی و پنل مدیریتی امن در این نسخه پیاده‌سازی نشده‌اند. اطلاعات پرداخت وارد نکن.</p>
+        <h3>محتوای آموزشی</h3>
+        <p class="muted">درس‌های فعلی نمونه آموزشی هستند و جایگزین دوره کامل یا آزمون رسمی زبان نیستند.</p>
       </section>
     </div>
   </div>
 </main>
 
 <div id="toast" role="status" aria-live="polite"></div>
-<footer>MORTI Ill LANGUAGE ACADEMY · DEUTSCH • ENGLISH • ESPAÑOL<br>Learn a little. Grow every day.</footer>
+<footer>
+  MORTI Ill LANGUAGE ACADEMY · DEUTSCH • ENGLISH • ESPAÑOL<br>
+  Learn a little. Grow every day.
+</footer>
 
 <script>
 "use strict";
 
 const lessons = {
-de:[
- {title:"سلام و احوال‌پرسی",word:"Hallo!",meaning:"سلام!",pron:"هالو",q:"معنی Hallo چیست؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
- {title:"معرفی خود",word:"Ich heiße Anna.",meaning:"اسم من آنا است.",pron:"ایش هایسه آنا",q:"Ich heiße Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل آلمانم"],correct:0},
- {title:"تشکر کردن",word:"Danke schön!",meaning:"خیلی ممنون!",pron:"دانکه شون",q:"کدام عبارت برای تشکر است؟",opts:["Gute Nacht!","Danke schön!","Auf Wiedersehen!"],correct:1},
- {title:"صبح بخیر",word:"Guten Morgen!",meaning:"صبح بخیر!",pron:"گوتن مورگن",q:"Guten Morgen چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
- {title:"خداحافظی",word:"Auf Wiedersehen!",meaning:"خداحافظ!",pron:"آوف ویدرزین",q:"معنی Auf Wiedersehen چیست؟",opts:["لطفاً","صبح بخیر","خداحافظ"],correct:2}
-],
-en:[
- {title:"Greetings",word:"Hello!",meaning:"سلام!",pron:"هِلُو",q:"Hello یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
- {title:"Introducing yourself",word:"My name is Anna.",meaning:"اسم من آنا است.",pron:"مای نیم ایز آنا",q:"My name is Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","اسم تو آناست"],correct:0},
- {title:"Saying thanks",word:"Thank you!",meaning:"متشکرم!",pron:"ثَنک یو",q:"کدام عبارت برای تشکر است؟",opts:["Good night!","Thank you!","Goodbye!"],correct:1},
- {title:"Good morning",word:"Good morning!",meaning:"صبح بخیر!",pron:"گود مورنینگ",q:"Good morning چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
- {title:"Goodbye",word:"See you later!",meaning:"بعداً می‌بینمت!",pron:"سی یو لِیتر",q:"See you later یعنی چه؟",opts:["حالت چطور است؟","شب بخیر","بعداً می‌بینمت"],correct:2}
-],
-es:[
- {title:"سلام و احوال‌پرسی",word:"¡Hola!",meaning:"سلام!",pron:"اولا",q:"¡Hola! یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
- {title:"معرفی خود",word:"Me llamo Ana.",meaning:"اسم من آنا است.",pron:"مه یامو آنا",q:"Me llamo Ana یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل اسپانیا هستم"],correct:0},
- {title:"تشکر کردن",word:"¡Muchas gracias!",meaning:"خیلی ممنون!",pron:"موچاس گراسیاس",q:"کدام عبارت برای تشکر است؟",opts:["¡Buenos días!","¡Adiós!","¡Muchas gracias!"],correct:2},
- {title:"صبح بخیر",word:"¡Buenos días!",meaning:"صبح بخیر!",pron:"بوئِنوس دیاس",q:"¡Buenos días! چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
- {title:"خداحافظی",word:"¡Hasta luego!",meaning:"بعداً می‌بینمت!",pron:"آستا لوئگو",q:"¡Hasta luego! یعنی چه؟",opts:["لطفاً","متشکرم","بعداً می‌بینمت"],correct:2}
-]
+  de: [
+    {title:"سلام و احوال‌پرسی",word:"Hallo!",meaning:"سلام!",pron:"هالو",q:"معنی Hallo چیست؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
+    {title:"معرفی خود",word:"Ich heiße Anna.",meaning:"اسم من آنا است.",pron:"ایش هایسه آنا",q:"Ich heiße Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل آلمانم"],correct:0},
+    {title:"تشکر کردن",word:"Danke schön!",meaning:"خیلی ممنون!",pron:"دانکه شون",q:"کدام عبارت برای تشکر است؟",opts:["Gute Nacht!","Danke schön!","Auf Wiedersehen!"],correct:1},
+    {title:"صبح بخیر",word:"Guten Morgen!",meaning:"صبح بخیر!",pron:"گوتن مورگن",q:"Guten Morgen چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
+    {title:"خداحافظی",word:"Auf Wiedersehen!",meaning:"خداحافظ!",pron:"آوف ویدرزین",q:"معنی Auf Wiedersehen چیست؟",opts:["لطفاً","صبح بخیر","خداحافظ"],correct:2}
+  ],
+  en: [
+    {title:"سلام و احوال‌پرسی",word:"Hello!",meaning:"سلام!",pron:"هِلُو",q:"Hello یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
+    {title:"معرفی خود",word:"My name is Anna.",meaning:"اسم من آنا است.",pron:"مای نیم ایز آنا",q:"My name is Anna یعنی چه؟",opts:["اسم من آنا است","من خوبم","اسم تو آناست"],correct:0},
+    {title:"تشکر کردن",word:"Thank you!",meaning:"متشکرم!",pron:"ثَنک یو",q:"کدام عبارت برای تشکر است؟",opts:["Good night!","Thank you!","Goodbye!"],correct:1},
+    {title:"صبح بخیر",word:"Good morning!",meaning:"صبح بخیر!",pron:"گود مورنینگ",q:"Good morning چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
+    {title:"خداحافظی",word:"See you later!",meaning:"بعداً می‌بینمت!",pron:"سی یو لِیتر",q:"See you later یعنی چه؟",opts:["حالت چطور است؟","شب بخیر","بعداً می‌بینمت"],correct:2}
+  ],
+  es: [
+    {title:"سلام و احوال‌پرسی",word:"¡Hola!",meaning:"سلام!",pron:"اولا",q:"¡Hola! یعنی چه؟",opts:["خداحافظ","سلام","متشکرم"],correct:1},
+    {title:"معرفی خود",word:"Me llamo Ana.",meaning:"اسم من آنا است.",pron:"مه یامو آنا",q:"Me llamo Ana یعنی چه؟",opts:["اسم من آنا است","من خوبم","من اهل اسپانیا هستم"],correct:0},
+    {title:"تشکر کردن",word:"¡Muchas gracias!",meaning:"خیلی ممنون!",pron:"موچاس گراسیاس",q:"کدام عبارت برای تشکر است؟",opts:["¡Buenos días!","¡Adiós!","¡Muchas gracias!"],correct:2},
+    {title:"صبح بخیر",word:"¡Buenos días!",meaning:"صبح بخیر!",pron:"بوئِنوس دیاس",q:"¡Buenos días! چه زمانی استفاده می‌شود؟",opts:["صبح","شب","هنگام خداحافظی"],correct:0},
+    {title:"خداحافظی",word:"¡Hasta luego!",meaning:"بعداً می‌بینمت!",pron:"آستا لوئگو",q:"¡Hasta luego! یعنی چه؟",opts:["لطفاً","متشکرم","بعداً می‌بینمت"],correct:2}
+  ]
 };
 
-const $=id=>document.getElementById(id);
-const freshState=()=>({
- name:"",lang:"de",level:"A1",goal:10,xp:0,attempts:0,correct:0,
- index:{de:0,en:0,es:0},completed:{de:[],en:[],es:[]},
- savedWords:[],daily:{date:"",xp:0},streak:0,lastDay:""
-});
-let state;
-try {
- const raw=JSON.parse(localStorage.getItem("morti-academy-v1")||"null");
- state=Object.assign(freshState(),raw||{});
- if(!state.index)state.index={de:0,en:0,es:0};
- if(!state.completed)state.completed={de:[],en:[],es:[]};
- if(!Array.isArray(state.savedWords))state.savedWords=[];
-} catch(e){state=freshState()}
+const $ = id => document.getElementById(id);
 
-let choice=null,answered=false,toastTimer=null;
+function freshState(){
+  return {
+    name:"",lang:"de",level:"A1",goal:10,xp:0,attempts:0,correct:0,
+    index:{de:0,en:0,es:0},
+    completed:{de:[],en:[],es:[]},
+    savedWords:[],
+    daily:{date:"",xp:0},
+    streak:0,lastDay:""
+  };
+}
+
+function loadState(){
+  try{
+    const raw=JSON.parse(localStorage.getItem("morti-academy-v1")||"null");
+    if(!raw)return freshState();
+    const s={...freshState(),...raw};
+    s.index={...freshState().index,...(raw.index||{})};
+    s.completed={...freshState().completed,...(raw.completed||{})};
+    s.savedWords=Array.isArray(raw.savedWords)?raw.savedWords:[];
+    for(const code of ["de","en","es"]){
+      s.index[code]=Number.isInteger(s.index[code])?Math.max(0,s.index[code])%lessons[code].length:0;
+      s.completed[code]=Array.isArray(s.completed[code])?s.completed[code].filter(n=>Number.isInteger(n)&&n>=0&&n<lessons[code].length):[];
+    }
+    s.xp=Math.max(0,Number(s.xp)||0);
+    s.correct=Math.max(0,Number(s.correct)||0);
+    s.attempts=Math.max(s.correct,Number(s.attempts)||0);
+    s.goal=[10,20,30].includes(Number(s.goal))?Number(s.goal):10;
+    if(!["de","en","es"].includes(s.lang))s.lang="de";
+    if(!["A1","A2","B1","B2","C1","C2"].includes(s.level))s.level="A1";
+    return s;
+  }catch(e){
+    return freshState();
+  }
+}
+
+let state=loadState();
+let choice=null;
+let answered=false;
+let toastTimer=null;
 
 function save(){
- try{localStorage.setItem("morti-academy-v1",JSON.stringify(state))}
- catch(e){notify("ذخیره مرورگر در دسترس نیست؛ فضای ذخیره‌سازی را بررسی کن.")}
+  try{
+    localStorage.setItem("morti-academy-v1",JSON.stringify(state));
+  }catch(e){
+    notify("ذخیره‌سازی در مرورگر ممکن نشد. فضای ذخیره‌سازی را بررسی کن.");
+  }
 }
-function today(){return new Date().toLocaleDateString("en-CA")}
+
+function today(){
+  const d=new Date();
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+
 function dailyReset(){
- const d=today();
- if(!state.daily||state.daily.date!==d)state.daily={date:d,xp:0};
+  const d=today();
+  if(!state.daily||state.daily.date!==d)state.daily={date:d,xp:0};
 }
+
 function notify(message){
- const t=$("toast");t.textContent=message;t.style.display="block";
- clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.style.display="none",2800);
+  const t=$("toast");
+  t.textContent=message;
+  t.style.display="block";
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.style.display="none",3000);
 }
-function current(){
- const list=lessons[state.lang];
- const i=Number(state.index[state.lang]||0)%list.length;
- return list[i];
+
+function escapeHTML(s){
+  return String(s).replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
 }
+
 function languageName(code){
- return ({de:"آلمانی",en:"انگلیسی",es:"اسپانیایی"})[code]||"زبان";
+  return {de:"آلمانی",en:"انگلیسی",es:"اسپانیایی"}[code]||"زبان";
 }
-function startApp(){
- $("welcome").classList.add("hidden");
- $("app").classList.remove("hidden");
- $("greeting").textContent="خوش آمدی، "+state.name+"! 👋";
- $("heroText").textContent="امروز یک قدم کوچک به هدف یادگیری‌ات نزدیک‌تر شو.";
- $("homeTitle").textContent="سلام "+state.name+"، آماده‌ای؟";
- $("profileName").value=state.name;
- $("profileLevel").value=state.level;
- $("dailyGoal").value=String(state.goal);
- updateAll();
+
+function current(){
+  const list=lessons[state.lang];
+  const i=Number(state.index[state.lang]||0)%list.length;
+  return list[i];
 }
+
 function onboarding(){
- $("app").classList.add("hidden");
- $("welcome").classList.remove("hidden");
- $("firstName").value=state.name||"";
- $("firstLang").value=state.lang||"de";
- $("firstLevel").value=state.level||"A1";
+  $("app").classList.add("hidden");
+  $("welcome").classList.remove("hidden");
+  $("firstName").value=state.name||"";
+  $("firstLang").value=state.lang;
+  $("firstLevel").value=state.level;
 }
-function updateAll(){
- dailyReset();updateStats();renderCourses();renderVocab();renderPractice();renderProgress();
- document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===state.lang));
+
+function startApp(){
+  $("welcome").classList.add("hidden");
+  $("app").classList.remove("hidden");
+  $("greeting").textContent="خوش آمدی، "+state.name+"! 👋";
+  $("heroText").textContent="امروز یک قدم کوچک به هدف یادگیری‌ات نزدیک‌تر شو.";
+  $("homeTitle").textContent="سلام "+state.name، آماده‌ای؟".replace("، آماده‌ای؟","، آماده‌ای؟");
+  $("profileName").value=state.name;
+  $("profileLevel").value=state.level;
+  $("dailyGoal").value=String(state.goal);
+  updateAll();
 }
+
 function updateStats(){
- $("xp").textContent=state.xp;$("headerXP").textContent=state.xp+" XP";
- $("completed").textContent=state.correct;$("streak").textContent=state.streak;
- $("pXP").textContent=state.xp;$("pCorrect").textContent=state.correct;
- const acc=state.attempts?Math.round(state.correct/state.attempts*100):0;
- $("pAccuracy").textContent=state.attempts?acc+"%":"—";
- $("dailyLabel").textContent=state.daily.xp+" از "+state.goal+" XP";
- $("dailyBar").style.width=Math.min(100,state.daily.xp/state.goal*100)+"%";
- const idx=state.index[state.lang]||0;
- $("nextLesson").textContent="زبان "+languageName(state.lang)+" · درس "+(idx+1)+": "+current().title;
- $("continueBtn").textContent=idx>=lessons[state.lang].length?"مرور درس‌ها ←":"شروع "+(idx===0?"درس اول":"درس بعدی")+" ←";
+  dailyReset();
+  $("xp").textContent=state.xp;
+  $("headerXP").textContent=state.xp+" XP";
+  $("completed").textContent=state.correct;
+  $("streak").textContent=state.streak;
+  $("pXP").textContent=state.xp;
+  $("pCorrect").textContent=state.correct;
+
+  const accuracy=state.attempts?Math.round(state.correct/state.attempts*100):0;
+  $("pAccuracy").textContent=state.attempts?accuracy+"%":"—";
+  $("dailyLabel").textContent=state.daily.xp+" از "+state.goal+" XP";
+  $("dailyBar").style.width=Math.min(100,state.daily.xp/state.goal*100)+"%";
+
+  const idx=state.index[state.lang]||0;
+  $("nextLesson").textContent="زبان "+languageName(state.lang)+" · درس "+(idx+1)+": "+current().title;
+  $("continueBtn").textContent="شروع "+(idx===0?"درس اول":"درس بعدی")+" ←";
 }
+
+function updateAll(){
+  dailyReset();
+  updateStats();
+  renderCourses();
+  renderVocab();
+  renderPractice();
+  renderProgress();
+  document.querySelectorAll("[data-lang]").forEach(b=>{
+    b.classList.toggle("active",b.dataset.lang===state.lang);
+  });
+}
+
 function showView(id){
- document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));
- document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
- if(id==="practice")renderPractice();
- if(id==="courses")renderCourses();
- if(id==="vocab")renderVocab();
- if(id==="progress")renderProgress();
- window.scrollTo({top:0,behavior:"smooth"});
+  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));
+  document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
+  if(id==="practice")renderPractice();
+  if(id==="courses")renderCourses();
+  if(id==="vocab")renderVocab();
+  if(id==="progress")renderProgress();
+  window.scrollTo({top:0,behavior:"smooth"});
 }
-document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{
- state.lang=b.dataset.lang;
- save();updateAll();
- notify("زبان یادگیری به "+languageName(state.lang)+" تغییر کرد.");
-}));
+
+document.querySelectorAll("[data-view]").forEach(b=>{
+  b.addEventListener("click",()=>showView(b.dataset.view));
+});
+
+document.querySelectorAll("[data-lang]").forEach(b=>{
+  b.addEventListener("click",()=>{
+    state.lang=b.dataset.lang;
+    save();
+    updateAll();
+    notify("زبان یادگیری: "+languageName(state.lang));
+  });
+});
 
 $("welcomeForm").addEventListener("submit",e=>{
- e.preventDefault();
- const name=$("firstName").value.trim();
- if(!name){notify("لطفاً نامت را وارد کن.");return}
- state.name=name.slice(0,50);
- state.lang=$("firstLang").value;
- state.level=$("firstLevel").value;
- dailyReset();save();startApp();
- notify("خوش آمدی "+state.name+"! سفر یادگیری تو شروع شد ✨");
+  e.preventDefault();
+  const name=$("firstName").value.trim();
+  if(!name){notify("لطفاً نامت را وارد کن.");return;}
+  state.name=name.slice(0,50);
+  state.lang=$("firstLang").value;
+  state.level=$("firstLevel").value;
+  dailyReset();
+  save();
+  startApp();
+  notify("خوش آمدی "+state.name+"! سفر یادگیری تو شروع شد ✨");
 });
+
 $("continueBtn").addEventListener("click",()=>showView("practice"));
 
 function renderCourses(){
- const list=lessons[state.lang],idx=Number(state.index[state.lang]||0);
- $("courseList").innerHTML=list.map((l,i)=>{
- const done=(state.completed[state.lang]||[]).includes(i);
- const currentLesson=i===idx;
- return `<div class="lessonrow">
- <div class="lessonicon">${done?"✓":currentLesson?"▶":"📘"}</div>
- <div class="lessoninfo"><b>${i+1}. ${escapeHTML(l.title)}</b>
- <p class="muted">${escapeHTML(l.word)} — ${escapeHTML(l.meaning)}</p>
- <span class="muted small">${done?"تکمیل‌شده":currentLesson?"درس فعلی":"درس بعدی"}</span></div>
- <button class="btn ${currentLesson?"primary":""}" data-start="${i}">${done?"مرور":"شروع"}</button>
- </div>`;
- }).join("");
- $("courseList").querySelectorAll("[data-start]").forEach(b=>b.addEventListener("click",()=>{
- state.index[state.lang]=Number(b.dataset.start);save();renderPractice();showView("practice");
- }));
+  const list=lessons[state.lang];
+  const idx=Number(state.index[state.lang]||0);
+  $("courseList").innerHTML=list.map((l,i)=>{
+    const done=state.completed[state.lang].includes(i);
+    const active=i===idx;
+    return `<div class="lessonrow">
+      <div class="lessonicon">${done?"✓":active?"▶":"📘"}</div>
+      <div class="lessoninfo">
+        <b>${i+1}. ${escapeHTML(l.title)}</b>
+        <p class="muted">${escapeHTML(l.word)} — ${escapeHTML(l.meaning)}</p>
+        <span class="muted small">${done?"تکمیل‌شده":active?"درس فعلی":"درس بعدی"}</span>
+      </div>
+      <button class="btn ${active?"primary":""}" data-start="${i}">${done?"مرور":"شروع"}</button>
+    </div>`;
+  }).join("");
+
+  $("courseList").querySelectorAll("[data-start]").forEach(b=>{
+    b.addEventListener("click",()=>{
+      state.index[state.lang]=Number(b.dataset.start);
+      save();
+      renderPractice();
+      showView("practice");
+    });
+  });
 }
-function escapeHTML(s){
- return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
+
 function renderPractice(){
- const l=current(),idx=Number(state.index[state.lang]||0);
- choice=null;answered=false;
- $("wordCount").textContent="درس "+(idx+1)+" از "+lessons[state.lang].length;
- $("word").textContent=l.word;$("meaning").textContent=l.meaning;
- $("question").textContent=l.q;$("feedback").innerHTML="";
- $("checkBtn").classList.remove("hidden");$("nextBtn").classList.add("hidden");
- $("options").innerHTML=l.opts.map((o,i)=>`<button class="option" data-choice="${i}">${escapeHTML(o)}</button>`).join("");
- $("options").querySelectorAll("[data-choice]").forEach(b=>b.addEventListener("click",()=>{
-  if(answered)return;
-  choice=Number(b.dataset.choice);
-  $("options").querySelectorAll(".option").forEach(x=>x.classList.toggle("selected",x===b));
- }));
- const key=state.lang+":"+idx;
- $("saveWordBtn").textContent=state.savedWords.some(w=>w.key===key)?"★ ذخیره‌شده":"☆ ذخیره واژه";
+  const l=current();
+  const idx=Number(state.index[state.lang]||0);
+  choice=null;
+  answered=false;
+
+  $("wordCount").textContent="درس "+(idx+1)+" از "+lessons[state.lang].length;
+  $("word").textContent=l.word;
+  $("meaning").textContent=l.meaning;
+  $("question").textContent=l.q;
+  $("feedback").innerHTML="";
+  $("checkBtn").classList.remove("hidden");
+  $("nextBtn").classList.add("hidden");
+
+  $("options").innerHTML=l.opts.map((o,i)=>
+    `<button class="option" data-choice="${i}">${escapeHTML(o)}</button>`
+  ).join("");
+
+  $("options").querySelectorAll("[data-choice]").forEach(b=>{
+    b.addEventListener("click",()=>{
+      if(answered)return;
+      choice=Number(b.dataset.choice);
+      $("options").querySelectorAll(".option").forEach(x=>{
+        x.classList.toggle("selected",x===b);
+      });
+    });
+  });
+
+  const key=state.lang+":"+idx;
+  $("saveWordBtn").textContent=state.savedWords.some(w=>w.key===key)?"★ ذخیره‌شده":"☆ ذخیره واژه";
 }
+
 $("checkBtn").addEventListener("click",()=>{
- if(answered)return;
- if(choice===null){notify("ابتدا یک پاسخ انتخاب کن.");return}
- const l=current(),idx=Number(state.index[state.lang]||0),ok=choice===l.correct;
- answered=true;state.attempts++;
- if(ok){
-  state.correct++;state.xp+=10;dailyReset();state.daily.xp+=10;
-  const done=state.completed[state.lang];
-  if(!done.includes(idx))done.push(idx);
-  $("feedback").innerHTML='<div class="notice success">آفرین! پاسخ درست است. 🎉 +10 XP</div>';
-  const d=today();
-  if(state.lastDay!==d){
-   const yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);
-   const y=yesterday.toLocaleDateString("en-CA");
-   state.streak=state.lastDay===y?state.streak+1:1;state.lastDay=d;
+  if(answered)return;
+  if(choice===null){notify("ابتدا یک پاسخ انتخاب کن.");return;}
+
+  const l=current();
+  const idx=Number(state.index[state.lang]||0);
+  const ok=choice===l.correct;
+  answered=true;
+  state.attempts++;
+
+  if(ok){
+    state.correct++;
+    state.xp+=10;
+    dailyReset();
+    state.daily.xp+=10;
+    if(!state.completed[state.lang].includes(idx))state.completed[state.lang].push(idx);
+
+    $("feedback").innerHTML='<div class="notice success">آفرین! پاسخ درست است. 🎉 +10 XP</div>';
+
+    const d=today();
+    if(state.lastDay!==d){
+      const yesterday=new Date();
+      yesterday.setDate(yesterday.getDate()-1);
+      const y=yesterday.getFullYear()+"-"+String(yesterday.getMonth()+1).padStart(2,"0")+"-"+String(yesterday.getDate()).padStart(2,"0");
+      state.streak=state.lastDay===y?state.streak+1:1;
+      state.lastDay=d;
+    }
+  }else{
+    $("feedback").innerHTML='<div class="notice error">اشکالی ندارد! پاسخ درست: <b>'+escapeHTML(l.opts[l.correct])+'</b>. دوباره مرورش کن.</div>';
   }
- }else{
-  $("feedback").innerHTML='<div class="notice error">اشکالی ندارد! پاسخ درست: <b>'+escapeHTML(l.opts[l.correct])+'</b>. دوباره مرورش کن.</div>';
- }
- $("options").querySelectorAll(".option").forEach((b,i)=>{
-  b.disabled=true;
-  if(i===l.correct)b.classList.add("correct");
-  else if(i===choice)b.classList.add("wrong");
- });
- $("checkBtn").classList.add("hidden");$("nextBtn").classList.remove("hidden");
- save();updateStats();renderProgress();
+
+  $("options").querySelectorAll(".option").forEach((b,i)=>{
+    b.disabled=true;
+    if(i===l.correct)b.classList.add("correct");
+    else if(i===choice)b.classList.add("wrong");
+  });
+
+  $("checkBtn").classList.add("hidden");
+  $("nextBtn").classList.remove("hidden");
+  save();
+  updateStats();
+  renderProgress();
 });
+
 $("nextBtn").addEventListener("click",()=>{
- const total=lessons[state.lang].length;
- state.index[state.lang]=(Number(state.index[state.lang]||0)+1)%total;
- save();updateAll();
+  state.index[state.lang]=(Number(state.index[state.lang]||0)+1)%lessons[state.lang].length;
+  save();
+  updateAll();
 });
+
 $("speakBtn").addEventListener("click",()=>{
- if(!("speechSynthesis" in window)){notify("قابلیت گفتار در این مرورگر در دسترس نیست.");return}
- window.speechSynthesis.cancel();
- const u=new SpeechSynthesisUtterance(current().word);
- u.lang=({de:"de-DE",en:"en-US",es:"es-ES"})[state.lang];u.rate=.85;
- window.speechSynthesis.speak(u);
+  if(!("speechSynthesis" in window)){
+    notify("قابلیت گفتار در این مرورگر در دسترس نیست.");
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(current().word);
+  u.lang={de:"de-DE",en:"en-US",es:"es-ES"}[state.lang];
+  u.rate=.85;
+  window.speechSynthesis.speak(u);
 });
+
 $("saveWordBtn").addEventListener("click",()=>{
- const l=current(),key=state.lang+":"+Number(state.index[state.lang]||0);
- const at=state.savedWords.findIndex(w=>w.key===key);
- if(at>=0){state.savedWords.splice(at,1);notify("واژه از دفترچه حذف شد.")}
- else{state.savedWords.push({key,lang:state.lang,word:l.word,meaning:l.meaning,pron:l.pron});notify("واژه ذخیره شد ⭐")}
- save();renderPractice();renderVocab();
+  const l=current();
+  const key=state.lang+":"+Number(state.index[state.lang]||0);
+  const at=state.savedWords.findIndex(w=>w.key===key);
+
+  if(at>=0){
+    state.savedWords.splice(at,1);
+    notify("واژه از دفترچه حذف شد.");
+  }else{
+    state.savedWords.push({
+      key,lang:state.lang,word:l.word,meaning:l.meaning,pron:l.pron
+    });
+    notify("واژه ذخیره شد ⭐");
+  }
+  save();
+  renderPractice();
+  renderVocab();
 });
+
 function renderVocab(){
- const list=$("vocabList");
- if(!state.savedWords.length){
-  list.innerHTML='<div class="empty"><div class="emoji">📖</div><h3>دفترچه‌ات هنوز خالی است</h3><p class="muted">در بخش تمرین، روی «ذخیره واژه» بزن تا کلمات اینجا جمع شوند.</p></div>';return;
- }
- list.innerHTML=state.savedWords.map((w,i)=>`<div class="lessonrow"><div class="lessonicon">🔖</div><div class="lessoninfo"><b>${escapeHTML(w.word)}</b><p class="muted">${escapeHTML(w.meaning)} · ${escapeHTML(languageName(w.lang))}</p></div><button class="btn" data-remove="${i}">حذف</button></div>`).join("");
- list.querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>{
-  state.savedWords.splice(Number(b.dataset.remove),1);save();renderVocab();renderPractice();
- }));
+  const list=$("vocabList");
+  if(!state.savedWords.length){
+    list.innerHTML='<div class="empty"><div class="emoji">📖</div><h3>دفترچه‌ات هنوز خالی است</h3><p class="muted">در تمرین روی «ذخیره واژه» بزن تا کلمات اینجا جمع شوند.</p></div>';
+    return;
+  }
+
+  list.innerHTML=state.savedWords.map((w,i)=>`
+    <div class="lessonrow">
+      <div class="lessonicon">🔖</div>
+      <div class="lessoninfo">
+        <b>${escapeHTML(w.word)}</b>
+        <p class="muted">${escapeHTML(w.meaning)} · ${escapeHTML(languageName(w.lang))}</p>
+      </div>
+      <button class="btn" data-remove="${i}">حذف</button>
+    </div>`
+  ).join("");
+
+  list.querySelectorAll("[data-remove]").forEach(b=>{
+    b.addEventListener("click",()=>{
+      state.savedWords.splice(Number(b.dataset.remove),1);
+      save();
+      renderVocab();
+      renderPractice();
+    });
+  });
 }
+
 function renderProgress(){
- const acc=state.attempts?Math.round(state.correct/state.attempts*100):0;
- $("accuracyBar").style.width=acc+"%";
- $("progressMessage").textContent=state.attempts?
- "از "+state.attempts+" پاسخ، "+state.correct+" پاسخ صحیح ثبت شده است.":
- "با اولین تمرین، گزارش تو شروع می‌شود.";
- $("languageStats").innerHTML=Object.keys(lessons).map(code=>{
- const n=(state.completed[code]||[]).length;
- return `<p>${({de:"🇩🇪 آلمانی",en:"🇬🇧 انگلیسی",es:"🇪🇸 اسپانیایی"})[code]}: ${n} از ${lessons[code].length} درس تکمیل‌شده</p>`;
- }).join("");
+  const accuracy=state.attempts?Math.round(state.correct/state.attempts*100):0;
+  $("accuracyBar").style.width=accuracy+"%";
+  $("progressMessage").textContent=state.attempts
+    ?"از "+state.attempts+" پاسخ، "+state.correct+" پاسخ صحیح ثبت شده است."
+    :"با اولین تمرین، گزارش تو شروع می‌شود.";
+
+  $("languageStats").innerHTML=Object.keys(lessons).map(code=>{
+    const n=state.completed[code].length;
+    return `<p>${{de:"🇩🇪 آلمانی",en:"🇬🇧 انگلیسی",es:"🇪🇸 اسپانیایی"}[code]}: ${n} از ${lessons[code].length} درس تکمیل‌شده</p>`;
+  }).join("");
 }
+
 $("saveProfile").addEventListener("click",()=>{
- const n=$("profileName").value.trim();
- if(!n){notify("نام نمی‌تواند خالی باشد.");return}
- state.name=n.slice(0,50);state.level=$("profileLevel").value;
- state.goal=Number($("dailyGoal").value)||10;
- save();startApp();$("profileFeedback").textContent="تغییرات ذخیره شد.";
- notify("پروفایل به‌روزرسانی شد.");
+  const name=$("profileName").value.trim();
+  if(!name){notify("نام نمی‌تواند خالی باشد.");return;}
+  state.name=name.slice(0,50);
+  state.level=$("profileLevel").value;
+  state.goal=Number($("dailyGoal").value)||10;
+  save();
+  startApp();
+  $("profileFeedback").textContent="تغییرات ذخیره شد.";
+  notify("پروفایل به‌روزرسانی شد.");
 });
+
 $("resetProgress").addEventListener("click",()=>{
- if(!confirm("تمام امتیازها و نتایج آزمون پاک شوند؟"))return;
- const keep={name:state.name,lang:state.lang,level:state.level,goal:state.goal};
- state=Object.assign(freshState(),keep);save();updateAll();
- $("profileFeedback").textContent="پیشرفت پاک شد.";
- notify("پیشرفت بازنشانی شد.");
+  if(!confirm("تمام امتیازها و نتایج آزمون پاک شوند؟"))return;
+  const keep={name:state.name,lang:state.lang,level:state.level,goal:state.goal};
+  state={...freshState(),...keep};
+  save();
+  updateAll();
+  $("profileFeedback").textContent="پیشرفت پاک شد.";
+  notify("پیشرفت بازنشانی شد.");
 });
+
 $("exportBtn").addEventListener("click",()=>{
- try{
-  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
-  const url=URL.createObjectURL(blob),a=document.createElement("a");
-  a.href=url;a.download="morti-progress.json";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
- }catch(e){notify("ساخت نسخه پشتیبان ممکن نشد.")}
+  try{
+    const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;
+    a.download="morti-progress.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }catch(e){
+    notify("ساخت نسخه پشتیبان ممکن نشد.");
+  }
 });
+
 $("premiumBtn").addEventListener("click",()=>{
- $("premiumMessage").textContent="این نسخه آزمایشی است. پرداخت واقعی، حساب آنلاین و اشتراک Premium هنوز راه‌اندازی نشده‌اند.";
+  $("premiumMessage").textContent="پرداخت واقعی و اشتراک هنوز فعال نیستند. برای راه‌اندازی آن‌ها سرور امن و درگاه پرداخت لازم است.";
 });
+
 dailyReset();
-if(state.name&&state.name.trim())startApp();else onboarding();
+if(state.name&&state.name.trim())startApp();
+else onboarding();
 </script>
 </body>
 </html>
-
