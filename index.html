@@ -74,6 +74,21 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
 .hero:before{opacity:1;z-index:0;background:radial-gradient(ellipse at center,rgba(12,13,17,.62),rgba(12,13,17,0) 72%),linear-gradient(#14171d,#0f1115)}
 .hero:after{content:"";position:absolute;inset:0;z-index:0;opacity:.11;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201100%20437%22%20width%3D%221100%22%20height%3D%22437%22%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23d02a1f%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%23e6e9ef%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23d02a1f%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%238b8d96%22%2F%3E%3C%2Fsvg%3E") center/min(94%,780px) no-repeat}
 .hero>*{z-index:1}.hero h1,.hero p{text-shadow:0 2px 12px #000c}
+.hero{padding:2rem 1rem 3.4rem}
+.hero:after{display:none}
+.hero:before{background:radial-gradient(ellipse 75% 70% at 50% 24%,rgba(86,100,138,.55),rgba(86,100,138,0) 72%),linear-gradient(#151922,#0f1115)}
+.hl{display:block;width:min(90%,640px);height:auto;margin:0 auto 1.5rem;filter:drop-shadow(0 6px 18px #0009)}
+.wm{overflow:hidden;margin:-2rem -1rem 1.3rem;padding:.6rem 0;background:linear-gradient(90deg,rgba(224,56,44,.16),rgba(224,56,44,.05) 50%,rgba(224,56,44,.16));border-block-end:1px solid rgba(255,255,255,.09);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.tk{display:flex;width:max-content;animation:tk 90s linear infinite;will-change:transform}
+.un{display:flex;align-items:center;flex:none}
+.ph{padding:0 1rem;white-space:nowrap;color:#dfe3ea;font-size:clamp(.92rem,2.3vw,1.12rem);line-height:1.5}
+.ph.hi{color:#f2a71b;font-weight:800}
+.sp{color:#e0382c;font-weight:800;font-style:italic;letter-spacing:-.08em;padding:0 .3rem}
+@keyframes tk{to{transform:translateX(-50%)}}
+@keyframes tkr{to{transform:translateX(50%)}}
+html[dir=rtl] .tk{animation-name:tkr}
+.wm:hover .tk{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.tk{animation:none}}
 </style>
 </head>
 <body>
@@ -84,6 +99,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
  <button class="ib" onclick="S.dark=!S.dark;sv();draw()" aria-label="Theme">◐</button>
 </header>
 <div class="hero">
+ <div class="wm" id="wm" role="region"><div class="tk" id="tk"></div></div>
+ <img class="hl" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2292%2056%20916%20324%22%20width%3D%22916%22%20height%3D%22324%22%3E%0A%3Crect%20x%3D%2299%22%20y%3D%2267%22%20width%3D%22902%22%20height%3D%226%22%20fill%3D%22%23e0382c%22%2F%3E%0A%3Cg%20font-family%3D%22Helvetica%20Neue%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%20font-weight%3D%22700%22%3E%0A%3Ctext%20x%3D%22138%22%20y%3D%22264%22%20font-size%3D%2296%22%20fill%3D%22%23f7f8fb%22%20textLength%3D%22325%22%20lengthAdjust%3D%22spacingAndGlyphs%22%3EMORTI%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22214%22%20font-size%3D%2253%22%20fill%3D%22%23e3e6ec%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3ELANGUAGE%3C%2Ftext%3E%0A%3Ctext%20x%3D%22656%22%20y%3D%22264%22%20font-size%3D%2253%22%20fill%3D%22%23e3e6ec%22%20textLength%3D%22305%22%20lengthAdjust%3D%22spacing%22%3EACADEMY%3C%2Ftext%3E%0A%3Ctext%20x%3D%22230%22%20y%3D%22334%22%20font-size%3D%2234%22%20font-weight%3D%22400%22%20fill%3D%22%23b9bdc8%22%20textLength%3D%22640%22%20lengthAdjust%3D%22spacing%22%3EDEUTSCH%20%C2%B7%20ENGLISH%20%C2%B7%20ESPA%C3%91OL%3C%2Ftext%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23e0382c%22%3E%3Cpolygon%20points%3D%22513%2C264%20534%2C264%20560%2C176%20539%2C176%22%2F%3E%3Cpolygon%20points%3D%22548%2C264%20569%2C264%20595%2C176%20574%2C176%22%2F%3E%3Cpolygon%20points%3D%22583%2C264%20604%2C264%20630%2C176%20609%2C176%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2299%22%20y%3D%22365%22%20width%3D%22902%22%20height%3D%223%22%20fill%3D%22%23a3a6b1%22%2F%3E%3C%2Fsvg%3E" alt="Morti Language Academy">
  <h1 dir="ltr"><span>Hallo</span><span>Hello</span><span>Hola</span><span dir="rtl">سلام</span></h1>
  <p id="sub"></p>
  <div class="sw" id="sw"></div>
@@ -130,6 +147,16 @@ de:{learn:'Wörter & Sätze',type:'Tippen',match:'Zuordnen',lvl:'Niveau',words:'
 en:{learn:'Words & phrases',type:'Typing',match:'Match',lvl:'Level',words:'Words',sents:'Sentences',allT:'All',ex:'Example',typeq:'Type this in the language you learn',check:'Check',ans:'Correct answer',addcat:'New category',done:'Great! All pairs matched',fill:'Please fill in all four translations.',kind:'Type'},
 es:{learn:'Palabras y frases',type:'Escribir',match:'Unir',lvl:'Nivel',words:'Palabras',sents:'Frases',allT:'Todo',ex:'Ejemplo',typeq:'Escribe esto en el idioma que aprendes',check:'Comprobar',ans:'Respuesta correcta',addcat:'Nueva categoría',done:'¡Genial! Todo unido',fill:'Rellena las cuatro traducciones.',kind:'Tipo'}};
 for(const l in X)Object.assign(T[l],X[l]);
+const W={
+fa:['به آکادمی زبان مورتی خوش آمدید','هر روز یک جمله، یک قدم نزدیک‌تر به روان‌صحبت‌کردن','یادگیری یک زبان تازه، دری به دنیای تازه است؛ همین امروز شروع کن!'],
+de:['Willkommen in der Morti Language Academy','Jeden Tag ein Satz – ein Schritt näher zur Sprachfreiheit','Eine neue Sprache öffnet dir eine neue Welt – fang heute an!'],
+en:['Welcome to Morti Language Academy','One sentence a day – one step closer to fluency','A new language opens a new world – start today!'],
+es:['Te damos la bienvenida a Morti Language Academy','Una frase al día, un paso más cerca de la fluidez','Un nuevo idioma abre un mundo nuevo: ¡empieza hoy!']};
+let wmLang=null;
+function setWm(){if(wmLang===S.ui)return;wmLang=S.ui;const ph=W[S.ui]||W.en;
+ const unit=()=>[0,1,2].map(()=>ph.map((x,i)=>`<span class="ph${i?'':' hi'}">${x}</span><b class="sp" aria-hidden="true">///</b>`).join('')).join('');
+ document.getElementById('tk').innerHTML=`<div class="un">${unit()}</div><div class="un" aria-hidden="true">${unit()}</div>`;
+ document.getElementById('wm').setAttribute('aria-label',ph[0])}
 
 const ld=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(x){return null}};
 let D=ld('lp_data')||BASE,CU=ld('lp_cats')||{},
@@ -218,7 +245,7 @@ function impD(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{if(appl
 const TABS=['learn','cards','quiz','type','match','saved','admin'],VW={learn:vLearn,cards:vCards,quiz:vQuiz,type:vType,match:vMatch,saved:vSaved,admin:vAdmin};
 function draw(keep){
  const el=document.documentElement;el.lang=S.ui;el.dir=dirOf(S.ui);el.dataset.t=S.dark?'dark':'light';
- ui.value=S.ui;sub.textContent=t('sub');
+ ui.value=S.ui;sub.textContent=t('sub');setWm();
  sw.innerHTML=['de','en','es'].map(l=>`<button class="${S.learn===l?'on':''}" onclick="S.learn='${l}';qz=ty=mg=null;sv();draw()">${LN[l]}</button>`).join('')+
  `<select onchange="S.my=this.value;sv();draw()" aria-label="${t('my')}">${['fa','de','en','es'].map(l=>`<option value="${l}" ${S.my===l?'selected':''}>${t('my')} ${LN[l]}</option>`).join('')}</select>`;
  st.innerHTML=`<div>${S.xp}<small>${t('xp')}</small></div><div>🔥 ${S.streak}<small>${t('streak')}</small></div><div>${S.known.length}/${D.length}<small>${t('known')}</small></div>`;
