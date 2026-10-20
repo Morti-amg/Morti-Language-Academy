@@ -1,3 +1,25 @@
+# Live chat – how it works (no account, no server)
+
+The chat connects every visitor through a free public MQTT broker (HiveMQ, backup: EMQX).
+Nothing to set up: upload `index.html` + `data.json` and the chat is live for everyone.
+
+* Everyone online sees the online list, people joining ("👋 Say hi"), the typing indicator and new messages instantly.
+* Private messages to the admin are end-to-end encrypted (AES-GCM / ECDH). Only the user and the admin can read them.
+* Admin actions (correct, pin, delete, mute, 👑 badge) are digitally signed. Nobody else can fake them.
+
+## Admin login
+1. Keep `admin-key.json` SECRET. **Never upload it to GitHub.** Store it on your phone/PC.
+2. Open the site → 🔒 → choose `admin-key.json` (or paste its content) → Login. The key is remembered on that device.
+3. Lost key = no admin access. Keep a backup copy.
+
+## Honest limits
+* The group chat is public. Messages are kept for 3 days.
+* It uses a shared public broker: if it is down the chat shows "connecting…". No guarantee of service.
+* Spam: 1 message per 1.2 s per client; the admin can mute users.
+
+# Optional: Firebase instead (stricter, real accounts)
+Paste your `firebaseConfig` into `FIREBASE_CONFIG` in index.html. Then Firebase is used instead of the public broker. Steps and rules:
+
 # راه‌اندازی گفتگوی زنده (Firebase، رایگان)
 
 سایت بدون این مرحله هم کار می‌کند، ولی گفتگو فقط بین تب‌های همان مرورگر است (حالت آزمایشی).

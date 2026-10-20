@@ -100,6 +100,7 @@ html[dir=rtl] .tk{animation-name:tkr}
 .prm{background:linear-gradient(90deg,#F2A71B33,#E0382C22);border-radius:12px;padding:.5rem .8rem;margin:.4rem 0 .6rem;font-weight:700}
 .cmsgs{height:min(52vh,460px);overflow-y:auto;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:.6rem}.cm{display:flex;gap:.5rem;padding:.3rem;border-radius:12px;cursor:pointer}.cm.sel{background:#F2A71B22}.av{font-size:1.6rem;line-height:1}.bb{background:var(--bg);border-radius:12px;padding:.35rem .7rem;max-width:min(88%,520px)}.cm.me .bb{background:#0E8A8F26}.mh small,.bb>small{color:var(--mut);margin-inline-start:.5rem;font-size:.75rem}.mt{overflow-wrap:anywhere}.fx{margin-top:.3rem;background:#1E9E6222;border-inline-start:3px solid var(--ok);border-radius:8px;padding:.2rem .5rem;font-size:.92rem}
 .ac{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.4rem}.ac button{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.2rem .6rem;cursor:pointer}
+.sys{text-align:center;color:var(--mut);font-size:.85rem;margin:.4rem 0}.sys button{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:.1rem .6rem;cursor:pointer;color:var(--ink)}.typ{min-height:1.2rem;font-size:.85rem;color:var(--mut);padding:.1rem .4rem}.dotg.off{background:var(--saf)}textarea{font:inherit;padding:.5rem;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
 .comp{display:flex;gap:.5rem;margin-top:.6rem}.snd{flex:none;padding:.6rem 1.2rem}.hint{color:var(--mut);margin:.2rem 0 .6rem}.dm0{background:#F2A71B22;border-color:var(--saf)}
 .avg{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}.avg button{font-size:1.5rem;background:var(--bg);border:2px solid var(--line);border-radius:12px;cursor:pointer}.avg button.on{border-color:var(--saf);background:#F2A71B33}.rl{padding-inline-start:1.3rem}.rl li{margin:.4rem 0}.ck{display:flex;gap:.5rem;align-items:center;margin-top:.8rem}.ck input{width:auto}
 .inb{display:grid;gap:.4rem;margin-bottom:.8rem}.ib2{display:flex;gap:.6rem;align-items:center;text-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.4rem .7rem;cursor:pointer}.ib2 small{display:block;color:var(--mut)}.ib2.un{border-color:var(--saf);background:#F2A71B22}.ib2.on{border-color:var(--lap)}
@@ -196,7 +197,13 @@ dmhint:['اینجا فقط تو و مدیر پیام‌ها را می‌بینی
 reports:['گزارش‌ها','Meldungen','Reports','Denuncias'],
 demo:['حالت آزمایشی: گفتگو فقط بین تب‌های همین مرورگر کار می‌کند.','Testmodus: Der Chat funktioniert nur zwischen Tabs in diesem Browser.','Test mode: the chat only works between tabs of this browser.','Modo de prueba: el chat solo funciona entre pestañas de este navegador.'],
 cprompt:['✍️ چالش امروز: با «{w}» یک جمله بنویس','✍️ Heute: Schreibe einen Satz mit „{w}“','✍️ Today’s challenge: write a sentence with “{w}”','✍️ Reto de hoy: escribe una frase con «{w}»'],
-loading:['در حال اتصال…','Verbinde…','Connecting…','Conectando…']};
+loading:['در حال اتصال…','Verbinde…','Connecting…','Conectando…'],
+joined:['به گفتگو پیوست','ist beigetreten','joined the chat','se unió al chat'],
+sayhi:['سلام بده','Hallo sagen','Say hi','Saludar'],
+typing:['در حال نوشتن…','schreibt…','is typing…','está escribiendo…'],
+youin:['تو آنلاین هستی؛ الان {n} نفر در گفتگو هستند','Du bist online – gerade {n} Person(en) im Chat','You are online – {n} in the chat right now','Estás en línea: {n} en el chat ahora'],
+akey:['کلید مدیر (فایل admin-key.json)','Admin-Schlüssel (Datei admin-key.json)','Admin key (admin-key.json file)','Clave de admin (archivo admin-key.json)'],
+akeyh:['فایل کلید را انتخاب کن یا محتوایش را اینجا بچسبان. این فایل فقط مال توست؛ هرگز آن را در GitHub آپلود نکن.','Wähle die Schlüssel-Datei oder füge ihren Inhalt ein. Die Datei gehört nur dir – niemals auf GitHub hochladen.','Choose the key file or paste its content. It is yours alone – never upload it to GitHub.','Elige el archivo de clave o pega su contenido. Es solo tuyo: nunca lo subas a GitHub.']};
 for(const k in K)LNG.forEach((l,i)=>T[l][k]=K[k][i]);
 const RL=[
 ['با همه مؤدب و مهربان باش؛ هر کسی در حال یادگیری است.','Sei höflich und freundlich – jeder lernt gerade.','Be polite and kind – everyone here is learning.','Sé amable y educado: todos aquí estamos aprendiendo.'],
@@ -267,7 +274,7 @@ return `<div class="card nar"><p style="color:var(--mut);margin:0">${t('typeq')}
 ${ty.r===null?`<div class="row"><button class="btn" onclick="chkT()">${t('check')}</button></div>`:`<p style="font-weight:700;color:var(--${ty.r?'ok':'bad'})">${ty.r?t('right'):t('ans')+':'} <span dir="ltr" style="color:var(--ink)">${ty.r?'':e(p[S.learn])}</span></p><div class="row"><button class="btn s" onclick="speak(${p.id})">🔊</button><button class="btn" onclick="newT();draw()">${t('next')}</button></div>`}</div>`}
 
 function vAdmin(){
-if(!admin)return `<div class="card nar"><h3>${t('admin')}</h3>${CH.live?`<label>Email</label><input id="em" type="email" dir="ltr" autocomplete="username">`:''}<label>${t('pw')}</label><input type="password" id="pw" autocomplete="current-password" onkeydown="if(event.key==='Enter')login()"><div class="row"><button class="btn" onclick="login()">${t('login')}</button></div><p style="color:var(--bad)">${msg}</p></div>`;
+if(!admin)return `<div class="card nar"><h3>${t('admin')}</h3>${CH.net?`<label>${t('akey')}</label><textarea id="ak" dir="ltr" rows="4" placeholder='{"sign":{…},"ecdh":{…}}' style="width:100%"></textarea><input type="file" id="akf" accept=".json" onchange="rdKey(this.files[0])" style="margin-top:.4rem"><p class="hint">${t('akeyh')}</p>`:`${CH.live?`<label>Email</label><input id="em" type="email" dir="ltr" autocomplete="username">`:''}<label>${t('pw')}</label><input type="password" id="pw" autocomplete="current-password" onkeydown="if(event.key==='Enter')login()">`}<div class="row"><button class="btn" onclick="login()">${t('login')}</button></div><p style="color:var(--bad)">${msg}</p></div>`;
 const p=ed!=null?D.find(x=>x.id===ed):{k:'w',c:Object.keys(CAT())[0],lv:'A1'};const x=p.ex||{};
 return `<div class="ad"><div>
 <div class="card"><h3>${ed!=null?'✏️ ':''}${t('newp')}</h3>
@@ -282,11 +289,14 @@ ${LG.map(l=>`<label>${LN[l]}</label><input id="f_${l}" dir="${dirOf(l)}" value="
 <div class="card"><div class="row" style="margin:0"><button class="btn s" onclick="expD()">${t('exp')}</button><button class="btn m" onclick="document.getElementById('imp').click()">${t('imp')}</button><input type="file" id="imp" accept=".json" hidden onchange="impD(this.files[0])"></div><p style="color:var(--mut)">${t('hint')}</p>
 <label>${t('chpw')}</label><input id="np"><div class="row"><button class="btn" onclick="chPw()">${t('save')}</button></div></div></div>
 <div>${D.slice().reverse().map(y=>`<div class="p" style="margin-bottom:.6rem"><div class="t"><b dir="ltr">${e(y.de)}<span class="lv">${y.lv||'A1'}</span></b><span dir="ltr">${e(y.en)} · ${e(y.es)}</span><span dir="rtl" style="display:block">${e(y.fa)}</span><span style="font-size:.8rem">${(y.k||'p')==='w'?t('words'):t('sents')} · ${e(cn(y.c))}</span></div><div class="ab"><button onclick="ed=${y.id};msg='';draw();scrollTo(0,0)" aria-label="edit">✏️</button><button onclick="delP(${y.id})" aria-label="${t('del')}">🗑️</button></div></div>`).join('')}</div></div>`}
-async function login(){const v=document.getElementById('pw').value;
+async function login(){
+ if(CH.net){try{const k=JSON.parse(($('ak').value||'').trim());await CR.chkKey(k);CH.ak=k;try{localStorage.setItem('lp_ak',JSON.stringify(k))}catch(x){}admin=true;CH.adm=true;msg='';attachAdmin()}catch(x){msg=t('wrong')}draw();return}
+ const v=document.getElementById('pw').value;
  if(CH.live){try{await CH.Au.signInWithEmailAndPassword(CH.auth,document.getElementById('em').value.trim(),v);admin=true;msg='';await startChat()}catch(x){msg=t('wrong')}}
  else{const pw=localStorage.getItem('lp_pw')||'admin1234';if(v===pw){admin=true;CH.adm=true;msg='';attachAdmin()}else msg=t('wrong')}
  draw()}
-function logout(){admin=false;ed=null;CH.adm=false;if(CH.live&&CH.Au)CH.Au.signOut(CH.auth).then(()=>CH.Au.signInAnonymously(CH.auth)).then(()=>startChat());draw()}
+function rdKey(f){if(!f)return;const r=new FileReader();r.onload=()=>{$('ak').value=r.result};r.readAsText(f)}
+function logout(){admin=false;ed=null;CH.adm=false;CH.ak=null;try{localStorage.removeItem('lp_ak')}catch(x){}if(CH.live&&CH.Au)CH.Au.signOut(CH.auth).then(()=>CH.Au.signInAnonymously(CH.auth)).then(()=>startChat());draw()}
 function chPw(){const v=document.getElementById('np').value.trim();if(v.length>=6){try{localStorage.setItem('lp_pw',v)}catch(x){}document.getElementById('np').value=''}}
 function addP(){const g=i=>document.getElementById(i).value.trim();const o={k:g('f_k'),c:g('f_c'),lv:g('f_lv')};LG.forEach(l=>o[l]=g('f_'+l));
 if(LG.some(l=>!o[l])){msg=t('fill');draw();return}
@@ -329,7 +339,8 @@ return `<div class="card jr"><div class="ring" style="--p:${pc}"><b>${lv}</b></d
 const FIREBASE_CONFIG=null; /* ← paste your firebaseConfig here (see README-chat.md). null = test mode inside this browser only */
 const FB='https://www.gstatic.com/firebasejs/10.12.2/firebase-';
 const AVS=['🦊','🐼','🦁','🐯','🐨','🐸','🦉','🐙','🦄','🐳','🐧','🦋'];
-let DB=null,CH={live:false,ready:false,uid:'',adm:false,sel:null,msgs:[],on:{},th:[],mutes:{},idx:{},rep:{},dw:null,subs:[],dmSub:null,err:'',pres:0,aat:0,last:0,acc:false};
+let DB=null,CH={live:false,ready:false,uid:'',adm:false,sel:null,msgs:[],on:{},th:[],mutes:{},idx:{},rep:{},dw:null,subs:[],dmSub:null,err:'',pres:0,aat:0,last:0,acc:false,net:false,unr:0,sys:[],al:{},raw:{},on0:0,gr:0,tyAt:{},dq:0,ak:null,sid:new Set(),jt:{},tl:0,tm:0,m0:0};
+const T0=document.title;
 S.chat=S.chat||{name:'',av:AVS[0],ok:false};S.sub=S.sub||'pub';
 const LDB=(()=>{const K='lp_demo',bc=window.BroadcastChannel?new BroadcastChannel('lp_demo'):null;let subs=[];
 const load=()=>{try{return JSON.parse(localStorage.getItem(K))||{}}catch(x){return{}}};
@@ -341,83 +352,199 @@ bc&&(bc.onmessage=fire);addEventListener('storage',ev=>ev.key===K&&fire());
 return{on(p,cb){const s={p,cb};subs.push(s);cb(get(load(),p)||null);return()=>{subs=subs.filter(x=>x!==s)}},
 set(p,v){const t=load();put(t,p,v);save(t)},upd(p,v){const t=load();for(const k in v)put(t,p+'/'+k,v[k]);save(t)},rm(p){this.set(p,null)},
 push(p,v){const k=Date.now().toString(36)+Math.random().toString(36).slice(2,6);this.set(p+'/'+k,v);return k},
-pres(uid,o){const b=()=>this.set('online/'+uid,{...o,ts:Date.now()});b();setInterval(b,8000);addEventListener('beforeunload',()=>this.rm('online/'+uid))}}})();
+eph(){},pres(uid,o){const b=()=>this.set('online/'+uid,{...o,ts:Date.now()});b();setInterval(b,8000);addEventListener('beforeunload',()=>this.rm('online/'+uid))}}})();
+/* ===== Live network: shared public MQTT broker over WebSocket (no account / no server needed) ===== */
+const NET_ON=true,NS='mla-q7k2x9/',TTL=259200000,BROKERS=['wss://broker.hivemq.com:8884/mqtt','wss://broker.emqx.io:8084/mqtt'];
+const AP={s:{x:'bHTLu2M25vaXpk_DHtoVJnwZzbQywGEq_NIgvf03eoc',y:'ODU9I1K76YKUlEAl6sfDmOXcOW0Yb4keyJ-Mf6jYo84'},d:{x:'0nasFCXQHj-e_On4MzPlBYdK9CXa-_oOFdesXtn31OQ',y:'yCbKLswURPkSCeVKtcrlAd41USHes-GnvrBCml7vIKM'}};
+const ENC=new TextEncoder(),DEC=new TextDecoder(),b64=a=>btoa(String.fromCharCode(...new Uint8Array(a))),unb=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const EC=n=>({name:n,namedCurve:'P-256'}),SG={name:'ECDSA',hash:'SHA-256'};
+const CR={
+async verify(s,sig){try{CR._v=CR._v||await crypto.subtle.importKey('jwk',{kty:'EC',crv:'P-256',...AP.s,ext:true},EC('ECDSA'),false,['verify']);return await crypto.subtle.verify(SG,CR._v,unb(sig),ENC.encode(s))}catch(x){return false}},
+async sign(s){CR._s=CR._s||await crypto.subtle.importKey('jwk',CH.ak.sign,EC('ECDSA'),false,['sign']);return b64(await crypto.subtle.sign(SG,CR._s,ENC.encode(s)))},
+async chkKey(k){if(!k||!k.sign||!k.ecdh||k.sign.x!==AP.s.x||k.sign.y!==AP.s.y||k.ecdh.x!==AP.d.x||k.ecdh.y!==AP.d.y)throw 1;
+ const pk=await crypto.subtle.importKey('jwk',k.sign,EC('ECDSA'),false,['sign']);if(!await CR.verify('t',b64(await crypto.subtle.sign(SG,pk,ENC.encode('t')))))throw 2;
+ await crypto.subtle.importKey('jwk',k.ecdh,EC('ECDH'),false,['deriveKey'])},
+async uk(){if(CR._u)return CR._u;let j;try{j=JSON.parse(localStorage.getItem('lp_uk'))}catch(x){}
+ if(!j){const g=await crypto.subtle.generateKey(EC('ECDH'),true,['deriveKey']);j=await crypto.subtle.exportKey('jwk',g.privateKey);try{localStorage.setItem('lp_uk',JSON.stringify(j))}catch(x){}}
+ return CR._u={priv:await crypto.subtle.importKey('jwk',j,EC('ECDH'),false,['deriveKey']),pub:{x:j.x,y:j.y}}},
+async dk(priv,pub){const p=await crypto.subtle.importKey('jwk',{kty:'EC',crv:'P-256',x:pub.x,y:pub.y,ext:true},EC('ECDH'),false,[]);return crypto.subtle.deriveKey({name:'ECDH',public:p},priv,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])},
+async enc(k,t){const iv=crypto.getRandomValues(new Uint8Array(12));return{iv:b64(iv),ct:b64(await crypto.subtle.encrypt({name:'AES-GCM',iv},k,ENC.encode(t)))}},
+async dec(k,m){try{return DEC.decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:unb(m.iv)},k,unb(m.ct)))}catch(x){return '🔒'}}};
+const AVC=new Map();
+function av(s,sig){if(!CH.net)return Promise.resolve(true);if(!sig)return Promise.resolve(false);const k=s+'~'+sig;if(!AVC.has(k))AVC.set(k,CR.verify(s,sig));return AVC.get(k)}
+const mkId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+/* minimal MQTT 3.1.1 client (QoS 0) */
+function MQ(o){let ws,ok=false,subs=new Set(),q=[],hb,tries=0,buf=new Uint8Array(0),ct;
+const str=s=>{const b=ENC.encode(s);return[b.length>>8,b.length&255,...b]};
+const rl=n=>{const r=[];do{let d=n%128;n=Math.floor(n/128);if(n>0)d|=128;r.push(d)}while(n>0);return r};
+const out=(h,b)=>{try{ws.send(new Uint8Array([h,...rl(b.length),...b]))}catch(x){}};
+const sub1=f=>out(0x82,[0,1,...str(f),0]);
+function retry(){ok=false;clearInterval(hb);clearTimeout(ct);o.onstate(false);const d=Math.min(1000*2**tries,10000);tries++;setTimeout(open,d)}
+function open(){let w;const url=o.urls[Math.floor(tries/3)%o.urls.length];try{w=new WebSocket(url,'mqtt')}catch(x){return retry()}
+ ws=w;w.binaryType='arraybuffer';buf=new Uint8Array(0);
+ ct=setTimeout(()=>{try{w.close()}catch(x){}},9000);
+ w.onopen=()=>out(0x10,[...str('MQTT'),4,0x26,0,30,...str(o.id),...str(o.will),0,0]);
+ w.onclose=()=>{if(ws===w)retry()};w.onerror=()=>{};
+ w.onmessage=ev=>{const n=new Uint8Array(ev.data),t=new Uint8Array(buf.length+n.length);t.set(buf);t.set(n,buf.length);buf=t;
+  for(;;){if(buf.length<2)return;let m=1,len=0,i=1,b;do{if(i>=buf.length)return;b=buf[i++];len+=(b&127)*m;m*=128}while(b&128);
+   if(buf.length<i+len)return;const ty=buf[0]>>4,fl=buf[0]&15,body=buf.slice(i,i+len);buf=buf.slice(i+len);
+   if(ty===2){if(body[1]!==0){try{w.close()}catch(x){}return}ok=true;tries=0;clearTimeout(ct);o.onstate(true);subs.forEach(sub1);q.splice(0).forEach(x=>out(x.h,x.b));hb=setInterval(()=>out(0xC0,[]),20000)}
+   else if(ty===3){const tl=(body[0]<<8)|body[1],tp=DEC.decode(body.slice(2,2+tl));let p=2+tl;if((fl>>1)&3)p+=2;o.onmsg(tp,DEC.decode(body.slice(p)))}}}}
+open();
+return{sub(f){if(subs.has(f))return;subs.add(f);if(ok)sub1(f)},
+ pub(t,p,r){const b=[...str(t),...ENC.encode(p)],h=0x30|(r?1:0);if(ok)out(h,b);else{q.push({h,b});if(q.length>80)q.shift()}}}}
+const NDB=(()=>{const st=new Map(),ls=[],PROT=/^(rooms|muted|dm)\//;let mq,ft,up=false,uid='';
+const tp=p=>NS+'db/'+p,cl=v=>v==null?v:JSON.parse(JSON.stringify(v));
+function get(p){const ks=[];st.forEach((v,k)=>{if(k===p||k.startsWith(p+'/'))ks.push(k)});if(!ks.length)return null;ks.sort((a,b)=>a.length-b.length);let r;
+ for(const k of ks){const v=st.get(k);if(k===p){r=cl(v);continue}if(r===undefined)r={};if(r===null||typeof r!=='object')continue;
+  const sg=k.slice(p.length+1).split('/');let o=r;for(let i=0;i<sg.length-1;i++){if(o[sg[i]]==null||typeof o[sg[i]]!=='object')o[sg[i]]={};o=o[sg[i]]}o[sg[sg.length-1]]=cl(v)}
+ return r===undefined?null:r}
+function fire(){clearTimeout(ft);ft=setTimeout(()=>ls.slice().forEach(l=>{const v=get(l.p),s=JSON.stringify(v);if(s!==l.last){l.last=s;try{l.cb(v)}catch(x){console.error('NDB',l.p,x)}}}),40)}
+function onmsg(t,pl){if(!t.startsWith(NS+'db/'))return;const p=t.slice(NS.length+3);
+ if(pl===''){if(PROT.test(p))return;st.delete(p);fire();return}
+ let v;try{v=JSON.parse(pl)}catch(x){return}st.set(p,v);fire()}
+const api={get up(){return up},get,
+start(u){uid=u;mq=MQ({urls:BROKERS,id:'mla_'+u+'_'+Math.random().toString(36).slice(2,6),will:tp('online/'+u),onmsg,onstate:s=>{up=s;if(s)CH.gr=Date.now()+2500;calcOn();drawChat()}});return api},
+on(p,cb){mq.sub(tp(p)+'/#');const l={p,cb,last:'null'};ls.push(l);const v=get(p);l.last=JSON.stringify(v);cb(v);return()=>{const i=ls.indexOf(l);if(i>=0)ls.splice(i,1)}},
+set(p,v){if(v==null){[...st.keys()].forEach(k=>{if(k===p||k.startsWith(p+'/')){st.delete(k);mq.pub(tp(k),'',true)}});if(!st.has(p))mq.pub(tp(p),'',true)}
+ else{st.set(p,cl(v));mq.pub(tp(p),JSON.stringify(v),true)}fire()},
+upd(p,o){for(const k in o)api.set(p+'/'+k,o[k])},rm(p){api.set(p,null)},
+push(p,v){const k=mkId();api.set(p+'/'+k,v);return k},
+eph(p,v){mq.pub(tp(p),JSON.stringify(v),false)},
+pres(u,o){const b=()=>api.set('online/'+u,{...o,ts:Date.now()}),off=()=>mq.pub(tp('online/'+u),'',true);b();setInterval(b,15000);addEventListener('pagehide',off);addEventListener('beforeunload',off);document.addEventListener('visibilitychange',()=>{if(!document.hidden)b()})},
+prune(){const now=Date.now(),del=k=>{st.delete(k);mq.pub(tp(k),'',true)};
+ [...st.keys()].forEach(k=>{const s=k.split('/');
+  if(s[0]==='rooms'&&s[1]==='main'&&s.length>=3){const b=st.get('rooms/main/'+s[2]);if(!b||typeof b!=='object'||!b.ts||now-b.ts>TTL)del(k)}
+  else if(s[0]==='online'&&s.length===2){const b=st.get(k);if(!b||!b.ts||now-b.ts>600000)del(k)}});fire()}};
+return api})();
 async function fbConnect(){const [A,Au,R]=await Promise.all(['app','auth','database'].map(m=>import(FB+m+'.js')));
 const app=A.initializeApp(FIREBASE_CONFIG),auth=Au.getAuth(app),rdb=R.getDatabase(app);CH.auth=auth;CH.Au=Au;
 if(!auth.currentUser)await Au.signInAnonymously(auth);
 return{uid:()=>auth.currentUser.uid,
 on(p,cb){return R.onValue(R.ref(rdb,p),s=>cb(s.val()),er=>{CH.err=er.message})},
 set(p,v){return R.set(R.ref(rdb,p),v)},upd(p,v){return R.update(R.ref(rdb,p),v)},rm(p){return R.remove(R.ref(rdb,p))},
-push(p,v){const r=R.push(R.ref(rdb,p));R.set(r,v);return r.key},
+push(p,v){const r=R.push(R.ref(rdb,p));R.set(r,v);return r.key},eph(){},
 pres(uid,o){const r=R.ref(rdb,'online/'+uid);R.onValue(R.ref(rdb,'.info/connected'),s=>{if(s.val()){R.onDisconnect(r).remove();R.set(r,{...o,ts:Date.now()})}})}}}
 const $=id=>document.getElementById(id);
 const tmf=ts=>{try{return new Date(ts).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}catch(x){return''}};
 function toast(m){const d=document.createElement('div');d.className='toast';d.textContent=m;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)}
 const isMuted=()=>!!(CH.mutes&&CH.mutes[CH.uid]);
-function unread(){return CH.adm?Object.values(CH.idx||{}).filter(x=>x&&x.u).length:0}
+function dmUn(){return CH.adm?Object.values(CH.idx||{}).filter(x=>x&&x.u).length:0}
+function unread(){return dmUn()+(CH.unr||0)}
+function ttl(){document.title=(CH.unr?'('+CH.unr+') ':'')+T0}
+const viewing=()=>S.tab==='community'&&S.sub==='pub'&&S.chat.ok&&!document.hidden;
 const ICO={learn:'📚',practice:'🎯',journey:'🏅',community:'💬'};
 function navLabel(k){return ICO[k]+' '+t(k)+(k==='community'&&unread()?' ('+unread()+')':'')}
 function updNav(){const n=$('nv_community');if(n)n.textContent=navLabel('community')}
-function attachAdmin(){if(CH.aat||!CH.adm||!DB)return;CH.aat=1;CH.subs.push(DB.on('dmidx',v=>{CH.idx=v||{};drawChat()}));CH.subs.push(DB.on('reports',v=>{CH.rep=v||{};drawChat()}))}
+function attachAdmin(){if(CH.aat||!CH.adm||!DB)return;CH.aat=1;CH.subs.push(DB.on('dmidx',v=>{CH.idx=v||{};drawChat()}));CH.subs.push(DB.on('reports',v=>{CH.rep=v||{};drawChat()}));if(CH.net){setTimeout(()=>NDB.prune(),7000);setInterval(()=>NDB.prune(),600000)}}
 async function startChat(){CH.subs.forEach(f=>f());CH.subs=[];CH.dmSub&&CH.dmSub();CH.dmSub=null;CH.aat=0;CH.pres=0;
-if(!DB){try{if(FIREBASE_CONFIG){DB=await fbConnect();CH.live=true}else DB=LDB}catch(x){CH.err=String(x&&x.message||x);DB=LDB;CH.live=false}}
+if(!DB){try{if(FIREBASE_CONFIG){DB=await fbConnect();CH.live=true}else if(NET_ON&&window.WebSocket&&window.crypto&&crypto.subtle){S.cu=S.cu||'u'+Math.random().toString(36).slice(2,9);CH.gr=Infinity;DB=NDB.start(S.cu);CH.net=true}else DB=LDB}catch(x){CH.err=String(x&&x.message||x);DB=LDB;CH.live=false;CH.net=false}}
+if(!CH.net)CH.gr=Date.now()+600;
 CH.uid=CH.live?DB.uid():(S.cu=S.cu||'u'+Math.random().toString(36).slice(2,9));
-const sb=(p,f)=>CH.subs.push(DB.on(p,v=>{f(v||{});drawChat()}));
-sb('rooms/main',v=>CH.msgs=Object.entries(v).map(([id,m])=>({id,...m})).sort((a,b)=>a.ts-b.ts).slice(-100));
-sb('online',v=>CH.on=Object.fromEntries(Object.entries(v).filter(([k,o])=>CH.live||Date.now()-o.ts<20000)));
-sb('muted',v=>CH.mutes=v);
-sb('dm/'+CH.uid,v=>CH.th=Object.entries(v).map(([id,m])=>({id,...m})).sort((a,b)=>a.ts-b.ts));
+const sba=(p,f,g)=>{let n=0;CH.subs.push(DB.on(p,v=>{const c=++n;f(v||{}).then(r=>{if(c===n){g(r);drawChat()}})}))};
+sba('rooms/main',procR,gotMsgs);
+CH.subs.push(DB.on('online',v=>{CH.raw=v||{};calcOn()}));
+sba('muted',procM,r=>{CH.mutes=r});
+CH.subs.push(DB.on('dm/'+CH.uid,v=>{if(CH.adm)return;const c=++CH.dq;thr(v||{},CH.uid).then(a=>{if(c===CH.dq){CH.th=a;drawChat()}})}));
+CH.subs.push(DB.on('typing',v=>typH(v||{})));
+if(CH.net){try{const raw=localStorage.getItem('lp_ak');if(raw){const k=JSON.parse(raw);await CR.chkKey(k);CH.ak=k;admin=true}}catch(x){}}
 if(CH.live)CH.subs.push(DB.on('admins/'+CH.uid,v=>{const was=CH.adm;CH.adm=v===true;if(CH.adm)attachAdmin();if(was!==CH.adm)draw();else drawChat()}));
 else{CH.adm=admin;attachAdmin()}
-CH.ready=true;if(S.chat.ok)startPres();draw()}
+if(!CH.tm)CH.tm=setInterval(()=>{calcOn();drawTyp()},1500);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)drawChat()});
+CH.ready=true;if(S.chat.ok){startPres();meLine()}draw()}
+/* --- processing (signature checks in net mode) --- */
+async function procR(v){const arr=Object.entries(v).map(([id,m])=>({id,...m})).filter(m=>m&&m.ts&&m.text!=null&&m.uid);
+if(!CH.net)return arr.sort((a,b)=>a.ts-b.ts).slice(-100);
+const now=Date.now(),out=[];
+for(const m of arr){if(now-m.ts>TTL||m.ts>now+3600000)continue;
+ if(m.del&&await av('del|'+m.id,m.del.sig))continue;
+ if(m.adm&&!await av('msg|'+m.id+'|'+m.uid+'|'+m.ts+'|'+m.text,m.sig))m.adm=false;
+ if(m.fix){if(!(await av('fix|'+m.id+'|'+m.fix.text,m.fix.sig))||!m.fix.text)delete m.fix}
+ if(m.pin){if(m.pin.on&&await av('pin|'+m.id+'|true',m.pin.sig))m.pin=true;else delete m.pin}
+ out.push(m)}
+return out.sort((a,b)=>a.ts-b.ts).slice(-100)}
+async function procM(v){const o={};for(const [u,m] of Object.entries(v)){if(!CH.net){if(m)o[u]=true;continue}
+ if(m&&typeof m==='object'&&m.on===true&&await av('mute|'+u+'|true|'+m.ts,m.sig))o[u]=true}return o}
+function gotMsgs(r){const first=Date.now()<CH.gr;let n=0;
+for(const m of r){if(!CH.sid.has(m.id)){CH.sid.add(m.id);if(!first&&m.uid!==CH.uid&&!(CH.mutes[m.uid]&&!CH.adm))n++}}
+CH.msgs=r;if(n&&!viewing()){CH.unr+=n;ttl();if(S.snd!==false)beep()}}
+function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.frequency.value=880;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+.12);setTimeout(()=>a.close(),400)}catch(x){}}
+function calcOn(){const raw=CH.raw||{},now=Date.now(),f={};
+for(const [k,o] of Object.entries(raw)){if(!o||!o.ts)continue;if(CH.live){f[k]=o;continue}
+ const a=CH.al[k];if(!a||a.ts!==o.ts)CH.al[k]={ts:o.ts,seen:now};
+ if(now-CH.al[k].seen<50000&&Math.abs(now-o.ts)<300000)f[k]=o}
+if(CH.on0)for(const k in f)if(!(k in CH.on)&&k!==CH.uid)joined(k,f[k]);
+const ch=Object.keys(f).sort().join()!==Object.keys(CH.on).sort().join();CH.on=f;CH.on0=1;if(ch)drawChat()}
+function joined(k,o){const now=Date.now();if(now<CH.gr||(CH.jt[k]&&now-CH.jt[k]<120000))return;CH.jt[k]=now;
+CH.sys.push({id:'j'+now+k,ts:now,uid:k,name:o.name||'?',av:o.av||'🙂'});CH.sys=CH.sys.slice(-30);
+if(S.chat.ok&&!viewing())toast((o.av||'🙂')+' '+(o.name||'')+' '+t('joined'))}
+function meLine(){CH.sys.push({id:'me'+Date.now(),ts:Date.now(),me:true})}
+function sysH(x){if(x.me)return `<div class="sys">🟢 ${t('youin').replace('{n}',Object.keys(CH.on).length)}</div>`;
+return `<div class="sys">${e(x.av)} <b>${e(x.name)}</b> ${t('joined')}${x.done||isMuted()?'':` <button onclick="greet('${e(x.uid)}')">👋 ${t('sayhi')}</button>`}</div>`}
+function greet(k){const s=CH.sys.find(x=>x.uid===k&&!x.done);if(!s)return;s.done=1;const hi={de:'Hallo',en:'Hello',es:'Hola'}[S.learn]||'Hallo';sendRaw(hi+' '+s.name+'! 👋');drawChat()}
+function typH(v){const now=Date.now();for(const [u,o] of Object.entries(v)){if(u===CH.uid||!o)continue;if(!CH.tyAt[u]||CH.tyAt[u].ts!==o.ts)CH.tyAt[u]={ts:o.ts,at:now,name:o.name}}drawTyp()}
+function drawTyp(){const n=$('ctyp');if(!n)return;const now=Date.now(),a=Object.values(CH.tyAt).filter(x=>now-x.at<3500).map(x=>x.name);n.textContent=a.length?a.slice(0,3).join(', ')+' '+t('typing'):''}
+function typ(){if(!DB||!DB.eph||Date.now()-CH.tl<2500)return;CH.tl=Date.now();DB.eph('typing/'+CH.uid,{name:S.chat.name,ts:Date.now()})}
+async function dmKey(u){if(CH.adm){const i=(CH.idx||{})[u];if(!i||!i.pub)throw 1;const p=await crypto.subtle.importKey('jwk',CH.ak.ecdh,EC('ECDH'),false,['deriveKey']);return CR.dk(p,i.pub)}return CR.dk((await CR.uk()).priv,AP.d)}
+async function thr(v,u){const arr=Object.entries(v||{}).map(([id,m])=>({id,...m})).filter(m=>m.ts).sort((a,b)=>a.ts-b.ts);if(!CH.net)return arr;
+let k=null;try{k=await dmKey(u)}catch(x){}return Promise.all(arr.map(async m=>({...m,text:k&&m.ct?await CR.dec(k,m):'🔒'})))}
 function startPres(){if(CH.pres||!DB)return;CH.pres=1;DB.pres(CH.uid,{name:S.chat.name,av:S.chat.av})}
-function joinChat(){S.chat.name=S.chat.name.trim().slice(0,20);S.chat.ok=true;sv();startPres();draw()}
+function joinChat(){S.chat.name=S.chat.name.trim().slice(0,20);S.chat.ok=true;sv();startPres();meLine();draw()}
 function msgH(m){const me=m.uid===CH.uid,s=CH.sel===m.id;
-return `<div class="cm${me?' me':''}${s?' sel':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${m.adm?' 👑':''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
+return `<div class="cm${me?' me':''}${s?' sel':''}" onclick="selM('${m.id}')"><span class="av">${e(m.av||'🙂')}</span><div class="bb"><div class="mh"><b>${e(m.name)}</b>${m.adm?' 👑':''}${m.pin?' 📌':''}<small>${tmf(m.ts)}</small></div><div class="mt" dir="auto">${e(m.text)}</div>${m.fix&&m.fix.text?`<div class="fx" dir="auto">✅ ${t('fix')}: ${e(m.fix.text)}</div>`:''}${s?actH(m):''}</div></div>`}
 function actH(m){const st='event.stopPropagation();';
 if(CH.adm)return `<div class="ac"><button onclick="${st}fixM('${m.id}')">✏️ ${t('fix')}</button><button onclick="${st}pinM('${m.id}')">${m.pin?'📍':'📌'}</button><button onclick="${st}delM('${m.id}')">🗑</button>${m.adm?'':`<button onclick="${st}muteU('${m.uid}')">🔇</button>`}</div>`;
 return m.uid===CH.uid?'':`<div class="ac"><button onclick="${st}repM('${m.id}')">🚩 ${t('report')}</button></div>`}
-const msgsH=()=>CH.msgs.map(msgH).join('')||`<div class="e">${t('nomsg')}</div>`;
+const msgsH=()=>{const it=[...CH.msgs.filter(m=>CH.adm||!CH.mutes[m.uid]).map(m=>({ts:m.ts,h:msgH(m)})),...CH.sys.map(x=>({ts:x.ts,h:sysH(x)}))].sort((a,b)=>a.ts-b.ts);return it.map(x=>x.h).join('')||`<div class="e">${t('nomsg')}</div>`};
 function dmH(){const mine=m=>CH.adm?m.from==='a':m.from==='u';return CH.th.map(m=>`<div class="cm${mine(m)?' me':''}"><span class="av">${m.from==='a'?'👑':e(S.chat.av)}</span><div class="bb"><div class="mt" dir="auto">${e(m.text)}</div><small>${tmf(m.ts)}</small></div></div>`).join('')||`<div class="e">—</div>`}
-const onlineH=()=>{const a=Object.entries(CH.on);return `<span class="dotg"></span><b>${a.length}</b> ${t('online')}`+a.slice(0,12).map(([k,o])=>`<span class="chip">${e(o.av||'🙂')} ${e(o.name||'')}</span>`).join('')};
-function inbH(){return Object.entries(CH.idx||{}).sort((a,b)=>b[1].ts-a[1].ts).map(([u,o])=>`<button class="ib2${o.u?' un':''}${CH.dw===u?' on':''}" onclick="openDm('${u}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||u)}</b><small>${e(o.last||'')}</small></span></button>`).join('')||`<p class="e">—</p>`}
+const onlineH=()=>{const a=Object.entries(CH.on),dn=CH.net&&!NDB.up;return `<span class="dotg${dn?' off':''}"></span><b>${a.length}</b> ${t('online')}`+a.slice(0,14).map(([k,o])=>`<span class="chip">${e(o.av||'🙂')} ${e(o.name||'')}${k===CH.uid?' ·':''}</span>`).join('')+`<button class="chip" onclick="S.snd=S.snd===false;sv();drawChat()" aria-label="sound">${S.snd===false?'🔕':'🔔'}</button>`+(dn?`<span class="chip">⏳ ${t('loading')}</span>`:'')};
+function inbH(){return Object.entries(CH.idx||{}).sort((a,b)=>b[1].ts-a[1].ts).map(([u,o])=>`<button class="ib2${o.u?' un':''}${CH.dw===u?' on':''}" onclick="openDm('${u}')"><span class="av">${e(o.av||'🙂')}</span><span><b>${e(o.name||u)}</b><small>${e(o.last||(CH.net?'🔒':''))}</small></span></button>`).join('')||`<p class="e">—</p>`}
 function modH(){const keys=[...new Set([...Object.keys(CH.on),...Object.keys(CH.mutes||{}).filter(k=>CH.mutes[k])])];
 const on=keys.map(k=>{const o=CH.on[k]||{};return `<div class="p"><div class="t"><b>${e(o.av||'🔇')} ${e(o.name||k)}</b>${CH.mutes[k]?'<span> 🔇</span>':''}</div><div class="ab"><button onclick="muteU('${k}')" aria-label="mute">${CH.mutes[k]?'🔊':'🔇'}</button></div></div>`}).join('');
 const rp=Object.entries(CH.rep||{}).map(([rid,r])=>`<div class="p"><div class="t"><b>${e(r.name)}</b><span dir="auto">${e(r.text)}</span></div><div class="ab"><button onclick="delM('${r.mid}',1);DB.rm('reports/${rid}')">🗑</button><button onclick="muteU('${r.uid}')">🔇</button><button onclick="DB.rm('reports/${rid}')">✓</button></div></div>`).join('');
 return `<h3>🟢 ${t('online')} (${Object.keys(CH.on).length})</h3><div class="grid">${on||'<p class="e">—</p>'}</div><h3>🚩 ${t('reports')} (${Object.keys(CH.rep||{}).length})</h3>${rp||'<p class="e">—</p>'}`}
-function drawChat(){updNav();if(S.tab!=='community'||!S.chat.ok)return;const set=(id,h)=>{const n=$(id);if(n)n.innerHTML=h};
+function drawChat(){updNav();if(S.tab!=='community'||!S.chat.ok)return;if(viewing()&&CH.unr){CH.unr=0;ttl();updNav()}const set=(id,h)=>{const n=$(id);if(n)n.innerHTML=h};
 const m=$('cmsgs');if(m&&S.sub==='pub'){const nb=m.scrollHeight-m.scrollTop-m.clientHeight<90;m.innerHTML=msgsH();if(nb)m.scrollTop=m.scrollHeight}
 const d=$('cdm');if(d){const nb=d.scrollHeight-d.scrollTop-d.clientHeight<90;d.innerHTML=dmH();if(nb)d.scrollTop=d.scrollHeight}
-set('conl',onlineH());set('cinb',inbH());set('cmod',modH())}
+set('conl',onlineH());set('cinb',inbH());set('cmod',modH());drawTyp()}
 function selM(id){CH.sel=CH.sel===id?null:id;drawChat()}
-function sendM(){const i=$('ci');if(!i)return;const x=i.value.trim();if(!x||isMuted())return;
-if(!CH.adm&&/https?:|www\./i.test(x)){toast(t('nolink'));return}
-if(Date.now()-CH.last<1500)return;CH.last=Date.now();
-const o={uid:CH.uid,name:S.chat.name,av:S.chat.av,text:x.slice(0,300),ts:Date.now()};if(CH.adm)o.adm=true;
-DB.push('rooms/main',o);i.value='';S.cn=(S.cn||0)+1;sv()}
-function sendDm(){const i=$('cdi');if(!i)return;const x=i.value.trim(),u=CH.adm?CH.dw:CH.uid;if(!x||!u)return;
+async function sendRaw(x){x=x.trim();if(!x||isMuted())return false;
+if(!CH.adm&&/https?:|www\./i.test(x)){toast(t('nolink'));return false}
+if(Date.now()-CH.last<1200)return false;CH.last=Date.now();
+const id=mkId(),o={uid:CH.uid,name:S.chat.name,av:S.chat.av,text:x.slice(0,300),ts:Date.now()};
+if(CH.adm){o.adm=true;if(CH.net)o.sig=await CR.sign('msg|'+id+'|'+o.uid+'|'+o.ts+'|'+o.text)}
+DB.set('rooms/main/'+id,o);S.cn=(S.cn||0)+1;sv();setTimeout(()=>{const m=$('cmsgs');if(m)m.scrollTop=m.scrollHeight},80);return true}
+function sendM(){const i=$('ci');if(!i)return;const x=i.value;i.value='';sendRaw(x).then(ok=>{if(!ok&&!i.value)i.value=x})}
+async function sendDm(){const i=$('cdi');if(!i)return;const x=i.value.trim(),u=CH.adm?CH.dw:CH.uid;if(!x||!u)return;
+if(CH.net){try{const k=await dmKey(u),c=await CR.enc(k,x.slice(0,500));i.value='';DB.push('dm/'+u,{from:CH.adm?'a':'u',...c,ts:Date.now()});
+ DB.upd('dmidx/'+u,CH.adm?{ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,pub:(await CR.uk()).pub,ts:Date.now(),u:true})}catch(x){toast('⚠')}return}
 DB.push('dm/'+u,{from:CH.adm?'a':'u',text:x.slice(0,500),ts:Date.now()});
 DB.upd('dmidx/'+u,CH.adm?{last:x.slice(0,60),ts:Date.now(),u:false}:{name:S.chat.name,av:S.chat.av,last:x.slice(0,60),ts:Date.now(),u:true});i.value=''}
-function openDm(u){CH.dw=u;CH.dmSub&&CH.dmSub();CH.th=[];CH.dmSub=DB.on('dm/'+u,v=>{CH.th=Object.entries(v||{}).map(([id,m])=>({id,...m})).sort((a,b)=>a.ts-b.ts);drawChat()});DB.upd('dmidx/'+u,{u:false});draw()}
+function openDm(u){CH.dw=u;CH.dmSub&&CH.dmSub();CH.th=[];let c=0;CH.dmSub=DB.on('dm/'+u,v=>{const n=++c;thr(v||{},u).then(a=>{if(n===c){CH.th=a;drawChat()}})});DB.upd('dmidx/'+u,{u:false});draw()}
 function repM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;DB.push('reports',{mid:id,uid:m.uid,name:m.name,text:m.text,by:CH.uid,ts:Date.now()});CH.sel=null;drawChat();toast(t('thanks'))}
-function fixM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;const x=prompt(t('fixp'),m.fix?m.fix.text:m.text);if(x===null)return;DB.upd('rooms/main/'+id,{fix:x.trim()?{text:x.trim().slice(0,300),ts:Date.now()}:null})}
-function pinM(id){const m=CH.msgs.find(x=>x.id===id);if(m)DB.upd('rooms/main/'+id,{pin:m.pin?null:true})}
-function delM(id,q){if(q||confirm(t('del')+'?'))DB.rm('rooms/main/'+id)}
-function muteU(u){DB.set('muted/'+u,CH.mutes[u]?null:true);toast(CH.mutes[u]?'🔊':'🔇')}
+async function fixM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;const x=prompt(t('fixp'),m.fix?m.fix.text:m.text);if(x===null)return;const tx=x.trim().slice(0,300),ts=Date.now();
+if(CH.net){DB.upd('rooms/main/'+id,{fix:{text:tx,ts,sig:await CR.sign('fix|'+id+'|'+tx)}})}else DB.upd('rooms/main/'+id,{fix:tx?{text:tx,ts}:null})}
+async function pinM(id){const m=CH.msgs.find(x=>x.id===id);if(!m)return;const on=!m.pin;
+if(CH.net)DB.upd('rooms/main/'+id,{pin:{on,ts:Date.now(),sig:await CR.sign('pin|'+id+'|'+on)}});else DB.upd('rooms/main/'+id,{pin:on?true:null})}
+async function delM(id,q){if(!(q||confirm(t('del')+'?')))return;
+if(CH.net){DB.upd('rooms/main/'+id,{del:{ts:Date.now(),sig:await CR.sign('del|'+id)}});setTimeout(()=>DB.rm('rooms/main/'+id),400)}else DB.rm('rooms/main/'+id)}
+async function muteU(u){const on=!CH.mutes[u];
+if(CH.net){const ts=Date.now();DB.set('muted/'+u,{on,ts,sig:await CR.sign('mute|'+u+'|'+on+'|'+ts)});if(!on)delete CH.mutes[u];else CH.mutes[u]=true}else DB.set('muted/'+u,on?true:null);toast(on?'🔇':'🔊')}
 const rulesH=()=>`<ol class="rl">${[0,1,2,3,4,5].map(i=>`<li>${t('r'+i)}</li>`).join('')}</ol>`;
 function chk(){const b=$('jb');if(b)b.disabled=!(S.chat.name.trim().length>=2&&CH.acc)}
 function vJoin(){const c=S.chat;return `<div class="card nar"><h3>💬 ${t('chat_join')}</h3><label>${t('nick')}</label><input id="jn" maxlength="20" value="${e(c.name)}" oninput="S.chat.name=this.value;chk()"><label>${t('avatar')}</label><div class="avg">${AVS.map(a=>`<button class="${c.av===a?'on':''}" onclick="S.chat.av='${a}';draw()">${a}</button>`).join('')}</div><h3 style="margin-top:1rem">🤝 ${t('rtitle')}</h3>${rulesH()}<label class="ck"><input type="checkbox" onchange="CH.acc=this.checked;chk()" ${CH.acc?'checked':''}> ${t('acc')}</label><div class="row"><button class="btn g" id="jb" ${c.name.trim().length>=2&&CH.acc?'':'disabled'} onclick="joinChat()">💬 ${t('enter')}</button></div></div>`}
 function vCommunity(){if(!CH.ready)return `<div class="e">${t('loading')}</div>`;if(!S.chat.ok)return vJoin();
 const P=CH.adm?['pub','inbox','mod','rules']:['pub','dm','rules'],IC={pub:'💬',dm:'✉️',inbox:'📥',mod:'🛡',rules:'📜'};if(!P.includes(S.sub))S.sub='pub';
-const pills=`<div class="pls">${P.map(k=>`<button class="${S.sub===k?'on':''}" onclick="S.sub='${k}';sv();draw()">${IC[k]} ${t(k)}${k==='inbox'&&unread()?' ('+unread()+')':''}</button>`).join('')}</div>`;
-const comp=(id,fn)=>`<div class="comp"><input id="${id}" maxlength="500" autocomplete="off" placeholder="${t('typem')}" onkeydown="if(event.key==='Enter')${fn}()"><button class="btn snd" onclick="${fn}()">${t('send')}</button></div>`;
+const pills=`<div class="pls">${P.map(k=>`<button class="${S.sub===k?'on':''}" onclick="S.sub='${k}';sv();draw()">${IC[k]} ${t(k)}${k==='inbox'&&dmUn()?' ('+dmUn()+')':''}</button>`).join('')}</div>`;
+const comp=(id,fn,ex)=>`<div class="comp"><input id="${id}" maxlength="500" autocomplete="off" ${ex||''} placeholder="${t('typem')}" onkeydown="if(event.key==='Enter')${fn}()"><button class="btn snd" onclick="${fn}()">${t('send')}</button></div>`;
 let b='';
-if(S.sub==='pub'){const w=todayWord();b=`<div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div>${isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM')}`}
+if(S.sub==='pub'){const w=todayWord();b=`<div class="ons" id="conl">${onlineH()}</div>${w?`<div class="prm">${t('cprompt').replace('{w}',e(w[S.learn]))}</div>`:''}<div class="cmsgs" id="cmsgs">${msgsH()}</div><div class="typ" id="ctyp"></div>${isMuted()?`<p class="e">${t('mutedm')}</p>`:comp('ci','sendM','oninput="typ()"')}`}
 else if(S.sub==='dm')b=`<p class="hint">${t('dmhint')}</p><div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`;
 else if(S.sub==='inbox')b=`<div class="inb" id="cinb">${inbH()}</div>${CH.dw?`<div class="cmsgs" id="cdm">${dmH()}</div>${comp('cdi','sendDm')}`:''}`;
 else if(S.sub==='mod')b=`<div id="cmod">${modH()}</div>`;
 else b=`<div class="card"><h3>🤝 ${t('rtitle')}</h3>${rulesH()}</div>`;
-return (CH.live?'':`<div class="card dm0">${t('demo')}</div>`)+pills+b}
+return (CH.live||CH.net?'':`<div class="card dm0">${t('demo')}</div>`)+pills+b}
 
 const TABS=['learn','practice','journey','community'],VW={learn:vLearn,practice:vPractice,journey:vJourney,community:vCommunity,admin:vAdmin};
 function draw(keep){
